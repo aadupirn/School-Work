@@ -1,0 +1,421 @@
+COE 449 Notes
+
+http://people.cs.pitt.edu/~jmisurda/teaching/cs0449.htm
+check website for information.
+
+1/6/16
+Hello world in C:
+
+#include <stdio.h>
+
+int main()
+{
+	printf("Hello, world! \n");
+	return 0;
+}
+
+- you return an int in the main function. This is passed back to the OS and can be queried to see if the program ran successfully.
+- there is no class unlike java. C is not object oriented it is procedural.
+- all of the code will live in functions and all of the data is just data. THERE ARE NO OBJECTS. no inheritance or polymorphism. 
+- #include will allow us to access other libraries.
+- C has a much smaller standard library than Java.
+
+- Data Types
+	- Integers
+		- JAVA
+			- int 
+				- 32 bits, +/- 2.1 billion in java
+			- short 
+				- 16 bits, +/- 32,767 in java
+			- long 
+				- 64 bits huge number in java
+		- In C (short <= int <= long && short < long)
+			- int will be the native word size.
+			- if int = 32, short = 16, long = 32. (32 bit systems)
+				- long kept at 32 bits after upgrader from 16 to 32 bit to maintain backwards compatability.
+			- On 64 bit systems int = 32, short = 16, long = 64.
+			- short is at least 16, long is at least 32. 
+	- Real
+	- Text
+- C runs on the actual machine so it depends on the machine you are using. It compiles into an executable that gives your actual processor instructions.
+
+1/11/16
+
+-int is really short int.
+
+-long is really long int
+
+-short is short int
+
+-in C you can specify unsigned and signed
+
+-char data type can be integer or text
+
+-Integer adjectives:
+	char <--typically 8 bits
+	short
+	int
+	long
+	long long
+
+-sizeof() <-- keyword(evaluated at compile time)
+	- will take type or expression
+		-if type will tell you the size of the type in bytes so sizeof(char)=1. Number of char's it takes up.
+		-if expression it will find out what the size of the type that the expression yields. Still number of char's it takes up.
+		-whatever we pass to it must be knowable at compiletime. It doesn't exist after compilation. All you will see is the answer in the compiled machine code.
+-Static = occurs at compile time
+-Dynamic = occurs at runtime
+
+-reals
+	-float (32 bit, 7 digits of decimal precision)
+	-double	(64 bit, 15 digits of decimal precision)
+	-long double
+	-We are going to store floating point numbers by storing an integer and an exponent to create a number that otherwize would be much more difficult to express.
+	-You can also store huge numbers like this but you will lose precision at lower digits.
+-Text adjectives:
+	char
+
+-No strings since strings are objects.
+-NO BOOLEANS!?!?
+	-Represent booleans with int. You can use int within a boolean context.
+	-0 is false anything else is true.
+		-0 = FALSE
+		-1,4,234,-2,-69,69 all are TRUE
+		-this means you can do false + 3 which equals 3.
+		-C WILL compile this.
+
+-Operators
+
+-Arithmetic:
+	-*
+	-/
+		3/5 -> 0
+	-%
+		Only done with integers
+	-+
+	--
+	-(
+	-)
+
+-Comparison
+	-<
+	->
+	-<=
+	->=
+	-==
+	-!=
+
+	-False comparison will return 0. Most of the time true comparison will return 1 but that might not work sometimes.
+
+-Logical
+	-&&
+	-||
+	-!
+
+-Bitwise
+	-&
+	-|
+	-~
+		-Compliment(flips bits)
+	-^
+		-XOR
+	-<<
+		-Left Shift(Creates 0's)
+	->>
+		-Right Shift
+		-if you are using a signed number you will extent the most significant bit.
+		-if you are using an unsigned number you will add 0's.
+
+1/13/16
+
+	-Bitwise operations treat the integers as an array of booleans.
+
+-Identifiers
+	-composed of letters numbers and underscores (_).
+	-uses ascii not Unicode.
+	-can't start with a number.
+	-shouldn't start h a _
+		-_Bool is the bool type.
+
+	-java convention numStudents.
+	-c convention num_students
+
+-delare variables
+	-type identifier;
+		int x;
+		char y;
+	-you can combine multiple declarations on the same line (int x, y;)
+		-probably shouldnt. 
+			-do this instead
+				int x;
+				int y;
+	-you can also declare and initialize on the same line 
+		-int x = z;
+		-initialization is a different operation than an assignment.
+		-if you dont initialize you will get a warning.
+
+-Blocks { }
+	-blocks define scopes
+	{
+		int x = 2;	//declaration
+		x = x+1;	//use
+		int y = 3;	//declaration
+	}
+	-^legal in C99 but89.
+	-C89 depends on a split where declarations do and dont happen.
+	-anything after the first non-declaring use cannot declare a new variable (c89)
+	{
+		int x = 2;	//declarations
+		int y = 3;
+		x = x+1;	//use
+	}
+	-^legal in both
+	-this allows for one pass compilers to work.
+		-one pass compiler visits each line of code once.
+	-x=x+1 is an assignment not an initialization. Its a non-declaring use which makes it different.
+	-we are using a bastardization that allows for the C99 rules.
+
+-Assignment
+	-=
+	-right associative.
+	-things on the right of the equals sign are done first.
+	-everything else is left.
+	-you can chain the = with the operators.
+	-x += 1; ---> x = x+1
+	-also x++ and ++x.
+
+-Comments
+	- /*   */ (C89)
+	- // works in C99 and really any compiler these days because C++ supports it.
+
+-I/O
+	-#include <stdio.h>
+	-printf("Hello world \n");
+		-use interpolation instead of concatenation.
+		-put into format string.
+			1) Literal text is output literally.
+			2) Placeholders
+		-Escape sequences
+			-\n, \", \', \\, \r, \v, \t, \a
+		-Scan Codes
+			-%d <-- decimal(int)
+			-%x <-- print in hex
+				-%X <-- prints uppercase letters
+			-%o <-- print in octal
+			-%u <-- unsigned
+			-%f <-- double (will print the entire number even if it is huge)
+			-%e <-- scientific notation (1e^7, 2.3e^-2)
+				-%E <-- prints uppercase letters
+			-%g <-- picks %f or %e based on how long the stringified version of the value is.
+				-$G <-- prints uppercase letters
+			-%c <-- character (ascii)
+			-%s <-- string
+			-%p <-- pointers
+			-%% <-- single percent sign
+			-printf("The value of x is %d\n",x);
+				The value of x is 3
+		-you can put in multiple scan codes and then variables or expressions from left to right after text.
+		
+
+1/20/16
+
+		-returns an int
+			-if positive its the # of chars printed
+			-if negative error.
+		-%.2f
+		    ^ precision
+			-this would truncate to 2 decimal points.
+		-%5.2f
+		   ^ field width
+			- you will make spaces before the number if you dont have as many characters as the field width.
+				-3.14
+				-  3.14
+		-%05.2
+			-will pad the number with 0's instead of spaces
+				-3.14 --> 03.14
+		-%-05.2 
+			-will pad the number with 0's after the number
+				-3.14 --> 3.140
+		-after precision between percent and type you can include type width modifyer.	
+			-%hd = short
+			-%ld = long
+			-%lld = long long
+			-%Ld = long double
+		-
+			x=10;
+			printf("0x%08x", x);
+		-output = 0x0000000a
+		-printf("%#08x", x); does the same thing 
+	
+	-int scanf(format, vars);
+		- 
+			int x
+			printf("Enter a number:");
+			scanf("%d", &x);
+		-whats in the format string will never show up on screen put that in a printf
+		-literal text in the format string is matched literally except for whitespace which matches whitespace.
+		-say I want to read in the numbers from the data 1999-01-31
+			-"%d-%d-%d", &year, &month, &day
+		-will return the number of scan codes successfully parsed.
+	-Buffered I/O
+		-what causes the stuff in the buffer to be shown on screen.
+			1) buffer is full
+			2) explicityly flush
+			3) Ends with \n (will be flushed)
+		-printf("hello"); won't print to the console.
+		-scanf process
+			1) If buffer is empty, prompt for input, copy to output
+			2) Attempt to parse according to format string
+	-scanf strings doesnt need &
+	-
+		scanf("%s", str);
+		type in: The quick brown fox *enter*
+		-only "the" will be read in
+		-%s will only read in one whitespace delimited series of characters.
+	- 
+		int x;
+		char c;
+		scanf("%d", &x);
+		scanf("%c", &c);
+	-entering 5 *enter* will cause the program to exit.
+		-newline will read in as a character.
+	-scanf("%[ ]", str);
+		          ^ you put what is allowed to go into the string in here.
+		-if "^" is the first character then it will read everything that is not between the brackers.
+			-"^\n" will read in until you hit the new line.
+	-fgets(stdin, 255, str);
+		-input device (stdin is standard input)
+		-max number of characters.
+		-variable name (must include at least max number of characters and will stop at newline but include new line)
+-Control Structures
+	-
+		if(condition)
+		1) single statement
+		2) empty statement <-- mistake
+		3) block
+	-use only blocks, you can use single statements but its safer to go with blocks.
+
+1/25/16
+
+	-else works the same way, use blocks to be safe.
+	-else if... else if... else works the same way. <-- reallying if and else statements chained together
+		switch(x)//x has to be int or char
+		{
+			case 2:
+			case 3:
+				break;
+			default:
+		}
+	while(condition)
+	{
+		
+	}
+	do{
+
+	}while(condition);
+
+	-for loop ---> for( 1 ; 2 ; 3 )
+		1) initialization
+			-you can use comma to initialize multiple variables
+		2)	while condition
+			-commas not here since it only returns the right most thing.
+		3)	update
+			-you can update multiple variables with ","
+	-if(condition)
+		break;
+		-no braces will take you out of outside loupt.
+		continue;
+		-will take you to the top. evaluate while loop again. even in do while.
+	-while(	)
+		while(	)
+			if(	)
+				break;
+
+	-break will break out of second while. (the closest loop)
+-Control
+	-goto
+	-goto LABEL;
+
+	LABEL:
+	-stylistically goto is very bad.
+	
+-functions
+	int f(int x)
+	{
+		return x;
+	}
+	int main ()
+	{
+		return 0;
+	}
+	-call of function is considereed the use.
+	-int f(int x) is definition and declaration.
+	-declare int f(int);
+	-function prototype
+		-prototype does not need to match the names of the parameters.
+	-c89 default prototype
+		-risky.
+	-#include prototypes or implements functions.
+	-#include is pretty much a mass prototype.
+		-header files never include implementation code.
+-Arrays
+	-An aggregate, homogenous data structure.
+	-homogenous = all the same data type.
+	-aggregate = all the same name
+	-int a[10];
+	-type name[size];
+	-sizeof will return 40 since that is the number of bytes.
+	-sizeof(a)/sizeof(a[0]) <-works sometimes
+		-only works when array is in scope can't see the declaration of the array outside of the scope.
+		-sizeof also only works at compiletime constant.
+
+1/27/16
+
+	-if you want to use arrays as a parameter needs to get passed an integer length of the array also.
+	-you have to remember to pass the length of the array around.
+	-accessing invalid index in array:
+		1)Program could crash
+		2)Silent corruption of data.
+	-Java checks every time you access an array element at runtime.
+		-virtual machine does this.
+		-it will make the runtime slow.
+		-there is no C vm.
+		-there is no easy way for C to determine the length of the array.
+	int n;
+	scanf("%d", &n);
+	int a[n]; <-- not legal C89
+	-you are using a declaration after a use.
+	-legal in C99
+	-C99 has a variable length array.
+-Strings in C
+1)Array of chars.
+2)Terminated with a sentinel. (NUL)
+char str[100];
+#include <string.h>
+	-strcpy(str, "Hello");
+	-strcpy copies string strcpy(destination, source);
+	-length of array is 100 but length of string is 5. <-- problem.
+-Variable-length data
+	-Explicit length variable.
+	-Sentinel value
+		-mark end with a special marker
+	-Replacing character.
+		-str[0] = 'h';
+	-concatenate 2 strings
+		-strcat(left side, right side);
+		-strcat(str, "there");
+		-assigns string to first parameter. Is one of the sources and the destination.
+		-if you want to keep first string strcpy first.
+	-strlen(str)
+		-returns length of the string.
+	-compare two strings, strcmp
+		strcmp(a,b)
+		-returns <0 a<b
+		-returns 0 a=b
+		-returns >0 a>b
+		-!strcmp(a,b) <-- looks like they are not equal but really a boolean false is 0 which means they are equal.
+	-C uses the sentinel value.
+	-ASCII 0 is NUL
+	-'\0' is NUL escape sequence.
+	-'0' is 48 in ascii.
+	-string literal automatcally has a NUL terminal at its end.

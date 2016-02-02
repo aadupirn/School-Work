@@ -1,0 +1,326 @@
+COE 1501 Notes
+Check website for office hours and stuff http://people.cs.pitt.edu/~nlf4/cs1501/
+
+1/6/16
+Office Hours   T 1-2:30
+		W 1:30-3
+		H 1-2:30
+
+all emails have [CS1501] in subject
+
+Algorithm metrics: time, memory, complexity.
+
+asymptotic performance: performance as input size goes to infinity
+
+Runtime determined by two factors: 
+1 cost of executing each statement
+2 frequency of execution of each statement
+
+time	frequency
+
+grey			t0	1
+
+yellow		t1	n
+
+blue			t2	n(n-1)/2
+
+red			t3	n^3/6 - n^2/2 + n/3
+
+purple 		t4	n^3/6 - n^2/2 + n/3 (worst case)
+
+using summations for blue red and purple
+
+1/11/16 
+
+- always try to model for worst case
+
+- worst case for threesum example
+
+	t0 + t1n + t2(n^2/2-n/2) + t3(n^3/6-n^2/2+n/3) + t4(n^3/6-n^2/2+n/3)
+
+- Ignore multiplicative constants and lower terms
+
+- O(n^3) <-- big O notation
+	- upper bound on asymptotic performance 
+- Big Omega 
+	- Lower bound on asymptotic performance
+- Theta
+	- Upper and Lower bound on asymptotic performance.
+	- Exact bound
+- ALL THREE ARE ALWAYS IN THE WORST CASE.
+
+- Formal definitions
+
+	f(x) is O(g(x)) if constants c and x0 exist such that:
+		|f(x)| <= c*|g(x)| as x>x0.
+		- x0 is ensurring sufficiently large input
+	f(x) is OMEGA(g(x)) if constants c and x0 exist such that
+		|f(x)| >= c*|g(x)| as x > x0 
+	if f(x) is O(g(x)) AND OM(g(x)) then f(x) is THETA(g(x))
+		c1 and c2 and x0 exust such that both above things are true.
+- Tilde approximations and Order of Growth
+	- Order of Growth?
+		Upper bound?
+			O(n^3)
+		Lower bound?
+			c1 = 1, c2 = 1/48
+			g(x) = x^3 works for big oh and omega
+		THETA(n^3) works.
+- Tilde approximations is a THETA bound with multiplicative constants.
+
+- That was easy but lower bounds are not always that easy to prove.
+
+- Common orders of grouth
+	- Constant - 1
+	- Logarithmic - log(n)
+	- Linear - n
+	- Linearithmic - nlog(n)
+	- Quadratic - n^2
+	- Cubic - n^3
+	- Exponential - 2^n
+	- Factorial - n!
+
+- Back to ThreeSum, is there a better way?
+	- Pick 2 numbers and then binary search for the third. 
+	- n^2(log(n))
+	- once its sorted then you can do it in n(log(n)) since you only have to sort once.
+
+- Sorting
+	GIven a list of n items place the items in a given order.
+		Numerical, alphabetical.
+	There are good, bad, and ugly ones.
+	- less(x, y) returns true if x<y.
+	- exch(a[], x, y)
+		swaps the values and indexes x and y.
+- Bubble sort
+	-Compare pairs of items, swap if they are out of order. Repeat until you make 0 swaps.
+
+1/13/16
+
+-Bubble Sort
+	-each value bubbles up to where it should be
+	-improved bubble sort only goes to n, n-1, n-2 as each last element becomes sorted.
+		-still O(n^2). Asymptotically it really doesn't improve runtime.
+
+-Insertion Sort
+	-Look at each item in the array and push it as close to the front of the array as it should go.
+	-Numbers are being pushed towards the beginning after being compared backwards.
+
+	for (int i = 1; i<n' i+=){
+		for (int j=i; j>0 && less(a[j], a[j-1]); j--){
+			exch(a, j, j-1)
+		}
+	}
+
+	- n^2/2-n/2 still O(n^2) better because only in the very worst case.
+	-average case is still O(n^2).
+	-practically better than bubble sort.
+
+-Merge Sort
+	-divide and conquer
+	-keep dividing and then once you get to the bottom combine up into the correct order.
+	-you're going to have to use multiple arrays.
+	-going to divide log2(n) times and then combine arrays up.
+	-code is on class website. Going to use 2 arrays so you'll need O(n) extra space for aux array.
+	-stable?
+
+-Quick Sort
+	-choose a pivot value
+	-place the pivot in the array such that all items at lower indices are less than pivot and all higher indices are greater.
+	-recurse for lesser indices and greater indices.
+	-keep incrementing towards the middle if you find two that should swap swap them the recursively call for left and right.
+	-If you keep picking really bad pivots then you'll get O(n^2)
+	-Average case will be O(nlog(n))
+	-choosing pivot will have drastic impact on runtime.
+		-you can scramble indexes.
+		-you can pick 5 numbers and choose the median.
+	-you won't need extra memory to run quick sort.
+	-very quick in practice and widely used.
+	-this implementation of quick sort is not stable.
+
+-Stable: stable sorting maintains the relative ordering of tied values
+
+-Comparison sort runtime of O(nlogn) is optimal.
+	-The problem of sorting cannot be solved using comparisons with less than n log n time complexity.
+
+1/21/16
+
+-Consider least significant digit.
+	-group numers with same digit.	
+	-maintain relative order.
+	-put back in array. 1's 10's 100's.
+	-Called Radix sort.
+	-O(nk)
+		-where k is the length of the strings.	
+	-In-place?
+		-no
+	-Stable?
+		-yes
+		-the algorithm uses stability to work.
+-Best way to sort 1,000,000 32 bit integers.
+	-4 MB
+	-no big deal
+-What about 1TB of numbers.
+	-won't all fit in memory.
+	-we have so far had the assumption that we are performing internal sorts.
+		-everything in memory.
+	-we now need to consider external sorting.
+		-writing to disk.
+-Hybrid merge sort.
+	-read in amount of data that will fit in memory.
+	-sort it in place (quick sort)
+	-write sorted chunk to disk.
+	-repeat till all data is sorted in sorted chunks.
+	-merge chunks together.
+-external sort considerations.
+	-should we merge all chunks together at once?
+		-means fewer disk read/writes.
+			-each merge pass reads/writes every value.
+		-also more disk seeks.
+-what about when you have 1PB of data?
+	-In 2008, Google sorted 10 trillion 100 byte records on 4000 computers in 6 hours and 2 minutes.
+	-48.000 hard drives were involved.
+		-at least 1 disk failed during each run of the sort.
+-Brute-force Search (exhaustive search)
+	-find the solution to a problem by considering all potential solutions and selecting the correct one.
+	-run-time is bounded by the number of potential solutions.
+	-short passwords are insecure because of vulnerability to brute force.
+-Pin cracking example.	
+	-will enumerate 10^n different PINs
+	-so 10,000 different PINs
+	-for a computer this is tiny.
+	-what would be long for a computer?
+	-say 128 bits
+	-2^128
+		-assuming a supercomputer can check 338600000000000 passwords per scond stil would take 1.57x10^17 years by brute force.
+		-you can trim down impossible combinations from the bits like the ascii for backspace.
+	-Pruning!
+		-clipping away subtrees of our serch space.
+		-when we can use it it makes our algorithm practical for much larger n's
+		-does not howerver improve the asymptotic performance of an algorithm.
+	-In general exhaustive search trees can be easily traversed with recursion.
+-8 queens problem
+	-place 8 queens on a chessboard such that no queen can take another.
+	-64 C 8
+		=64!/(8!*56!) > 4,000,000,000
+	-pruning
+		-solutions only have one queen per column.
+		-solutions can only have one queen per row.
+			-now at 8!
+		-can only have one queen per diagonal.
+	-Basic idea
+		-recurse over columns of the board.
+		-each recursive call iterates through the rows of the board.
+		-check rows/diagonal
+		-are we safe?
+			-place queen in the current row
+		-if not go to next row/collumn.
+-Another problem: Boggle.
+	-have 8 different options from each cube	
+		-from B[i][j] 8 options
+	-naively runtime is 16!
+	-pruning
+		-from edge of the board you have 5 options and 3 from corners.
+		-can't go over the same cube twice.
+		-can we possibly build a word off of the letters I have?
+	-Implementation concerns with boggle.
+		-constructing the words over the course of recursion will mean building up and tearing down strings
+		-pushing/poping stack operations are generally THETA(1)
+		-Java strings, however, are immutable
+			-StringBuilder to the rescue!
+			-StringBuffer if you are multithreaded.
+1/25/16
+-symbol tables
+	-abstract structures that link key's to values;
+	-key is used to search the data structure for a value
+	-key functions: 
+		put()
+		contains()
+-searching through a collection
+	-unsorted array
+		-step through an array.
+	-sorted array
+		-binary search
+	-unsorted and sorted linked list
+		-no random access so sorting will not help. step through array.
+	-binary search tree
+		-n in worst case but log(n) in average case.
+	-4 options at each note in a bst
+		-note ref is null
+		-k is less
+		-k is greater
+		-k is equal
+-Digital Search Tree: Lets go left and right based on the bits of the key.
+	-if first bit is 0 store on left if one store on right
+	-value is added to each of the node objects.
+	-runtime = bit length
+	-still need to compare to check if you have found the number.
+-Radix search tries (RSTs)
+	-trie as in retrieve.
+	-store at full bit address with the same strategy as digital search tree.
+	-always bitlength.
+	-characters?
+		-use ascii, sure.
+	-strings
+		-huge bitlength.
+-In our binary based radix search trie we considered one bit at a time.
+	-branch based on more bits?
+	-you are going to miss sometimes.
+	-repeating letters.
+	-miss times --> logr(n)
+	-r is size of alphabet
+	-Average 20 checks for 2^20 keys in an RST
+	-with 2^20 keys in an r-way trie assuming 8-bit ASCII? 2.5.
+		-bigger the number of options the lower the miss times.
+-TrieSt.java
+	-r-way trie.
+	-basic node object with value atribute 
+	-array added on
+	-tooooons of wasted space.
+-De La Briandais tries (DLBs)
+	-replace the .next array with the r-way trie with a linked list
+	-no wasted space!
+	-search insert are not THETA(kr)
+		-implementations with a log of sparse nodes use dlb otherwise r-way is ok.
+	-S-->H-->E-->^
+			|
+			V
+			E-->L-->L-->S-->^
+				  |
+				  V
+				  A-->^
+
+1/27/15
+
+-So far we've continually assumed each serch would look for the presence of a whole key, what about prefix search like Boggle.
+-What if data needs to be stored on disk
+-You're writing software that will be used to store records of online store transactions, each with a unique ID.
+	-vinyl album sales.
+-You'll want to store these on disk on non-volatile memory.
+-how can you still efficiently search for different things?
+-Data stored on disk is grouped into blocks.
+	-typically of size 4KB
+-I/O to the disk is performed on the block lebel.
+-to read a file the os will fetch all of the blocks that store some portion of that file and read the data from each block.
+-B-trees
+	-operates similarly to a binary search tree, but not limited to a branching factor of 2.
+	-the order of a B-tree determines the max branching factor.
+	-Invariants for the order M B-tree
+		-Nodes have a max of M children
+		-M keys per node and must be half full (interior).
+		-interior nodes have at min of M/2 children
+			-Nodes that are not root or leaves.
+	-Start with a single node
+	-add keys until the node fills
+	-visualization http://pearl.ics.hawaii.edu/~sugihara/courses/ics311f10/notes/BTrees.html
+	-when inserting into full leaf split the leaf node and put the middle key into the one above
+-runtime
+	-logm(n)
+-Align m so each block is one node.
+	-search and insert are same runtime.
+
+1/29/16
+
+-tries use keys with values.
+-use binary bits to create binary search tree. (Radix search trie O(bitlength))
+
