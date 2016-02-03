@@ -19,14 +19,27 @@ struct id3tag {
 int main(int argc, char *argv[])
 {	
 	int i;
-	for(i = 1; i < argc; i++)
-	{
-		if(strcmp(argv[i+1], "-title") == 0)
-		{
-			printf("You asked for the title from %s", argv[i]);
-		}
-		printf("\nYour arguments are %s", argv[i]);
-	}
+
+	FILE *filePointer;
+	filePointer = fopen("testTag.tag", "w");
+
+	struct id3tag tag;
+	strcpy(tag.tag, "TAG");
+	strcpy(tag.title, "TITLE");
+	
+	struct id3tag *tagP = &tag;
+
+	fwrite(tagP, 128, 1, filePointer);
+	
+	fclose(filePointer);
+	//for(i = 2; i < argc; i++)
+	//{
+	//	if(strcmp(argv[i+1], "-title") == 0)
+	//	{
+	//		printf("You asked for the title from %s", argv[i]);
+	//	}
+	//	printf("\nYour arguments are %s", argv[i]);
+	//}
 	
 	return 0;
 }
