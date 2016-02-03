@@ -326,7 +326,6 @@ using summations for blue red and purple
 
 2/3/16
 
--modulous is good for hash tables.
 -if a pigeon's hole is taken, it has to find another.
 -if h(x) = h(y) ==i
 	-if x is at y 
@@ -335,12 +334,10 @@ using summations for blue red and purple
 -linear Probing
 	-attempt to insert the key at index i + 1
 	-until an open space is found.
-	-searching and inserting has worst case O(n)
-	-deleteing is a pain.
 -search: 
 	-if another key is stored at index i
 	-check i +1, +2, +3 until
 	-key is found
 	-empty location is found
 	-hash table is full when circled back to index i
--
+
