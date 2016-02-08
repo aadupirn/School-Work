@@ -419,5 +419,3 @@ char str[100];
 	-'\0' is NUL escape sequence.
 	-'0' is 48 in ascii.
 	-string literal automatcally has a NUL terminal at its end.
-
-
