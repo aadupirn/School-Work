@@ -168,7 +168,7 @@ int main(int argc, char *argv[])
 	}
 	
 	//only close if there are an even number of command line arguments
-	if(argc % 2 == 0)
+	if(argc % 2 == 0 && argc > 2)
 	{
 		fclose(filePointer);
 	}
