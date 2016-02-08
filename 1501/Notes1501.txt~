@@ -343,4 +343,28 @@ using summations for blue red and purple
 	-key is found
 	-empty location is found
 	-hash table is full when circled back to index i
--
+
+2/8/16
+
+abracadabra!
+A - 5
+R - 2
+D - 1
+C - 1
+B - 2
+! - 1
+
+Two trees with minimum weight
+
+-Check notes to see how to build a huffman tree.
+-use radix search trie for decoding
+-radix search trie uses the key as the address.
+-binary search tree has key in node with address
+-encode using an array thie size of the alphabet.
+-need to efficiently be able to select lowest wight tress to merge when constructing the trie.
+	-can accomplish this using a priority queue
+-need to be able to read/write bitstrings!
+	-unless we pick multiples of 8 bits for our codewords, we will need to read/write fractions of bytes for our codewords.
+	-we'll maintain a buffer of bytes and perform bit processing on this buffer.
+-to create the trie create a bitstring. code is in slides.
+
