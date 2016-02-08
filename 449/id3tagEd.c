@@ -13,7 +13,7 @@ struct id3tag {
 	char year[4];
 	char comment[28];
 	char separator[1];
-	char track[1];
+	char track;
 	char genre[1];
 };
 
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	filePointer = fopen(argv[1], "r+");
 	struct id3tag tag;
 	struct id3tag *tagP = &tag;
-	//There cannot be an odd number of command line arguments.
+	//There cannot be an odd numbzer of command line arguments.
 	if(argc%2 != 0)
 	{
 		printf("\nPlease enter a valid command for the id3tag editor\n\n");
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 			strncpy(tag.year, "", 4);
 			strncpy(tag.comment, "", 28);
 			strncpy(tag.separator, "", 1);			
-			strncpy(tag.track, "", 1);
+			tag.track = 0;
 			strncpy(tag.genre, "", 1);
 			
 			char field[30];
@@ -75,7 +75,9 @@ int main(int argc, char *argv[])
 				}
 				else if(strcmp(field, "-track") == 0)
 				{
-					strncpy(tag.track, value, 1);
+					char num;
+					num = (char)atoi(value);
+					tag.track = num;
 				}
 				else
 				{
@@ -137,7 +139,9 @@ int main(int argc, char *argv[])
 				}
 				else if(strcmp(field, "-track") == 0)
 				{
-					strncpy(tag.track, value, 1);
+					char num;
+					num = (char)atoi(value);
+					tag.track = num;
 				}
 				else
 				{
@@ -162,7 +166,7 @@ int main(int argc, char *argv[])
 		else
 		{
 			fread(tagP, 128, 1, filePointer);
-			printf("\ntitle: %.30s\nartist: %.30s\nalbum: %.30s\nyear: %.4s\ncomment: %.28s\ntrack: %.1s\n\n", tag.title, tag.artist, tag.album, tag.year, tag.comment, tag.track);
+			printf("\ntitle: %.30s\nartist: %.30s\nalbum: %.30s\nyear: %.4s\ncomment: %.28s\ntrack: %d\n\n", tag.title, tag.artist, tag.album, tag.year, tag.comment, tag.track);
 			
 		}	
 	}
