@@ -420,4 +420,40 @@ char str[100];
 	-'0' is 48 in ascii.
 	-string literal automatcally has a NUL terminal at its end.
 
+2/8/16
 
+-character's have single quotes '
+-pass pointers to functions
+-change parameters(outputs)
+-name of an array can stand in for a pointer to the start of that memory.
+-every array is passed by address at the beginning of the array.
+-if you passed an entire array you'd have to clone the entire array.
+-t->artist 
+	-left hand side is pointer to struct
+	-right hand side is part of struct
+	-you have to pass a struct's pointer 
+	-and *t.artist doesn't work you have to (*t).artist
+	-a[0] = *a
+	-a[1] = *(a + 1)
+
+-pointer arithmetic 
+	-pointer + int
+	-pointer - int
+	-pointer-pointer
+-automaticlaly scaled by the size of the type.
+
+	-a[i] = *(a+i)
+
+-if you want to access the middle addresses 
+	-void *p; //void pointer
+	-p=a;
+	-pointer arithmetic will incremeent address by 1 not the size by of type.
+	-if you want to dereference a void pointer you have to cast to a type. you can't directly dereference a void pointer.
+
+-FILE *f = fopen("filename", "mode");
+
+- atoi(argv[5]); will turn track into a number <----- I need to do this.
+
+-FILE * <-- pointer to opaque type
+-once you consume some data it will advance the file pointer.
+-if f == null then something wrong happened.
