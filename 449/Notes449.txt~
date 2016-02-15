@@ -420,4 +420,88 @@ char str[100];
 	-'0' is 48 in ascii.
 	-string literal automatcally has a NUL terminal at its end.
 
+2/8/16
 
+-character's have single quotes '
+-pass pointers to functions
+-change parameters(outputs)
+-name of an array can stand in for a pointer to the start of that memory.
+-every array is passed by address at the beginning of the array.
+-if you passed an entire array you'd have to clone the entire array.
+-t->artist 
+	-left hand side is pointer to struct
+	-right hand side is part of struct
+	-you have to pass a struct's pointer 
+	-and *t.artist doesn't work you have to (*t).artist
+	-a[0] = *a
+	-a[1] = *(a + 1)
+
+-pointer arithmetic 
+	-pointer + int
+	-pointer - int
+	-pointer-pointer
+-automaticlaly scaled by the size of the type.
+
+	-a[i] = *(a+i)
+
+-if you want to access the middle addresses 
+	-void *p; //void pointer
+	-p=a;
+	-pointer arithmetic will incremeent address by 1 not the size by of type.
+	-if you want to dereference a void pointer you have to cast to a type. you can't directly dereference a void pointer.
+
+-FILE *f = fopen("filename", "mode");
+
+- atoi(argv[5]); will turn track into a number <----- I need to do this.
+
+-FILE * <-- pointer to opaque type
+-once you consume some data it will advance the file pointer.
+-if f == null then something wrong happened.
+
+2/10/16
+
+-FILE * fopen(filename, mode)
+	-w creates a new filE
+	-open in w mode no reading, open in r no writing.
+	-"+" modes fix this.
+	-r+ file must already exist
+	-w+ file is overwritten/created
+	-a+ reads start at the begginning but all writes are appends.
+	- t or b can also be specified in the mode.
+		-t = text mode
+			-"\n"
+		-b = binary mode
+			-some portion of the data is meant to be read by the computer.
+	- fprintf(f, format string, variables);
+-fwrite(void*, size, count FILE *);
+-size and count 
+	-what do I want to happend if file contains less data than was asked for.
+	-fread returns how many things of size were successfully read
+	-return of negative number is error.
+	-0 means that there is no error but there is no data there.
+-int feof(FILE*);
+	-checks if EOF marker has been consumed
+-Dynamic Allocation
+	-Unkown size until runtime
+	-Unknown number until runtime
+	
+	-memory allocation done with { void* malloc(int size);}
+	-will return a contiguous chunk of memory at least as small as you asked for.
+	-returns the address of where the memory is.
+	-int *a;
+	-a = malloc(n*sizeof(int));
+	-#include <stdlib.h>
+	-void pointers can be assigned to any other pointer type without a cast.
+	-don't cast the return value of malloc, can secrety break things.
+	-if (a == null) malloc did not work.
+	-malloc will never fail on linux. 
+	-check against null
+	-with malloc the memory never goes away.
+		-memory stays there till the process terminates.
+		-still once something is allocated it can never be used again.
+	-when you are done with it free(a);
+	-you have to free the exact value returned by malloc. you can free a different variable.
+	-if you forget to free something you have a memory leak.
+-Scope
+	-Where in the code a variable name is legal to refer to its value.
+	-SCOPE ISN'T REAL

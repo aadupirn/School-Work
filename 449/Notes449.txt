@@ -505,3 +505,82 @@ char str[100];
 -Scope
 	-Where in the code a variable name is legal to refer to its value.
 	-SCOPE ISN'T REAL
+
+-2/15/16
+
+-why scope?
+	-reuse variable names.
+	-encapsulation.
+	-enforced by compiler.
+	-static concept
+	-"local variables"
+		-scope is the block
+	-"global"
+		-file scoped variable.
+-lifetime
+	-from allocation to deallocation.
+	-dynamic (while program is running)\
+	-"local"
+		-function call --> return
+	-"global"
+		-lifetime of program.
+	-malloc's lifetime is set by the user.
+		-the variables referring to the malloc have their own scope and lifetime.
+-think of every combination of lifetime and scope. block and program and file and function.
+	-there are no file scope and function lifetime.
+	-block scope  but program lifetime exists in c.
+		-prefix local variable with static.
+		-static int x = 2;
+		-x++;
+			-a function with the above will initialize x to 2 once then every time after will add it. 
+			-if I just had x = 2 will then reassign x to 2 every time. 
+
+-Executables and Linking
+-compiler
+	-c source --preprocessor preprocessed source compiler object files linker--> exectuable
+	-c preprocessor is a textual transformation of source code.
+		-#include is a preprocessor command that opens the header file specified
+	-compiler
+		-takes c and produces machine code or assembly language.
+		-compiler produces object file.
+	-object files
+		-pretty much machine code.
+		-you might not have implemented everything you need
+	-linker 
+		-weaves the object files together and resolves undefined labels to their actual addresses.
+-Executables	
+	-what do we need to store?
+		-code
+		-data
+		-more?
+	-agree with comon format.
+	-consumed by operating system
+	-a.out (assembler output)
+		-older UNIX format
+		-no longer commonly used
+	-COFF(common object file format)
+		-older UNIX Format
+		-no longer commonly used.
+	-PE (Portable Executable)
+		-based on COFF
+		-used in 32- and 64-bit Windows
+	-ELF (Executable and Linkable Format)
+		-Lunux/UNIX
+	-Mach-O file
+		-Mac
+-a.out format
+	-exec header
+	-text segment
+	-data segment
+	-text relocations
+	-data relocations
+	-symbol table
+	-string table.
+
+-Deduplication
+	-removes duplication
+	-why store 100 million of the same thing when you can store it once and give everyone a reference.
+	-to avoid deduplication do char c[100]; then strcpy(c, "hello");
+	-every a.out formatted binarry file begins with an exec structure.
+		-magic number tells operating system what kind of file it is.
+		-bss tells how many bytes of zeroed space there is.
