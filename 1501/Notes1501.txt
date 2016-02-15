@@ -391,3 +391,65 @@ Two trees with minimum weight
 -Option 3: Adaptive Huffman coding.
 	-single pass over the data to construct the codes and compress with no background knowledge of source distribution
 
+2/15/15
+
+-check online for lzw info
+-array for expansion
+-trie for compression.
+-Further implementation issues: codeword size
+	-using fewer bits: gives better compression early on.
+	-but leaves fewer codewords available which will hamper compression later on.
+-use more bits: greater compression later on
+-variable width codewords:
+	-technique is diferent.
+	-start out using 9 bit codewords.
+	-when codeword 512 is inserted switch to outputting/grabbing 10 bit codewords.
+	-then 11, then 12, then 13.
+	-what happens when you run out of codewords?
+-two primary option.
+	-stop adding new keywords, use the codebook as it stands.
+	-if file changes, it will not be compressed as effectively
+	-or
+	-throw out the codebook and start out from single characters.
+-In general, LZW does better than huffman.
+	-also better for compression of archived directories of files.
+	-why?
+		-very long patterns can be built up, leading to better compression.
+		-different files don't "hurt" each other as they did in huffman.
+-Lossless compression apps use LZW.
+-gifs can use it	
+	-and pdf.
+-modt dedicated compression applications use other algorithms.
+	-DEFLATE (combination of LZ77 and Huffman)
+		-Used by PKZIP and gzip.
+	-burrows-wheelers transforms.
+		-used by bzip2
+	-LZMA
+		-used by 7-zip
+	-brotli
+		-introduced by Google in Sept. 2015
+-How much can they compress a file?
+	-how much can a file be compressed by any algorithm?
+-No algorithm can compress every bitstream.
+	-assume we have such an algorithm.
+	-we can use to compress its own output.
+	-you should be able to compress from 1 bit to 0 which by definition has losless compression.
+-Use concept of shannon entropy.
+-Information theory.
+	-Entropy is a key measure in information theory.
+	-slightly different from thermodynamic entropy.
+	-a measure of the unpredictability of information content.
+	-by losslessly compresssing data we represent teh same information in less space.
+-Translating a language into binary, the entropy is the average number of bits required to store a letter of the language.
+	-entropy of a message * length of a message = amount of information contained in the message.
+-On average, a clossless compression scheme cannot compress a message to have more than 1 bit of information per bit of compressed message.
+-Uncompressed English has between 0.6 and 1.3 bits of entropey per character of the message.
+-truely random data is not compressible.
+-entropy tells us how good out compression algorithm really is
+-uncompressed data has much lower entropy than compressed data.
+-entropy: measure of unpredictability of information.
+-weissman score.
+	-made up for silicon valley.
+	-Weissman is a professor at stanford.
+	-one of his students was brought in for Silicon Valley.
+	-

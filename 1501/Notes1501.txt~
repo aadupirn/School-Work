@@ -368,3 +368,26 @@ Two trees with minimum weight
 	-we'll maintain a buffer of bytes and perform bit processing on this buffer.
 -to create the trie create a bitstring. code is in slides.
 
+-Huffman pseudocode.
+	-read input
+	-compute frequencies
+	-build trie/codeword table.
+	-write out trie as a bitstring to compressed file.
+	-write out character count of input
+	-use table to write out codeword for each input character.
+	-GET THE REST OF THIS FROM SLIDE
+-how do we determine character frequencies?
+-option 1 preprocess the file to be compressed.
+	-upside best algorithm for best output for the given file.
+	-downsides.
+		-requires two passes over input, one to analyze frequencies and build the lookup table and another to compress to file.
+	-trie must be stored with the compressed file reducing the quality of compression.
+	-more stuff in slides.
+-Option2 : use a static trie;
+	-analize multiple sample files, build a single treee that will be used for all compressions/expansions
+	-saves on storage overhead...
+	-in general not a very good approach.
+	-you can create more data.
+-Option 3: Adaptive Huffman coding.
+	-single pass over the data to construct the codes and compress with no background knowledge of source distribution
+
