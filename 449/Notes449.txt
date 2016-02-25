@@ -584,3 +584,71 @@ char str[100];
 	-every a.out formatted binarry file begins with an exec structure.
 		-magic number tells operating system what kind of file it is.
 		-bss tells how many bytes of zeroed space there is.
+
+2/22/15
+
+-Static Linking
+	-copy code into executable at compile time, done by linker
+	-dynamic linking
+	-copy code into address space at load time or later
+	-done by link loader.
+	-dynamic linking is default. 
+-Fntion Pointers
+	-how do we call a function when we can't be sure what address it's loaded at?
+	-need a level of indireciton.
+
+	
+	int f(int x)	
+	{
+		return x;
+	}
+
+	function pointer:
+	int (*g)(int x);
+	g = f;
+
+	you can then call g;
+
+-x86 or Oh No! Not Another Assembler!
+-CISC vs. RISC
+	-x86 is the epitme of a Complex Instruction Set Computer 
+	-hundreds of instructions
+	-someone said they'd buy a bunch of processors if you added this instructions.
+-gcc and gas use the AT&T syntax
+	-opcode appended by type
+	-b - byte 8 bit
+	-w - word 16 bit
+	-l - long 32 bit
+	- q quad 64 bit
+	-first operand is source
+	-second is destination
+	-memory dereferences are denoted by ()
+	-some operations use the same register for source and destination.
+	-registers are prefixed by a %
+	-immediates are prefixed by a $
+
+2/24/16
+
+-common syntax use Intel Syntax
+	-BYTE, WORD, DWORD, QWORD
+	-first operand is destination
+	-second operation is source
+	-memory dereferences are denoted by []
+	-registers use $
+	-immediates dont have prefix
+	-need to know this shit if we are looking at outside documentations.
+-Stacks, Frames and Calling Conventions.
+-Stack
+	-region of memory managed in a last-in first-out fashion.
+	-Activation Record.
+	-an object containing all the necessary data for a function
+		-values of parameters
+		-count of number of arguments
+		-return address
+		-return value
+-x86 Calling Convention
+	-$EAX, $ECX, and $EDX are generally caller-saved.
+	-three registers are probably insufficient.
+	-most register are spilled onto the stack
+	-$EAX is the return value
+	-everything else is on the stack.

@@ -452,4 +452,36 @@ Two trees with minimum weight
 	-made up for silicon valley.
 	-Weissman is a professor at stanford.
 	-one of his students was brought in for Silicon Valley.
-	-
+
+-missing notes here check his slides.
+-KMP
+
+2/22/24
+
+-improve average case of string pattern matching.
+-if you get letter not in pattern slide past it
+-if it doesnt match up but could in the future slide to the next starting character.
+	-create a right array
+	-complete array of -1's except for the locations for each character in the pattern.
+	-that characters spot in the right array is set to the index of its right most occurrence.
+	-if index of character checked is negative one you can move past the entire check.
+	-check right most first.
+	-if the letter is in the pattern move so it matches up with the index in the right array.
+-Hashing was cool, let's try using that.
+	-practically worse than brute force.
+	-look at horners method in slides.
+	-rolling hash moves down the letters.
+	-can get next hash in constant time.
+	-Rabin-Karp is what the rolling hash is called.
+	-what about collisions?
+	-you can set a huge q since you never need to store a hash table.
+	-chance of collisions are verrrrrrry small but not 0.
+	-so character by comparison on a collision just to be sure.
+		-worst cast?
+		-THETA(mn) but suuuuuuuuper unlikely.
+		-probably fast
+		-Las Vegas
+	-you could never check
+		-guaranteed fast
+		-probably fast
+		-Monte Carlo
