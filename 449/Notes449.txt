@@ -652,3 +652,14 @@ char str[100];
 	-most register are spilled onto the stack
 	-$EAX is the return value
 	-everything else is on the stack.
+
+2/29/16
+
+-main does some stuff to a line in its activation record. Storage rounded up to 16 bytes so things stay alligned. parameters are offsets of the base pointer.
+-parameters are pushed right to left onto the stack. Why?
+	-int printf(const char *format, ...)
+	-"..." means fariabe number of arguments.
+	-the thing you need to know where it is is the format string. 
+-variatic functions are functions that take arbitrary number of arguments.
+	-#include <stdarg.h>
+-Buffer Overrun Vulnerability.
