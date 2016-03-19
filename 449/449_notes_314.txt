@@ -1,0 +1,22 @@
+3/14
+
+-Allocation Strategies
+	-First First - find the first free block that can accomidate teth request.
+	-Next Fit - find the first block, starting where the last search left off that can ccomidaate the request.
+	-Best Fit - find the free block that is closest in the size to the request
+	-Worst Fit - find teh free block with the most left over after fulfilling the allocation request.
+	-Quick Fit - Keep several lists of free blocks of common sizes, allocate from the list that nearest matches the request.
+	
+	-Project
+	void *mymalloc(size){
+		return sbrk(size + sizeof(struct node)) + sizeof(struct node););
+	}
+	
+	free(void * p)
+	{
+		node = p=sizeof(node);
+	}
+	
+	midterm of end of malloc stuff.
+	
+	HELP
