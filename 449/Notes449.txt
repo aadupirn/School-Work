@@ -663,3 +663,78 @@ char str[100];
 -variatic functions are functions that take arbitrary number of arguments.
 	-#include <stdarg.h>
 -Buffer Overrun Vulnerability.
+
+3/14
+
+-Allocation Strategies
+	-First First - find the first free block that can accomidate teth request.
+	-Next Fit - find the first block, starting where the last search left off that can ccomidaate the request.
+	-Best Fit - find the free block that is closest in the size to the request
+	-Worst Fit - find teh free block with the most left over after fulfilling the allocation request.
+	-Quick Fit - Keep several lists of free blocks of common sizes, allocate from the list that nearest matches the request.
+	
+	-Project
+	void *mymalloc(size){
+		return sbrk(size + sizeof(struct node)) + sizeof(struct node););
+	}
+	
+	free(void * p)
+	{
+		node = p=sizeof(node);
+	}
+	
+	midterm of end of malloc stuff.
+	
+	HELP
+
+3/21/16
+
+Practical C Issues:
+-#include
+	-Copies the contents of the specified file into the current file
+	-<> indicate to look in a known location for includes
+	-"" indicate to look in the current directory or specified path. 
+	-Textual Symbol replacements is done with #define.
+		#define PI 3.1415926535
+		#define MAX 10
+		-NULL is defined as a 0 cast to a void pointer.
+	-preprocessor does the replacement according to the rules of C. (doesn't do it in comments).
+	-Textual replacemeents with parameters.
+	good:
+		#define MAX(a, b) (a > b) ? a : b
+	not so good
+		#define SWAP(a, b) {int t = a; a = b; b = t}
+	?operator
+		-takes 3 operands (only one in c)
+	First operand is and expression evaluated in a boolean context (expr)
+	?
+	The two expressions separated by a colon.
+	first one is what happens if true
+	second is what happens if false
+	
+		(expr) ? trueCaseExpr : falseCaseExpr
+
+	x = (3<5)>7:2;
+	x = 7.
+
+	-End of line terminates macro.
+	-by not being a function you don't have an activation record which saves on time and memory in some cases.
+	-you are putting the body of the function every time the macro is "called".
+		-inline functions.
+	-functions exist because you want to deduplicate code but it also deduplicates in the machine code.
+	-macros don't deduplicate machine code. 
+		-at some time the code growth will cause performance problems. 
+	-you can use a macro on any data type this doesn't work with functions. 
+		-you can only call MAX on something that can be compared by >.
+	-Correct way to define max is MAX(a, b) (((a)>(b))?(a):(b))
+	-this is done so you can actually keep order of operations when using the macro as a function. 
+	-can't have return statement in a macro since you would return out of the outer function.
+	-have to use ?: since it is an if expression you can't have a statement in the function. 
+-#if<condition that can be evaluated by the preprocessor>
+-What does preprocessor know?
+	-values of #defined variables
+	-constants
+	-used for CONDITIONAL COMPILATION
+	-preprocessor will removes stuff if #if condition is zero will never make it to compilation.
+	-nested block comments will mess up
+		-#if can do this.

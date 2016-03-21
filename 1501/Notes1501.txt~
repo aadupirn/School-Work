@@ -485,3 +485,25 @@ Two trees with minimum weight
 		-guaranteed fast
 		-probably fast
 		-Monte Carlo
+
+3/21/16
+
+-Prim's algorithm
+	-O(V^2)
+	-2THETA(V^2) = THETA(V^2)
+-use priority que instead of best edge array.
+-If you have an array that you are using to find the min of something use priority que!
+-when you visit a new node add all of its edges to a pq.
+-eager prim's is indexable pq.
+-lazy prim's is when you don't use an indexable priority que. THETA(ElgE)
+-eager prim's THETA(ElgV)
+	-updates take things in the order of V but you still have to look at every edge.
+-weighted shortest path.
+	-Dijkstra's algorithm.
+	-set a distance value of MAX_INT for all nodes but start.
+	-set cur = start.
+	-whilce destination not visited:
+		-for each univisited neighbor of cur
+			-compute tentative distance from the start to unvisitited through current.
+	-can't have negative edge weights.
+	-for minimum tenative distance array use an array. 
