@@ -738,3 +738,85 @@ Practical C Issues:
 	-preprocessor will removes stuff if #if condition is zero will never make it to compilation.
 	-nested block comments will mess up
 		-#if can do this.
+
+3/23/16
+
+-you can do things to implement code if a version is greater than a number.
+-#if
+-#elif
+-#else
+-#endif
+-#if defined
+	-#if defined
+	-checks to see if a macro has been defined but doesn't care about the falue.
+	-#endif after
+-#undef will undefine a symbol.
+-#if defined = #ifdef
+-#if !defined = #ifndef
+-Uses
+	-handle operating system/architecture specific code.
+	-handle differences in compilers.
+	-build program with different features.
+-you can use this for debug. They won't appear in the preprocessor at all
+-you can compile with -D to define something
+--DVERSION=5;
+--DMACRO
+-you never have to edit code to run in debug mode.
+-#quotes a string
+-## concatenates two strings
+-#pragma
+-#warn
+-#error
+-Defined Constants 
+	__FILE__
+	__LINE__ - Line number I'm At!
+	__DATE__
+	__TIME__
+	__STDC__ -compiler support for C
+	_ -other compiler specific stuff.
+-typedef type-declaration synonym;
+-Typedef helps with structs
+
+typedef struct node {
+	int i;
+	struct node *next;
+} Node;
+
+-useful for function pointers also
+
+-Function pointers as parameters.
+-qsort has three paremters
+	-void * to the base to an array.
+	-size of the array.
+	-size of single element.
+	-function pointer that compares and returns an int.
+		-that function takes 2 parameters that are pointers.
+		-int tells you comparison 
+-You have to write custom comparison function
+
+int compare_ints(const void *a, const void *b)
+{
+	int x = (int*)a;
+	int *x = (int *) b;
+	return *x - *y;
+}
+
+-Multi-file development
+-want to break up a program into multiple files
+	-easier to maintain.
+	-multiple authors.
+	-quick compilation
+	-modularity.
+
+-Static Local Scope
+	-Scope: Local
+	-Lifetime: Global
+-Global Variables are actually limited to the file
+-extern maybe use dto import variables from other files.
+-files are compiled separately
+-put all files in same gcc command.
+
+-gcc a.c b.c
+	./a.out
+-if static in global scope
+	-will make it private to file.

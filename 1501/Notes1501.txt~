@@ -507,3 +507,37 @@ Two trees with minimum weight
 			-compute tentative distance from the start to unvisitited through current.
 	-can't have negative edge weights.
 	-for minimum tenative distance array use an array. 
+	-ElgV
+
+3/23/16
+
+-Back to Minimum Spanning Tree's, Another one
+-Kruskals
+	-insert all edges to PQ
+	-insert until they create a cycle.
+	-elge unless cycle detection takes more than lge
+-Union Find
+-Dynamic connectivity problem
+	-For a given graph G can we determine wheter or not two vertices are connected in G?
+	-can also be viewed as checking subset membership.
+		-connected nodes are viewed as subsets.
+-count keeps track of number of nodes in graph.
+-connected(int p, int q);
+	-return find(p) == find(q);
+-Simple approach
+	-have an id array simply store the component id for each item in the union data structure.
+	-at start each vertex is in its own croup.
+	-for every edge union the two vertices and make their id the same.
+-What if we store our connected components as a forest of trees?
+	-whenever you connect two things you connect thir trees
+	-just check the root of the tree to see what connected component you are a member of.
+	-lg(v) runtime for find.
+	-value in id array can just hold the parent node.
+	-if the value stored at index is the same as the index you are at a root.
+	-every vertex only has one parent.
+-Runtime?
+	-weighted trees will make more balanced trees
+-to improve even more you can shorten trees by making everything in the tree point directly to the root.
+	-in Kruskal's you can just check every time you add an edge and see if it is already connected by using the union find scheme.
+	-as long as you have fewer vertices than edges kruskals is elge.
+
