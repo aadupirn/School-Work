@@ -541,3 +541,120 @@ Two trees with minimum weight
 	-in Kruskal's you can just check every time you add an edge and see if it is already connected by using the union find scheme.
 	-as long as you have fewer vertices than edges kruskals is elge.
 
+-3/30/16
+-Network Flow
+	-maintain a que
+	-visit top of que after each node is visited
+	-once you find an augmenting path
+		-find the edge in the path with the lowest residual capacity.
+		-add flow to the path as much as you can 
+		-start traversal over
+	-can't see edges that are saturated
+	-once you've gotten through the path an dyou don't see t anymore you are done.
+-st cut on g is a set of edges in g that, if removed, will partition the vertices of g in to two sets once with s and one with t.
+-focus on finding minimum st cut.
+	-Max Flow == Min Cut
+-Greatest common divisor.
+	-largest in that evenly divides both a and b.
+-Easiest approach
+	-Brute Force
+		-THETA(min(a,b));
+	-liinear in value of min(a,b);
+	-EXPONENTIAL IN N IF N IS NUMBER OF BITS.
+-Euclids algorithm
+	-GCD(a, b) = GCD(b, a%b)
+	-its linear in bitlength.
+
+-4/4/16
+	-Integer multiplication
+	-hardware mul instruction has 64 bit inputs and so you have to implement your own.
+	-go through each collumn and then figure out the output for each collumn one at a time. (helps with size)
+	-for Speed
+		-try to divide and conquer
+		-break our n-bit integers in half
+	-We'll use a recurrence relation to analyze the recursive runtime.
+	-keep splitting it up until you can fit multiplications into stuff that fits into the hardware.
+	-the master theorem.
+		-LOOK AT SLIDES FOR MASTER THEOREM
+	-Master theorem will be provided we need to know how to use it.
+	-T(n) = aT(n/b) + f(n)
+	-by reducing number of recursive calls you can reduce runtime. 
+	-at 3000 bits the karatsuba algorithm will become practically better.
+
+-Exponentiation
+	-x^y
+		-multiply x y times
+	-Runtime
+	-single loop from 1 to y
+	- n is bitlength of y
+	-increasing n by 1 doubles the number of iterations
+	-THETA(2^n)
+	-THIS IS RIDICULOUSLY BAD.
+	-How do we get better?
+	-divide and conquer
+		-(x^(y/2)^2)
+	-bounded by multiplying huge numbers
+
+-4/6/16
+-Cryptography-enabling secure communication in the presence of third parties
+	-Alice wants to send bob a message without anyone else being able to read it.
+	-people who aren't bob and alice who might be able to see the message are adversaries.
+	-adversary will have access to 
+		-ciphertext
+		-encryption algorithm
+		-Assume enemy knows the system.
+-Early classic encryption scheme
+	-Caesar cipher.
+	-"shift" the alphabet by a set amount.
+	-"key" is the amount shifted.
+	-Easy to crack with brute force.
+-Instead maybe permute the alphabet.
+	-still easy
+	-look for patterns
+	-essentially playing wheel of fortune.
+-What is a good cipher?
+	-one-time pad
+		-list of one-time use keys called a pad
+	-to send a message
+		-take an unused pad
+		-use modular addition to combine key with message
+			-for binary xor
+		-send to recipiend
+	-upon receiving a message
+		-take next pad
+		-reverse process
+		-read result
+	-perfect secrecy.
+	-Once you run out of pads, no more messages can be sent.
+-Symmentric ciphers
+	-users share a single key.
+	-key can be reused.
+-Encryptions/decryptions will be fast
+	-typically linear in size of the input
+-Ciphertext should appear random
+	-best way to recover is a brute force attack on the encryption key.
+	-Alice and bob have to both know the same key.
+	-key can't be the same key that alice uses with others.
+-RSA cryptosystem.
+	-everyone will have 2 keys
+	-public and private key.
+		-public key is two numbers which we will call n and e
+		-private key is a single number we will call d
+	-Alice wants to send a message to bob
+		-Looks up Bob's public key
+		-convert the meesage into an integer: m
+		-Compute the ciphertext c as
+			-c = m^e(modn)
+		-send c to bob
+	-Bob decrypt
+		-m = c^d(modn)
+		-m is original message
+	-n e and d need to be carefully generated.
+	-To generate
+		-choose 2 prime numbers p and q
+			-n = p*q
+			-......... FML
+			-knowing proof is not required for the course.
+			-knowing how to generate RSA keys and encrypt/decrypt IS.
+		-NEXT Why RSA is Secure?
+			

@@ -807,3 +807,78 @@ int compare_ints(const void *a, const void *b)
 	-multiple authors.
 	-quick compilation
 	-modularity.
+
+-Static Local Scope
+	-Scope: Local
+	-Lifetime: Global
+-Global Variables are actually limited to the file
+-extern maybe use dto import variables from other files.
+-files are compiled separately
+-put all files in same gcc command.
+
+-gcc a.c b.c
+	./a.out
+-if static in global scope
+	-will make it private to file.
+
+-3/28/16
+-Header files
+	-usually only contain declarations
+		-types
+		-functions
+		-#define macros
+	-paired with an implementation file. 
+-Driver
+	-#include "mymalloc.h"
+	-can now use those functions
+	-compile all files on command line
+-Makefiles
+	-express what files depend upon others
+	-if any are modified, build smallest set required.
+	-dependency graph
+	-gcc -c output is o file.
+	-uses timestamp to determine when to compile.
+-Operating Systems
+	-manage resources
+	-abstract details.
+-System Call
+	-an operation (function) that an OS provides for running applications to use.
+-Kernel 
+	-The core process of the operating system.
+
+3/30/16
+
+-use control transfer for system call.
+-context switch
+-the act of switching from one process to another.
+	-general purpose registers
+	-program counter
+	-cpu status word
+	-stack pointer
+	-memory management details
+-you can miss output because of buffer.
+-325 different syscall slots. not all are used.
+	-read
+	-write
+	-open
+	-close
+	-create
+-a number can represent a bunch of booleans with each bit being a boolean.
+
+-4/4/16
+
+-operating system might ofer things c standard library does not so you just want to use that.
+-you can also skip a layer by directly referencing them.
+-use c standard library for better portability and to standardize things only use syscalls if you need to.
+-One thing that you need syscalls for is fork()
+-fork
+	-creates a new process identical to the calling one.
+	-return value differs
+		-"child" process return value is 0
+		-"parent" process gets childs process id number
+	-Often used with execv family of functions to launch a new program.
+	-fork creates an identical clone of the running process.
+-believe scheduling is random.
+
+-Device Drivers
+-

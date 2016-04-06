@@ -820,3 +820,144 @@ int compare_ints(const void *a, const void *b)
 	./a.out
 -if static in global scope
 	-will make it private to file.
+
+-3/28/16
+-Header files
+	-usually only contain declarations
+		-types
+		-functions
+		-#define macros
+	-paired with an implementation file. 
+-Driver
+	-#include "mymalloc.h"
+	-can now use those functions
+	-compile all files on command line
+-Makefiles
+	-express what files depend upon others
+	-if any are modified, build smallest set required.
+	-dependency graph
+	-gcc -c output is o file.
+	-uses timestamp to determine when to compile.
+-Operating Systems
+	-manage resources
+	-abstract details.
+-System Call
+	-an operation (function) that an OS provides for running applications to use.
+-Kernel 
+	-The core process of the operating system.
+
+3/30/16
+
+-use control transfer for system call.
+-context switch
+-the act of switching from one process to another.
+	-general purpose registers
+	-program counter
+	-cpu status word
+	-stack pointer
+	-memory management details
+-you can miss output because of buffer.
+-325 different syscall slots. not all are used.
+	-read
+	-write
+	-open
+	-close
+	-create
+-a number can represent a bunch of booleans with each bit being a boolean.
+
+-4/4/16
+
+-operating system might ofer things c standard library does not so you just want to use that.
+-you can also skip a layer by directly referencing them.
+-use c standard library for better portability and to standardize things only use syscalls if you need to.
+-One thing that you need syscalls for is fork()
+-fork
+	-creates a new process identical to the calling one.
+	-return value differs
+		-"child" process return value is 0
+		-"parent" process gets childs process id number
+	-Often used with execv family of functions to launch a new program.
+	-fork creates an identical clone of the running process.
+-believe scheduling is random.
+
+-Device Drivers
+
+-4/6/16
+-Software Layers
+	----------------------------------------------------------------------
+		User-level I/O software and libraries
+	----------------------------------------------------------------------
+		Device-independent OS software
+	----------------------------------------------------------------------
+		Device Drivers
+	----------------------------------------------------------------------
+		Interrupt handlers
+	----------------------------------------------------------------------
+		Hardware
+	----------------------------------------------------------------------
+-Same system call to print to screen and write to disk
+	-to screen uses file descriptor 1 that represents system out.
+-Device drivers now how to talk to the hardware.
+-Hardware talks back.
+	-Tells when its done, needs more data, or when something gos wrong/something needs to be done.
+-How do you get the OS to pay attention if the OS isn't running.
+	-You make an interrupt
+	-Stop what your are doing and switch to the operating system.
+	-Parallel to software interrupt is a hardware interrupt
+	-signal to cpu and does the same thing a software interrupt does just not caused by a syscall its done by a hardware device.
+	-Does same thing: Stop what you are doing look up system call and transfer controll to OS.
+-Job of interrupt handler layer is to pass info up to device driver.
+-Hit keys causes keyboard data to be copied to OS to user program.
+	-Write that to disk you talk to OS which talks to disk driver which talks to the disk controller which talks to the physical hard drive.
+-Do you have to write software for each device uniquely?
+-Devices are not so wierd as to require individual attention.
+-OS looks at devices in three categories.
+	-OS doesn't need to know anything about your specific device just needs to know the kinds of things it can do.
+-Types of devices
+-Block Devices
+	-A device that stores data in fixed-sized blocks each uniquely addressed, and can be randomly accessed.
+		-Disks, flash drives, etc...
+-Character devices,
+	-Device that delivers or accepts a stream of characters.
+		-Keyboard, mouse, terminal, etc...
+	-Character devices stream data.
+		-if you don't capture it it is gone forever
+-None of the Above
+	-Pretty small chategory.
+	-Best example = clock. (doesn't stream data and itsn't indexable)
+-OS manages devices coarsly based on what a device claims to be.
+-Drivers are doers.
+-Drivers should enable the device to do anything possible with the device.
+-Driver shouln't make a decision about the legality of doing anything.
+-Mechanism: what  capabilities to have (algorithm).
+-Policy: How to use a mechanism (parameters).
+-Drivers should only care about mechanisms.
+-Device Drivers in Linux
+	-Can be compiled into the kernel.
+	-Can be loaded dynamically as Modules.
+	-Modules are dynamic loading otherwise is static.
+	-You can extend the OS code with either.
+-/dev (stands for device)
+	-Has a virtual filesystem (fake filesystem, doesn't take up any space on a block device)
+	-everything in linux is a file.
+	-Devices get filenames.
+	-Character and block devices can be exposed via a filesystem.
+	-/dev/ typically contains "files" that represent the different devices on a system.
+	-/dev/console - the console
+	-/dev/fd/- a process's open file descriptors.
+-/proc
+	-virtual filesystem with information about the system and running programs
+	-/proc/cpuinfo-test "file" containing CPU information.
+-Sysfs
+	-exports information about devices and drivers to userspace
+	-can configure aspects of a device
+	-/sys/
+	-qmu 
+-kernel is not linked to C standard library.
+	-kernel does not do all of the thing c standard library does.
+	-You do get a limited subset of C standard library.
+	-printf is not there.
+	-printk
+		-print from kernel.
+		-you're already in the OS
+	-printing in kernel goes to log.
