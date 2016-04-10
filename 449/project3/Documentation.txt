@@ -1,0 +1,12 @@
+//Aadu Pirn
+//aap75
+//Project 3 cs449
+Eveything should work.
+
+If you free the last node in the doubly linked list it will move the brk pointer back so if you free everything you malloced you will not have moved the brk at all.
+
+All tests work as intended.
+
+The getSpace function creates more space if not enough space is currently available.
+
+The findNextFree function checks if there are any chunks with enough space.
