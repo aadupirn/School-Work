@@ -6,9 +6,18 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
 
 void printDice(int roll[]);
 int compfunc (const void * a, const void * b);
+
+int randDie()
+{
+	int f = open("/dev/dice", O_RDONLY);
+	unsigned char c;
+	int test = read(f, &c, 1);
+	return (int)c + 1;
+}
 
 int main()
 {
@@ -46,11 +55,16 @@ A score of more than 63 points in the upper section will result in a ponus 35 po
 		printf("Here is your roll:\n");
 		int roll[5];
 		char rerollString[100];
-		roll[0] = (rand()%6) + 1;
+		/*roll[0] = (rand()%6) + 1;
 		roll[1] = (rand()%6) + 1;
 		roll[2] = (rand()%6) + 1;
 		roll[3] = (rand()%6) + 1;
-		roll[4] = (rand()%6) + 1;
+		roll[4] = (rand()%6) + 1;*/
+		roll[0] = randDie();
+		roll[1] = randDie();
+		roll[2] = randDie();
+		roll[3] = randDie();
+		roll[4] = randDie();
 		rollCount++;
 		while(rollCount < 3)
 		{
@@ -65,7 +79,7 @@ A score of more than 63 points in the upper section will result in a ponus 35 po
 			}
 			int numR;
 			scanf("%d", &numR);
-			
+			rerolls[0] = numR;
 			
 			if(rerolls[0] == 0)
 			{
@@ -80,7 +94,8 @@ A score of more than 63 points in the upper section will result in a ponus 35 po
 			{
 				if(rerolls[i] != -1)
 				{
-					roll[rerolls[i]-1] = (rand()%6) +1;
+					//roll[rerolls[i]-1] = (rand()%6) +1;
+					roll[rerolls[i]-1] = randDie();
 				}
 				else
 				{
