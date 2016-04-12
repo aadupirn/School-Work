@@ -961,3 +961,34 @@ int compare_ints(const void *a, const void *b)
 		-print from kernel.
 		-you're already in the OS
 	-printing in kernel goes to log.
+
+-4/14/16
+-Error Handling
+	-Use goto?
+-Makefiles	
+	-default: include dependecies (target)
+	-targets have dependencies.
+-Signals
+	-Notifications sent to a program by OS
+	-Indicate special events
+	-Allows for asynchronous notification rather that polling
+	-Polling
+		-to explicitly ask if something occurred, usually repeatedly.
+	-Common Error signals
+		-SIGILL - illegal instruction
+		-SIGBUS - Bus Error, usually caused by bad data alignment or a bad address
+		-SIGFPE - Floating Point Exception
+		-SIGSEGV - segmentation violation, i.e., bad address
+	-Default action for a process recieving a signal is the program crashing.
+	-Termination SIgnals
+		-SIGINT - interrupt or what happens when you ctrl+c
+		-SIGTERM - ask nicely for a program to end (can be caught)
+		-SIGKILL - ASK meanly for a program to end (cannot be caught)
+		-SIGABRT, SIGQUIT - end a program with a core dump
+-Kill
+	-kill() is the system call that can send a process a signal (any signal not just SIGKILL)
+
+-Threads	
+-Multiprogramming
+	-uses psuedoparrallelism.
+	-actually one core that is runnign the processes interwoven together.
