@@ -992,3 +992,18 @@ int compare_ints(const void *a, const void *b)
 -Multiprogramming
 	-uses psuedoparrallelism.
 	-actually one core that is runnign the processes interwoven together.
+	
+-4/18/16
+
+-pthread_create()
+-a unique identifier for the Threads
+-Thread attributes or NULL for the default.
+-Race condition
+	-the speed at which you go through a problem matters
+-Synchronization
+	-Scheduling can be random and preemption can happen at any time
+	-need some way to make critical regions "atomic"
+-Mutex
+	-MUTual EXclusion
+	-a mutex is a lock that only one thread can acquire
+	-all other threads attempting to enter the critical region will be blocked.

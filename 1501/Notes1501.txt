@@ -658,3 +658,123 @@ Two trees with minimum weight
 			-knowing how to generate RSA keys and encrypt/decrypt IS.
 		-NEXT Why RSA is Secure?
 			
+4/13/16
+
+-P and NP problems
+	-P - problems that can be solved by a deterministic Turing machine using a polynomial amount of computation time, or polynomial time.
+	-NP - solvable in polynomial time by a nondeterministic Turing machine. A P-problem (whose solution time is bounded by a polynomial) is always also NP.
+-5 options for how these problems intersect.
+	-either P is a subset of NP OR P = NP.
+		-One of the biggest unsolved problems in computer science.
+-intractable = problem is going to require exponential work.
+-If P = NP
+	-most widely-used cryptography would break.
+		-efficient solutions would exist for:
+			-breaking public key cryptography	
+			-breaking AES/destination
+			-Reversing cryptographic hash functions
+	-Efficiency would become a lot better
+-If P!= NP
+	-meh
+		-most on going research assumes this to be the case. 
+-NP-Complete
+	-"hardest" problems in NP
+	-equally hard
+	-So if we find a polynomial time solution to one of them, we clearly have a polynomial time solution for all of them.
+	-How do you show a problem is NP-Complete.
+-Show the problem is in NP
+	-Show that your problem is at least as hard as every other problem in NP
+	-typically done by reducing an existing NP-Complete problem to your problem.
+		-In polynomial time.
+	-Assume we've just come up with the set cover problem.
+		- set of S elements and a collection of s1 .... sm of subsets of S. is there a collection of at most k of these sets whose union equals S?
+		-Is it in NP?
+			-yep
+		-NP-Complete?
+			-Take existing NPC problem
+			-Vertex Cover problem.
+				-Does a vertex cover exist for a graph G that consists of at most k vertices?
+		-Always solve the known NP-Complete problem using your new problem.
+-A timeline of P/NP
+	-1971 - Cook presents the Cook-Levin theorem, which shows that the boolean satisfiability problem is as hard as every problem in NP.
+		-It is NP-Complete, bu this term appears nowhere in paper
+	-1972-Karp presents 21 NP-Complete problems via reduction from boolean satisfiability.
+	-NP-Hard the set of problems at least as hard as NP-Complete. 
+-What if you still need to solve an NP complete problem?
+
+4/18/16
+
+	-in general choose mst rather than nearest neighbor since you have guarantee of some sort of max performance.
+-Greedy algorithms and Dynamic Programming
+-Making change problem.
+	-start with quarter then dime then nickle then penny.
+	-greedy algorithm
+		-each step the algorithm makes the choice that seems best at the moment.
+		-nearest neighbor huristic is one.
+		-huffman tree
+-Nearest neighbor doesn't solve the travelling salesman problem.
+	-does not produce an optmial result
+-Does our change making algorithm solve the change making problem?
+	-yes
+	-the future is not impacted by choosing a quarter.
+-if coin denominations were 1, 3, 4 and you were making 6 cents this would not be optimal.
+-for greedy algorithms to produce optimal results problems must have two properties:
+	-optimal substructure: Optimal solution to a subproblem leads to optimal solution
+	-The greedy choice property: globally optimal solutions can be assembled from locally optimal choices.
+-Finding all subproblems solutions can be inefficient.
+	-for fibinacci sequence don't call identical subproblems multiple times.
+-memoization.
+	-Have array of size n+1;
+	-ass array fills up you can just call on the values in the array instead of computing.
+	-wait you don't need an array.
+	-just the previous and current values.
+-Where can we apply dynamic programming
+	-optimal substructier
+	-overlapping subproblems
+		-naively we would need to recompute the same subproblem multiple times.
+-Subset sum: given a set of nonegative integers S and a value k is there a subset of S that sums to exactly k?
+	-look at notes for recursive code for this problem.
+	-dynamic programming is in slides also.
+-0/1 knapsack problem
+	-knapsack that can hold a certain amount of weight and you want to maximize the amount of weight to carry.
+	-each item has 2 choices
+		-goes in knapsack or it doesnt.
+-Database query optimization
+	-SQL is declarative.
+		-user's don't specify what the database should do to answer their query, just what they want.
+	-Find best blans to join triplets of tables.
+-4/20/16 REVIEW!!!
+
+-GCD
+	GCD(56, 24)
+	24(2) + 8
+	GCD(24, 8)
+	8(3) + 0
+-Union Find
+	-Dynamic connectivity or subset problem.
+	-fastfind(simple) you just update indeces to be the same.
+	-root of the smaller tree should be made a child of the root of the larger tree
+-RSA
+	Find 2 large prime numbers. (p, q).
+	n = p*q.
+	PHI(n) = PHI(p) * PHI(q) = (p-1)*(q-1).
+	pick e such that e is between 1 and PHI(n) and e and PHI(n) are coprime.
+	determine d such that d = e^(-1)mod(PHI(n))
+	
+	-public key = (n, e)
+	-private = (d)
+	
+	given a message:
+	= c = (m^e)mod(n)
+	
+	message = c^(d)mod n
+	
+-Random large prime number
+	-randomly choose large prime number
+	-check if it is not prime or could be prime.
+	
+-Recurrence relation
+	T(n) = aT(n/b) + f(n)
+	b is how much we are dividing our input size by in further operations.
+	aT(x) + f(n) 
+	x is the size of the input that you pass on.
