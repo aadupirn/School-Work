@@ -778,3 +778,9 @@ Two trees with minimum weight
 	b is how much we are dividing our input size by in further operations.
 	aT(x) + f(n) 
 	x is the size of the input that you pass on.
+	friday 2-350 157Benedum
+	
+-Articulation point
+	-point that if removed would disconnect the graph.
+	-DFS traversal on graph.
+	-Assign order we visited in dfs traversal.
