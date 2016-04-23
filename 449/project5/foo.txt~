@@ -1,0 +1,4 @@
+total 20
+-rw-rw-r-- 1 aadu aadu     0 Apr 22 17:12 foo.txt
+-rwxrwxr-x 1 aadu aadu 13317 Apr 22 17:04 myshell
+-rw-rw-r-- 1 aadu aadu  1707 Apr 22 17:04 myshell.c
