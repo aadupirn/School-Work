@@ -60,3 +60,7 @@ flatMap returns sequence of objects not a single object.
 
 reduceByKey(_ + _)
 
+Don't collect by accident!!
+
+1AON.pdb
+
