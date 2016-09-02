@@ -1,0 +1,62 @@
+Scala
+
+Scalable language
+In Java virtual machine
+capable of using external Java libraries.
+
+val a = 1 + 2 + 3
+
+val l = List(1, 2, 3)
+
+l.map(x => x*2)
+
+val m = Map(l-> 2, 2->4)
+
+val m = Map(1->2, 2->4)
+
+m.keys
+
+m.values
+
+can't reassign values to variables (var) you can reassign to val.
+
+Scala data types
+
+	Numbers, Strings "...", Tuples val t = (1, "banana", 2.05), Lists, Maps
+
+you can take tuple values by doing t._1 t._2 t._3
+
+Expressions
+
+	if(condition) expression else expression
+
+for (a<-l) {println(a)}
+
+while has no breaks or continue statements.
+
+val hasUpperCase = name.exists(_.isUpperCase)
+
+
+
+Apache Spark
+
+collection of objects spread across cluster
+highly fault tolerant (read only data)
+iterative algorithms
+all data needs to be converted to RDD
+
+write code in terms of transformations and actions
+
+Transformations: Map, filter, union, etc.
+Action: Reduce, collect, etc
+
+localhost:4040 for ui when running tasks
+
+textFile.flatMap(line => line.split(" "))
+
+flatMap returns sequence of objects not a single object.
+
+.map(word => (word, 1))
+
+reduceByKey(_ + _)
+
