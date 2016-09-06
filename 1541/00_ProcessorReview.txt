@@ -1,0 +1,23 @@
+Reviewed Processor from 447 so far. Hand-written notes for earlier stuff.
+
+-Control
+    takes op code and ALUOp to tell the other components what to do
+    controls multiplexer inputs.
+-What can change after execution?
+    memory
+    registers
+    program counter
+-To display things:
+    Have control register and data register that tells the display to read from the data register and display it.
+
+-Example: Calculate th time to execute an Add instruction assuming negligible delays except: memory (.2ns) ALU and adders (.2ns) register file access (.1ns)
+    Answer: .2ns to read instruction + .1ns to read registers + .2ns for ALU operation + .1ns to write into register. = .6ns
+    (R-type)
+
+    You have to look at all paths that signals go through. You always have to take the longer path since clock speed has to accommodate both paths.
+    In the example the PC path is shorter so you take the length of the other one.
+
+-Example: Similarly, lw instruction time?
+    Answer: .2ns to read instr + .1ns to read registers + .2ns for ALU operation + .2ns to read from data memory + .1ns to write into register = .8ns
+
+-Clock architecture on worst possible propagation. (for above it would be .8ns)

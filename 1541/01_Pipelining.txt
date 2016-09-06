@@ -1,0 +1,50 @@
+-Where is Delay?
+    1. Instruction fetch (IF stage)
+    2. Decode and register read (ID stage)
+    3. ALU (compute) (EX stage)
+    4. Use memory (MEM stage)
+    5. Register write (WB stage)
+
+
+-More efficient if you pipeline things.
+    Right now each instruction has to go through 1-5, Why not have a different instruction at each step at all times.
+    You are processing more things at once
+    The time for each instruction is the same but you can get more done and the wait time will be shorter.
+    Pipelining has much better throughput!
+
+-Downsides to pipelines?
+    delay to move from one stage to the next.
+    if the stages in the pipelining have different run times you will only run as fast as the number of stages * the speed of the slowest speed.
+    Think conveyor belt. Even if faster stages are later on the conveyor is on a set speed.
+
+-To improve pipeline throughput try to make all stages the same length.
+    For example you can split a station into 2 stations
+    depends on bottleneck, a little counterintuitive.
+    downside to splitting is travel time but thats usually not the biggest deal.
+
+-Basic idea of a MIPS pipeline.
+    Need to use buffers.
+
+-Inter-stage buffers
+    result of stage is put in first part of buffer and then on clock ticks the instruction is sent through.
+    PC is pretty much a buffer
+    cycle has to accommodate the slowest of the stages.
+
+-Pipeline Control
+    5 stages: all have control signals.
+    control signals have to be buffered until the stage they are needed.
+    they have to travel with the instruction.
+
+-Some signals have to travel with the instructions and then loop back (for write instructions you have to do this with the write register after the second stage)
+
+-Clocks per instruction will be 1 (CPI)
+    one instruction will finish every cycle when you are pipelining.
+
+-Structural Hazard: One module is being used by two stages.
+    This happens with register reading and writing.
+        This is resolved because it is fast enough to do both.
+
+-Data Hazard: Instruction assumes that an instruction is done when it is still in the pipeline. Assumes data is there that isn't.
+
+-Control Hazard: Branch instruction is found out after other instructions are already pipelined.
+    Unwanted instructions sneak in.
