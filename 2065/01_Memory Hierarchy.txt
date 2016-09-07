@@ -1,0 +1,35 @@
+-Big Data:
+    Volume
+    Velocity (generation)
+    Variety (# of sources)
+    Veracity (quality)
+
+-Scalability - how system performance increases as more resources are added
+
+-L1 Cache 1-2ns
+-L2 Cache 3-5ns
+-L3 Cache 12-20ns
+-DRAM 60-200ns
+-Memory througput (sequential): 25-50 GB/s
+
+-Spatial Locality
+    Referencing items that are stored nearby in memory
+        memory caches load an entire cache line (typically 64 bytes) - accessing arr[i] will likely pull arr[i+1] into the cache
+        file caches load an entire page (typically 4096 bytes) and often prefetch additional pages
+
+-Temporal Locality
+    Referencing the same item over and over again
+        stays in cache, only the first reference is an expensive cache miss to memory/disk (unless there is spatial locality as well)
+
+-thread of execution is the smallest sequence of programmed instructions that can be managed independently by an operating system scheduler.
+
+-process is an instance of a computer program.
+
+-Synchronization only ensures correctness
+
+-Queue
+    Provides one-way communication between many threads/processes (producer-consumer)
+
+-Pipe/Socket
+    Provides two-way communication between two threads/processes
+    These are examples of communication with message passing

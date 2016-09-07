@@ -60,3 +60,10 @@ flatMap returns sequence of objects not a single object.
 
 reduceByKey(_ + _)
 
+Don't collect by accident!!
+
+1AON.pdb
+
+start spark with Scala shell:
+	1. navigate to spark installation folder.
+	2. run ./bin/spark-shell --master local[2] (2 is number of cores)
