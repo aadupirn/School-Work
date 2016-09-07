@@ -1,0 +1,27 @@
+-What makes a hardware description language different than a programming language.
+
+-Shifter in this project is being designed using a flow chart.
+    Has sequential behavior to it. Before you get to each point you need to know what happened first.
+    Could use a huge truth table though.
+
+-VHDL Process Example
+
+    ARCHITECTURE REG4 OF REG4a IS
+    BEGIN
+        CLKD : process(D, CLK, EN, RST)
+        begin
+            if(RST = '1') then
+                Q <= "0000";
+            elseif(CLK'event AND CLK = '0') then
+                if(EN = '1') then
+                    Q <= D;
+                end if;
+            end if;
+        end process CLKD;
+    END REG4;
+
+    SignalName'event is a VHDL keyword that tells you if any signal with this happens assert this.
+    line 15 is saying if CLK changes and its 0 then do things, Looking for Falling Edge!!!
+    Above is a falling edge trigger 4 big register.
+
+-You have to account for sign shift operator. If you shift right you can't just shift in 0's you have to shift in the sign bit.
