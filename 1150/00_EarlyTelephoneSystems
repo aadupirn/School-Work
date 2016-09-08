@@ -2,7 +2,6 @@ So far have handwritten:
 Antenna Parameters
 Polarization
 Matching
-Friis Transmission Equation
 Spectrum
 Allocation
 Band
@@ -10,4 +9,66 @@ Channels
 Geographic Coverage
 
 
--Homework assigned at end of class that will be due next friday.
+-Homework assigned at end of class that will be due next Friday.
+
+-When you analyze antennas always compare to isotropic case.
+
+-Active rf systems have external power source (vs passive).
+
+-Why when you rotate reciever does the power drop off?
+-Antenna Polarization
+    EM waves described as propogating E (electric) and H (magnetic) field vectors.
+    Transfer of energy occurs with E Vector
+    For an EM wave, the bolarization is the plane in which the electric field oscillates.
+
+    In order to maximize the received signal, it is
+    important to match the polarization of the
+    antenna to that of the incoming signal
+
+-Friis transmission equation is a closed form expression for the power recieved.
+    Assume isotropic
+
+    Srx = Ptx * 1/(4pir^2) (W/m^2)
+
+    Factor in Antenna specifics
+
+    Srx = Gtx * Ptx/(4piR^2)
+
+    Using Effective are of the recieving (Rx) antenna
+
+    Prx = Srx * Ae = (Gtx)(Ptx)(Aerx)/(4pir^2)
+
+    What is Ae = G * (lambda^2)/(4piR^2) (m^2)
+
+    Complete expression for the power recieved.
+
+    Prx = Ptx(GtxGrx(lambda^2))/(4pir^2) [W]
+
+-What can we discern from this?
+    Power recieved is proportional to:
+        Power transmitted
+        Gain of both antennas
+        wavelenth^2
+        1/R^2
+
+-Path Loss: the difference between the transmitted and recieved power.
+
+-Example: Satellite TV system radiates 120W of power from a distance of 38000 km from the user's home. The frequency band is centerd around 12.5 GHz and the gains of both antennae are 34 dB how much power is recieved?
+    Gain values in Friis is straight not in DB
+
+    34dB = 10log10(x)
+    x = 2500
+
+    Prx = 2 pW
+
+-Example: A bluetooth mouse requires a signal on the order of 10 nW in order to function properly. The base station transmits 1 mW at 2.4 GHz. The gains of both antennae are 2 dB. How far away can the mouse operate.
+
+    1 nW = 1 mW (2 dB)^2(...)
+
+    r is variable
+
+    r = 5m
+
+    Remember to convert frequencies to wavelengths!
+
+    c = (lambda)f
