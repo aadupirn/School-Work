@@ -1,3 +1,6 @@
+Aadu Pirn
+1541 Homework One
+Collaborated with Jonathan Selling for the first problem.
  1.
     a)
         lw = 20%, sw = 15%
@@ -35,3 +38,50 @@
         105 * 5.1 = 535.5 clocks for 100 instructions
 
         No, it would take more clocks to finish the same instruction set even though your CPI is higher.
+
+2.
+    addi    $s0,    $zero,  96      <- I-type
+        opcode: 8
+        rs: 16
+        rt: 0
+        immediate: 96
+        001000 10000 00000 0000000001100000
+
+    lw      $t2,    180($s2)        <- I-type
+        opcode: 35
+        rs: 19
+        rt: 10
+        immediate: 180
+        100011 10011 01010 0000000000100011
+    sub     $t2,    $s3,    $t1     <- R-type
+        opcode: 0
+        rd: 10
+        rs: 20
+        rt: 9
+        shamt: 0
+        funct: 34
+        000000 10100 01001 01010 00000 100010
+
+    sw      $t2,    180($s2)        <- I-type
+        opcode: 43
+        rs: 19
+        rt: 10
+        immediate: 180
+        101011 10011 01010 0000000000100011
+
+    addi    $s2,    $s2,    -4      <- I-type
+        opcode: 8
+        rs:10
+        rt:10
+        immediate: -4
+        001000 01010 01010 1111111111111100
+
+    bne     $s2,    $zero,  Loop    <- I-type
+        opcode: 5
+        rs: 10
+        rt: 0
+        immediate: -4
+        000101 01010 00000 1111111111111100
+
+3.
+    a) These instructions can be used to call functions. If you jal to a location you will be able to return to the location you jal'ed from with the jr instruction. The jal is the function call and jr is the return statement.
