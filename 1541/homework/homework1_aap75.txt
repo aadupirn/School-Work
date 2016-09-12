@@ -1,1 +1,37 @@
- 
+ 1.
+    a)
+        lw = 20%, sw = 15%
+
+        lw and sw have 2 memory accesses. One of them is for data. The rest only have one memory access not for data.
+
+        (.2 + .15)/(1 + .2 + .15) = 35/135 = 26%
+
+        26% of memory accesses are for data.
+
+        % of write memory access is 1/2 of only the store word memory acess
+
+        15/135 = 11.1% <- write memory accesses.
+        1 - 11.1% = 88.9%
+
+        88.9% of memory accesses are for reading from memory.
+
+    b)
+        2*10^9 clk/sec
+        .5*6 +.35*5 + .1*3 +.05*2 = Avg CPI = 5.15
+        2GHz/5.15 = 388.3 MIPS
+
+    c)
+        .5*5 + .35*5 + .1*3 + .05*2 = 4.65 CPI
+        1.8*10^9/4.65 = 387.1 MIPS < 388.3 MIPS
+
+        No, you would lose over 1,000,000 instructions per second by switching.
+
+    d)
+        .45*6 + .23*5 + .17*5 + .13*3 + .05*2 = 5.1 CPI
+
+        5.15 CPI vs 5.1 CPI plus 5% more instructions
+
+        100 * 5.15 = 515 clocks for 100 instructions
+        105 * 5.1 = 535.5 clocks for 100 instructions
+
+        No, it would take more clocks to finish the same instruction set even though your CPI is higher.
