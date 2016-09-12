@@ -1,0 +1,57 @@
+-Combinational Logic
+    output is a function of the input.
+    output - f(input)
+
+-Sequential Logic
+    Output = f(input, input history)
+    function of input and input history
+
+-Finite State Machine:
+    FSMs are made up of:
+        input symbol alphabet
+        output symbol alphabet
+        set of states(one is a start state)
+        set of transitions
+
+-Implementing FSM in hardware
+    Memory: Flip-flops to store state values.
+    State Logic: Logic network that takes the present state, inputs and produces signals that will drive the circuit to the next staet.
+    Output Logic: Produces Outputs Based on Present State (and possibly inputs)
+        Moore Machine -> Outputs depend on the present state (not inputs)
+        Mealy Machine -> Outputs depend on bot the present state AND inputs.
+    Clock: Synchronous state machines transition on clock edge.
+    Reset: Returns machine to default state.
+
+-Creating FSM's in this class
+    Remember to specify CLOCK
+    Default State
+    Reset State is by default to active low reset.
+    if a transition is not specified then on the next transition it will move.
+    Set priorities if two branches can happen at once.
+    Give the staets meaningful names so that debugging is easy.
+
+-Design Project #2: Checksummer
+    Checksums used to ensure data integrity.
+
+    00000001 00000101 00000000 00000010
+                4 Byte Date Frame
+    Checksum = 00001000
+
+    1+5+0+2 = 8
+
+-Inputs
+    clock: synchronous
+    reset: asynchronous active-high
+    DataIn: 8-bit bus that accepts a new byte on the falling edge of the clock.
+
+-Outputs
+    ChecksumError: asserted for one clock cycle following the data payload if there is a checksum error in the data packet.
+    CheckValid: CheckValid is asserted once the checksum operation for the current packet has been completed and the Checksum is valid.
+
+-Data Frame
+    Sync Character 1    Sync Character 2    length  data payload    checksum
+    8-bits              8bits               8bits   'length'-bytes  8-bits
+
+    Sync Characters: 00110011 11001100
+
+-Think of in 2 components: datapath/hardware, and a FSM that is controlling this.
