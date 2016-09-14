@@ -75,10 +75,3 @@ Geographic Coverage
 
 -Frequency shift Key
     When you want to specify a bit you have to decrease or increase frequency slightly.
-
-- IMTS Improved Mobile Telephone System
-    It was a significant improvment on making a movile practical.
-    You can now directly dial people.
-    Introduced automatic channel selection.
-    Switched to ability to have a full duplex conversation.
-    
