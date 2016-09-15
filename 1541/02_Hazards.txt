@@ -61,4 +61,6 @@
 
 -You need to detect that there is a lw instruction followed by an instruction that uses what you loaded.
 
--2 Mechanisms: Forwarding and Stalling(Inserting no-op)
+-2 Mechanisms: Forwarding (you can do this from different places) and Stalling(Inserting no-op)
+
+-
