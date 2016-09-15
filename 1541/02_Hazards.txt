@@ -63,4 +63,5 @@
 
 -2 Mechanisms: Forwarding (you can do this from different places) and Stalling(Inserting no-op)
 
--
+-Control hazards: Branches make bubbles so you want to check if you have bubbles as early as possible.
+    
