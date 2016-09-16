@@ -9,3 +9,8 @@
 -Predict “TAKEN”
     67% MIPS branches taken on average
     Start fetching from the branch target as soon it is available (useful if target address is computed earlier than the branch condition).
+
+-Store branches you've taken and automatically assume they will be taken in the future.
+
+-Branch Prediction Table.
+    Hash|full address|target
