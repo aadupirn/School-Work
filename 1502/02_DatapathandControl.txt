@@ -1,0 +1,5 @@
+-It is not sufficient to just use an FSM.
+
+-it is common practice to partition design into datapath and control.
+
+-FSM is controller and the hardware is the datapath.

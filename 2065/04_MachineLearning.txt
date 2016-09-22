@@ -1,0 +1,42 @@
+-A1
+    2 data sizes (for laptop and for cluster implementation)
+    in second part of A1, you will write your own K-means clustering algorithm.
+
+-Final Project: Let us know what you are interested e.g. for graph structured problems try GraphX
+    Will be significant effort on our parts.
+
+-Supervised Machine Learning
+
+-Start recording the measurements (clinical variables) and the outcome of interest.
+
+-Supervised Learning
+    input is a d-dimentional vector x
+    output is scalar target variable y
+    data is n training examples (write down matrix form.)
+    find mapping from x to y
+    SL most successful ML method
+
+-If y is continuous it is called a regression
+-We will consider the special case of linear regression.
+
+-Linear Regression and Least Squares
+    Xt y = XtX w
+
+    (XtX)^(-1) Xt y = w
+
+    Xt(XtX)^-1 is called the pseudo-inverse
+
+-Add a beta so it travels through origin.
+
+-We usually think of superised learning in two phases.
+    Training
+        fit a model based on the training data X and y
+
+    Testing phase
+        evaluate the model on new data that was not used in training.
+
+    In machine learning, what we care about is the test error.
+
+-Memorization vs Learning.
+
+-for A1 report the model that has the minimum average validation error.

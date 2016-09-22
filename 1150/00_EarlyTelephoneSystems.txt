@@ -139,7 +139,7 @@ Geographic Coverage
     When you want to specify a bit you have to decrease or increase frequency slightly.
 
 - IMTS Improved Mobile Telephone System
-    It was a significant improvment on making a movile practical.
+    It was a significant improvement on making a mobile practical.
     You can now directly dial people.
     Introduced automatic channel selection.
     Switched to ability to have a full duplex conversation.
@@ -153,29 +153,3 @@ Geographic Coverage
         Took a lot of power. 25W from mobile transmitter and 100W from base.
 
 -You can still decrease power on transmitters in order to split up a region.
-
--Going "Cellular"
-    1947 Bell Laboratories Internal Memo
-    Required some small infrastructure changes but most stuff was in change.
-    Network of small geographical areas (cells)
-    Transmitter in each cell
-    traffic controlled by a central switch
-    Frequencies reused by different cells
-
--Adjacent cells only use channels that aren't used by adjacent cells.
-    Dipole antennas theoretically have circular radiation pattern.
-    The set number of frequencies into which a F is divided is the reuse factor (k).
-    F is the set of frequencies.
-    T is the # of full duplex communication channels.
-    Max # of simultaneous users/cell is T/k
-
--AMPS "1G Wireless"
-    Like IMTS but incorporated cell idea and added ability to hand off conversation.
-    824-849 is for mobile to cell
-    869 -894 for cell to mobile (cell being base stations)
-    30kHz channel width
-        416 full Duplex channel
-        395 for voice
-        21 for signal control.
-
-    If you divide by 7 you have 56 channels per cell

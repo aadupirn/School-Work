@@ -11,7 +11,7 @@
 -Control Hazard: Branch instruction is found out after other instructions are already pipelined.
     Unwanted instructions sneak in.
 
-    Every time you branch K instruction following the branch are in the pipeline. Each branch introduces K bubbles into the pipeline. Hence the aveerage number of clock cycles to execute an instruction is CPI = 1 + a * pi * K
+    Every time you branc h K instruction following the branch are in the pipeline. Each branch introduces K bubbles into the pipeline. Hence the aveerage number of clock cycles to execute an instruction is CPI = 1 + a * pi * K
 
         1 is CPI with no hazard
         a is fraction of branch instructions in the instruction mix
@@ -29,7 +29,7 @@
 
 -Data Hazard: Instruction assumes that an instruction is done when it is still in the pipeline. Assumes data is there that isn't.
     you have to add no ops. You can detect data dependence at compile time.
-    you have to make sure any 2 instructions that depend on each other are separated by 2 instructions.
+    you have to take sure any 2 instructions that depend on each other are separated by 2 instructions.
 
     Forwarding
         send correct data to the instruction.
@@ -64,4 +64,3 @@
 -2 Mechanisms: Forwarding (you can do this from different places) and Stalling(Inserting no-op)
 
 -Control hazards: Branches make bubbles so you want to check if you have bubbles as early as possible.
-    

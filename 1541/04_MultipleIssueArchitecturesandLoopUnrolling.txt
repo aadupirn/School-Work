@@ -1,0 +1,11 @@
+-Static, multiple-issue (superscalar) pipelines
+-Start more than one instruction in the same cycle.
+
+-Expensive stuff in one thing and cheap stuff in a different pipeline.
+
+-2 different paths and then you read 2 instructions at once. PC + 8.
+
+-Having to do forwarding paths in a superscaler is a pain in the ass.
+
+-Loop unrolling
+    5 instructions per iterations to 8 instructions per 2 iterations.
