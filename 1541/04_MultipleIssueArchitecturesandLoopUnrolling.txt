@@ -9,3 +9,7 @@
 
 -Loop unrolling
     5 instructions per iterations to 8 instructions per 2 iterations.
+
+-Handling exceptions:
+    Modern os and debuggers depend on the hardware support for exceptions.
+    Interrupt mechanism allows efficient use of CPU cycles by allowing the CPU to do useful work while waiting for an event.
