@@ -1,0 +1,50 @@
+
+-Going "Cellular"
+    1947 Bell Laboratories Internal Memo
+    Required some small infrastructure changes but most stuff was in change.
+    Network of small geographical areas (cells)
+    Transmitter in each cell
+    traffic controlled by a central switch
+    Frequencies reused by different cells
+
+-Adjacent cells only use channels that aren't used by adjacent cells.
+    Dipole antennas theoretically have circular radiation pattern.
+    The set number of frequencies into which a F is divided is the reuse factor (k).
+    F is the set of frequencies.
+    T is the # of full duplex communication channels.
+    Max # of simultaneous users/cell is T/k
+
+-AMPS "1G Wireless"
+    Like IMTS but incorporated cell idea and added ability to hand off conversation.
+    824-849 is for mobile to cell
+    869 -894 for cell to mobile (cell being base stations)
+    30kHz channel width
+        416 full Duplex channel
+        395 for voice
+        21 for signal control.
+
+    If you divide by 7 you have 56 channels per cell
+
+-Example
+    960 voice channels available to us.
+    area of one cell is 6km^2
+    Coverage area of 2000km^2
+    k=4
+    what is max capacity?
+
+    4*6 = 24
+    2000/24 = 83
+    960/4 = 240
+    83*4*240 = 79,680 channels simultaneously being used in best case.
+
+    if k = 7?
+        46,000 channels
+
+-You have sync bits.
+-Message fields are 40 bits wide repeated 5 times for redundancy.
+
+-Block code
+    28 data bits/463 bits transmitted
+    transmitted at a rate of 10 kbps
+
+    so 605 bps of data transferred.

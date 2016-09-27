@@ -1,0 +1,2 @@
+-Pipelined CPU.
+-5 stage single issue pipeline.

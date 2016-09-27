@@ -1,0 +1,54 @@
+-Remember Mapreduce
+-Map Phase Reduce Phase
+
+-Main limitations of MapReduce
+    -You have to wait for the first phase to finish.
+
+-Goals of Spark
+    Support iterative algorithms (significant reuse of data)
+    interactive analysis (low latency)
+    High erformance
+    fault tolerance
+    programming abstraction
+
+-Resilient Distributed Datasets - A distributed memory abstraction.
+    Programming abstraction
+        read-only set of (key, value) records
+            or a list of values
+        can only be created by
+            loading data
+            transformation of another RDD
+        actions convert RDD to regular files or other output.
+
+    Implementation
+        data is stored in memory (usually)
+            can request to have memory on disk.
+        transformations are lazy - data isn't generated until it is needed in an action.
+        every RDD knows how it was created through its lineage
+        persistent RDDs stay in memory - don't need to be recomputed
+            will spill to disk if necessary
+        every RDD has a partition specifying what nodes the data is stored on
+            not replicated.
+
+-Narrow vs Wide Depencies
+    Narrow dependencies: Each partition of the aren't RDD is used by at most one partition of the child.
+    Wide dependencies: Each partition of the parent RDD is used by potentially more than one partition of the child.
+
+-Partitioning
+    Data partitioned by location
+    Transformation that merge based on key will set new Partitioner (Usually HashPartitioner which is fairly random)
+    Transformation that change the key remove any partitioner
+        map - use mapValues if you are not changing the key
+
+-Use ReduceBy not GroupBy
+
+-Delay Scheduling (Tasks)
+    Spark will attempt to assign a task to the node that has the data.
+    If the node is busy it will wait a bit.
+    If node is still busy it will use other node and move data.
+
+-Fault tolerance.
+    What happens if a node hosting an in-memory partition dies?
+
+-Broadcast Variables
+    Location of RDD data is broadcasted to everyone.

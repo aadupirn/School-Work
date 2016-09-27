@@ -1,0 +1,66 @@
+
+-Structural Hazard: One module is being used by two stages.
+    This happens with register reading and writing.
+        This is resolved because it is fast enough to do both.
+
+    resolve only if it happens.
+
+    if two things want to use the registers then you have to go for 2 cycles.
+    you can separate memory i.e. 2 different memories but you can't do that with registers.
+
+-Control Hazard: Branch instruction is found out after other instructions are already pipelined.
+    Unwanted instructions sneak in.
+
+    Every time you branc h K instruction following the branch are in the pipeline. Each branch introduces K bubbles into the pipeline. Hence the aveerage number of clock cycles to execute an instruction is CPI = 1 + a * pi * K
+
+        1 is CPI with no hazard
+        a is fraction of branch instructions in the instruction mix
+        pi is the probability a branch is actually taken.
+
+        For software solution CPI = 1 + a * K
+
+        If you move back the branch instruction in the stages cycle time might go up.
+
+        Unwanted instructions are turned into bubbles that affect nothing.
+
+-Flushing the pipe after a branch.
+    you can bring the zero checker back using XNOR gates and it will not increase the cycle time of the ID stage too much.
+    You only have to flush one instruction now.
+
+-Data Hazard: Instruction assumes that an instruction is done when it is still in the pipeline. Assumes data is there that isn't.
+    you have to add no ops. You can detect data dependence at compile time.
+    you have to take sure any 2 instructions that depend on each other are separated by 2 instructions.
+
+    Forwarding
+        send correct data to the instruction.
+
+    To solve data hazards you have to send the correct data to the instruction that needs it in the stage that it needs it.
+
+-Buffers are named with the names of the two stages it is between. Ex: IF/ID
+
+-Implementing forwarding is e the same.done with muxes going into the ALU which choose whether you use what you got from the register or what is sent to you from a future stage.
+
+-Since you will have to forward from more than one stage you will have to use a 3 input mux.
+    to choose which mux input you need to use the register that each instruction will use and also you need to check that each the register is being written to.
+
+-MEM/WB buffer
+    instruction in MEM/WB will write into $X
+    instruction in ID/EX did read from $X
+
+-EX/MEM
+    instruction in EX/MEM will write into $X
+    instruction in ID/EX did read from $X
+
+    Both of the above conditions can be satisfied. The second one needs to be followed.
+
+-Sometimes forwarding is not enough. A load word can still cause a hazard if it writes to a register and then the instruction directly after it uses that value you still have to separate by one instruction so you have to bubble once.
+
+-if MemRead == 1 then you have a load word instruction.
+
+-You can turn off the buffer enable so you don't continue the instruction.
+
+-You need to detect that there is a lw instruction followed by an instruction that uses what you loaded.
+
+-2 Mechanisms: Forwarding (you can do this from different places) and Stalling(Inserting no-op)
+
+-Control hazards: Branches make bubbles so you want to check if you have bubbles as early as possible.

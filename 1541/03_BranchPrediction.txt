@@ -1,0 +1,18 @@
+-You have to assume or predict that the branch is not taken.
+    You take corrective action and kill the actions behind.
+
+-Predict “NOT TAKEN”
+    Execute fall-off instructions that follow the branch (at PC+4, PC+8, ...)
+    Squash (or cancel) instructions in pipeline if branch is actually taken
+
+    (PC+4) already computed, so use it to get next instruction
+-Predict “TAKEN”
+    67% MIPS branches taken on average
+    Start fetching from the branch target as soon it is available (useful if target address is computed earlier than the branch condition).
+
+-Store branches you've taken and automatically assume they will be taken in the future.
+
+-Branch Prediction Table.
+    Hash|full address|target
+
+-
