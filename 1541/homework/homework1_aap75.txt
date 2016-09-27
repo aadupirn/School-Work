@@ -1,6 +1,6 @@
 Aadu Pirn
 1541 Homework One
-Collaborated with Jonathan Selling for the first problem.
+Collaborated with Jonathan Selling for some of the work.
  1.
     a)
         lw = 20%, sw = 15%
@@ -85,3 +85,53 @@ Collaborated with Jonathan Selling for the first problem.
 
 3.
     a) These instructions can be used to call functions. If you jal to a location you will be able to return to the location you jal'ed from with the jr instruction. The jal is the function call and jr is the return statement.
+    b) On other sheet
+    c) On other sheet
+
+4. a-d specify the longest path I was able to discern through the design for each instruction.
+    a) r type
+        pc read: 10ps
+        instruction read: 250ps
+        read r: 160ps
+        alu: 150ps
+        write r: 160ps
+        mux: 10x3
+
+        250 + 160 + 150 + 160 + 10 + 30 = 760ps
+
+    b) sw
+        pc read: 10
+        inst read: 250
+        read r: 160
+        alu: 150
+        d-mem: 250
+        2 muxes: 20
+        10+250+160+10+150+250+20 = 840ps
+
+        You don't have to worry about sign extend because it is slower than reading data from the register.
+
+    c) lw
+        pc read: 10
+        inst read: 250
+        read r: 160
+        mux before alu: 10
+        alu: 150
+        d-mem: 250
+        memtoreg mux:10
+        regDst mux: 10
+        10+250+160+10+150+250+10+10 = 850ps
+
+    d) beq
+        pc: 10
+        inst: 250
+        read r: 160
+        alu mux: 10
+        alu: 150
+        mux to choose pc: 10
+        10+250+160+10+150+10 = 590ps
+
+    e)
+        850ps because it has to accomodate the longest instruction (lw) which is 850ps.
+
+    f)
+        The cycle time would be the length of the longest stage plus 20ps for reading and writing to buffers. The stage that takes the longest is the IF stage. The longest path through it uses a mux (10ps), accesses the pc (10ps) and instruction memory(250ps). That adds up to 270ps plus the 20ps for buffering leads to a cycle time of 290ps.

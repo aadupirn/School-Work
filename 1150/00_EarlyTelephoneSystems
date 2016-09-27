@@ -72,3 +72,37 @@ Geographic Coverage
     Remember to convert frequencies to wavelengths!
 
     c = (lambda)f
+
+  -Sharing a band.
+    A bunch of channels on a band.
+    930 - 900 MHz
+      70 kHz channels -> 428 channels.
+  -Simplex channel
+    one way communication 428 transmissions possible.
+  -Duplex channel
+    2-way communications
+    less users.
+    214 users
+
+  -Theoretically you could divide a band into as many channels as you want.
+    -Devices can only detect channels to a certain specificity.
+
+  -Consider a dipole transmitting antenna ta a distance R from the receiver.
+    Say the FCC allocates a band of B Hz . Technology dictates a channel width of C Hz.
+    How many could you cover with Simplex Channels?
+    How many with duplex?
+
+  -Effects of Power?
+    What if power is reduced such that range is reduced to R/2?
+    2 circles each with smaller radius. You can have twice as many users.
+    Reducing power allows for frequency re-use.
+
+  -Originally Time Division Multiple Access
+    1 channel can't have multiple channels and you can't also transfer calls from base station to base station.
+
+  -Basestation grants a request by transmitting a 1.83 kHz (seize)
+
+  -Mobile device has sole control of channel.
+
+  -signal modulation scheme a form of Frequency Shift Keying (FSK)
+    Handshaking protocol.
