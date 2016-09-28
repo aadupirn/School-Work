@@ -1,0 +1,34 @@
+-By time
+    HDD/Flash > DRAM > L2 Cache/SRAM > L1 Cache/SRAM > CPU/Registers
+
+-As you get faster you have less space. More expensive per byte.
+
+-DRAM: built from capacitor. Charged = 1, otherwise = 0.
+    volatile
+    needs to be refreshed periodically
+    reads are destructive
+
+-SRAM cell is built from 6 transistors. faster but larger than DRAM.
+    non-volatile-keeps its value
+    does not need to be refreshed.
+    reads are not destructive.
+
+-Arranging cells in 2-d structure.
+
+-Example:
+    Assume a byte addressable memory that contains 512 bytes
+    Need 9 bits to adress one of the 512 bytes.
+    Bytes are arranged into an array of 64x8 bytes to keep an aspect ration of one.
+    A 9 bit address into a row address (6 bits) and a byte address(3 bits).
+
+-To get data you open a row and then select the byte you need.
+
+-Use banks of data so you need to specify band row and collumn.
+
+-A DIMM consists of 1-4 ranks mounted on a single printed circuit board.
+
+-A Rank consists of multiple parallel chips contributing to the same transaction for example each of of 8 chips can provide a byte for a total of 64 data bits on the channel.
+
+-A bemory chip is organized internally as a number of banks (1-8)
+
+-Multiple banks can execute different commands at the same time.
