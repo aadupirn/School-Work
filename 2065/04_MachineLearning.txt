@@ -40,3 +40,5 @@
 -Memorization vs Learning.
 
 -for A1 report the model that has the minimum average validation error.
+
+-

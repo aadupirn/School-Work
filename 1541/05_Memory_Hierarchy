@@ -32,3 +32,18 @@
 -A bemory chip is organized internally as a number of banks (1-8)
 
 -Multiple banks can execute different commands at the same time.
+
+-Disk Storage:
+
+-HHD hybrid hard drive adds a non volatile cache using NAND flash memory.
+
+-Locality
+    Spacial: nearby items will tend to be referenced soon.
+    Temporal: items that have been referenced will probably be referenced again soon.
+
+-Cache hit is when it is in cache miss is when it is not.
+
+-What is the total number of bits needed for a 4KB cache assuming 32-bit address?
+
+-What about an 8KB cache?
+-20/32 bits * 4KB = space for tag.
