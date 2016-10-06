@@ -1,0 +1,11 @@
+-2nd generation (After amps)
+
+-2G -> Europe -> GSM was TDMA based. Time division multiple access.
+    -> USA -> CDMAone. Code division multiple access.
+
+-T1 speed 1.544 Mbps
+
+-T1 Data frame
+    193 bits in 125 microseconds.
+
+-Pr = PtGtGrLambda^2/

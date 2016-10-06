@@ -37,7 +37,7 @@
 
 -HHD hybrid hard drive adds a non volatile cache using NAND flash memory.
 
--Locality
+-Localitya
     Spacial: nearby items will tend to be referenced soon.
     Temporal: items that have been referenced will probably be referenced again soon.
 
@@ -47,3 +47,14 @@
 
 -What about an 8KB cache?
 -20/32 bits * 4KB = space for tag.
+
+-Direct map
+
+-How to imporve performance - decrease miss ratio, large-blocks = small ratio.
+
+-decreasing miss penalty.
+
+-Effective miss rate is instruction miss rate + data miss rate.
+
+-Calculate CPI considering stalls due to cache misses.
+    example you have to add 40 cycles for every miss (miss penalty = 40)

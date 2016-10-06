@@ -41,4 +41,22 @@
 
 -for A1 report the model that has the minimum average validation error.
 
--
+-Big n and Big d
+    sparse data is prevelant
+    reduce dimenstion or dimensionality reduction with low-rank approximations
+
+-in memory computation (instead of reading from disk)
+    trainData.cache() #minimize disk access
+    for i in range(numIters):
+
+    alpha_i = alpha/(n*np.squt(i+1))
+    gradient = trainData.map(lambda lp: gradientSummand(w, lp)).sum()
+    w -= alpha_i * gradient
+    return w
+
+-Alternating Direction method of Multipliers.
+
+    minimize f(x) + g(z)
+    subject to Ax + Bz = c                  x and z are vectors!
+
+-Rank = # of linearly independent columns.
