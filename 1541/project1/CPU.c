@@ -19,6 +19,7 @@ int main(int argc, char **argv)
     int prediction_method = 0;
     int hazard = 0;
     int prediction_array_size = 64;
+    int branch_hazard = 0;
 
     int prediction_values[prediction_array_size];
     int prediction_pc[prediction_array_size];
@@ -49,16 +50,17 @@ int main(int argc, char **argv)
 
     /*
             This is the buffer array
-            pipeline[0] = IF1/IF2
-            pipeline[1] = IF2/ID
-            pipeline[2] = ID/EX1
-            pipeline[3] = EX1/EX2
-            pipeline[4] = EX2/MEM1
-            pipeline[5] = MEM1/MEM2
-            pipeline[6] = MEM2/WB
+            pipeline[0] = IF1
+            pipeline[1] = IF2
+            pipeline[2] = ID
+            pipeline[3] = EX1
+            pipeline[4] = EX2
+            pipeline[5] = MEM1
+            pipeline[6] = MEM2
+            pipeline[7] = WB
     */
-    struct trace_item *pipeline[7];
-    for(int i = 0; i < 7; i++)
+    struct trace_item *pipeline[8];
+    for(int i = 0; i < 8; i++)
     {
         pipeline[i] = no_op;
     }
@@ -95,32 +97,49 @@ int main(int argc, char **argv)
 
     while(1)
     {
-
-        if()//branch taken and prediction method is 0
+        //you are in branch loop and adding conditions.
+        /*if(branch_hazard != 0)
+        {
+            pipeline[7] = pipeline[6];
+            pipeline[6] = pipeline[5];
+            pipeline[5] = pipeline[4];
+            pipeline[4] = &squashed;
+            branch_hazard--;
+        }
+        //branch taken and prediction method is 0
+        else if()
+        {
+            pipeline[7] = pipeline[6];
+            pipeline[6] = pipeline[5];
+            pipeline[5] = pipeline[4];
+            pipeline[4] = &squashed;
+            branch_hazard = 3;
+        }
+        //branch taken and prediction method is 1+
+        else if()
+        {
+            if()
+        }
+        //branch not taken and prediction method is 1+
+        else if()
         {
 
         }
-        else if()//branch taken and prediction method is 1+
+        //data hazards
+        else if()
         {
 
         }
-        else if()//branch not taken and prediction method is 1+
+        //structural hazards
+        else if()
         {
 
-        }
-        else if()//data hazards
-        {
-
-        }
-        else if()//structural hazards
-        {
-
-        }
+        }*/
         if(hazard = 0)
         {
-            tr_entry = pipeline[6];
+            pipeline[7] = pipeline[6];
             pipeline[6] = pipeline[5];
-            pipeline[5] = pipeline[4]
+            pipeline[5] = pipeline[4];
             pipeline[4] = pipeline[3];
             pipeline[3] = pipeline[2];
             pipeline[2] = pipeline[1];
@@ -143,6 +162,7 @@ int main(int argc, char **argv)
 
         if (trace_view_on) /* print the executed instruction if trace_view_on=1 */
         {
+            tr_entry = pipeline[7]
             t_type = tr_entry->type;
             t_sReg_a = tr_entry->sReg_a;
             t_sReg_b = tr_entry->sReg_b;
