@@ -70,12 +70,6 @@ int main(int argc, char **argv)
         pipeline[i] = &no_op;
     }
 
-    int branch_taken[5];
-    for(int i = 0; i< 5; i++)
-    {
-        branch_taken[i] = 0;
-    }
-
     unsigned char t_type = 0;
     unsigned char t_sReg_a= 0;
     unsigned char t_sReg_b= 0;
@@ -108,6 +102,14 @@ int main(int argc, char **argv)
 
     while(1)
     {
+
+        if(pipeline[1]->type == ti_BRANCH && pipeline[1]->Addr == pipeline[0]->PC && hazard ==0)
+        {
+            pipeline[1]->dReg == 69; //Flag branch for taken
+        }
+
+        hazard = 0;
+
         //you are in branch loop and adding conditions.
         if(branch_hazard != 0)
         {
@@ -119,7 +121,7 @@ int main(int argc, char **argv)
             branch_hazard--;
         }
         //branch taken and prediction method is 0
-        else if(prediction_method == 0 && pipeline[4]->type == ti_BRANCH && branch_taken[4]==1)
+        else if(prediction_method == 0 && pipeline[4]->type == ti_BRANCH && pipeline[4]->dReg == 69)
         {
             pipeline[7] = pipeline[6];
             pipeline[6] = pipeline[5];
@@ -129,7 +131,7 @@ int main(int argc, char **argv)
             branch_hazard = 3;
         }
         //branch taken and prediction method is 1+
-        else if(prediction_method != 0 && pipeline[4]->type == ti_BRANCH && branch_taken[4] == 1)
+        else if(prediction_method != 0 && pipeline[4]->type == ti_BRANCH && pipeline[4]->dReg == 69)
         {
             int pc_hash = ((pipeline[4]->PC)>>4)&(prediction_array_size-1);
             //pc appears in prediction table.
@@ -251,22 +253,6 @@ int main(int argc, char **argv)
             {
                 pipeline[0] = &end_op;
             }
-        }
-        hazard = 0;
-
-        if(pipeline[1]->type == ti_BRANCH && pipeline[1]->Addr == pipeline[0]->PC)
-        {
-            branch_taken[4] = branch_taken[3];
-            branch_taken[3] = branch_taken[2];
-            branch_taken[2] = branch_taken[1];
-            branch_taken[1] = 1;
-        }
-        else
-        {
-            branch_taken[4] = branch_taken[3];
-            branch_taken[3] = branch_taken[2];
-            branch_taken[2] = branch_taken[1];
-            branch_taken[1] = branch_taken[0];
         }
 
         if(pipeline[7]->type == 9)
