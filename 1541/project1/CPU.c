@@ -23,30 +23,35 @@ int main(int argc, char **argv)
 
     int prediction_values[prediction_array_size];
     int prediction_pc[prediction_array_size];
+    for(int i = 0; i < prediction_array_size; i++)
+    {
+        prediction_values[i] = 0;
+        prediction_pc[i] = 2;
+    }
 
     struct trace_item no_op;
-    no_op->type = ti_NOP;
-    no_op->sReg_a = 255;
-    no_op->sReg_b = 255;
-    no_op->dReg = 255;
-    no_op->PC = 0;
-    no_op->Addr = 0;
+    no_op.type = ti_NOP;
+    no_op.sReg_a = 255;
+    no_op.sReg_b = 255;
+    no_op.dReg = 255;
+    no_op.PC = 0;
+    no_op.Addr = 0;
 
     struct trace_item end_op;
-    end_op->type = 9;
-    end_op->sReg_a = 255;
-    end_op->sReg_b = 255;
-    end_op->dReg = 255;
-    end_op->PC = 0;
-    end_op->Addr = 0;
+    end_op.type = 9;
+    end_op.sReg_a = 255;
+    end_op.sReg_b = 255;
+    end_op.dReg = 255;
+    end_op.PC = 0;
+    end_op.Addr = 0;
 
     struct trace_item squashed;
-    squashed->type = 10;
-    squashed->sReg_a = 255;
-    squashed->sReg_b = 255;
-    squashed->dReg = 255;
-    squashed->PC = 0;
-    squashed->Addr = 0;
+    squashed.type = 10;
+    squashed.sReg_a = 255;
+    squashed.sReg_b = 255;
+    squashed.dReg = 255;
+    squashed.PC = 0;
+    squashed.Addr = 0;
 
     /*
             This is the buffer array
@@ -62,7 +67,13 @@ int main(int argc, char **argv)
     struct trace_item *pipeline[8];
     for(int i = 0; i < 8; i++)
     {
-        pipeline[i] = no_op;
+        pipeline[i] = &no_op;
+    }
+
+    int branch_taken[5];
+    for(int i = 0; i< 5; i++)
+    {
+        branch_taken[i] = 0;
     }
 
     unsigned char t_type = 0;
@@ -98,44 +109,135 @@ int main(int argc, char **argv)
     while(1)
     {
         //you are in branch loop and adding conditions.
-        /*if(branch_hazard != 0)
+        if(branch_hazard != 0)
         {
             pipeline[7] = pipeline[6];
             pipeline[6] = pipeline[5];
             pipeline[5] = pipeline[4];
             pipeline[4] = &squashed;
+            hazard = 1;
             branch_hazard--;
         }
         //branch taken and prediction method is 0
-        else if()
+        else if(prediction_method == 0 && pipeline[4]->type == ti_BRANCH && branch_taken[4]==1)
         {
             pipeline[7] = pipeline[6];
             pipeline[6] = pipeline[5];
             pipeline[5] = pipeline[4];
             pipeline[4] = &squashed;
+            hazard = 1;
             branch_hazard = 3;
         }
         //branch taken and prediction method is 1+
-        else if()
+        else if(prediction_method != 0 && pipeline[4]->type == ti_BRANCH && branch_taken[4] == 1)
         {
-            if()
+            int pc_hash = ((pipeline[4]->PC)>>4)&(prediction_array_size-1);
+            //pc appears in prediction table.
+            if(prediction_pc[pc_hash] == pipeline[4]->PC && (prediction_values[pc_hash] == 0 || prediction_values[pc_hash] == 1))
+            {
+                pipeline[7] = pipeline[6];
+                pipeline[6] = pipeline[5];
+                pipeline[5] = pipeline[4];
+                pipeline[4] = &squashed;
+                hazard = 1;
+                branch_hazard = 3;
+            }
+            else //pc not in prediction table
+            {
+                pipeline[7] = pipeline[6];
+                pipeline[6] = pipeline[5];
+                pipeline[5] = pipeline[4];
+                pipeline[4] = &squashed;
+                hazard = 1;
+                branch_hazard = 3;
+                prediction_values[pc_hash] = 0;
+            }
+
+            prediction_pc[pc_hash] = pipeline[4]->PC;
+            if(prediction_method ==1)
+            {
+                prediction_values[pc_hash] = 3;
+            }
+            else
+            {
+                switch(prediction_pc[pc_hash])
+                {
+                    case 0:
+                        prediction_values[pc_hash] = 1;
+                        break;
+                    case 1:
+                    case 2:
+                    case 3:
+                        prediction_values[pc_hash] = 3;
+                        break;
+                }
+            }
         }
         //branch not taken and prediction method is 1+
-        else if()
+        else if(prediction_method != 0 && pipeline[4]->type == ti_BRANCH)
         {
+            int pc_hash = ((pipeline[4]->PC)>>4)&(prediction_array_size-1);
+            //pc appears in prediction table
+            if(prediction_pc[pc_hash] == pipeline[4]->PC && (prediction_values[pc_hash] == 2 || prediction_values[pc_hash] == 3))
+            {
+                pipeline[7] = pipeline[6];
+                pipeline[6] = pipeline[5];
+                pipeline[5] = pipeline[4];
+                pipeline[4] = &squashed;
+                hazard = 1;
+                branch_hazard = 3;
+            }
+            else
+            {
+                prediction_values[pc_hash] = 0;
+            }
 
+            prediction_pc[pc_hash] = pipeline[4]->PC;
+            if(prediction_method ==1)
+            {
+                prediction_values[pc_hash] = 0;
+            }
+            else
+            {
+                switch(prediction_pc[pc_hash])
+                {
+                    case 0:
+                    case 1:
+                    case 2:
+                        prediction_values[pc_hash] = 0;
+                        break;
+                    case 3:
+                        prediction_values[pc_hash] = 1;
+                        break;
+                }
+            }
         }
         //data hazards
-        else if()
+        else if(
+            ((pipeline[3]->dReg == pipeline[2]->sReg_a || pipeline[3]->dReg == pipeline[2]->sReg_b) && pipeline[3]->dReg != 255) ||
+            (pipeline[4]->type == ti_LOAD && (pipeline[4]->dReg == pipeline[2]->sReg_a || pipeline[4]->dReg == pipeline[2]->sReg_b) && pipeline[4]->dReg !=255) ||
+            (pipeline[5]->type == ti_LOAD && (pipeline[5]->dReg == pipeline[2]->sReg_a || pipeline[5]->dReg == pipeline[2]->sReg_b) && pipeline[5]->dReg !=255)
+        )
         {
-
+            pipeline[7] = pipeline[6];
+            pipeline[6] = pipeline[5];
+            pipeline[5] = pipeline[4];
+            pipeline[4] = pipeline[3];
+            pipeline[3] = &no_op;
+            hazard = 1;
         }
         //structural hazards
-        else if()
+        else if((pipeline[7]->dReg == pipeline[2]->sReg_a || pipeline[7]->dReg == pipeline[2]->sReg_b)&&pipeline[7]->dReg!=255)
         {
+            pipeline[7] = pipeline[6];
+            pipeline[6] = pipeline[5];
+            pipeline[5] = pipeline[4];
+            pipeline[4] = pipeline[3];
+            pipeline[3] = &no_op;
+            hazard = 1;
+        }
 
-        }*/
-        if(hazard = 0)
+        if(hazard == 0)
         {
             pipeline[7] = pipeline[6];
             pipeline[6] = pipeline[5];
@@ -150,8 +252,24 @@ int main(int argc, char **argv)
                 pipeline[0] = &end_op;
             }
         }
+        hazard = 0;
 
-        if(tr_entry->type == 9)
+        if(pipeline[1]->type == ti_BRANCH && pipeline[1]->Addr == pipeline[0]->PC)
+        {
+            branch_taken[4] = branch_taken[3];
+            branch_taken[3] = branch_taken[2];
+            branch_taken[2] = branch_taken[1];
+            branch_taken[1] = 1;
+        }
+        else
+        {
+            branch_taken[4] = branch_taken[3];
+            branch_taken[3] = branch_taken[2];
+            branch_taken[2] = branch_taken[1];
+            branch_taken[1] = branch_taken[0];
+        }
+
+        if(pipeline[7]->type == 9)
         {
             printf("+ Simulation terminates at cycle : %u\n", cycle_number);
             break;
@@ -159,10 +277,9 @@ int main(int argc, char **argv)
 
         cycle_number++;
 
-
         if (trace_view_on) /* print the executed instruction if trace_view_on=1 */
         {
-            tr_entry = pipeline[7]
+            tr_entry = pipeline[7];
             t_type = tr_entry->type;
             t_sReg_a = tr_entry->sReg_a;
             t_sReg_b = tr_entry->sReg_b;
@@ -172,7 +289,7 @@ int main(int argc, char **argv)
             switch(tr_entry->type)
             {
                 case ti_NOP:
-                    printf("[cycle %d] NOP:",cycle_number) ;
+                    printf("[cycle %d] NOP:\n",cycle_number) ;
                     break;
                 case ti_RTYPE:
                     printf("[cycle %d] RTYPE:",cycle_number) ;
@@ -206,14 +323,15 @@ int main(int argc, char **argv)
                     printf(" (PC: %x) (sReg_a: %d)(addr: %x)\n", tr_entry->PC, tr_entry->dReg, tr_entry->Addr);
                     break;
                 case 10:
-                    printf("[cycle %d] SQUASHED:",cycle_number);
+                    printf("[cycle %d] SQUASHED:\n",cycle_number);
 
             }
         }
-
-
-        trace_uninit();
-
-        exit(0);
     }
+
+
+    trace_uninit();
+
+    exit(0);
+
 }
