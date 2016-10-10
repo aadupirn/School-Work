@@ -66,224 +66,224 @@
 [cycle 64] ITYPE: (PC: 20e900)(sReg_a: 4)(dReg: 2)(addr: 3)
 [cycle 65] NOP:
 [cycle 66] BRANCH: (PC: 20e904)(sReg_a: 2)(sReg_b: 0)(addr: 20e920)
-[cycle 67] ITYPE: (PC: 20e920)(sReg_a: 255)(dReg: 8)(addr: 7efe)
-[cycle 68] NOP:
-[cycle 69] ITYPE: (PC: 20e924)(sReg_a: 8)(dReg: 8)(addr: feff)
-[cycle 70] ITYPE: (PC: 20e928)(sReg_a: 255)(dReg: 2)(addr: 8)
-[cycle 71] NOP:
-[cycle 72] RTYPE: (PC: 20e92c)(sReg_a: 5)(sReg_b: 2)(dReg: 9) 
-[cycle 73] NOP:
-[cycle 74] ITYPE: (PC: 20e930)(sReg_a: 255)(dReg: 2)(addr: 10)
+[cycle 67] SQUASHED:
+[cycle 68] SQUASHED:
+[cycle 69] SQUASHED:
+[cycle 70] SQUASHED:
+[cycle 71] ITYPE: (PC: 20e920)(sReg_a: 255)(dReg: 8)(addr: 7efe)
+[cycle 72] NOP:
+[cycle 73] ITYPE: (PC: 20e924)(sReg_a: 8)(dReg: 8)(addr: feff)
+[cycle 74] ITYPE: (PC: 20e928)(sReg_a: 255)(dReg: 2)(addr: 8)
 [cycle 75] NOP:
-[cycle 76] RTYPE: (PC: 20e934)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
-[cycle 77] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: ffff00d4)
-[cycle 78] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
-[cycle 79] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
-[cycle 80] NOP:
-[cycle 81] RTYPE: (PC: 20e944)(sReg_a: 6)(sReg_b: 8)(dReg: 3) 
-[cycle 82] NOP:
-[cycle 83] RTYPE: (PC: 20e948)(sReg_a: 0)(sReg_b: 6)(dReg: 2) 
+[cycle 76] RTYPE: (PC: 20e92c)(sReg_a: 5)(sReg_b: 2)(dReg: 9) 
+[cycle 77] NOP:
+[cycle 78] ITYPE: (PC: 20e930)(sReg_a: 255)(dReg: 2)(addr: 10)
+[cycle 79] NOP:
+[cycle 80] RTYPE: (PC: 20e934)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
+[cycle 81] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: ffff00d4)
+[cycle 82] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
+[cycle 83] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
 [cycle 84] NOP:
-[cycle 85] RTYPE: (PC: 20e94c)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 85] RTYPE: (PC: 20e944)(sReg_a: 6)(sReg_b: 8)(dReg: 3) 
 [cycle 86] NOP:
-[cycle 87] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 87] RTYPE: (PC: 20e948)(sReg_a: 0)(sReg_b: 6)(dReg: 2) 
 [cycle 88] NOP:
-[cycle 89] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
-[cycle 90] RTYPE: (PC: 20e958)(sReg_a: 6)(sReg_b: 9)(dReg: 2) 
-[cycle 91] NOP:
-[cycle 92] RTYPE: (PC: 20e95c)(sReg_a: 2)(sReg_b: 8)(dReg: 3) 
-[cycle 93] RTYPE: (PC: 20e960)(sReg_a: 0)(sReg_b: 2)(dReg: 2) 
-[cycle 94] NOP:
+[cycle 89] RTYPE: (PC: 20e94c)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 90] NOP:
+[cycle 91] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 92] NOP:
+[cycle 93] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
+[cycle 94] RTYPE: (PC: 20e958)(sReg_a: 6)(sReg_b: 9)(dReg: 2) 
 [cycle 95] NOP:
-[cycle 96] RTYPE: (PC: 20e964)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
-[cycle 97] NOP:
-[cycle 98] RTYPE: (PC: 20e968)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 96] RTYPE: (PC: 20e95c)(sReg_a: 2)(sReg_b: 8)(dReg: 3) 
+[cycle 97] RTYPE: (PC: 20e960)(sReg_a: 0)(sReg_b: 2)(dReg: 2) 
+[cycle 98] NOP:
 [cycle 99] NOP:
-[cycle 100] BRANCH: (PC: 20e96c)(sReg_a: 3)(sReg_b: 0)(addr: 20e938)
-[cycle 101] LOAD: (PC: 20e970)(sReg_a: 4)(dReg: 3)(addr: 800080c4)
-[cycle 102] ITYPE: (PC: 20e974)(sReg_a: 4)(dReg: 2)(addr: fffffffc)
+[cycle 100] RTYPE: (PC: 20e964)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 101] NOP:
+[cycle 102] RTYPE: (PC: 20e968)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
 [cycle 103] NOP:
-[cycle 104] NOP:
-[cycle 105] BRANCH: (PC: 20e978)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
-[cycle 106] NOP:
-[cycle 107] BRANCH: (PC: 20e97c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
-[cycle 108] LOAD: (PC: 20e980)(sReg_a: 4)(dReg: 3)(addr: 7fff80f2)
-[cycle 109] ITYPE: (PC: 20e984)(sReg_a: 4)(dReg: 2)(addr: fffffffd)
+[cycle 104] BRANCH: (PC: 20e96c)(sReg_a: 3)(sReg_b: 0)(addr: 20e938)
+[cycle 105] LOAD: (PC: 20e970)(sReg_a: 4)(dReg: 3)(addr: 800080c4)
+[cycle 106] ITYPE: (PC: 20e974)(sReg_a: 4)(dReg: 2)(addr: fffffffc)
+[cycle 107] NOP:
+[cycle 108] NOP:
+[cycle 109] BRANCH: (PC: 20e978)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
 [cycle 110] NOP:
-[cycle 111] NOP:
-[cycle 112] BRANCH: (PC: 20e988)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
-[cycle 113] ITYPE: (PC: 20e9c0)(sReg_a: 29)(dReg: 29)(addr: 10)
-[cycle 114] JRTYPE: (PC: 20e9c4) (sReg_a: 255)(addr: 20a9c0)
-[cycle 115] BRANCH: (PC: 20a9c0)(sReg_a: 2)(sReg_b: 0)(addr: 20a9d0)
-[cycle 116] RTYPE: (PC: 20a9c4)(sReg_a: 0)(sReg_b: 2)(dReg: 16) 
-[cycle 117] NOP:
-[cycle 118] ITYPE: (PC: 20a9c8)(sReg_a: 16)(dReg: 4)(addr: 1)
-[cycle 119] JTYPE: (PC: 20a9cc)(addr: 20a9b8)
-[cycle 120] RTYPE: (PC: 20a9b8)(sReg_a: 0)(sReg_b: 17)(dReg: 5) 
-[cycle 121] JTYPE: (PC: 20a9bc)(addr: 20e8f8)
-[cycle 122] ITYPE: (PC: 20e8f8)(sReg_a: 29)(dReg: 29)(addr: fffffff0)
-[cycle 123] ITYPE: (PC: 20e8fc)(sReg_a: 5)(dReg: 5)(addr: ff)
-[cycle 124] ITYPE: (PC: 20e900)(sReg_a: 4)(dReg: 2)(addr: 3)
+[cycle 111] BRANCH: (PC: 20e97c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
+[cycle 112] LOAD: (PC: 20e980)(sReg_a: 4)(dReg: 3)(addr: 7fff80f2)
+[cycle 113] ITYPE: (PC: 20e984)(sReg_a: 4)(dReg: 2)(addr: fffffffd)
+[cycle 114] NOP:
+[cycle 115] NOP:
+[cycle 116] BRANCH: (PC: 20e988)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
+[cycle 117] SQUASHED:
+[cycle 118] SQUASHED:
+[cycle 119] SQUASHED:
+[cycle 120] SQUASHED:
+[cycle 121] ITYPE: (PC: 20e9c0)(sReg_a: 29)(dReg: 29)(addr: 10)
+[cycle 122] JRTYPE: (PC: 20e9c4) (sReg_a: 255)(addr: 20a9c0)
+[cycle 123] BRANCH: (PC: 20a9c0)(sReg_a: 2)(sReg_b: 0)(addr: 20a9d0)
+[cycle 124] RTYPE: (PC: 20a9c4)(sReg_a: 0)(sReg_b: 2)(dReg: 16) 
 [cycle 125] NOP:
-[cycle 126] BRANCH: (PC: 20e904)(sReg_a: 2)(sReg_b: 0)(addr: 20e920)
-[cycle 127] LOAD: (PC: 20e908)(sReg_a: 4)(dReg: 2)(addr: 7fff80c4)
-[cycle 128] NOP:
-[cycle 129] NOP:
-[cycle 130] NOP:
-[cycle 131] BRANCH: (PC: 20e90c)(sReg_a: 2)(sReg_b: 5)(addr: 20e9b4)
-[cycle 132] NOP:
-[cycle 133] BRANCH: (PC: 20e910)(sReg_a: 2)(sReg_b: 0)(addr: 20e9bc)
-[cycle 134] ITYPE: (PC: 20e914)(sReg_a: 4)(dReg: 4)(addr: 1)
-[cycle 135] NOP:
-[cycle 136] ITYPE: (PC: 20e918)(sReg_a: 4)(dReg: 2)(addr: 3)
+[cycle 126] ITYPE: (PC: 20a9c8)(sReg_a: 16)(dReg: 4)(addr: 1)
+[cycle 127] JTYPE: (PC: 20a9cc)(addr: 20a9b8)
+[cycle 128] RTYPE: (PC: 20a9b8)(sReg_a: 0)(sReg_b: 17)(dReg: 5) 
+[cycle 129] JTYPE: (PC: 20a9bc)(addr: 20e8f8)
+[cycle 130] ITYPE: (PC: 20e8f8)(sReg_a: 29)(dReg: 29)(addr: fffffff0)
+[cycle 131] ITYPE: (PC: 20e8fc)(sReg_a: 5)(dReg: 5)(addr: ff)
+[cycle 132] ITYPE: (PC: 20e900)(sReg_a: 4)(dReg: 2)(addr: 3)
+[cycle 133] NOP:
+[cycle 134] BRANCH: (PC: 20e904)(sReg_a: 2)(sReg_b: 0)(addr: 20e920)
+[cycle 135] LOAD: (PC: 20e908)(sReg_a: 4)(dReg: 2)(addr: 7fff80c4)
+[cycle 136] NOP:
 [cycle 137] NOP:
-[cycle 138] BRANCH: (PC: 20e91c)(sReg_a: 2)(sReg_b: 0)(addr: 20e908)
-[cycle 139] NOP:
-[cycle 140] LOAD: (PC: 20e908)(sReg_a: 4)(dReg: 2)(addr: 7fff80c6)
-[cycle 141] NOP:
-[cycle 142] NOP:
+[cycle 138] NOP:
+[cycle 139] BRANCH: (PC: 20e90c)(sReg_a: 2)(sReg_b: 5)(addr: 20e9b4)
+[cycle 140] NOP:
+[cycle 141] BRANCH: (PC: 20e910)(sReg_a: 2)(sReg_b: 0)(addr: 20e9bc)
+[cycle 142] ITYPE: (PC: 20e914)(sReg_a: 4)(dReg: 4)(addr: 1)
 [cycle 143] NOP:
-[cycle 144] BRANCH: (PC: 20e90c)(sReg_a: 2)(sReg_b: 5)(addr: 20e9b4)
+[cycle 144] ITYPE: (PC: 20e918)(sReg_a: 4)(dReg: 2)(addr: 3)
 [cycle 145] NOP:
-[cycle 146] BRANCH: (PC: 20e910)(sReg_a: 2)(sReg_b: 0)(addr: 20e9bc)
-[cycle 147] ITYPE: (PC: 20e914)(sReg_a: 4)(dReg: 4)(addr: 1)
-[cycle 148] NOP:
-[cycle 149] ITYPE: (PC: 20e918)(sReg_a: 4)(dReg: 2)(addr: 3)
-[cycle 150] NOP:
-[cycle 151] BRANCH: (PC: 20e91c)(sReg_a: 2)(sReg_b: 0)(addr: 20e908)
-[cycle 152] ITYPE: (PC: 20e920)(sReg_a: 255)(dReg: 8)(addr: 7efe)
+[cycle 146] BRANCH: (PC: 20e91c)(sReg_a: 2)(sReg_b: 0)(addr: 20e908)
+[cycle 147] SQUASHED:
+[cycle 148] SQUASHED:
+[cycle 149] SQUASHED:
+[cycle 150] SQUASHED:
+[cycle 151] NOP:
+[cycle 152] LOAD: (PC: 20e908)(sReg_a: 4)(dReg: 2)(addr: 7fff80c6)
 [cycle 153] NOP:
-[cycle 154] ITYPE: (PC: 20e924)(sReg_a: 8)(dReg: 8)(addr: feff)
-[cycle 155] ITYPE: (PC: 20e928)(sReg_a: 255)(dReg: 2)(addr: 8)
-[cycle 156] NOP:
-[cycle 157] RTYPE: (PC: 20e92c)(sReg_a: 5)(sReg_b: 2)(dReg: 9) 
-[cycle 158] NOP:
-[cycle 159] ITYPE: (PC: 20e930)(sReg_a: 255)(dReg: 2)(addr: 10)
+[cycle 154] NOP:
+[cycle 155] NOP:
+[cycle 156] BRANCH: (PC: 20e90c)(sReg_a: 2)(sReg_b: 5)(addr: 20e9b4)
+[cycle 157] NOP:
+[cycle 158] BRANCH: (PC: 20e910)(sReg_a: 2)(sReg_b: 0)(addr: 20e9bc)
+[cycle 159] ITYPE: (PC: 20e914)(sReg_a: 4)(dReg: 4)(addr: 1)
 [cycle 160] NOP:
-[cycle 161] RTYPE: (PC: 20e934)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
-[cycle 162] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: e561aff2)
-[cycle 163] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
-[cycle 164] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
+[cycle 161] ITYPE: (PC: 20e918)(sReg_a: 4)(dReg: 2)(addr: 3)
+[cycle 162] NOP:
+[cycle 163] BRANCH: (PC: 20e91c)(sReg_a: 2)(sReg_b: 0)(addr: 20e908)
+[cycle 164] ITYPE: (PC: 20e920)(sReg_a: 255)(dReg: 8)(addr: 7efe)
 [cycle 165] NOP:
-[cycle 166] RTYPE: (PC: 20e944)(sReg_a: 6)(sReg_b: 8)(dReg: 3) 
-[cycle 167] NOP:
-[cycle 168] RTYPE: (PC: 20e948)(sReg_a: 0)(sReg_b: 6)(dReg: 2) 
-[cycle 169] NOP:
-[cycle 170] RTYPE: (PC: 20e94c)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
-[cycle 171] NOP:
-[cycle 172] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
-[cycle 173] NOP:
-[cycle 174] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
-[cycle 175] RTYPE: (PC: 20e958)(sReg_a: 6)(sReg_b: 9)(dReg: 2) 
-[cycle 176] NOP:
-[cycle 177] RTYPE: (PC: 20e95c)(sReg_a: 2)(sReg_b: 8)(dReg: 3) 
-[cycle 178] RTYPE: (PC: 20e960)(sReg_a: 0)(sReg_b: 2)(dReg: 2) 
+[cycle 166] ITYPE: (PC: 20e924)(sReg_a: 8)(dReg: 8)(addr: feff)
+[cycle 167] ITYPE: (PC: 20e928)(sReg_a: 255)(dReg: 2)(addr: 8)
+[cycle 168] NOP:
+[cycle 169] RTYPE: (PC: 20e92c)(sReg_a: 5)(sReg_b: 2)(dReg: 9) 
+[cycle 170] NOP:
+[cycle 171] ITYPE: (PC: 20e930)(sReg_a: 255)(dReg: 2)(addr: 10)
+[cycle 172] NOP:
+[cycle 173] RTYPE: (PC: 20e934)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
+[cycle 174] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: e561aff2)
+[cycle 175] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
+[cycle 176] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
+[cycle 177] NOP:
+[cycle 178] RTYPE: (PC: 20e944)(sReg_a: 6)(sReg_b: 8)(dReg: 3) 
 [cycle 179] NOP:
-[cycle 180] NOP:
-[cycle 181] RTYPE: (PC: 20e964)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
-[cycle 182] NOP:
-[cycle 183] RTYPE: (PC: 20e968)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
-[cycle 184] NOP:
-[cycle 185] BRANCH: (PC: 20e96c)(sReg_a: 3)(sReg_b: 0)(addr: 20e938)
-[cycle 186] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: ed67e436)
-[cycle 187] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
-[cycle 188] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
-[cycle 189] NOP:
-[cycle 190] RTYPE: (PC: 20e944)(sReg_a: 6)(sReg_b: 8)(dReg: 3) 
+[cycle 180] RTYPE: (PC: 20e948)(sReg_a: 0)(sReg_b: 6)(dReg: 2) 
+[cycle 181] NOP:
+[cycle 182] RTYPE: (PC: 20e94c)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 183] NOP:
+[cycle 184] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 185] NOP:
+[cycle 186] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
+[cycle 187] RTYPE: (PC: 20e958)(sReg_a: 6)(sReg_b: 9)(dReg: 2) 
+[cycle 188] NOP:
+[cycle 189] RTYPE: (PC: 20e95c)(sReg_a: 2)(sReg_b: 8)(dReg: 3) 
+[cycle 190] RTYPE: (PC: 20e960)(sReg_a: 0)(sReg_b: 2)(dReg: 2) 
 [cycle 191] NOP:
-[cycle 192] RTYPE: (PC: 20e948)(sReg_a: 0)(sReg_b: 6)(dReg: 2) 
-[cycle 193] NOP:
-[cycle 194] RTYPE: (PC: 20e94c)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
-[cycle 195] NOP:
-[cycle 196] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
-[cycle 197] NOP:
-[cycle 198] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
-[cycle 199] RTYPE: (PC: 20e958)(sReg_a: 6)(sReg_b: 9)(dReg: 2) 
-[cycle 200] NOP:
-[cycle 201] RTYPE: (PC: 20e95c)(sReg_a: 2)(sReg_b: 8)(dReg: 3) 
-[cycle 202] RTYPE: (PC: 20e960)(sReg_a: 0)(sReg_b: 2)(dReg: 2) 
-[cycle 203] NOP:
-[cycle 204] NOP:
-[cycle 205] RTYPE: (PC: 20e964)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
-[cycle 206] NOP:
-[cycle 207] RTYPE: (PC: 20e968)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
-[cycle 208] NOP:
-[cycle 209] BRANCH: (PC: 20e96c)(sReg_a: 3)(sReg_b: 0)(addr: 20e938)
-[cycle 210] LOAD: (PC: 20e970)(sReg_a: 4)(dReg: 3)(addr: ffff80cc)
-[cycle 211] ITYPE: (PC: 20e974)(sReg_a: 4)(dReg: 2)(addr: fffffffc)
-[cycle 212] NOP:
+[cycle 192] NOP:
+[cycle 193] RTYPE: (PC: 20e964)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 194] NOP:
+[cycle 195] RTYPE: (PC: 20e968)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 196] NOP:
+[cycle 197] BRANCH: (PC: 20e96c)(sReg_a: 3)(sReg_b: 0)(addr: 20e938)
+[cycle 198] SQUASHED:
+[cycle 199] SQUASHED:
+[cycle 200] SQUASHED:
+[cycle 201] SQUASHED:
+[cycle 202] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: ed67e436)
+[cycle 203] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
+[cycle 204] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
+[cycle 205] NOP:
+[cycle 206] RTYPE: (PC: 20e944)(sReg_a: 6)(sReg_b: 8)(dReg: 3) 
+[cycle 207] NOP:
+[cycle 208] RTYPE: (PC: 20e948)(sReg_a: 0)(sReg_b: 6)(dReg: 2) 
+[cycle 209] NOP:
+[cycle 210] RTYPE: (PC: 20e94c)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 211] NOP:
+[cycle 212] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
 [cycle 213] NOP:
-[cycle 214] BRANCH: (PC: 20e978)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
-[cycle 215] NOP:
-[cycle 216] BRANCH: (PC: 20e97c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
-[cycle 217] LOAD: (PC: 20e980)(sReg_a: 4)(dReg: 3)(addr: 7fff812d)
-[cycle 218] ITYPE: (PC: 20e984)(sReg_a: 4)(dReg: 2)(addr: fffffffd)
+[cycle 214] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
+[cycle 215] RTYPE: (PC: 20e958)(sReg_a: 6)(sReg_b: 9)(dReg: 2) 
+[cycle 216] NOP:
+[cycle 217] RTYPE: (PC: 20e95c)(sReg_a: 2)(sReg_b: 8)(dReg: 3) 
+[cycle 218] RTYPE: (PC: 20e960)(sReg_a: 0)(sReg_b: 2)(dReg: 2) 
 [cycle 219] NOP:
 [cycle 220] NOP:
-[cycle 221] BRANCH: (PC: 20e988)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
+[cycle 221] RTYPE: (PC: 20e964)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
 [cycle 222] NOP:
-[cycle 223] BRANCH: (PC: 20e98c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
-[cycle 224] LOAD: (PC: 20e990)(sReg_a: 4)(dReg: 3)(addr: 7fff813e)
-[cycle 225] ITYPE: (PC: 20e994)(sReg_a: 4)(dReg: 2)(addr: fffffffe)
-[cycle 226] NOP:
-[cycle 227] NOP:
-[cycle 228] BRANCH: (PC: 20e998)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
+[cycle 223] RTYPE: (PC: 20e968)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 224] NOP:
+[cycle 225] BRANCH: (PC: 20e96c)(sReg_a: 3)(sReg_b: 0)(addr: 20e938)
+[cycle 226] LOAD: (PC: 20e970)(sReg_a: 4)(dReg: 3)(addr: ffff80cc)
+[cycle 227] ITYPE: (PC: 20e974)(sReg_a: 4)(dReg: 2)(addr: fffffffc)
+[cycle 228] NOP:
 [cycle 229] NOP:
-[cycle 230] BRANCH: (PC: 20e99c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
-[cycle 231] LOAD: (PC: 20e9a0)(sReg_a: 4)(dReg: 3)(addr: 7fff8137)
-[cycle 232] ITYPE: (PC: 20e9a4)(sReg_a: 4)(dReg: 2)(addr: ffffffff)
-[cycle 233] NOP:
-[cycle 234] NOP:
-[cycle 235] BRANCH: (PC: 20e9a8)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
-[cycle 236] ITYPE: (PC: 20e9c0)(sReg_a: 29)(dReg: 29)(addr: 10)
-[cycle 237] JRTYPE: (PC: 20e9c4) (sReg_a: 255)(addr: 20a9c0)
-[cycle 238] BRANCH: (PC: 20a9c0)(sReg_a: 2)(sReg_b: 0)(addr: 20a9d0)
-[cycle 239] RTYPE: (PC: 20a9c4)(sReg_a: 0)(sReg_b: 2)(dReg: 16) 
-[cycle 240] NOP:
-[cycle 241] ITYPE: (PC: 20a9c8)(sReg_a: 16)(dReg: 4)(addr: 1)
-[cycle 242] JTYPE: (PC: 20a9cc)(addr: 20a9b8)
-[cycle 243] RTYPE: (PC: 20a9b8)(sReg_a: 0)(sReg_b: 17)(dReg: 5) 
-[cycle 244] JTYPE: (PC: 20a9bc)(addr: 20e8f8)
-[cycle 245] ITYPE: (PC: 20e8f8)(sReg_a: 29)(dReg: 29)(addr: fffffff0)
-[cycle 246] ITYPE: (PC: 20e8fc)(sReg_a: 5)(dReg: 5)(addr: ff)
-[cycle 247] ITYPE: (PC: 20e900)(sReg_a: 4)(dReg: 2)(addr: 3)
-[cycle 248] NOP:
-[cycle 249] BRANCH: (PC: 20e904)(sReg_a: 2)(sReg_b: 0)(addr: 20e920)
-[cycle 250] ITYPE: (PC: 20e920)(sReg_a: 255)(dReg: 8)(addr: 7efe)
-[cycle 251] NOP:
-[cycle 252] ITYPE: (PC: 20e924)(sReg_a: 8)(dReg: 8)(addr: feff)
-[cycle 253] ITYPE: (PC: 20e928)(sReg_a: 255)(dReg: 2)(addr: 8)
-[cycle 254] NOP:
-[cycle 255] RTYPE: (PC: 20e92c)(sReg_a: 5)(sReg_b: 2)(dReg: 9) 
-[cycle 256] NOP:
-[cycle 257] ITYPE: (PC: 20e930)(sReg_a: 255)(dReg: 2)(addr: 10)
-[cycle 258] NOP:
-[cycle 259] RTYPE: (PC: 20e934)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
-[cycle 260] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: af6af32d)
-[cycle 261] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
-[cycle 262] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
-[cycle 263] NOP:
-[cycle 264] RTYPE: (PC: 20e944)(sReg_a: 6)(sReg_b: 8)(dReg: 3) 
-[cycle 265] NOP:
-[cycle 266] RTYPE: (PC: 20e948)(sReg_a: 0)(sReg_b: 6)(dReg: 2) 
-[cycle 267] NOP:
-[cycle 268] RTYPE: (PC: 20e94c)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
-[cycle 269] NOP:
-[cycle 270] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
-[cycle 271] NOP:
-[cycle 272] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
-[cycle 273] RTYPE: (PC: 20e958)(sReg_a: 6)(sReg_b: 9)(dReg: 2) 
-[cycle 274] NOP:
-[cycle 275] RTYPE: (PC: 20e95c)(sReg_a: 2)(sReg_b: 8)(dReg: 3) 
-[cycle 276] RTYPE: (PC: 20e960)(sReg_a: 0)(sReg_b: 2)(dReg: 2) 
-[cycle 277] NOP:
+[cycle 230] BRANCH: (PC: 20e978)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
+[cycle 231] NOP:
+[cycle 232] BRANCH: (PC: 20e97c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
+[cycle 233] LOAD: (PC: 20e980)(sReg_a: 4)(dReg: 3)(addr: 7fff812d)
+[cycle 234] ITYPE: (PC: 20e984)(sReg_a: 4)(dReg: 2)(addr: fffffffd)
+[cycle 235] NOP:
+[cycle 236] NOP:
+[cycle 237] BRANCH: (PC: 20e988)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
+[cycle 238] NOP:
+[cycle 239] BRANCH: (PC: 20e98c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
+[cycle 240] LOAD: (PC: 20e990)(sReg_a: 4)(dReg: 3)(addr: 7fff813e)
+[cycle 241] ITYPE: (PC: 20e994)(sReg_a: 4)(dReg: 2)(addr: fffffffe)
+[cycle 242] NOP:
+[cycle 243] NOP:
+[cycle 244] BRANCH: (PC: 20e998)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
+[cycle 245] NOP:
+[cycle 246] BRANCH: (PC: 20e99c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
+[cycle 247] LOAD: (PC: 20e9a0)(sReg_a: 4)(dReg: 3)(addr: 7fff8137)
+[cycle 248] ITYPE: (PC: 20e9a4)(sReg_a: 4)(dReg: 2)(addr: ffffffff)
+[cycle 249] NOP:
+[cycle 250] NOP:
+[cycle 251] BRANCH: (PC: 20e9a8)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
+[cycle 252] SQUASHED:
+[cycle 253] SQUASHED:
+[cycle 254] SQUASHED:
+[cycle 255] SQUASHED:
+[cycle 256] ITYPE: (PC: 20e9c0)(sReg_a: 29)(dReg: 29)(addr: 10)
+[cycle 257] JRTYPE: (PC: 20e9c4) (sReg_a: 255)(addr: 20a9c0)
+[cycle 258] BRANCH: (PC: 20a9c0)(sReg_a: 2)(sReg_b: 0)(addr: 20a9d0)
+[cycle 259] RTYPE: (PC: 20a9c4)(sReg_a: 0)(sReg_b: 2)(dReg: 16) 
+[cycle 260] NOP:
+[cycle 261] ITYPE: (PC: 20a9c8)(sReg_a: 16)(dReg: 4)(addr: 1)
+[cycle 262] JTYPE: (PC: 20a9cc)(addr: 20a9b8)
+[cycle 263] RTYPE: (PC: 20a9b8)(sReg_a: 0)(sReg_b: 17)(dReg: 5) 
+[cycle 264] JTYPE: (PC: 20a9bc)(addr: 20e8f8)
+[cycle 265] ITYPE: (PC: 20e8f8)(sReg_a: 29)(dReg: 29)(addr: fffffff0)
+[cycle 266] ITYPE: (PC: 20e8fc)(sReg_a: 5)(dReg: 5)(addr: ff)
+[cycle 267] ITYPE: (PC: 20e900)(sReg_a: 4)(dReg: 2)(addr: 3)
+[cycle 268] NOP:
+[cycle 269] BRANCH: (PC: 20e904)(sReg_a: 2)(sReg_b: 0)(addr: 20e920)
+[cycle 270] SQUASHED:
+[cycle 271] SQUASHED:
+[cycle 272] SQUASHED:
+[cycle 273] SQUASHED:
+[cycle 274] ITYPE: (PC: 20e920)(sReg_a: 255)(dReg: 8)(addr: 7efe)
+[cycle 275] NOP:
+[cycle 276] ITYPE: (PC: 20e924)(sReg_a: 8)(dReg: 8)(addr: feff)
+[cycle 277] ITYPE: (PC: 20e928)(sReg_a: 255)(dReg: 2)(addr: 8)
 [cycle 278] NOP:
-[cycle 279] RTYPE: (PC: 20e964)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 279] RTYPE: (PC: 20e92c)(sReg_a: 5)(sReg_b: 2)(dReg: 9) 
 [cycle 280] NOP:
-[cycle 281] RTYPE: (PC: 20e968)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 281] ITYPE: (PC: 20e930)(sReg_a: 255)(dReg: 2)(addr: 10)
 [cycle 282] NOP:
-[cycle 283] BRANCH: (PC: 20e96c)(sReg_a: 3)(sReg_b: 0)(addr: 20e938)
-[cycle 284] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: f068fb37)
+[cycle 283] RTYPE: (PC: 20e934)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
+[cycle 284] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: af6af32d)
 [cycle 285] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
 [cycle 286] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
 [cycle 287] NOP:
@@ -296,1151 +296,1395 @@
 [cycle 294] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
 [cycle 295] NOP:
 [cycle 296] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
-[cycle 297] LOAD: (PC: 20e970)(sReg_a: 4)(dReg: 3)(addr: 7fff81d4)
-[cycle 298] ITYPE: (PC: 20e974)(sReg_a: 4)(dReg: 2)(addr: fffffffc)
-[cycle 299] NOP:
-[cycle 300] NOP:
-[cycle 301] BRANCH: (PC: 20e978)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
+[cycle 297] RTYPE: (PC: 20e958)(sReg_a: 6)(sReg_b: 9)(dReg: 2) 
+[cycle 298] NOP:
+[cycle 299] RTYPE: (PC: 20e95c)(sReg_a: 2)(sReg_b: 8)(dReg: 3) 
+[cycle 300] RTYPE: (PC: 20e960)(sReg_a: 0)(sReg_b: 2)(dReg: 2) 
+[cycle 301] NOP:
 [cycle 302] NOP:
-[cycle 303] BRANCH: (PC: 20e97c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
-[cycle 304] RTYPE: (PC: 20e9bc)(sReg_a: 0)(sReg_b: 0)(dReg: 2) 
-[cycle 305] ITYPE: (PC: 20e9c0)(sReg_a: 29)(dReg: 29)(addr: 10)
-[cycle 306] JRTYPE: (PC: 20e9c4) (sReg_a: 255)(addr: 20a9c0)
-[cycle 307] BRANCH: (PC: 20a9c0)(sReg_a: 2)(sReg_b: 0)(addr: 20a9d0)
+[cycle 303] RTYPE: (PC: 20e964)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 304] NOP:
+[cycle 305] RTYPE: (PC: 20e968)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 306] NOP:
+[cycle 307] BRANCH: (PC: 20e96c)(sReg_a: 3)(sReg_b: 0)(addr: 20e938)
 [cycle 308] SQUASHED:
 [cycle 309] SQUASHED:
 [cycle 310] SQUASHED:
 [cycle 311] SQUASHED:
-[cycle 312] RTYPE: (PC: 20a9d0)(sReg_a: 0)(sReg_b: 16)(dReg: 2) 
-[cycle 313] LOAD: (PC: 20a9d4)(sReg_a: 29)(dReg: 31)(addr: 8040d318)
-[cycle 314] LOAD: (PC: 20a9d8)(sReg_a: 29)(dReg: 17)(addr: 7fff7fc7)
-[cycle 315] LOAD: (PC: 20a9dc)(sReg_a: 29)(dReg: 16)(addr: ffff0063)
-[cycle 316] ITYPE: (PC: 20a9e0)(sReg_a: 29)(dReg: 29)(addr: 20)
-[cycle 317] JRTYPE: (PC: 20a9e4) (sReg_a: 255)(addr: 20cd94)
-[cycle 318] BRANCH: (PC: 20cd94)(sReg_a: 2)(sReg_b: 0)(addr: 20cda0)
-[cycle 319] SQUASHED:
-[cycle 320] SQUASHED:
-[cycle 321] SQUASHED:
-[cycle 322] SQUASHED:
-[cycle 323] ITYPE: (PC: 20cda0)(sReg_a: 2)(dReg: 2)(addr: 1)
-[cycle 324] NOP:
-[cycle 325] STORE: (PC: 20cda4)(sReg_a: 28)(sReg_b: 2)(addr: 10004324)
-[cycle 326] LOAD: (PC: 20cda8)(sReg_a: 29)(dReg: 31)(addr: 80411ae0)
-[cycle 327] LOAD: (PC: 20cdac)(sReg_a: 29)(dReg: 16)(addr: fffeffbc)
-[cycle 328] ITYPE: (PC: 20cdb0)(sReg_a: 29)(dReg: 29)(addr: 18)
-[cycle 329] NOP:
-[cycle 330] JRTYPE: (PC: 20cdb4) (sReg_a: 255)(addr: 20a01c)
-[cycle 331] LOAD: (PC: 20a01c)(sReg_a: 29)(dReg: 31)(addr: 8040c008)
-[cycle 332] ITYPE: (PC: 20a020)(sReg_a: 29)(dReg: 29)(addr: 18)
-[cycle 333] NOP:
+[cycle 312] LOAD: (PC: 20e938)(sReg_a: 4)(dReg: 6)(addr: f068fb37)
+[cycle 313] RTYPE: (PC: 20e93c)(sReg_a: 0)(sReg_b: 8)(dReg: 7) 
+[cycle 314] ITYPE: (PC: 20e940)(sReg_a: 4)(dReg: 4)(addr: 4)
+[cycle 315] NOP:
+[cycle 316] RTYPE: (PC: 20e944)(sReg_a: 6)(sReg_b: 8)(dReg: 3) 
+[cycle 317] NOP:
+[cycle 318] RTYPE: (PC: 20e948)(sReg_a: 0)(sReg_b: 6)(dReg: 2) 
+[cycle 319] NOP:
+[cycle 320] RTYPE: (PC: 20e94c)(sReg_a: 3)(sReg_b: 2)(dReg: 3) 
+[cycle 321] NOP:
+[cycle 322] RTYPE: (PC: 20e950)(sReg_a: 3)(sReg_b: 7)(dReg: 3) 
+[cycle 323] NOP:
+[cycle 324] BRANCH: (PC: 20e954)(sReg_a: 3)(sReg_b: 0)(addr: 20e970)
+[cycle 325] SQUASHED:
+[cycle 326] SQUASHED:
+[cycle 327] SQUASHED:
+[cycle 328] SQUASHED:
+[cycle 329] LOAD: (PC: 20e970)(sReg_a: 4)(dReg: 3)(addr: 7fff81d4)
+[cycle 330] ITYPE: (PC: 20e974)(sReg_a: 4)(dReg: 2)(addr: fffffffc)
+[cycle 331] NOP:
+[cycle 332] NOP:
+[cycle 333] BRANCH: (PC: 20e978)(sReg_a: 3)(sReg_b: 5)(addr: 20e9c0)
 [cycle 334] NOP:
-[cycle 335] JRTYPE: (PC: 20a024) (sReg_a: 255)(addr: 2000d8)
-[cycle 336] STORE: (PC: 2000d8)(sReg_a: 28)(sReg_b: 0)(addr: 10004880)
-[cycle 337] RTYPE: (PC: 2000dc)(sReg_a: 0)(sReg_b: 16)(dReg: 4) 
-[cycle 338] RTYPE: (PC: 2000e0)(sReg_a: 0)(sReg_b: 17)(dReg: 5) 
-[cycle 339] RTYPE: (PC: 2000e4)(sReg_a: 0)(sReg_b: 18)(dReg: 6) 
-[cycle 340] JTYPE: (PC: 2000e8)(addr: 2052c8)
-[cycle 341] ITYPE: (PC: 2052c8)(sReg_a: 29)(dReg: 29)(addr: ffffffd8)
-[cycle 342] NOP:
-[cycle 343] STORE: (PC: 2052cc)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7fd0)
-[cycle 344] RTYPE: (PC: 2052d0)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
-[cycle 345] STORE: (PC: 2052d4)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7fd4)
-[cycle 346] RTYPE: (PC: 2052d8)(sReg_a: 0)(sReg_b: 5)(dReg: 17) 
-[cycle 347] STORE: (PC: 2052dc)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7fe0)
-[cycle 348] STORE: (PC: 2052e0)(sReg_a: 29)(sReg_b: 19)(addr: 7fff7fdc)
-[cycle 349] STORE: (PC: 2052e4)(sReg_a: 29)(sReg_b: 18)(addr: 7fff7fd8)
-[cycle 350] JTYPE: (PC: 2052e8)(addr: 209f6c)
-[cycle 351] LOAD: (PC: 209f6c)(sReg_a: 28)(dReg: 2)(addr: 900040cc)
-[cycle 352] ITYPE: (PC: 209f70)(sReg_a: 29)(dReg: 29)(addr: ffffffe0)
-[cycle 353] NOP:
-[cycle 354] STORE: (PC: 209f74)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7fb8)
-[cycle 355] STORE: (PC: 209f78)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7fb4)
-[cycle 356] STORE: (PC: 209f7c)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7fb0)
-[cycle 357] BRANCH: (PC: 209f80)(sReg_a: 2)(sReg_b: 0)(addr: 209ff8)
-[cycle 358] ITYPE: (PC: 209f84)(sReg_a: 0)(dReg: 2)(addr: 1)
-[cycle 359] NOP:
-[cycle 360] STORE: (PC: 209f88)(sReg_a: 28)(sReg_b: 2)(addr: 10004840)
-[cycle 361] ITYPE: (PC: 209f8c)(sReg_a: 255)(dReg: 4)(addr: 1000)
-[cycle 362] NOP:
-[cycle 363] LOAD: (PC: 209f90)(sReg_a: 4)(dReg: 4)(addr: 20000000)
-[cycle 364] ITYPE: (PC: 209f94)(sReg_a: 0)(dReg: 2)(addr: ffffffff)
+[cycle 335] BRANCH: (PC: 20e97c)(sReg_a: 3)(sReg_b: 0)(addr: 20e9bc)
+[cycle 336] SQUASHED:
+[cycle 337] SQUASHED:
+[cycle 338] SQUASHED:
+[cycle 339] SQUASHED:
+[cycle 340] RTYPE: (PC: 20e9bc)(sReg_a: 0)(sReg_b: 0)(dReg: 2) 
+[cycle 341] ITYPE: (PC: 20e9c0)(sReg_a: 29)(dReg: 29)(addr: 10)
+[cycle 342] JRTYPE: (PC: 20e9c4) (sReg_a: 255)(addr: 20a9c0)
+[cycle 343] BRANCH: (PC: 20a9c0)(sReg_a: 2)(sReg_b: 0)(addr: 20a9d0)
+[cycle 344] SQUASHED:
+[cycle 345] SQUASHED:
+[cycle 346] SQUASHED:
+[cycle 347] SQUASHED:
+[cycle 348] RTYPE: (PC: 20a9d0)(sReg_a: 0)(sReg_b: 16)(dReg: 2) 
+[cycle 349] LOAD: (PC: 20a9d4)(sReg_a: 29)(dReg: 31)(addr: 8040d318)
+[cycle 350] LOAD: (PC: 20a9d8)(sReg_a: 29)(dReg: 17)(addr: 7fff7fc7)
+[cycle 351] LOAD: (PC: 20a9dc)(sReg_a: 29)(dReg: 16)(addr: ffff0063)
+[cycle 352] ITYPE: (PC: 20a9e0)(sReg_a: 29)(dReg: 29)(addr: 20)
+[cycle 353] JRTYPE: (PC: 20a9e4) (sReg_a: 255)(addr: 20cd94)
+[cycle 354] BRANCH: (PC: 20cd94)(sReg_a: 2)(sReg_b: 0)(addr: 20cda0)
+[cycle 355] SQUASHED:
+[cycle 356] SQUASHED:
+[cycle 357] SQUASHED:
+[cycle 358] SQUASHED:
+[cycle 359] ITYPE: (PC: 20cda0)(sReg_a: 2)(dReg: 2)(addr: 1)
+[cycle 360] NOP:
+[cycle 361] STORE: (PC: 20cda4)(sReg_a: 28)(sReg_b: 2)(addr: 10004324)
+[cycle 362] LOAD: (PC: 20cda8)(sReg_a: 29)(dReg: 31)(addr: 80411ae0)
+[cycle 363] LOAD: (PC: 20cdac)(sReg_a: 29)(dReg: 16)(addr: fffeffbc)
+[cycle 364] ITYPE: (PC: 20cdb0)(sReg_a: 29)(dReg: 29)(addr: 18)
 [cycle 365] NOP:
-[cycle 366] NOP:
-[cycle 367] BRANCH: (PC: 209f98)(sReg_a: 4)(sReg_b: 2)(addr: 209fc0)
-[cycle 368] NOP:
-[cycle 369] RTYPE: (PC: 209fc0)(sReg_a: 0)(sReg_b: 4)(dReg: 17) 
+[cycle 366] JRTYPE: (PC: 20cdb4) (sReg_a: 255)(addr: 20a01c)
+[cycle 367] LOAD: (PC: 20a01c)(sReg_a: 29)(dReg: 31)(addr: 8040c008)
+[cycle 368] ITYPE: (PC: 20a020)(sReg_a: 29)(dReg: 29)(addr: 18)
+[cycle 369] NOP:
 [cycle 370] NOP:
-[cycle 371] BRANCH: (PC: 209fc4)(sReg_a: 17)(sReg_b: 0)(addr: 209fec)
-[cycle 372] ITYPE: (PC: 209fec)(sReg_a: 255)(dReg: 4)(addr: 41)
-[cycle 373] NOP:
-[cycle 374] ITYPE: (PC: 209ff0)(sReg_a: 4)(dReg: 4)(addr: 3d30)
-[cycle 375] JTYPE: (PC: 209ff4)(addr: 20cc68)
-[cycle 376] ITYPE: (PC: 20cc68)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
-[cycle 377] NOP:
-[cycle 378] STORE: (PC: 20cc6c)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7f98)
-[cycle 379] NOP:
-[cycle 380] RTYPE: (PC: 20cc70)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
-[cycle 381] NOP:
-[cycle 382] STORE: (PC: 20cc74)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7f9c)
-[cycle 383] JTYPE: (PC: 20cc78)(addr: 20ccac)
-[cycle 384] LOAD: (PC: 20ccac)(sReg_a: 28)(dReg: 7)(addr: 9101c100)
-[cycle 385] ITYPE: (PC: 20ccb0)(sReg_a: 29)(dReg: 29)(addr: ffffffe0)
-[cycle 386] NOP:
-[cycle 387] STORE: (PC: 20ccb4)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7f80)
-[cycle 388] BRANCH: (PC: 20ccb8)(sReg_a: 7)(sReg_b: 0)(addr: 20cd08)
+[cycle 371] JRTYPE: (PC: 20a024) (sReg_a: 255)(addr: 2000d8)
+[cycle 372] STORE: (PC: 2000d8)(sReg_a: 28)(sReg_b: 0)(addr: 10004880)
+[cycle 373] RTYPE: (PC: 2000dc)(sReg_a: 0)(sReg_b: 16)(dReg: 4) 
+[cycle 374] RTYPE: (PC: 2000e0)(sReg_a: 0)(sReg_b: 17)(dReg: 5) 
+[cycle 375] RTYPE: (PC: 2000e4)(sReg_a: 0)(sReg_b: 18)(dReg: 6) 
+[cycle 376] JTYPE: (PC: 2000e8)(addr: 2052c8)
+[cycle 377] ITYPE: (PC: 2052c8)(sReg_a: 29)(dReg: 29)(addr: ffffffd8)
+[cycle 378] NOP:
+[cycle 379] STORE: (PC: 2052cc)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7fd0)
+[cycle 380] RTYPE: (PC: 2052d0)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
+[cycle 381] STORE: (PC: 2052d4)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7fd4)
+[cycle 382] RTYPE: (PC: 2052d8)(sReg_a: 0)(sReg_b: 5)(dReg: 17) 
+[cycle 383] STORE: (PC: 2052dc)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7fe0)
+[cycle 384] STORE: (PC: 2052e0)(sReg_a: 29)(sReg_b: 19)(addr: 7fff7fdc)
+[cycle 385] STORE: (PC: 2052e4)(sReg_a: 29)(sReg_b: 18)(addr: 7fff7fd8)
+[cycle 386] JTYPE: (PC: 2052e8)(addr: 209f6c)
+[cycle 387] LOAD: (PC: 209f6c)(sReg_a: 28)(dReg: 2)(addr: 900040cc)
+[cycle 388] ITYPE: (PC: 209f70)(sReg_a: 29)(dReg: 29)(addr: ffffffe0)
 [cycle 389] NOP:
-[cycle 390] LOAD: (PC: 20ccbc)(sReg_a: 7)(dReg: 2)(addr: 100034cf)
-[cycle 391] RTYPE: (PC: 20ccc0)(sReg_a: 0)(sReg_b: 0)(dReg: 4) 
-[cycle 392] NOP:
-[cycle 393] NOP:
-[cycle 394] BRANCH: (PC: 20ccc4)(sReg_a: 2)(sReg_b: 0)(addr: 20ccf4)
-[cycle 395] LOAD: (PC: 20ccf4)(sReg_a: 7)(dReg: 3)(addr: 100034d0)
-[cycle 396] NOP:
-[cycle 397] NOP:
+[cycle 390] STORE: (PC: 209f74)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7fb8)
+[cycle 391] STORE: (PC: 209f78)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7fb4)
+[cycle 392] STORE: (PC: 209f7c)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7fb0)
+[cycle 393] BRANCH: (PC: 209f80)(sReg_a: 2)(sReg_b: 0)(addr: 209ff8)
+[cycle 394] ITYPE: (PC: 209f84)(sReg_a: 0)(dReg: 2)(addr: 1)
+[cycle 395] NOP:
+[cycle 396] STORE: (PC: 209f88)(sReg_a: 28)(sReg_b: 2)(addr: 10004840)
+[cycle 397] ITYPE: (PC: 209f8c)(sReg_a: 255)(dReg: 4)(addr: 1000)
 [cycle 398] NOP:
-[cycle 399] ITYPE: (PC: 20ccf8)(sReg_a: 3)(dReg: 2)(addr: 20)
-[cycle 400] NOP:
-[cycle 401] BRANCH: (PC: 20ccfc)(sReg_a: 2)(sReg_b: 0)(addr: 20cd40)
-[cycle 402] ITYPE: (PC: 20cd40)(sReg_a: 3)(dReg: 2)(addr: 1)
-[cycle 403] NOP:
-[cycle 404] NOP:
-[cycle 405] STORE: (PC: 20cd44)(sReg_a: 7)(sReg_b: 2)(addr: 100034d4)
-[cycle 406] ITYPE: (PC: 20cd48)(sReg_a: 255)(dReg: 2)(addr: 1)
-[cycle 407] NOP:
-[cycle 408] RTYPE: (PC: 20cd4c)(sReg_a: 2)(sReg_b: 3)(dReg: 2) 
-[cycle 409] NOP:
-[cycle 410] ITYPE: (PC: 20cd50)(sReg_a: 255)(dReg: 2)(addr: 2)
-[cycle 411] NOP:
-[cycle 412] ITYPE: (PC: 20cd54)(sReg_a: 2)(dReg: 2)(addr: 8)
-[cycle 413] NOP:
-[cycle 414] RTYPE: (PC: 20cd58)(sReg_a: 7)(sReg_b: 2)(dReg: 2) 
-[cycle 415] JTYPE: (PC: 20cd5c)(addr: 20cd64)
-[cycle 416] LOAD: (PC: 20cd64)(sReg_a: 29)(dReg: 31)(addr: 80411860)
-[cycle 417] ITYPE: (PC: 20cd68)(sReg_a: 29)(dReg: 29)(addr: 20)
-[cycle 418] NOP:
-[cycle 419] NOP:
-[cycle 420] JRTYPE: (PC: 20cd6c) (sReg_a: 255)(addr: 20cc7c)
-[cycle 421] RTYPE: (PC: 20cc7c)(sReg_a: 0)(sReg_b: 2)(dReg: 4) 
-[cycle 422] NOP:
-[cycle 423] BRANCH: (PC: 20cc80)(sReg_a: 4)(sReg_b: 0)(addr: 20cc98)
-[cycle 424] RTYPE: (PC: 20cc84)(sReg_a: 0)(sReg_b: 0)(dReg: 2) 
-[cycle 425] ITYPE: (PC: 20cc88)(sReg_a: 0)(dReg: 3)(addr: 2)
-[cycle 426] NOP:
-[cycle 427] STORE: (PC: 20cc8c)(sReg_a: 4)(sReg_b: 3)(addr: 100034d8)
-[cycle 428] STORE: (PC: 20cc90)(sReg_a: 4)(sReg_b: 16)(addr: 100034dc)
-[cycle 429] JTYPE: (PC: 20cc94)(addr: 20cc9c)
-[cycle 430] LOAD: (PC: 20cc9c)(sReg_a: 29)(dReg: 31)(addr: 80411880)
-[cycle 431] LOAD: (PC: 20cca0)(sReg_a: 29)(dReg: 16)(addr: 8040bcb8)
-[cycle 432] ITYPE: (PC: 20cca4)(sReg_a: 29)(dReg: 29)(addr: 18)
+[cycle 399] LOAD: (PC: 209f90)(sReg_a: 4)(dReg: 4)(addr: 20000000)
+[cycle 400] ITYPE: (PC: 209f94)(sReg_a: 0)(dReg: 2)(addr: ffffffff)
+[cycle 401] NOP:
+[cycle 402] NOP:
+[cycle 403] BRANCH: (PC: 209f98)(sReg_a: 4)(sReg_b: 2)(addr: 209fc0)
+[cycle 404] SQUASHED:
+[cycle 405] SQUASHED:
+[cycle 406] SQUASHED:
+[cycle 407] SQUASHED:
+[cycle 408] NOP:
+[cycle 409] RTYPE: (PC: 209fc0)(sReg_a: 0)(sReg_b: 4)(dReg: 17) 
+[cycle 410] NOP:
+[cycle 411] BRANCH: (PC: 209fc4)(sReg_a: 17)(sReg_b: 0)(addr: 209fec)
+[cycle 412] SQUASHED:
+[cycle 413] SQUASHED:
+[cycle 414] SQUASHED:
+[cycle 415] SQUASHED:
+[cycle 416] ITYPE: (PC: 209fec)(sReg_a: 255)(dReg: 4)(addr: 41)
+[cycle 417] NOP:
+[cycle 418] ITYPE: (PC: 209ff0)(sReg_a: 4)(dReg: 4)(addr: 3d30)
+[cycle 419] JTYPE: (PC: 209ff4)(addr: 20cc68)
+[cycle 420] ITYPE: (PC: 20cc68)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
+[cycle 421] NOP:
+[cycle 422] STORE: (PC: 20cc6c)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7f98)
+[cycle 423] NOP:
+[cycle 424] RTYPE: (PC: 20cc70)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
+[cycle 425] NOP:
+[cycle 426] STORE: (PC: 20cc74)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7f9c)
+[cycle 427] JTYPE: (PC: 20cc78)(addr: 20ccac)
+[cycle 428] LOAD: (PC: 20ccac)(sReg_a: 28)(dReg: 7)(addr: 9101c100)
+[cycle 429] ITYPE: (PC: 20ccb0)(sReg_a: 29)(dReg: 29)(addr: ffffffe0)
+[cycle 430] NOP:
+[cycle 431] STORE: (PC: 20ccb4)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7f80)
+[cycle 432] BRANCH: (PC: 20ccb8)(sReg_a: 7)(sReg_b: 0)(addr: 20cd08)
 [cycle 433] NOP:
-[cycle 434] JRTYPE: (PC: 20cca8) (sReg_a: 255)(addr: 209ff8)
-[cycle 435] LOAD: (PC: 209ff8)(sReg_a: 29)(dReg: 31)(addr: 8040bf90)
-[cycle 436] LOAD: (PC: 209ffc)(sReg_a: 29)(dReg: 17)(addr: 7fff7fa0)
+[cycle 434] LOAD: (PC: 20ccbc)(sReg_a: 7)(dReg: 2)(addr: 100034cf)
+[cycle 435] RTYPE: (PC: 20ccc0)(sReg_a: 0)(sReg_b: 0)(dReg: 4) 
+[cycle 436] NOP:
 [cycle 437] NOP:
-[cycle 438] LOAD: (PC: 20a000)(sReg_a: 29)(dReg: 16)(addr: 7fff7fa3)
-[cycle 439] ITYPE: (PC: 20a004)(sReg_a: 29)(dReg: 29)(addr: 20)
-[cycle 440] NOP:
-[cycle 441] JRTYPE: (PC: 20a008) (sReg_a: 255)(addr: 2052ec)
-[cycle 442] ITYPE: (PC: 2052ec)(sReg_a: 0)(dReg: 18)(addr: 40)
-[cycle 443] ITYPE: (PC: 2052f0)(sReg_a: 255)(dReg: 19)(addr: 1000)
+[cycle 438] BRANCH: (PC: 20ccc4)(sReg_a: 2)(sReg_b: 0)(addr: 20ccf4)
+[cycle 439] SQUASHED:
+[cycle 440] SQUASHED:
+[cycle 441] SQUASHED:
+[cycle 442] SQUASHED:
+[cycle 443] LOAD: (PC: 20ccf4)(sReg_a: 7)(dReg: 3)(addr: 100034d0)
 [cycle 444] NOP:
-[cycle 445] ITYPE: (PC: 2052f4)(sReg_a: 19)(dReg: 19)(addr: e1c)
-[cycle 446] ITYPE: (PC: 2052f8)(sReg_a: 0)(dReg: 2)(addr: a)
-[cycle 447] NOP:
-[cycle 448] STORE: (PC: 2052fc)(sReg_a: 28)(sReg_b: 2)(addr: 10004910)
-[cycle 449] ITYPE: (PC: 205300)(sReg_a: 16)(dReg: 2)(addr: 2)
-[cycle 450] NOP:
-[cycle 451] NOP:
-[cycle 452] BRANCH: (PC: 205304)(sReg_a: 2)(sReg_b: 0)(addr: 20530c)
-[cycle 453] LOAD: (PC: 205308)(sReg_a: 17)(dReg: 19)(addr: 8fff8e20)
-[cycle 454] ITYPE: (PC: 20530c)(sReg_a: 16)(dReg: 2)(addr: 3)
+[cycle 445] NOP:
+[cycle 446] NOP:
+[cycle 447] ITYPE: (PC: 20ccf8)(sReg_a: 3)(dReg: 2)(addr: 20)
+[cycle 448] NOP:
+[cycle 449] BRANCH: (PC: 20ccfc)(sReg_a: 2)(sReg_b: 0)(addr: 20cd40)
+[cycle 450] SQUASHED:
+[cycle 451] SQUASHED:
+[cycle 452] SQUASHED:
+[cycle 453] SQUASHED:
+[cycle 454] ITYPE: (PC: 20cd40)(sReg_a: 3)(dReg: 2)(addr: 1)
 [cycle 455] NOP:
-[cycle 456] BRANCH: (PC: 205310)(sReg_a: 2)(sReg_b: 0)(addr: 205328)
-[cycle 457] LOAD: (PC: 205314)(sReg_a: 17)(dReg: 4)(addr: 8fffb4dc)
-[cycle 458] RTYPE: (PC: 205318)(sReg_a: 0)(sReg_b: 0)(dReg: 5) 
-[cycle 459] ITYPE: (PC: 20531c)(sReg_a: 0)(dReg: 6)(addr: a)
-[cycle 460] JTYPE: (PC: 205320)(addr: 20bb38)
-[cycle 461] BRANCH: (PC: 20bb38)(sReg_a: 6)(sReg_b: 255)(addr: 20bb4c)
-[cycle 462] ITYPE: (PC: 20bb3c)(sReg_a: 0)(dReg: 2)(addr: 1)
-[cycle 463] NOP:
+[cycle 456] STORE: (PC: 20cd44)(sReg_a: 7)(sReg_b: 2)(addr: 100034d4)
+[cycle 457] ITYPE: (PC: 20cd48)(sReg_a: 255)(dReg: 2)(addr: 1)
+[cycle 458] NOP:
+[cycle 459] NOP:
+[cycle 460] RTYPE: (PC: 20cd4c)(sReg_a: 2)(sReg_b: 3)(dReg: 2) 
+[cycle 461] NOP:
+[cycle 462] NOP:
+[cycle 463] ITYPE: (PC: 20cd50)(sReg_a: 255)(dReg: 2)(addr: 2)
 [cycle 464] NOP:
-[cycle 465] BRANCH: (PC: 20bb40)(sReg_a: 6)(sReg_b: 2)(addr: 20bb4c)
-[cycle 466] ITYPE: (PC: 20bb44)(sReg_a: 6)(dReg: 2)(addr: 25)
+[cycle 465] NOP:
+[cycle 466] ITYPE: (PC: 20cd54)(sReg_a: 2)(dReg: 2)(addr: 8)
 [cycle 467] NOP:
-[cycle 468] BRANCH: (PC: 20bb48)(sReg_a: 2)(sReg_b: 0)(addr: 20bb50)
-[cycle 469] LOAD: (PC: 20bb50)(sReg_a: 4)(dReg: 2)(addr: 7fff80eb)
-[cycle 470] LOAD: (PC: 20bb54)(sReg_a: 28)(dReg: 3)(addr: 1000c002)
-[cycle 471] NOP:
-[cycle 472] NOP:
-[cycle 473] ITYPE: (PC: 20bb58)(sReg_a: 255)(dReg: 2)(addr: 1)
+[cycle 468] NOP:
+[cycle 469] RTYPE: (PC: 20cd58)(sReg_a: 7)(sReg_b: 2)(dReg: 2) 
+[cycle 470] JTYPE: (PC: 20cd5c)(addr: 20cd64)
+[cycle 471] LOAD: (PC: 20cd64)(sReg_a: 29)(dReg: 31)(addr: 80411860)
+[cycle 472] ITYPE: (PC: 20cd68)(sReg_a: 29)(dReg: 29)(addr: 20)
+[cycle 473] NOP:
 [cycle 474] NOP:
-[cycle 475] NOP:
-[cycle 476] RTYPE: (PC: 20bb5c)(sReg_a: 2)(sReg_b: 3)(dReg: 2) 
+[cycle 475] JRTYPE: (PC: 20cd6c) (sReg_a: 255)(addr: 20cc7c)
+[cycle 476] RTYPE: (PC: 20cc7c)(sReg_a: 0)(sReg_b: 2)(dReg: 4) 
 [cycle 477] NOP:
-[cycle 478] NOP:
-[cycle 479] LOAD: (PC: 20bb60)(sReg_a: 2)(dReg: 2)(addr: 2000273c)
-[cycle 480] RTYPE: (PC: 20bb64)(sReg_a: 0)(sReg_b: 4)(dReg: 10) 
+[cycle 478] BRANCH: (PC: 20cc80)(sReg_a: 4)(sReg_b: 0)(addr: 20cc98)
+[cycle 479] RTYPE: (PC: 20cc84)(sReg_a: 0)(sReg_b: 0)(dReg: 2) 
+[cycle 480] ITYPE: (PC: 20cc88)(sReg_a: 0)(dReg: 3)(addr: 2)
 [cycle 481] NOP:
-[cycle 482] NOP:
-[cycle 483] ITYPE: (PC: 20bb68)(sReg_a: 2)(dReg: 2)(addr: 10)
-[cycle 484] NOP:
-[cycle 485] BRANCH: (PC: 20bb6c)(sReg_a: 2)(sReg_b: 0)(addr: 20bb8c)
-[cycle 486] LOAD: (PC: 20bb8c)(sReg_a: 10)(dReg: 3)(addr: 8fff941c)
-[cycle 487] NOP:
+[cycle 482] STORE: (PC: 20cc8c)(sReg_a: 4)(sReg_b: 3)(addr: 100034d8)
+[cycle 483] STORE: (PC: 20cc90)(sReg_a: 4)(sReg_b: 16)(addr: 100034dc)
+[cycle 484] JTYPE: (PC: 20cc94)(addr: 20cc9c)
+[cycle 485] LOAD: (PC: 20cc9c)(sReg_a: 29)(dReg: 31)(addr: 80411880)
+[cycle 486] LOAD: (PC: 20cca0)(sReg_a: 29)(dReg: 16)(addr: 8040bcb8)
+[cycle 487] ITYPE: (PC: 20cca4)(sReg_a: 29)(dReg: 29)(addr: 18)
 [cycle 488] NOP:
-[cycle 489] NOP:
-[cycle 490] BRANCH: (PC: 20bb90)(sReg_a: 3)(sReg_b: 0)(addr: 20bd3c)
-[cycle 491] ITYPE: (PC: 20bb94)(sReg_a: 0)(dReg: 2)(addr: 2d)
+[cycle 489] JRTYPE: (PC: 20cca8) (sReg_a: 255)(addr: 209ff8)
+[cycle 490] LOAD: (PC: 209ff8)(sReg_a: 29)(dReg: 31)(addr: 8040bf90)
+[cycle 491] LOAD: (PC: 209ffc)(sReg_a: 29)(dReg: 17)(addr: 7fff7fa0)
 [cycle 492] NOP:
-[cycle 493] BRANCH: (PC: 20bb98)(sReg_a: 3)(sReg_b: 2)(addr: 20bba8)
-[cycle 494] ITYPE: (PC: 20bba8)(sReg_a: 0)(dReg: 2)(addr: 2b)
+[cycle 493] LOAD: (PC: 20a000)(sReg_a: 29)(dReg: 16)(addr: 7fff7fa3)
+[cycle 494] ITYPE: (PC: 20a004)(sReg_a: 29)(dReg: 29)(addr: 20)
 [cycle 495] NOP:
-[cycle 496] NOP:
-[cycle 497] BRANCH: (PC: 20bbac)(sReg_a: 3)(sReg_b: 2)(addr: 20bbbc)
-[cycle 498] RTYPE: (PC: 20bbbc)(sReg_a: 0)(sReg_b: 0)(dReg: 13) 
-[cycle 499] ITYPE: (PC: 20bbc0)(sReg_a: 0)(dReg: 2)(addr: 10)
-[cycle 500] NOP:
-[cycle 501] BRANCH: (PC: 20bbc4)(sReg_a: 6)(sReg_b: 2)(addr: 20bbf4)
-[cycle 502] SQUASHED:
-[cycle 503] SQUASHED:
-[cycle 504] SQUASHED:
-[cycle 505] SQUASHED:
-[cycle 506] BRANCH: (PC: 20bbf4)(sReg_a: 6)(sReg_b: 0)(addr: 20bc38)
-[cycle 507] ITYPE: (PC: 20bc38)(sReg_a: 0)(dReg: 2)(addr: ffffffff)
-[cycle 508] NOP:
-[cycle 509] RTYPE: (PC: 20bc3c)(sReg_a: 2)(sReg_b: 255)(dReg: 6) 
+[cycle 496] JRTYPE: (PC: 20a008) (sReg_a: 255)(addr: 2052ec)
+[cycle 497] ITYPE: (PC: 2052ec)(sReg_a: 0)(dReg: 18)(addr: 40)
+[cycle 498] ITYPE: (PC: 2052f0)(sReg_a: 255)(dReg: 19)(addr: 1000)
+[cycle 499] NOP:
+[cycle 500] ITYPE: (PC: 2052f4)(sReg_a: 19)(dReg: 19)(addr: e1c)
+[cycle 501] ITYPE: (PC: 2052f8)(sReg_a: 0)(dReg: 2)(addr: a)
+[cycle 502] NOP:
+[cycle 503] STORE: (PC: 2052fc)(sReg_a: 28)(sReg_b: 2)(addr: 10004910)
+[cycle 504] ITYPE: (PC: 205300)(sReg_a: 16)(dReg: 2)(addr: 2)
+[cycle 505] NOP:
+[cycle 506] NOP:
+[cycle 507] BRANCH: (PC: 205304)(sReg_a: 2)(sReg_b: 0)(addr: 20530c)
+[cycle 508] LOAD: (PC: 205308)(sReg_a: 17)(dReg: 19)(addr: 8fff8e20)
+[cycle 509] ITYPE: (PC: 20530c)(sReg_a: 16)(dReg: 2)(addr: 3)
 [cycle 510] NOP:
-[cycle 511] BRANCH: (PC: 20bc40)(sReg_a: 6)(sReg_b: 0)(addr: 20bc48)
-[cycle 512] RTYPE: (PC: 20bc48)(sReg_a: 255)(sReg_b: 255)(dReg: 11) 
-[cycle 513] RTYPE: (PC: 20bc4c)(sReg_a: 255)(sReg_b: 255)(dReg: 24) 
-[cycle 514] RTYPE: (PC: 20bc50)(sReg_a: 0)(sReg_b: 0)(dReg: 12) 
-[cycle 515] LOAD: (PC: 20bc54)(sReg_a: 10)(dReg: 7)(addr: 8fffb5ba)
-[cycle 516] RTYPE: (PC: 20bc58)(sReg_a: 0)(sReg_b: 0)(dReg: 9) 
-[cycle 517] RTYPE: (PC: 20bc5c)(sReg_a: 0)(sReg_b: 10)(dReg: 25) 
+[cycle 511] BRANCH: (PC: 205310)(sReg_a: 2)(sReg_b: 0)(addr: 205328)
+[cycle 512] LOAD: (PC: 205314)(sReg_a: 17)(dReg: 4)(addr: 8fffb4dc)
+[cycle 513] RTYPE: (PC: 205318)(sReg_a: 0)(sReg_b: 0)(dReg: 5) 
+[cycle 514] ITYPE: (PC: 20531c)(sReg_a: 0)(dReg: 6)(addr: a)
+[cycle 515] JTYPE: (PC: 205320)(addr: 20bb38)
+[cycle 516] BRANCH: (PC: 20bb38)(sReg_a: 6)(sReg_b: 255)(addr: 20bb4c)
+[cycle 517] ITYPE: (PC: 20bb3c)(sReg_a: 0)(dReg: 2)(addr: 1)
 [cycle 518] NOP:
-[cycle 519] BRANCH: (PC: 20bc60)(sReg_a: 7)(sReg_b: 0)(addr: 20bce4)
-[cycle 520] LOAD: (PC: 20bc64)(sReg_a: 28)(dReg: 15)(addr: 1000c000)
-[cycle 521] LOAD: (PC: 20bc68)(sReg_a: 28)(dReg: 14)(addr: 1000c000)
-[cycle 522] ITYPE: (PC: 20bc6c)(sReg_a: 7)(dReg: 2)(addr: ff)
-[cycle 523] NOP:
-[cycle 524] ITYPE: (PC: 20bc70)(sReg_a: 255)(dReg: 8)(addr: 1)
-[cycle 525] NOP:
-[cycle 526] RTYPE: (PC: 20bc74)(sReg_a: 8)(sReg_b: 15)(dReg: 2) 
-[cycle 527] NOP:
-[cycle 528] LOAD: (PC: 20bc78)(sReg_a: 2)(dReg: 3)(addr: 100013d4)
-[cycle 529] NOP:
+[cycle 519] NOP:
+[cycle 520] BRANCH: (PC: 20bb40)(sReg_a: 6)(sReg_b: 2)(addr: 20bb4c)
+[cycle 521] ITYPE: (PC: 20bb44)(sReg_a: 6)(dReg: 2)(addr: 25)
+[cycle 522] NOP:
+[cycle 523] BRANCH: (PC: 20bb48)(sReg_a: 2)(sReg_b: 0)(addr: 20bb50)
+[cycle 524] SQUASHED:
+[cycle 525] SQUASHED:
+[cycle 526] SQUASHED:
+[cycle 527] SQUASHED:
+[cycle 528] LOAD: (PC: 20bb50)(sReg_a: 4)(dReg: 2)(addr: 7fff80eb)
+[cycle 529] LOAD: (PC: 20bb54)(sReg_a: 28)(dReg: 3)(addr: 1000c002)
 [cycle 530] NOP:
 [cycle 531] NOP:
-[cycle 532] ITYPE: (PC: 20bc7c)(sReg_a: 3)(dReg: 2)(addr: 8)
+[cycle 532] ITYPE: (PC: 20bb58)(sReg_a: 255)(dReg: 2)(addr: 1)
 [cycle 533] NOP:
-[cycle 534] BRANCH: (PC: 20bc80)(sReg_a: 2)(sReg_b: 0)(addr: 20bc8c)
-[cycle 535] ITYPE: (PC: 20bc84)(sReg_a: 7)(dReg: 7)(addr: ffffffd0)
-[cycle 536] JTYPE: (PC: 20bc88)(addr: 20bca0)
-[cycle 537] ITYPE: (PC: 20bca0)(sReg_a: 7)(dReg: 3)(addr: ff)
-[cycle 538] NOP:
-[cycle 539] RTYPE: (PC: 20bca4)(sReg_a: 3)(sReg_b: 6)(dReg: 2) 
+[cycle 534] NOP:
+[cycle 535] RTYPE: (PC: 20bb5c)(sReg_a: 2)(sReg_b: 3)(dReg: 2) 
+[cycle 536] NOP:
+[cycle 537] NOP:
+[cycle 538] LOAD: (PC: 20bb60)(sReg_a: 2)(dReg: 2)(addr: 2000273c)
+[cycle 539] RTYPE: (PC: 20bb64)(sReg_a: 0)(sReg_b: 4)(dReg: 10) 
 [cycle 540] NOP:
-[cycle 541] BRANCH: (PC: 20bca8)(sReg_a: 2)(sReg_b: 0)(addr: 20bce4)
-[cycle 542] RTYPE: (PC: 20bcac)(sReg_a: 11)(sReg_b: 9)(dReg: 2) 
+[cycle 541] NOP:
+[cycle 542] ITYPE: (PC: 20bb68)(sReg_a: 2)(dReg: 2)(addr: 10)
 [cycle 543] NOP:
-[cycle 544] NOP:
-[cycle 545] BRANCH: (PC: 20bcb0)(sReg_a: 2)(sReg_b: 0)(addr: 20bcc0)
-[cycle 546] BRANCH: (PC: 20bcb4)(sReg_a: 9)(sReg_b: 11)(addr: 20bcc8)
-[cycle 547] RTYPE: (PC: 20bcc8)(sReg_a: 9)(sReg_b: 255)(dReg: 6) 
-[cycle 548] RTYPE: (PC: 20bccc)(sReg_a: 255)(sReg_b: 255)(dReg: 9) 
-[cycle 549] ITYPE: (PC: 20bcd0)(sReg_a: 7)(dReg: 2)(addr: ff)
+[cycle 544] BRANCH: (PC: 20bb6c)(sReg_a: 2)(sReg_b: 0)(addr: 20bb8c)
+[cycle 545] SQUASHED:
+[cycle 546] SQUASHED:
+[cycle 547] SQUASHED:
+[cycle 548] SQUASHED:
+[cycle 549] LOAD: (PC: 20bb8c)(sReg_a: 10)(dReg: 3)(addr: 8fff941c)
 [cycle 550] NOP:
-[cycle 551] RTYPE: (PC: 20bcd4)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
-[cycle 552] ITYPE: (PC: 20bcd8)(sReg_a: 10)(dReg: 10)(addr: 1)
-[cycle 553] NOP:
-[cycle 554] LOAD: (PC: 20bcdc)(sReg_a: 10)(dReg: 7)(addr: 7fff80f1)
+[cycle 551] NOP:
+[cycle 552] NOP:
+[cycle 553] BRANCH: (PC: 20bb90)(sReg_a: 3)(sReg_b: 0)(addr: 20bd3c)
+[cycle 554] ITYPE: (PC: 20bb94)(sReg_a: 0)(dReg: 2)(addr: 2d)
 [cycle 555] NOP:
-[cycle 556] NOP:
-[cycle 557] NOP:
-[cycle 558] BRANCH: (PC: 20bce0)(sReg_a: 7)(sReg_b: 0)(addr: 20bc6c)
-[cycle 559] NOP:
-[cycle 560] ITYPE: (PC: 20bc6c)(sReg_a: 7)(dReg: 2)(addr: ff)
-[cycle 561] NOP:
-[cycle 562] ITYPE: (PC: 20bc70)(sReg_a: 255)(dReg: 8)(addr: 1)
-[cycle 563] NOP:
-[cycle 564] RTYPE: (PC: 20bc74)(sReg_a: 8)(sReg_b: 15)(dReg: 2) 
-[cycle 565] NOP:
-[cycle 566] LOAD: (PC: 20bc78)(sReg_a: 2)(dReg: 3)(addr: 10001398)
-[cycle 567] NOP:
-[cycle 568] NOP:
-[cycle 569] NOP:
-[cycle 570] ITYPE: (PC: 20bc7c)(sReg_a: 3)(dReg: 2)(addr: 8)
-[cycle 571] NOP:
-[cycle 572] BRANCH: (PC: 20bc80)(sReg_a: 2)(sReg_b: 0)(addr: 20bc8c)
-[cycle 573] ITYPE: (PC: 20bc84)(sReg_a: 7)(dReg: 7)(addr: ffffffd0)
-[cycle 574] JTYPE: (PC: 20bc88)(addr: 20bca0)
-[cycle 575] ITYPE: (PC: 20bca0)(sReg_a: 7)(dReg: 3)(addr: ff)
-[cycle 576] NOP:
-[cycle 577] RTYPE: (PC: 20bca4)(sReg_a: 3)(sReg_b: 6)(dReg: 2) 
-[cycle 578] NOP:
-[cycle 579] BRANCH: (PC: 20bca8)(sReg_a: 2)(sReg_b: 0)(addr: 20bce4)
-[cycle 580] RTYPE: (PC: 20bcac)(sReg_a: 11)(sReg_b: 9)(dReg: 2) 
-[cycle 581] NOP:
+[cycle 556] BRANCH: (PC: 20bb98)(sReg_a: 3)(sReg_b: 2)(addr: 20bba8)
+[cycle 557] SQUASHED:
+[cycle 558] SQUASHED:
+[cycle 559] SQUASHED:
+[cycle 560] SQUASHED:
+[cycle 561] ITYPE: (PC: 20bba8)(sReg_a: 0)(dReg: 2)(addr: 2b)
+[cycle 562] NOP:
+[cycle 563] BRANCH: (PC: 20bbac)(sReg_a: 3)(sReg_b: 2)(addr: 20bbbc)
+[cycle 564] SQUASHED:
+[cycle 565] SQUASHED:
+[cycle 566] SQUASHED:
+[cycle 567] SQUASHED:
+[cycle 568] RTYPE: (PC: 20bbbc)(sReg_a: 0)(sReg_b: 0)(dReg: 13) 
+[cycle 569] ITYPE: (PC: 20bbc0)(sReg_a: 0)(dReg: 2)(addr: 10)
+[cycle 570] NOP:
+[cycle 571] BRANCH: (PC: 20bbc4)(sReg_a: 6)(sReg_b: 2)(addr: 20bbf4)
+[cycle 572] SQUASHED:
+[cycle 573] SQUASHED:
+[cycle 574] SQUASHED:
+[cycle 575] SQUASHED:
+[cycle 576] BRANCH: (PC: 20bbf4)(sReg_a: 6)(sReg_b: 0)(addr: 20bc38)
+[cycle 577] SQUASHED:
+[cycle 578] SQUASHED:
+[cycle 579] SQUASHED:
+[cycle 580] SQUASHED:
+[cycle 581] ITYPE: (PC: 20bc38)(sReg_a: 0)(dReg: 2)(addr: ffffffff)
 [cycle 582] NOP:
-[cycle 583] BRANCH: (PC: 20bcb0)(sReg_a: 2)(sReg_b: 0)(addr: 20bcc0)
-[cycle 584] BRANCH: (PC: 20bcb4)(sReg_a: 9)(sReg_b: 11)(addr: 20bcc8)
-[cycle 585] RTYPE: (PC: 20bcc8)(sReg_a: 9)(sReg_b: 255)(dReg: 6) 
-[cycle 586] RTYPE: (PC: 20bccc)(sReg_a: 255)(sReg_b: 255)(dReg: 9) 
-[cycle 587] ITYPE: (PC: 20bcd0)(sReg_a: 7)(dReg: 2)(addr: ff)
-[cycle 588] NOP:
-[cycle 589] RTYPE: (PC: 20bcd4)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
-[cycle 590] ITYPE: (PC: 20bcd8)(sReg_a: 10)(dReg: 10)(addr: 1)
-[cycle 591] NOP:
-[cycle 592] LOAD: (PC: 20bcdc)(sReg_a: 10)(dReg: 7)(addr: 7fff80ec)
-[cycle 593] NOP:
-[cycle 594] NOP:
-[cycle 595] NOP:
-[cycle 596] BRANCH: (PC: 20bce0)(sReg_a: 7)(sReg_b: 0)(addr: 20bc6c)
-[cycle 597] BRANCH: (PC: 20bce4)(sReg_a: 10)(sReg_b: 25)(addr: 20bd3c)
-[cycle 598] BRANCH: (PC: 20bce8)(sReg_a: 5)(sReg_b: 0)(addr: 20bcf0)
-[cycle 599] SQUASHED:
-[cycle 600] SQUASHED:
-[cycle 601] SQUASHED:
-[cycle 602] SQUASHED:
-[cycle 603] BRANCH: (PC: 20bcf0)(sReg_a: 13)(sReg_b: 0)(addr: 20bd04)
-[cycle 604] BRANCH: (PC: 20bd04)(sReg_a: 9)(sReg_b: 255)(addr: 20bd0c)
-[cycle 605] BRANCH: (PC: 20bd0c)(sReg_a: 12)(sReg_b: 0)(addr: 20bd2c)
-[cycle 606] RTYPE: (PC: 20bd2c)(sReg_a: 0)(sReg_b: 9)(dReg: 2) 
-[cycle 607] BRANCH: (PC: 20bd30)(sReg_a: 13)(sReg_b: 0)(addr: 20bd48)
-[cycle 608] SQUASHED:
-[cycle 609] SQUASHED:
-[cycle 610] SQUASHED:
-[cycle 611] SQUASHED:
-[cycle 612] JRTYPE: (PC: 20bd48) (sReg_a: 255)(addr: 205324)
-[cycle 613] RTYPE: (PC: 205324)(sReg_a: 0)(sReg_b: 2)(dReg: 18) 
-[cycle 614] ITYPE: (PC: 205328)(sReg_a: 16)(dReg: 2)(addr: 4)
-[cycle 615] NOP:
-[cycle 616] BRANCH: (PC: 20532c)(sReg_a: 2)(sReg_b: 0)(addr: 205344)
-[cycle 617] RTYPE: (PC: 205344)(sReg_a: 0)(sReg_b: 18)(dReg: 2) 
+[cycle 583] RTYPE: (PC: 20bc3c)(sReg_a: 2)(sReg_b: 255)(dReg: 6) 
+[cycle 584] NOP:
+[cycle 585] BRANCH: (PC: 20bc40)(sReg_a: 6)(sReg_b: 0)(addr: 20bc48)
+[cycle 586] SQUASHED:
+[cycle 587] SQUASHED:
+[cycle 588] SQUASHED:
+[cycle 589] SQUASHED:
+[cycle 590] RTYPE: (PC: 20bc48)(sReg_a: 255)(sReg_b: 255)(dReg: 11) 
+[cycle 591] RTYPE: (PC: 20bc4c)(sReg_a: 255)(sReg_b: 255)(dReg: 24) 
+[cycle 592] RTYPE: (PC: 20bc50)(sReg_a: 0)(sReg_b: 0)(dReg: 12) 
+[cycle 593] LOAD: (PC: 20bc54)(sReg_a: 10)(dReg: 7)(addr: 8fffb5ba)
+[cycle 594] RTYPE: (PC: 20bc58)(sReg_a: 0)(sReg_b: 0)(dReg: 9) 
+[cycle 595] RTYPE: (PC: 20bc5c)(sReg_a: 0)(sReg_b: 10)(dReg: 25) 
+[cycle 596] NOP:
+[cycle 597] BRANCH: (PC: 20bc60)(sReg_a: 7)(sReg_b: 0)(addr: 20bce4)
+[cycle 598] LOAD: (PC: 20bc64)(sReg_a: 28)(dReg: 15)(addr: 1000c000)
+[cycle 599] LOAD: (PC: 20bc68)(sReg_a: 28)(dReg: 14)(addr: 1000c000)
+[cycle 600] ITYPE: (PC: 20bc6c)(sReg_a: 7)(dReg: 2)(addr: ff)
+[cycle 601] NOP:
+[cycle 602] ITYPE: (PC: 20bc70)(sReg_a: 255)(dReg: 8)(addr: 1)
+[cycle 603] NOP:
+[cycle 604] RTYPE: (PC: 20bc74)(sReg_a: 8)(sReg_b: 15)(dReg: 2) 
+[cycle 605] NOP:
+[cycle 606] LOAD: (PC: 20bc78)(sReg_a: 2)(dReg: 3)(addr: 100013d4)
+[cycle 607] NOP:
+[cycle 608] NOP:
+[cycle 609] NOP:
+[cycle 610] ITYPE: (PC: 20bc7c)(sReg_a: 3)(dReg: 2)(addr: 8)
+[cycle 611] NOP:
+[cycle 612] BRANCH: (PC: 20bc80)(sReg_a: 2)(sReg_b: 0)(addr: 20bc8c)
+[cycle 613] ITYPE: (PC: 20bc84)(sReg_a: 7)(dReg: 7)(addr: ffffffd0)
+[cycle 614] JTYPE: (PC: 20bc88)(addr: 20bca0)
+[cycle 615] ITYPE: (PC: 20bca0)(sReg_a: 7)(dReg: 3)(addr: ff)
+[cycle 616] NOP:
+[cycle 617] RTYPE: (PC: 20bca4)(sReg_a: 3)(sReg_b: 6)(dReg: 2) 
 [cycle 618] NOP:
-[cycle 619] ITYPE: (PC: 205348)(sReg_a: 255)(dReg: 16)(addr: 14)
-[cycle 620] ITYPE: (PC: 20534c)(sReg_a: 255)(dReg: 2)(addr: 14)
-[cycle 621] ITYPE: (PC: 205350)(sReg_a: 255)(dReg: 1)(addr: 1005)
+[cycle 619] BRANCH: (PC: 20bca8)(sReg_a: 2)(sReg_b: 0)(addr: 20bce4)
+[cycle 620] RTYPE: (PC: 20bcac)(sReg_a: 11)(sReg_b: 9)(dReg: 2) 
+[cycle 621] NOP:
 [cycle 622] NOP:
-[cycle 623] STORE: (PC: 205354)(sReg_a: 1)(sReg_b: 16)(addr: 10055690)
-[cycle 624] ITYPE: (PC: 205358)(sReg_a: 255)(dReg: 1)(addr: 1005)
-[cycle 625] NOP:
-[cycle 626] NOP:
-[cycle 627] STORE: (PC: 20535c)(sReg_a: 1)(sReg_b: 2)(addr: 100556a0)
-[cycle 628] ITYPE: (PC: 205360)(sReg_a: 255)(dReg: 1)(addr: 1005)
-[cycle 629] NOP:
-[cycle 630] STORE: (PC: 205364)(sReg_a: 1)(sReg_b: 16)(addr: 100556b0)
-[cycle 631] JTYPE: (PC: 205368)(addr: 204718)
-[cycle 632] LOAD: (PC: 204718)(sReg_a: 28)(dReg: 2)(addr: 13c0c000)
-[cycle 633] ITYPE: (PC: 20471c)(sReg_a: 29)(dReg: 29)(addr: ffffffd0)
-[cycle 634] NOP:
-[cycle 635] STORE: (PC: 204720)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7fbc)
-[cycle 636] STORE: (PC: 204724)(sReg_a: 29)(sReg_b: 20)(addr: 7fff7fb8)
-[cycle 637] STORE: (PC: 204728)(sReg_a: 29)(sReg_b: 19)(addr: 7fff7fb4)
+[cycle 623] BRANCH: (PC: 20bcb0)(sReg_a: 2)(sReg_b: 0)(addr: 20bcc0)
+[cycle 624] BRANCH: (PC: 20bcb4)(sReg_a: 9)(sReg_b: 11)(addr: 20bcc8)
+[cycle 625] SQUASHED:
+[cycle 626] SQUASHED:
+[cycle 627] SQUASHED:
+[cycle 628] SQUASHED:
+[cycle 629] RTYPE: (PC: 20bcc8)(sReg_a: 9)(sReg_b: 255)(dReg: 6) 
+[cycle 630] RTYPE: (PC: 20bccc)(sReg_a: 255)(sReg_b: 255)(dReg: 9) 
+[cycle 631] ITYPE: (PC: 20bcd0)(sReg_a: 7)(dReg: 2)(addr: ff)
+[cycle 632] NOP:
+[cycle 633] RTYPE: (PC: 20bcd4)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
+[cycle 634] ITYPE: (PC: 20bcd8)(sReg_a: 10)(dReg: 10)(addr: 1)
+[cycle 635] NOP:
+[cycle 636] LOAD: (PC: 20bcdc)(sReg_a: 10)(dReg: 7)(addr: 7fff80f1)
+[cycle 637] NOP:
 [cycle 638] NOP:
-[cycle 639] STORE: (PC: 20472c)(sReg_a: 29)(sReg_b: 18)(addr: 7fff7fb0)
-[cycle 640] STORE: (PC: 204730)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7fac)
-[cycle 641] STORE: (PC: 204734)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7fa8)
-[cycle 642] ITYPE: (PC: 204738)(sReg_a: 2)(dReg: 2)(addr: 4)
-[cycle 643] NOP:
-[cycle 644] BRANCH: (PC: 20473c)(sReg_a: 2)(sReg_b: 0)(addr: 20474c)
-[cycle 645] ITYPE: (PC: 204740)(sReg_a: 255)(dReg: 4)(addr: 1000)
-[cycle 646] NOP:
-[cycle 647] ITYPE: (PC: 204744)(sReg_a: 4)(dReg: 4)(addr: c40)
-[cycle 648] JTYPE: (PC: 204748)(addr: 20a910)
-[cycle 649] STORE: (PC: 20a910)(sReg_a: 29)(sReg_b: 5)(addr: 7fff7f94)
-[cycle 650] NOP:
-[cycle 651] RTYPE: (PC: 20a914)(sReg_a: 0)(sReg_b: 4)(dReg: 5) 
-[cycle 652] NOP:
-[cycle 653] STORE: (PC: 20a918)(sReg_a: 29)(sReg_b: 4)(addr: 7fff7f90)
-[cycle 654] LOAD: (PC: 20a91c)(sReg_a: 28)(dReg: 4)(addr: 2000cc40)
-[cycle 655] STORE: (PC: 20a920)(sReg_a: 29)(sReg_b: 6)(addr: 7fff7f98)
-[cycle 656] STORE: (PC: 20a924)(sReg_a: 29)(sReg_b: 7)(addr: 7fff7f9c)
-[cycle 657] ITYPE: (PC: 20a928)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
-[cycle 658] NOP:
-[cycle 659] ITYPE: (PC: 20a92c)(sReg_a: 29)(dReg: 6)(addr: 1c)
-[cycle 660] STORE: (PC: 20a930)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7f88)
-[cycle 661] JTYPE: (PC: 20a934)(addr: 20cf48)
+[cycle 639] NOP:
+[cycle 640] BRANCH: (PC: 20bce0)(sReg_a: 7)(sReg_b: 0)(addr: 20bc6c)
+[cycle 641] SQUASHED:
+[cycle 642] SQUASHED:
+[cycle 643] SQUASHED:
+[cycle 644] SQUASHED:
+[cycle 645] NOP:
+[cycle 646] ITYPE: (PC: 20bc6c)(sReg_a: 7)(dReg: 2)(addr: ff)
+[cycle 647] NOP:
+[cycle 648] ITYPE: (PC: 20bc70)(sReg_a: 255)(dReg: 8)(addr: 1)
+[cycle 649] NOP:
+[cycle 650] RTYPE: (PC: 20bc74)(sReg_a: 8)(sReg_b: 15)(dReg: 2) 
+[cycle 651] NOP:
+[cycle 652] LOAD: (PC: 20bc78)(sReg_a: 2)(dReg: 3)(addr: 10001398)
+[cycle 653] NOP:
+[cycle 654] NOP:
+[cycle 655] NOP:
+[cycle 656] ITYPE: (PC: 20bc7c)(sReg_a: 3)(dReg: 2)(addr: 8)
+[cycle 657] NOP:
+[cycle 658] BRANCH: (PC: 20bc80)(sReg_a: 2)(sReg_b: 0)(addr: 20bc8c)
+[cycle 659] ITYPE: (PC: 20bc84)(sReg_a: 7)(dReg: 7)(addr: ffffffd0)
+[cycle 660] JTYPE: (PC: 20bc88)(addr: 20bca0)
+[cycle 661] ITYPE: (PC: 20bca0)(sReg_a: 7)(dReg: 3)(addr: ff)
 [cycle 662] NOP:
-[cycle 663] ITYPE: (PC: 20cf48)(sReg_a: 29)(dReg: 29)(addr: fffff648)
+[cycle 663] RTYPE: (PC: 20bca4)(sReg_a: 3)(sReg_b: 6)(dReg: 2) 
 [cycle 664] NOP:
-[cycle 665] STORE: (PC: 20cf4c)(sReg_a: 29)(sReg_b: 20)(addr: 7fff7f60)
-[cycle 666] RTYPE: (PC: 20cf50)(sReg_a: 0)(sReg_b: 4)(dReg: 20) 
-[cycle 667] STORE: (PC: 20cf54)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7f50)
-[cycle 668] RTYPE: (PC: 20cf58)(sReg_a: 0)(sReg_b: 5)(dReg: 16) 
-[cycle 669] STORE: (PC: 20cf5c)(sReg_a: 29)(sReg_b: 21)(addr: 7fff7f64)
-[cycle 670] RTYPE: (PC: 20cf60)(sReg_a: 0)(sReg_b: 0)(dReg: 21) 
-[cycle 671] STORE: (PC: 20cf64)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7f74)
-[cycle 672] STORE: (PC: 20cf68)(sReg_a: 29)(sReg_b: 30)(addr: 7fff7f70)
-[cycle 673] STORE: (PC: 20cf6c)(sReg_a: 29)(sReg_b: 23)(addr: 7fff7f6c)
-[cycle 674] STORE: (PC: 20cf70)(sReg_a: 29)(sReg_b: 22)(addr: 7fff7f68)
-[cycle 675] STORE: (PC: 20cf74)(sReg_a: 29)(sReg_b: 19)(addr: 7fff7f5c)
-[cycle 676] STORE: (PC: 20cf78)(sReg_a: 29)(sReg_b: 18)(addr: 7fff7f58)
-[cycle 677] STORE: (PC: 20cf7c)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7f54)
-[cycle 678] STORE: (PC: 20cf80)(sReg_a: 29)(sReg_b: 6)(addr: 7fff7f80)
-[cycle 679] BRANCH: (PC: 20cf84)(sReg_a: 20)(sReg_b: 0)(addr: 20cfc0)
-[cycle 680] LOAD: (PC: 20cf88)(sReg_a: 20)(dReg: 3)(addr: 10003430)
-[cycle 681] ITYPE: (PC: 20cf8c)(sReg_a: 255)(dReg: 2)(addr: feed)
-[cycle 682] NOP:
-[cycle 683] ITYPE: (PC: 20cf90)(sReg_a: 2)(dReg: 2)(addr: babe)
+[cycle 665] BRANCH: (PC: 20bca8)(sReg_a: 2)(sReg_b: 0)(addr: 20bce4)
+[cycle 666] RTYPE: (PC: 20bcac)(sReg_a: 11)(sReg_b: 9)(dReg: 2) 
+[cycle 667] NOP:
+[cycle 668] NOP:
+[cycle 669] BRANCH: (PC: 20bcb0)(sReg_a: 2)(sReg_b: 0)(addr: 20bcc0)
+[cycle 670] BRANCH: (PC: 20bcb4)(sReg_a: 9)(sReg_b: 11)(addr: 20bcc8)
+[cycle 671] SQUASHED:
+[cycle 672] SQUASHED:
+[cycle 673] SQUASHED:
+[cycle 674] SQUASHED:
+[cycle 675] RTYPE: (PC: 20bcc8)(sReg_a: 9)(sReg_b: 255)(dReg: 6) 
+[cycle 676] RTYPE: (PC: 20bccc)(sReg_a: 255)(sReg_b: 255)(dReg: 9) 
+[cycle 677] ITYPE: (PC: 20bcd0)(sReg_a: 7)(dReg: 2)(addr: ff)
+[cycle 678] NOP:
+[cycle 679] RTYPE: (PC: 20bcd4)(sReg_a: 9)(sReg_b: 2)(dReg: 9) 
+[cycle 680] ITYPE: (PC: 20bcd8)(sReg_a: 10)(dReg: 10)(addr: 1)
+[cycle 681] NOP:
+[cycle 682] LOAD: (PC: 20bcdc)(sReg_a: 10)(dReg: 7)(addr: 7fff80ec)
+[cycle 683] NOP:
 [cycle 684] NOP:
 [cycle 685] NOP:
-[cycle 686] NOP:
-[cycle 687] BRANCH: (PC: 20cf94)(sReg_a: 3)(sReg_b: 2)(addr: 20cfa0)
-[cycle 688] LOAD: (PC: 20cfa0)(sReg_a: 20)(dReg: 3)(addr: edaf31b)
-[cycle 689] ITYPE: (PC: 20cfa4)(sReg_a: 255)(dReg: 2)(addr: feda)
-[cycle 690] NOP:
-[cycle 691] ITYPE: (PC: 20cfa8)(sReg_a: 2)(dReg: 2)(addr: beeb)
-[cycle 692] NOP:
-[cycle 693] NOP:
-[cycle 694] NOP:
-[cycle 695] BRANCH: (PC: 20cfac)(sReg_a: 3)(sReg_b: 2)(addr: 20cfc0)
-[cycle 696] LOAD: (PC: 20cfb0)(sReg_a: 20)(dReg: 2)(addr: edaf31b)
-[cycle 697] NOP:
-[cycle 698] NOP:
-[cycle 699] NOP:
-[cycle 700] ITYPE: (PC: 20cfb4)(sReg_a: 2)(dReg: 2)(addr: 2)
-[cycle 701] NOP:
-[cycle 702] BRANCH: (PC: 20cfb8)(sReg_a: 2)(sReg_b: 0)(addr: 20cfc0)
-[cycle 703] SQUASHED:
+[cycle 686] BRANCH: (PC: 20bce0)(sReg_a: 7)(sReg_b: 0)(addr: 20bc6c)
+[cycle 687] BRANCH: (PC: 20bce4)(sReg_a: 10)(sReg_b: 25)(addr: 20bd3c)
+[cycle 688] BRANCH: (PC: 20bce8)(sReg_a: 5)(sReg_b: 0)(addr: 20bcf0)
+[cycle 689] SQUASHED:
+[cycle 690] SQUASHED:
+[cycle 691] SQUASHED:
+[cycle 692] SQUASHED:
+[cycle 693] BRANCH: (PC: 20bcf0)(sReg_a: 13)(sReg_b: 0)(addr: 20bd04)
+[cycle 694] SQUASHED:
+[cycle 695] SQUASHED:
+[cycle 696] SQUASHED:
+[cycle 697] SQUASHED:
+[cycle 698] BRANCH: (PC: 20bd04)(sReg_a: 9)(sReg_b: 255)(addr: 20bd0c)
+[cycle 699] SQUASHED:
+[cycle 700] SQUASHED:
+[cycle 701] SQUASHED:
+[cycle 702] SQUASHED:
+[cycle 703] BRANCH: (PC: 20bd0c)(sReg_a: 12)(sReg_b: 0)(addr: 20bd2c)
 [cycle 704] SQUASHED:
 [cycle 705] SQUASHED:
 [cycle 706] SQUASHED:
-[cycle 707] BRANCH: (PC: 20cfbc)(sReg_a: 16)(sReg_b: 0)(addr: 20cfd0)
-[cycle 708] LOAD: (PC: 20cfd0)(sReg_a: 20)(dReg: 2)(addr: 10003432)
-[cycle 709] NOP:
-[cycle 710] NOP:
-[cycle 711] NOP:
-[cycle 712] ITYPE: (PC: 20cfd4)(sReg_a: 2)(dReg: 2)(addr: 4000)
-[cycle 713] NOP:
-[cycle 714] BRANCH: (PC: 20cfd8)(sReg_a: 2)(sReg_b: 0)(addr: 20cff0)
-[cycle 715] RTYPE: (PC: 20cfdc)(sReg_a: 0)(sReg_b: 20)(dReg: 4) 
-[cycle 716] ITYPE: (PC: 20cfe0)(sReg_a: 0)(dReg: 5)(addr: ffffffff)
-[cycle 717] JTYPE: (PC: 20cfe4)(addr: 20c6c8)
-[cycle 718] ITYPE: (PC: 20c6c8)(sReg_a: 29)(dReg: 29)(addr: ffffffd8)
-[cycle 719] NOP:
-[cycle 720] STORE: (PC: 20c6cc)(sReg_a: 29)(sReg_b: 16)(addr: 7fff75a8)
-[cycle 721] RTYPE: (PC: 20c6d0)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
-[cycle 722] STORE: (PC: 20c6d4)(sReg_a: 29)(sReg_b: 18)(addr: 7fff75b0)
-[cycle 723] RTYPE: (PC: 20c6d8)(sReg_a: 0)(sReg_b: 5)(dReg: 18) 
-[cycle 724] NOP:
-[cycle 725] RTYPE: (PC: 20c6dc)(sReg_a: 0)(sReg_b: 18)(dReg: 2) 
-[cycle 726] STORE: (PC: 20c6e0)(sReg_a: 29)(sReg_b: 19)(addr: 7fff75b4)
-[cycle 727] ITYPE: (PC: 20c6e4)(sReg_a: 2)(dReg: 19)(addr: 1)
-[cycle 728] STORE: (PC: 20c6e8)(sReg_a: 29)(sReg_b: 31)(addr: 7fff75b8)
-[cycle 729] STORE: (PC: 20c6ec)(sReg_a: 29)(sReg_b: 17)(addr: 7fff75ac)
-[cycle 730] BRANCH: (PC: 20c6f0)(sReg_a: 16)(sReg_b: 0)(addr: 20c728)
-[cycle 731] LOAD: (PC: 20c6f4)(sReg_a: 16)(dReg: 3)(addr: edaf31b)
-[cycle 732] ITYPE: (PC: 20c6f8)(sReg_a: 255)(dReg: 2)(addr: feed)
-[cycle 733] NOP:
-[cycle 734] ITYPE: (PC: 20c6fc)(sReg_a: 2)(dReg: 2)(addr: babe)
-[cycle 735] NOP:
-[cycle 736] NOP:
-[cycle 737] NOP:
-[cycle 738] BRANCH: (PC: 20c700)(sReg_a: 3)(sReg_b: 2)(addr: 20c70c)
-[cycle 739] LOAD: (PC: 20c70c)(sReg_a: 16)(dReg: 3)(addr: edaf31b)
-[cycle 740] ITYPE: (PC: 20c710)(sReg_a: 255)(dReg: 2)(addr: feda)
-[cycle 741] NOP:
-[cycle 742] ITYPE: (PC: 20c714)(sReg_a: 2)(dReg: 2)(addr: beeb)
+[cycle 707] SQUASHED:
+[cycle 708] RTYPE: (PC: 20bd2c)(sReg_a: 0)(sReg_b: 9)(dReg: 2) 
+[cycle 709] BRANCH: (PC: 20bd30)(sReg_a: 13)(sReg_b: 0)(addr: 20bd48)
+[cycle 710] SQUASHED:
+[cycle 711] SQUASHED:
+[cycle 712] SQUASHED:
+[cycle 713] SQUASHED:
+[cycle 714] JRTYPE: (PC: 20bd48) (sReg_a: 255)(addr: 205324)
+[cycle 715] RTYPE: (PC: 205324)(sReg_a: 0)(sReg_b: 2)(dReg: 18) 
+[cycle 716] ITYPE: (PC: 205328)(sReg_a: 16)(dReg: 2)(addr: 4)
+[cycle 717] NOP:
+[cycle 718] BRANCH: (PC: 20532c)(sReg_a: 2)(sReg_b: 0)(addr: 205344)
+[cycle 719] SQUASHED:
+[cycle 720] SQUASHED:
+[cycle 721] SQUASHED:
+[cycle 722] SQUASHED:
+[cycle 723] RTYPE: (PC: 205344)(sReg_a: 0)(sReg_b: 18)(dReg: 2) 
+[cycle 724] ITYPE: (PC: 205348)(sReg_a: 255)(dReg: 16)(addr: 14)
+[cycle 725] ITYPE: (PC: 20534c)(sReg_a: 255)(dReg: 2)(addr: 14)
+[cycle 726] ITYPE: (PC: 205350)(sReg_a: 255)(dReg: 1)(addr: 1005)
+[cycle 727] NOP:
+[cycle 728] STORE: (PC: 205354)(sReg_a: 1)(sReg_b: 16)(addr: 10055690)
+[cycle 729] ITYPE: (PC: 205358)(sReg_a: 255)(dReg: 1)(addr: 1005)
+[cycle 730] NOP:
+[cycle 731] NOP:
+[cycle 732] STORE: (PC: 20535c)(sReg_a: 1)(sReg_b: 2)(addr: 100556a0)
+[cycle 733] ITYPE: (PC: 205360)(sReg_a: 255)(dReg: 1)(addr: 1005)
+[cycle 734] NOP:
+[cycle 735] STORE: (PC: 205364)(sReg_a: 1)(sReg_b: 16)(addr: 100556b0)
+[cycle 736] JTYPE: (PC: 205368)(addr: 204718)
+[cycle 737] LOAD: (PC: 204718)(sReg_a: 28)(dReg: 2)(addr: 13c0c000)
+[cycle 738] ITYPE: (PC: 20471c)(sReg_a: 29)(dReg: 29)(addr: ffffffd0)
+[cycle 739] NOP:
+[cycle 740] STORE: (PC: 204720)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7fbc)
+[cycle 741] STORE: (PC: 204724)(sReg_a: 29)(sReg_b: 20)(addr: 7fff7fb8)
+[cycle 742] STORE: (PC: 204728)(sReg_a: 29)(sReg_b: 19)(addr: 7fff7fb4)
 [cycle 743] NOP:
-[cycle 744] NOP:
-[cycle 745] NOP:
-[cycle 746] BRANCH: (PC: 20c718)(sReg_a: 3)(sReg_b: 2)(addr: 20c728)
-[cycle 747] LOAD: (PC: 20c71c)(sReg_a: 16)(dReg: 2)(addr: edaf31b)
+[cycle 744] STORE: (PC: 20472c)(sReg_a: 29)(sReg_b: 18)(addr: 7fff7fb0)
+[cycle 745] STORE: (PC: 204730)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7fac)
+[cycle 746] STORE: (PC: 204734)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7fa8)
+[cycle 747] ITYPE: (PC: 204738)(sReg_a: 2)(dReg: 2)(addr: 4)
 [cycle 748] NOP:
-[cycle 749] NOP:
-[cycle 750] NOP:
-[cycle 751] ITYPE: (PC: 20c720)(sReg_a: 2)(dReg: 2)(addr: 2)
-[cycle 752] NOP:
-[cycle 753] BRANCH: (PC: 20c724)(sReg_a: 2)(sReg_b: 0)(addr: 20c738)
-[cycle 754] LOAD: (PC: 20c738)(sReg_a: 16)(dReg: 3)(addr: edaf31b)
+[cycle 749] BRANCH: (PC: 20473c)(sReg_a: 2)(sReg_b: 0)(addr: 20474c)
+[cycle 750] ITYPE: (PC: 204740)(sReg_a: 255)(dReg: 4)(addr: 1000)
+[cycle 751] NOP:
+[cycle 752] ITYPE: (PC: 204744)(sReg_a: 4)(dReg: 4)(addr: c40)
+[cycle 753] JTYPE: (PC: 204748)(addr: 20a910)
+[cycle 754] STORE: (PC: 20a910)(sReg_a: 29)(sReg_b: 5)(addr: 7fff7f94)
 [cycle 755] NOP:
-[cycle 756] NOP:
+[cycle 756] RTYPE: (PC: 20a914)(sReg_a: 0)(sReg_b: 4)(dReg: 5) 
 [cycle 757] NOP:
-[cycle 758] ITYPE: (PC: 20c73c)(sReg_a: 3)(dReg: 2)(addr: 400)
-[cycle 759] NOP:
-[cycle 760] BRANCH: (PC: 20c740)(sReg_a: 2)(sReg_b: 0)(addr: 20c730)
-[cycle 761] ITYPE: (PC: 20c744)(sReg_a: 3)(dReg: 2)(addr: 100)
-[cycle 762] NOP:
+[cycle 758] STORE: (PC: 20a918)(sReg_a: 29)(sReg_b: 4)(addr: 7fff7f90)
+[cycle 759] LOAD: (PC: 20a91c)(sReg_a: 28)(dReg: 4)(addr: 2000cc40)
+[cycle 760] STORE: (PC: 20a920)(sReg_a: 29)(sReg_b: 6)(addr: 7fff7f98)
+[cycle 761] STORE: (PC: 20a924)(sReg_a: 29)(sReg_b: 7)(addr: 7fff7f9c)
+[cycle 762] ITYPE: (PC: 20a928)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
 [cycle 763] NOP:
-[cycle 764] BRANCH: (PC: 20c748)(sReg_a: 2)(sReg_b: 0)(addr: 20c764)
-[cycle 765] LOAD: (PC: 20c764)(sReg_a: 16)(dReg: 2)(addr: 10003430)
-[cycle 766] NOP:
+[cycle 764] ITYPE: (PC: 20a92c)(sReg_a: 29)(dReg: 6)(addr: 1c)
+[cycle 765] STORE: (PC: 20a930)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7f88)
+[cycle 766] JTYPE: (PC: 20a934)(addr: 20cf48)
 [cycle 767] NOP:
-[cycle 768] NOP:
-[cycle 769] ITYPE: (PC: 20c768)(sReg_a: 2)(dReg: 2)(addr: 4000)
-[cycle 770] NOP:
-[cycle 771] BRANCH: (PC: 20c76c)(sReg_a: 2)(sReg_b: 0)(addr: 20c7c8)
-[cycle 772] LOAD: (PC: 20c770)(sReg_a: 28)(dReg: 2)(addr: 1000c000)
-[cycle 773] ITYPE: (PC: 20c774)(sReg_a: 255)(dReg: 3)(addr: 1000)
-[cycle 774] NOP:
-[cycle 775] LOAD: (PC: 20c778)(sReg_a: 3)(dReg: 3)(addr: 20000000)
-[cycle 776] STORE: (PC: 20c77c)(sReg_a: 16)(sReg_b: 2)(addr: 10003464)
-[cycle 777] NOP:
-[cycle 778] NOP:
-[cycle 779] STORE: (PC: 20c780)(sReg_a: 16)(sReg_b: 3)(addr: 10003468)
-[cycle 780] ITYPE: (PC: 20c784)(sReg_a: 255)(dReg: 5)(addr: 1000)
-[cycle 781] NOP:
-[cycle 782] ITYPE: (PC: 20c788)(sReg_a: 5)(dReg: 5)(addr: 1310)
-[cycle 783] NOP:
-[cycle 784] LOAD: (PC: 20c78c)(sReg_a: 5)(dReg: 2)(addr: 10419c10)
-[cycle 785] NOP:
-[cycle 786] LOAD: (PC: 20c790)(sReg_a: 5)(dReg: 3)(addr: 10419488)
+[cycle 768] ITYPE: (PC: 20cf48)(sReg_a: 29)(dReg: 29)(addr: fffff648)
+[cycle 769] NOP:
+[cycle 770] STORE: (PC: 20cf4c)(sReg_a: 29)(sReg_b: 20)(addr: 7fff7f60)
+[cycle 771] RTYPE: (PC: 20cf50)(sReg_a: 0)(sReg_b: 4)(dReg: 20) 
+[cycle 772] STORE: (PC: 20cf54)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7f50)
+[cycle 773] RTYPE: (PC: 20cf58)(sReg_a: 0)(sReg_b: 5)(dReg: 16) 
+[cycle 774] STORE: (PC: 20cf5c)(sReg_a: 29)(sReg_b: 21)(addr: 7fff7f64)
+[cycle 775] RTYPE: (PC: 20cf60)(sReg_a: 0)(sReg_b: 0)(dReg: 21) 
+[cycle 776] STORE: (PC: 20cf64)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7f74)
+[cycle 777] STORE: (PC: 20cf68)(sReg_a: 29)(sReg_b: 30)(addr: 7fff7f70)
+[cycle 778] STORE: (PC: 20cf6c)(sReg_a: 29)(sReg_b: 23)(addr: 7fff7f6c)
+[cycle 779] STORE: (PC: 20cf70)(sReg_a: 29)(sReg_b: 22)(addr: 7fff7f68)
+[cycle 780] STORE: (PC: 20cf74)(sReg_a: 29)(sReg_b: 19)(addr: 7fff7f5c)
+[cycle 781] STORE: (PC: 20cf78)(sReg_a: 29)(sReg_b: 18)(addr: 7fff7f58)
+[cycle 782] STORE: (PC: 20cf7c)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7f54)
+[cycle 783] STORE: (PC: 20cf80)(sReg_a: 29)(sReg_b: 6)(addr: 7fff7f80)
+[cycle 784] BRANCH: (PC: 20cf84)(sReg_a: 20)(sReg_b: 0)(addr: 20cfc0)
+[cycle 785] LOAD: (PC: 20cf88)(sReg_a: 20)(dReg: 3)(addr: 10003430)
+[cycle 786] ITYPE: (PC: 20cf8c)(sReg_a: 255)(dReg: 2)(addr: feed)
 [cycle 787] NOP:
-[cycle 788] LOAD: (PC: 20c794)(sReg_a: 5)(dReg: 4)(addr: 20004740)
+[cycle 788] ITYPE: (PC: 20cf90)(sReg_a: 2)(dReg: 2)(addr: babe)
 [cycle 789] NOP:
-[cycle 790] STORE: (PC: 20c798)(sReg_a: 16)(sReg_b: 2)(addr: 10003450)
+[cycle 790] NOP:
 [cycle 791] NOP:
-[cycle 792] STORE: (PC: 20c79c)(sReg_a: 16)(sReg_b: 3)(addr: 10003454)
-[cycle 793] NOP:
-[cycle 794] STORE: (PC: 20c7a0)(sReg_a: 16)(sReg_b: 4)(addr: 10003458)
-[cycle 795] LOAD: (PC: 20c7a4)(sReg_a: 5)(dReg: 2)(addr: 1041f1f0)
-[cycle 796] LOAD: (PC: 20c7a8)(sReg_a: 5)(dReg: 3)(addr: 1041f220)
-[cycle 797] NOP:
-[cycle 798] NOP:
-[cycle 799] STORE: (PC: 20c7ac)(sReg_a: 16)(sReg_b: 2)(addr: 1000345c)
-[cycle 800] STORE: (PC: 20c7b0)(sReg_a: 16)(sReg_b: 3)(addr: 10003460)
-[cycle 801] RTYPE: (PC: 20c7b4)(sReg_a: 0)(sReg_b: 16)(dReg: 4) 
-[cycle 802] JTYPE: (PC: 20c7b8)(addr: 20f290)
-[cycle 803] ITYPE: (PC: 20f290)(sReg_a: 29)(dReg: 29)(addr: ffffffa0)
-[cycle 804] NOP:
-[cycle 805] STORE: (PC: 20f294)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7588)
+[cycle 792] BRANCH: (PC: 20cf94)(sReg_a: 3)(sReg_b: 2)(addr: 20cfa0)
+[cycle 793] SQUASHED:
+[cycle 794] SQUASHED:
+[cycle 795] SQUASHED:
+[cycle 796] SQUASHED:
+[cycle 797] LOAD: (PC: 20cfa0)(sReg_a: 20)(dReg: 3)(addr: edaf31b)
+[cycle 798] ITYPE: (PC: 20cfa4)(sReg_a: 255)(dReg: 2)(addr: feda)
+[cycle 799] NOP:
+[cycle 800] ITYPE: (PC: 20cfa8)(sReg_a: 2)(dReg: 2)(addr: beeb)
+[cycle 801] NOP:
+[cycle 802] NOP:
+[cycle 803] NOP:
+[cycle 804] BRANCH: (PC: 20cfac)(sReg_a: 3)(sReg_b: 2)(addr: 20cfc0)
+[cycle 805] LOAD: (PC: 20cfb0)(sReg_a: 20)(dReg: 2)(addr: edaf31b)
 [cycle 806] NOP:
-[cycle 807] RTYPE: (PC: 20f298)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
+[cycle 807] NOP:
 [cycle 808] NOP:
-[cycle 809] STORE: (PC: 20f29c)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7590)
-[cycle 810] STORE: (PC: 20f2a0)(sReg_a: 29)(sReg_b: 17)(addr: 7fff758c)
-[cycle 811] LOAD: (PC: 20f2a4)(sReg_a: 16)(dReg: 2)(addr: 104214b0)
-[cycle 812] NOP:
-[cycle 813] LOAD: (PC: 20f2a8)(sReg_a: 16)(dReg: 17)(addr: 8fffb434)
-[cycle 814] NOP:
-[cycle 815] BRANCH: (PC: 20f2ac)(sReg_a: 2)(sReg_b: 0)(addr: 20f318)
-[cycle 816] LOAD: (PC: 20f2b0)(sReg_a: 16)(dReg: 2)(addr: 10003430)
-[cycle 817] NOP:
+[cycle 809] ITYPE: (PC: 20cfb4)(sReg_a: 2)(dReg: 2)(addr: 2)
+[cycle 810] NOP:
+[cycle 811] BRANCH: (PC: 20cfb8)(sReg_a: 2)(sReg_b: 0)(addr: 20cfc0)
+[cycle 812] BRANCH: (PC: 20cfbc)(sReg_a: 16)(sReg_b: 0)(addr: 20cfd0)
+[cycle 813] SQUASHED:
+[cycle 814] SQUASHED:
+[cycle 815] SQUASHED:
+[cycle 816] SQUASHED:
+[cycle 817] LOAD: (PC: 20cfd0)(sReg_a: 20)(dReg: 2)(addr: 10003432)
 [cycle 818] NOP:
 [cycle 819] NOP:
-[cycle 820] ITYPE: (PC: 20f2b4)(sReg_a: 2)(dReg: 2)(addr: 800)
-[cycle 821] NOP:
-[cycle 822] BRANCH: (PC: 20f2b8)(sReg_a: 2)(sReg_b: 0)(addr: 20f318)
-[cycle 823] RTYPE: (PC: 20f2bc)(sReg_a: 0)(sReg_b: 17)(dReg: 4) 
-[cycle 824] ITYPE: (PC: 20f2c0)(sReg_a: 29)(dReg: 5)(addr: 10)
-[cycle 825] JTYPE: (PC: 20f2c4)(addr: 20e608)
-[cycle 826] ITYPE: (PC: 20e608)(sReg_a: 0)(dReg: 2)(addr: 3e)
-[cycle 827] SPECIAL:[cycle 828] BRANCH: (PC: 20e610)(sReg_a: 7)(sReg_b: 0)(addr: 20e600)
-[cycle 829] RTYPE: (PC: 20e614)(sReg_a: 255)(sReg_b: 255)(dReg: 255) 
-[cycle 830] JRTYPE: (PC: 20e618) (sReg_a: 255)(addr: 20f2c8)
-[cycle 831] NOP:
-[cycle 832] BRANCH: (PC: 20f2c8)(sReg_a: 2)(sReg_b: 255)(addr: 20f318)
-[cycle 833] LOAD: (PC: 20f2cc)(sReg_a: 29)(dReg: 2)(addr: 7fff7538)
-[cycle 834] NOP:
-[cycle 835] NOP:
-[cycle 836] NOP:
-[cycle 837] ITYPE: (PC: 20f2d0)(sReg_a: 2)(dReg: 3)(addr: f000)
-[cycle 838] ITYPE: (PC: 20f2d4)(sReg_a: 0)(dReg: 2)(addr: 1000)
-[cycle 839] NOP:
-[cycle 840] BRANCH: (PC: 20f2d8)(sReg_a: 3)(sReg_b: 2)(addr: 20f2ec)
-[cycle 841] ITYPE: (PC: 20f2ec)(sReg_a: 0)(dReg: 2)(addr: 2000)
+[cycle 820] NOP:
+[cycle 821] ITYPE: (PC: 20cfd4)(sReg_a: 2)(dReg: 2)(addr: 4000)
+[cycle 822] NOP:
+[cycle 823] BRANCH: (PC: 20cfd8)(sReg_a: 2)(sReg_b: 0)(addr: 20cff0)
+[cycle 824] RTYPE: (PC: 20cfdc)(sReg_a: 0)(sReg_b: 20)(dReg: 4) 
+[cycle 825] ITYPE: (PC: 20cfe0)(sReg_a: 0)(dReg: 5)(addr: ffffffff)
+[cycle 826] JTYPE: (PC: 20cfe4)(addr: 20c6c8)
+[cycle 827] ITYPE: (PC: 20c6c8)(sReg_a: 29)(dReg: 29)(addr: ffffffd8)
+[cycle 828] NOP:
+[cycle 829] STORE: (PC: 20c6cc)(sReg_a: 29)(sReg_b: 16)(addr: 7fff75a8)
+[cycle 830] RTYPE: (PC: 20c6d0)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
+[cycle 831] STORE: (PC: 20c6d4)(sReg_a: 29)(sReg_b: 18)(addr: 7fff75b0)
+[cycle 832] RTYPE: (PC: 20c6d8)(sReg_a: 0)(sReg_b: 5)(dReg: 18) 
+[cycle 833] NOP:
+[cycle 834] RTYPE: (PC: 20c6dc)(sReg_a: 0)(sReg_b: 18)(dReg: 2) 
+[cycle 835] STORE: (PC: 20c6e0)(sReg_a: 29)(sReg_b: 19)(addr: 7fff75b4)
+[cycle 836] ITYPE: (PC: 20c6e4)(sReg_a: 2)(dReg: 19)(addr: 1)
+[cycle 837] STORE: (PC: 20c6e8)(sReg_a: 29)(sReg_b: 31)(addr: 7fff75b8)
+[cycle 838] STORE: (PC: 20c6ec)(sReg_a: 29)(sReg_b: 17)(addr: 7fff75ac)
+[cycle 839] BRANCH: (PC: 20c6f0)(sReg_a: 16)(sReg_b: 0)(addr: 20c728)
+[cycle 840] LOAD: (PC: 20c6f4)(sReg_a: 16)(dReg: 3)(addr: edaf31b)
+[cycle 841] ITYPE: (PC: 20c6f8)(sReg_a: 255)(dReg: 2)(addr: feed)
 [cycle 842] NOP:
-[cycle 843] NOP:
-[cycle 844] BRANCH: (PC: 20f2f0)(sReg_a: 3)(sReg_b: 2)(addr: 20f310)
-[cycle 845] RTYPE: (PC: 20f2f4)(sReg_a: 0)(sReg_b: 17)(dReg: 4) 
-[cycle 846] JTYPE: (PC: 20f2f8)(addr: 20cf10)
-[cycle 847] ITYPE: (PC: 20cf10)(sReg_a: 29)(dReg: 29)(addr: ffffffe0)
-[cycle 848] ITYPE: (PC: 20cf14)(sReg_a: 255)(dReg: 5)(addr: 4006)
-[cycle 849] STORE: (PC: 20cf18)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7530)
-[cycle 850] LOAD: (PC: 20cf1c)(sReg_a: 28)(dReg: 16)(addr: 2000f430)
-[cycle 851] ITYPE: (PC: 20cf20)(sReg_a: 5)(dReg: 5)(addr: 7408)
-[cycle 852] NOP:
-[cycle 853] ITYPE: (PC: 20cf24)(sReg_a: 29)(dReg: 6)(addr: 10)
-[cycle 854] STORE: (PC: 20cf28)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7534)
-[cycle 855] JTYPE: (PC: 20cf2c)(addr: 20f348)
-[cycle 856] ITYPE: (PC: 20f348)(sReg_a: 0)(dReg: 2)(addr: 36)
-[cycle 857] SPECIAL:[cycle 858] BRANCH: (PC: 20f350)(sReg_a: 7)(sReg_b: 0)(addr: 20f340)
-[cycle 859] RTYPE: (PC: 20f354)(sReg_a: 255)(sReg_b: 255)(dReg: 255) 
-[cycle 860] JRTYPE: (PC: 20f358) (sReg_a: 255)(addr: 20cf30)
+[cycle 843] ITYPE: (PC: 20c6fc)(sReg_a: 2)(dReg: 2)(addr: babe)
+[cycle 844] NOP:
+[cycle 845] NOP:
+[cycle 846] NOP:
+[cycle 847] BRANCH: (PC: 20c700)(sReg_a: 3)(sReg_b: 2)(addr: 20c70c)
+[cycle 848] SQUASHED:
+[cycle 849] SQUASHED:
+[cycle 850] SQUASHED:
+[cycle 851] SQUASHED:
+[cycle 852] LOAD: (PC: 20c70c)(sReg_a: 16)(dReg: 3)(addr: edaf31b)
+[cycle 853] ITYPE: (PC: 20c710)(sReg_a: 255)(dReg: 2)(addr: feda)
+[cycle 854] NOP:
+[cycle 855] ITYPE: (PC: 20c714)(sReg_a: 2)(dReg: 2)(addr: beeb)
+[cycle 856] NOP:
+[cycle 857] NOP:
+[cycle 858] NOP:
+[cycle 859] BRANCH: (PC: 20c718)(sReg_a: 3)(sReg_b: 2)(addr: 20c728)
+[cycle 860] LOAD: (PC: 20c71c)(sReg_a: 16)(dReg: 2)(addr: edaf31b)
 [cycle 861] NOP:
-[cycle 862] ITYPE: (PC: 20cf30)(sReg_a: 2)(dReg: 2)(addr: 1)
-[cycle 863] STORE: (PC: 20cf34)(sReg_a: 28)(sReg_b: 16)(addr: 10004880)
-[cycle 864] LOAD: (PC: 20cf38)(sReg_a: 29)(dReg: 31)(addr: 80411378)
-[cycle 865] LOAD: (PC: 20cf3c)(sReg_a: 29)(dReg: 16)(addr: 7fff7518)
-[cycle 866] ITYPE: (PC: 20cf40)(sReg_a: 29)(dReg: 29)(addr: 20)
-[cycle 867] NOP:
-[cycle 868] JRTYPE: (PC: 20cf44) (sReg_a: 255)(addr: 20f2fc)
-[cycle 869] BRANCH: (PC: 20f2fc)(sReg_a: 2)(sReg_b: 0)(addr: 20f310)
-[cycle 870] NOP:
-[cycle 871] LOAD: (PC: 20f300)(sReg_a: 16)(dReg: 2)(addr: 10003431)
-[cycle 872] STORE: (PC: 20f304)(sReg_a: 16)(sReg_b: 0)(addr: 10003458)
+[cycle 862] NOP:
+[cycle 863] NOP:
+[cycle 864] ITYPE: (PC: 20c720)(sReg_a: 2)(dReg: 2)(addr: 2)
+[cycle 865] NOP:
+[cycle 866] BRANCH: (PC: 20c724)(sReg_a: 2)(sReg_b: 0)(addr: 20c738)
+[cycle 867] SQUASHED:
+[cycle 868] SQUASHED:
+[cycle 869] SQUASHED:
+[cycle 870] SQUASHED:
+[cycle 871] LOAD: (PC: 20c738)(sReg_a: 16)(dReg: 3)(addr: edaf31b)
+[cycle 872] NOP:
 [cycle 873] NOP:
 [cycle 874] NOP:
-[cycle 875] ITYPE: (PC: 20f308)(sReg_a: 2)(dReg: 2)(addr: 1000)
+[cycle 875] ITYPE: (PC: 20c73c)(sReg_a: 3)(dReg: 2)(addr: 400)
 [cycle 876] NOP:
-[cycle 877] STORE: (PC: 20f30c)(sReg_a: 16)(sReg_b: 2)(addr: 1000347c)
-[cycle 878] LOAD: (PC: 20f310)(sReg_a: 29)(dReg: 2)(addr: 7fff8538)
+[cycle 877] BRANCH: (PC: 20c740)(sReg_a: 2)(sReg_b: 0)(addr: 20c730)
+[cycle 878] ITYPE: (PC: 20c744)(sReg_a: 3)(dReg: 2)(addr: 100)
 [cycle 879] NOP:
 [cycle 880] NOP:
-[cycle 881] NOP:
-[cycle 882] STORE: (PC: 20f314)(sReg_a: 16)(sReg_b: 2)(addr: 10003444)
-[cycle 883] LOAD: (PC: 20f318)(sReg_a: 29)(dReg: 31)(addr: 80415b30)
-[cycle 884] LOAD: (PC: 20f31c)(sReg_a: 29)(dReg: 17)(addr: 7fff7539)
-[cycle 885] LOAD: (PC: 20f320)(sReg_a: 29)(dReg: 16)(addr: 8fffa968)
-[cycle 886] ITYPE: (PC: 20f324)(sReg_a: 29)(dReg: 29)(addr: 60)
-[cycle 887] JRTYPE: (PC: 20f328) (sReg_a: 255)(addr: 20c7bc)
+[cycle 881] BRANCH: (PC: 20c748)(sReg_a: 2)(sReg_b: 0)(addr: 20c764)
+[cycle 882] SQUASHED:
+[cycle 883] SQUASHED:
+[cycle 884] SQUASHED:
+[cycle 885] SQUASHED:
+[cycle 886] LOAD: (PC: 20c764)(sReg_a: 16)(dReg: 2)(addr: 10003430)
+[cycle 887] NOP:
 [cycle 888] NOP:
-[cycle 889] LOAD: (PC: 20c7bc)(sReg_a: 16)(dReg: 2)(addr: 10003830)
-[cycle 890] NOP:
+[cycle 889] NOP:
+[cycle 890] ITYPE: (PC: 20c768)(sReg_a: 2)(dReg: 2)(addr: 4000)
 [cycle 891] NOP:
-[cycle 892] NOP:
-[cycle 893] ITYPE: (PC: 20c7c0)(sReg_a: 2)(dReg: 2)(addr: 4000)
-[cycle 894] NOP:
-[cycle 895] STORE: (PC: 20c7c4)(sReg_a: 16)(sReg_b: 2)(addr: 1000347c)
-[cycle 896] LOAD: (PC: 20c7c8)(sReg_a: 16)(dReg: 2)(addr: 10008430)
-[cycle 897] NOP:
+[cycle 892] BRANCH: (PC: 20c76c)(sReg_a: 2)(sReg_b: 0)(addr: 20c7c8)
+[cycle 893] LOAD: (PC: 20c770)(sReg_a: 28)(dReg: 2)(addr: 1000c000)
+[cycle 894] ITYPE: (PC: 20c774)(sReg_a: 255)(dReg: 3)(addr: 1000)
+[cycle 895] NOP:
+[cycle 896] LOAD: (PC: 20c778)(sReg_a: 3)(dReg: 3)(addr: 20000000)
+[cycle 897] STORE: (PC: 20c77c)(sReg_a: 16)(sReg_b: 2)(addr: 10003464)
 [cycle 898] NOP:
 [cycle 899] NOP:
-[cycle 900] BRANCH: (PC: 20c7cc)(sReg_a: 2)(sReg_b: 0)(addr: 20c83c)
-[cycle 901] LOAD: (PC: 20c7d0)(sReg_a: 16)(dReg: 2)(addr: 10003430)
+[cycle 900] STORE: (PC: 20c780)(sReg_a: 16)(sReg_b: 3)(addr: 10003468)
+[cycle 901] ITYPE: (PC: 20c784)(sReg_a: 255)(dReg: 5)(addr: 1000)
 [cycle 902] NOP:
-[cycle 903] NOP:
+[cycle 903] ITYPE: (PC: 20c788)(sReg_a: 5)(dReg: 5)(addr: 1310)
 [cycle 904] NOP:
-[cycle 905] ITYPE: (PC: 20c7d4)(sReg_a: 2)(dReg: 2)(addr: 800)
+[cycle 905] LOAD: (PC: 20c78c)(sReg_a: 5)(dReg: 2)(addr: 10419c10)
 [cycle 906] NOP:
-[cycle 907] BRANCH: (PC: 20c7d8)(sReg_a: 2)(sReg_b: 0)(addr: 20c83c)
-[cycle 908] LOAD: (PC: 20c7dc)(sReg_a: 16)(dReg: 2)(addr: 10003430)
-[cycle 909] NOP:
+[cycle 907] LOAD: (PC: 20c790)(sReg_a: 5)(dReg: 3)(addr: 10419488)
+[cycle 908] NOP:
+[cycle 909] LOAD: (PC: 20c794)(sReg_a: 5)(dReg: 4)(addr: 20004740)
 [cycle 910] NOP:
-[cycle 911] NOP:
-[cycle 912] BRANCH: (PC: 20c7e0)(sReg_a: 2)(sReg_b: 0)(addr: 20c7ec)
-[cycle 913] LOAD: (PC: 20c7ec)(sReg_a: 16)(dReg: 4)(addr: 10003431)
-[cycle 914] LOAD: (PC: 20c7f0)(sReg_a: 28)(dReg: 17)(addr: 90004004)
-[cycle 915] NOP:
-[cycle 916] NOP:
-[cycle 917] ITYPE: (PC: 20c7f4)(sReg_a: 4)(dReg: 2)(addr: 80)
+[cycle 911] STORE: (PC: 20c798)(sReg_a: 16)(sReg_b: 2)(addr: 10003450)
+[cycle 912] NOP:
+[cycle 913] STORE: (PC: 20c79c)(sReg_a: 16)(sReg_b: 3)(addr: 10003454)
+[cycle 914] NOP:
+[cycle 915] STORE: (PC: 20c7a0)(sReg_a: 16)(sReg_b: 4)(addr: 10003458)
+[cycle 916] LOAD: (PC: 20c7a4)(sReg_a: 5)(dReg: 2)(addr: 1041f1f0)
+[cycle 917] LOAD: (PC: 20c7a8)(sReg_a: 5)(dReg: 3)(addr: 1041f220)
 [cycle 918] NOP:
-[cycle 919] BRANCH: (PC: 20c7f8)(sReg_a: 2)(sReg_b: 0)(addr: 20c820)
-[cycle 920] JTYPE: (PC: 20c7fc)(addr: 20b55c)
-[cycle 921] LOAD: (PC: 20b55c)(sReg_a: 28)(dReg: 2)(addr: 1000c000)
-[cycle 922] ITYPE: (PC: 20b560)(sReg_a: 29)(dReg: 29)(addr: ffffffd8)
-[cycle 923] NOP:
-[cycle 924] STORE: (PC: 20b564)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7580)
-[cycle 925] RTYPE: (PC: 20b568)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
-[cycle 926] STORE: (PC: 20b56c)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7594)
+[cycle 919] NOP:
+[cycle 920] STORE: (PC: 20c7ac)(sReg_a: 16)(sReg_b: 2)(addr: 1000345c)
+[cycle 921] STORE: (PC: 20c7b0)(sReg_a: 16)(sReg_b: 3)(addr: 10003460)
+[cycle 922] RTYPE: (PC: 20c7b4)(sReg_a: 0)(sReg_b: 16)(dReg: 4) 
+[cycle 923] JTYPE: (PC: 20c7b8)(addr: 20f290)
+[cycle 924] ITYPE: (PC: 20f290)(sReg_a: 29)(dReg: 29)(addr: ffffffa0)
+[cycle 925] NOP:
+[cycle 926] STORE: (PC: 20f294)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7588)
 [cycle 927] NOP:
-[cycle 928] STORE: (PC: 20b570)(sReg_a: 29)(sReg_b: 20)(addr: 7fff7590)
-[cycle 929] STORE: (PC: 20b574)(sReg_a: 29)(sReg_b: 19)(addr: 7fff758c)
-[cycle 930] STORE: (PC: 20b578)(sReg_a: 29)(sReg_b: 18)(addr: 7fff7588)
-[cycle 931] STORE: (PC: 20b57c)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7584)
-[cycle 932] BRANCH: (PC: 20b580)(sReg_a: 2)(sReg_b: 0)(addr: 20b58c)
-[cycle 933] SQUASHED:
-[cycle 934] SQUASHED:
-[cycle 935] SQUASHED:
-[cycle 936] SQUASHED:
-[cycle 937] LOAD: (PC: 20b58c)(sReg_a: 28)(dReg: 2)(addr: 1000c000)
+[cycle 928] RTYPE: (PC: 20f298)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
+[cycle 929] NOP:
+[cycle 930] STORE: (PC: 20f29c)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7590)
+[cycle 931] STORE: (PC: 20f2a0)(sReg_a: 29)(sReg_b: 17)(addr: 7fff758c)
+[cycle 932] LOAD: (PC: 20f2a4)(sReg_a: 16)(dReg: 2)(addr: 104214b0)
+[cycle 933] NOP:
+[cycle 934] LOAD: (PC: 20f2a8)(sReg_a: 16)(dReg: 17)(addr: 8fffb434)
+[cycle 935] NOP:
+[cycle 936] BRANCH: (PC: 20f2ac)(sReg_a: 2)(sReg_b: 0)(addr: 20f318)
+[cycle 937] LOAD: (PC: 20f2b0)(sReg_a: 16)(dReg: 2)(addr: 10003430)
 [cycle 938] NOP:
 [cycle 939] NOP:
 [cycle 940] NOP:
-[cycle 941] BRANCH: (PC: 20b590)(sReg_a: 2)(sReg_b: 0)(addr: 20b59c)
-[cycle 942] JTYPE: (PC: 20b594)(addr: 20b288)
-[cycle 943] ITYPE: (PC: 20b288)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
-[cycle 944] LOAD: (PC: 20b28c)(sReg_a: 28)(dReg: 3)(addr: 1000e000)
-[cycle 945] ITYPE: (PC: 20b290)(sReg_a: 0)(dReg: 4)(addr: 3000)
-[cycle 946] ITYPE: (PC: 20b294)(sReg_a: 0)(dReg: 2)(addr: 400)
-[cycle 947] STORE: (PC: 20b298)(sReg_a: 29)(sReg_b: 31)(addr: 7fff756c)
-[cycle 948] NOP:
-[cycle 949] STORE: (PC: 20b29c)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7568)
-[cycle 950] STORE: (PC: 20b2a0)(sReg_a: 28)(sReg_b: 2)(addr: 10004850)
-[cycle 951] JTYPE: (PC: 20b2a4)(addr: 0)
-[cycle 952] ITYPE: (PC: 20ea30)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
-[cycle 953] NOP:
-[cycle 954] STORE: (PC: 20ea34)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7550)
-[cycle 955] JTYPE: (PC: 20ea38)(addr: 213a68)
-[cycle 956] ITYPE: (PC: 213a68)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
+[cycle 941] ITYPE: (PC: 20f2b4)(sReg_a: 2)(dReg: 2)(addr: 800)
+[cycle 942] NOP:
+[cycle 943] BRANCH: (PC: 20f2b8)(sReg_a: 2)(sReg_b: 0)(addr: 20f318)
+[cycle 944] RTYPE: (PC: 20f2bc)(sReg_a: 0)(sReg_b: 17)(dReg: 4) 
+[cycle 945] ITYPE: (PC: 20f2c0)(sReg_a: 29)(dReg: 5)(addr: 10)
+[cycle 946] JTYPE: (PC: 20f2c4)(addr: 20e608)
+[cycle 947] ITYPE: (PC: 20e608)(sReg_a: 0)(dReg: 2)(addr: 3e)
+[cycle 948] SPECIAL:[cycle 949] BRANCH: (PC: 20e610)(sReg_a: 7)(sReg_b: 0)(addr: 20e600)
+[cycle 950] RTYPE: (PC: 20e614)(sReg_a: 255)(sReg_b: 255)(dReg: 255) 
+[cycle 951] JRTYPE: (PC: 20e618) (sReg_a: 255)(addr: 20f2c8)
+[cycle 952] NOP:
+[cycle 953] BRANCH: (PC: 20f2c8)(sReg_a: 2)(sReg_b: 255)(addr: 20f318)
+[cycle 954] LOAD: (PC: 20f2cc)(sReg_a: 29)(dReg: 2)(addr: 7fff7538)
+[cycle 955] NOP:
+[cycle 956] NOP:
 [cycle 957] NOP:
-[cycle 958] STORE: (PC: 213a6c)(sReg_a: 29)(sReg_b: 31)(addr: 7fff753c)
-[cycle 959] STORE: (PC: 213a70)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7538)
-[cycle 960] BRANCH: (PC: 213a74)(sReg_a: 4)(sReg_b: 0)(addr: 213a80)
-[cycle 961] SQUASHED:
+[cycle 958] ITYPE: (PC: 20f2d0)(sReg_a: 2)(dReg: 3)(addr: f000)
+[cycle 959] ITYPE: (PC: 20f2d4)(sReg_a: 0)(dReg: 2)(addr: 1000)
+[cycle 960] NOP:
+[cycle 961] BRANCH: (PC: 20f2d8)(sReg_a: 3)(sReg_b: 2)(addr: 20f2ec)
 [cycle 962] SQUASHED:
 [cycle 963] SQUASHED:
 [cycle 964] SQUASHED:
-[cycle 965] LOAD: (PC: 213a80)(sReg_a: 28)(dReg: 16)(addr: 1000c400)
-[cycle 966] NOP:
+[cycle 965] SQUASHED:
+[cycle 966] ITYPE: (PC: 20f2ec)(sReg_a: 0)(dReg: 2)(addr: 2000)
 [cycle 967] NOP:
-[cycle 968] NOP:
-[cycle 969] RTYPE: (PC: 213a84)(sReg_a: 16)(sReg_b: 4)(dReg: 4) 
-[cycle 970] JTYPE: (PC: 213a88)(addr: 2162b8)
-[cycle 971] LOAD: (PC: 2162b8)(sReg_a: 28)(dReg: 2)(addr: 1000c400)
-[cycle 972] NOP:
-[cycle 973] NOP:
-[cycle 974] NOP:
-[cycle 975] RTYPE: (PC: 2162bc)(sReg_a: 4)(sReg_b: 2)(dReg: 1) 
+[cycle 968] BRANCH: (PC: 20f2f0)(sReg_a: 3)(sReg_b: 2)(addr: 20f310)
+[cycle 969] RTYPE: (PC: 20f2f4)(sReg_a: 0)(sReg_b: 17)(dReg: 4) 
+[cycle 970] JTYPE: (PC: 20f2f8)(addr: 20cf10)
+[cycle 971] ITYPE: (PC: 20cf10)(sReg_a: 29)(dReg: 29)(addr: ffffffe0)
+[cycle 972] ITYPE: (PC: 20cf14)(sReg_a: 255)(dReg: 5)(addr: 4006)
+[cycle 973] STORE: (PC: 20cf18)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7530)
+[cycle 974] LOAD: (PC: 20cf1c)(sReg_a: 28)(dReg: 16)(addr: 2000f430)
+[cycle 975] ITYPE: (PC: 20cf20)(sReg_a: 5)(dReg: 5)(addr: 7408)
 [cycle 976] NOP:
-[cycle 977] BRANCH: (PC: 2162c0)(sReg_a: 1)(sReg_b: 0)(addr: 2162c8)
-[cycle 978] ITYPE: (PC: 2162c8)(sReg_a: 0)(dReg: 2)(addr: 11)
-[cycle 979] SPECIAL:[cycle 980] BRANCH: (PC: 2162d0)(sReg_a: 7)(sReg_b: 0)(addr: 2162e0)
-[cycle 981] STORE: (PC: 2162d4)(sReg_a: 28)(sReg_b: 4)(addr: 100044d0)
-[cycle 982] RTYPE: (PC: 2162d8)(sReg_a: 0)(sReg_b: 0)(dReg: 2) 
-[cycle 983] JRTYPE: (PC: 2162dc) (sReg_a: 255)(addr: 213a8c)
-[cycle 984] RTYPE: (PC: 213a8c)(sReg_a: 0)(sReg_b: 2)(dReg: 3) 
-[cycle 985] ITYPE: (PC: 213a90)(sReg_a: 0)(dReg: 2)(addr: ffffffff)
-[cycle 986] BRANCH: (PC: 213a94)(sReg_a: 3)(sReg_b: 255)(addr: 213a9c)
-[cycle 987] RTYPE: (PC: 213a98)(sReg_a: 0)(sReg_b: 16)(dReg: 2) 
-[cycle 988] LOAD: (PC: 213a9c)(sReg_a: 29)(dReg: 31)(addr: 8041ea40)
-[cycle 989] LOAD: (PC: 213aa0)(sReg_a: 29)(dReg: 16)(addr: 9004d048)
-[cycle 990] ITYPE: (PC: 213aa4)(sReg_a: 29)(dReg: 29)(addr: 18)
+[cycle 977] ITYPE: (PC: 20cf24)(sReg_a: 29)(dReg: 6)(addr: 10)
+[cycle 978] STORE: (PC: 20cf28)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7534)
+[cycle 979] JTYPE: (PC: 20cf2c)(addr: 20f348)
+[cycle 980] ITYPE: (PC: 20f348)(sReg_a: 0)(dReg: 2)(addr: 36)
+[cycle 981] SPECIAL:[cycle 982] BRANCH: (PC: 20f350)(sReg_a: 7)(sReg_b: 0)(addr: 20f340)
+[cycle 983] RTYPE: (PC: 20f354)(sReg_a: 255)(sReg_b: 255)(dReg: 255) 
+[cycle 984] JRTYPE: (PC: 20f358) (sReg_a: 255)(addr: 20cf30)
+[cycle 985] NOP:
+[cycle 986] ITYPE: (PC: 20cf30)(sReg_a: 2)(dReg: 2)(addr: 1)
+[cycle 987] STORE: (PC: 20cf34)(sReg_a: 28)(sReg_b: 16)(addr: 10004880)
+[cycle 988] LOAD: (PC: 20cf38)(sReg_a: 29)(dReg: 31)(addr: 80411378)
+[cycle 989] LOAD: (PC: 20cf3c)(sReg_a: 29)(dReg: 16)(addr: 7fff7518)
+[cycle 990] ITYPE: (PC: 20cf40)(sReg_a: 29)(dReg: 29)(addr: 20)
 [cycle 991] NOP:
-[cycle 992] JRTYPE: (PC: 213aa8) (sReg_a: 255)(addr: 20ea3c)
-[cycle 993] RTYPE: (PC: 20ea3c)(sReg_a: 0)(sReg_b: 2)(dReg: 3) 
+[cycle 992] JRTYPE: (PC: 20cf44) (sReg_a: 255)(addr: 20f2fc)
+[cycle 993] BRANCH: (PC: 20f2fc)(sReg_a: 2)(sReg_b: 0)(addr: 20f310)
 [cycle 994] NOP:
-[cycle 995] RTYPE: (PC: 20ea40)(sReg_a: 0)(sReg_b: 3)(dReg: 3) 
-[cycle 996] NOP:
-[cycle 997] RTYPE: (PC: 20ea44)(sReg_a: 0)(sReg_b: 3)(dReg: 3) 
+[cycle 995] LOAD: (PC: 20f300)(sReg_a: 16)(dReg: 2)(addr: 10003431)
+[cycle 996] STORE: (PC: 20f304)(sReg_a: 16)(sReg_b: 0)(addr: 10003458)
+[cycle 997] NOP:
 [cycle 998] NOP:
-[cycle 999] RTYPE: (PC: 20ea48)(sReg_a: 2)(sReg_b: 3)(dReg: 2) 
-[cycle 1000] LOAD: (PC: 20ea4c)(sReg_a: 29)(dReg: 31)(addr: 804149b8)
-[cycle 1001] ITYPE: (PC: 20ea50)(sReg_a: 29)(dReg: 29)(addr: 18)
-[cycle 1002] NOP:
+[cycle 999] ITYPE: (PC: 20f308)(sReg_a: 2)(dReg: 2)(addr: 1000)
+[cycle 1000] NOP:
+[cycle 1001] STORE: (PC: 20f30c)(sReg_a: 16)(sReg_b: 2)(addr: 1000347c)
+[cycle 1002] LOAD: (PC: 20f310)(sReg_a: 29)(dReg: 2)(addr: 7fff8538)
 [cycle 1003] NOP:
-[cycle 1004] JRTYPE: (PC: 20ea54) (sReg_a: 255)(addr: 20b2a8)
-[cycle 1005] RTYPE: (PC: 20b2a8)(sReg_a: 0)(sReg_b: 2)(dReg: 16) 
-[cycle 1006] NOP:
-[cycle 1007] ITYPE: (PC: 20b2ac)(sReg_a: 16)(dReg: 2)(addr: fff)
-[cycle 1008] NOP:
-[cycle 1009] BRANCH: (PC: 20b2b0)(sReg_a: 2)(sReg_b: 0)(addr: 20b2c8)
-[cycle 1010] ITYPE: (PC: 20b2b4)(sReg_a: 0)(dReg: 4)(addr: 1000)
-[cycle 1011] NOP:
+[cycle 1004] NOP:
+[cycle 1005] NOP:
+[cycle 1006] STORE: (PC: 20f314)(sReg_a: 16)(sReg_b: 2)(addr: 10003444)
+[cycle 1007] LOAD: (PC: 20f318)(sReg_a: 29)(dReg: 31)(addr: 80415b30)
+[cycle 1008] LOAD: (PC: 20f31c)(sReg_a: 29)(dReg: 17)(addr: 7fff7539)
+[cycle 1009] LOAD: (PC: 20f320)(sReg_a: 29)(dReg: 16)(addr: 8fffa968)
+[cycle 1010] ITYPE: (PC: 20f324)(sReg_a: 29)(dReg: 29)(addr: 60)
+[cycle 1011] JRTYPE: (PC: 20f328) (sReg_a: 255)(addr: 20c7bc)
 [cycle 1012] NOP:
-[cycle 1013] RTYPE: (PC: 20b2b8)(sReg_a: 4)(sReg_b: 2)(dReg: 4) 
-[cycle 1014] LOAD: (PC: 20b2bc)(sReg_a: 28)(dReg: 2)(addr: 1000cb20)
+[cycle 1013] LOAD: (PC: 20c7bc)(sReg_a: 16)(dReg: 2)(addr: 10003830)
+[cycle 1014] NOP:
 [cycle 1015] NOP:
-[cycle 1016] RTYPE: (PC: 20b2c0)(sReg_a: 16)(sReg_b: 4)(dReg: 16) 
-[cycle 1017] NOP:
-[cycle 1018] JTYPE: (PC: 20b2c4)(addr: 0)
-[cycle 1019] ITYPE: (PC: 20ea30)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
-[cycle 1020] NOP:
-[cycle 1021] STORE: (PC: 20ea34)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7550)
-[cycle 1022] JTYPE: (PC: 20ea38)(addr: 213a68)
-[cycle 1023] ITYPE: (PC: 213a68)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
-[cycle 1024] NOP:
-[cycle 1025] STORE: (PC: 213a6c)(sReg_a: 29)(sReg_b: 31)(addr: 7fff753c)
-[cycle 1026] STORE: (PC: 213a70)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7538)
-[cycle 1027] BRANCH: (PC: 213a74)(sReg_a: 4)(sReg_b: 0)(addr: 213a80)
-[cycle 1028] SQUASHED:
-[cycle 1029] SQUASHED:
-[cycle 1030] SQUASHED:
-[cycle 1031] SQUASHED:
-[cycle 1032] LOAD: (PC: 213a80)(sReg_a: 28)(dReg: 16)(addr: 20062000)
+[cycle 1016] NOP:
+[cycle 1017] ITYPE: (PC: 20c7c0)(sReg_a: 2)(dReg: 2)(addr: 4000)
+[cycle 1018] NOP:
+[cycle 1019] STORE: (PC: 20c7c4)(sReg_a: 16)(sReg_b: 2)(addr: 1000347c)
+[cycle 1020] LOAD: (PC: 20c7c8)(sReg_a: 16)(dReg: 2)(addr: 10008430)
+[cycle 1021] NOP:
+[cycle 1022] NOP:
+[cycle 1023] NOP:
+[cycle 1024] BRANCH: (PC: 20c7cc)(sReg_a: 2)(sReg_b: 0)(addr: 20c83c)
+[cycle 1025] LOAD: (PC: 20c7d0)(sReg_a: 16)(dReg: 2)(addr: 10003430)
+[cycle 1026] NOP:
+[cycle 1027] NOP:
+[cycle 1028] NOP:
+[cycle 1029] ITYPE: (PC: 20c7d4)(sReg_a: 2)(dReg: 2)(addr: 800)
+[cycle 1030] NOP:
+[cycle 1031] BRANCH: (PC: 20c7d8)(sReg_a: 2)(sReg_b: 0)(addr: 20c83c)
+[cycle 1032] LOAD: (PC: 20c7dc)(sReg_a: 16)(dReg: 2)(addr: 10003430)
 [cycle 1033] NOP:
 [cycle 1034] NOP:
 [cycle 1035] NOP:
-[cycle 1036] RTYPE: (PC: 213a84)(sReg_a: 16)(sReg_b: 4)(dReg: 4) 
-[cycle 1037] JTYPE: (PC: 213a88)(addr: 2162b8)
-[cycle 1038] LOAD: (PC: 2162b8)(sReg_a: 28)(dReg: 2)(addr: 10429460)
-[cycle 1039] NOP:
-[cycle 1040] NOP:
-[cycle 1041] NOP:
-[cycle 1042] RTYPE: (PC: 2162bc)(sReg_a: 4)(sReg_b: 2)(dReg: 1) 
+[cycle 1036] BRANCH: (PC: 20c7e0)(sReg_a: 2)(sReg_b: 0)(addr: 20c7ec)
+[cycle 1037] SQUASHED:
+[cycle 1038] SQUASHED:
+[cycle 1039] SQUASHED:
+[cycle 1040] SQUASHED:
+[cycle 1041] LOAD: (PC: 20c7ec)(sReg_a: 16)(dReg: 4)(addr: 10003431)
+[cycle 1042] LOAD: (PC: 20c7f0)(sReg_a: 28)(dReg: 17)(addr: 90004004)
 [cycle 1043] NOP:
-[cycle 1044] BRANCH: (PC: 2162c0)(sReg_a: 1)(sReg_b: 0)(addr: 2162c8)
-[cycle 1045] ITYPE: (PC: 2162c8)(sReg_a: 0)(dReg: 2)(addr: 11)
-[cycle 1046] SPECIAL:[cycle 1047] BRANCH: (PC: 2162d0)(sReg_a: 7)(sReg_b: 0)(addr: 2162e0)
-[cycle 1048] STORE: (PC: 2162d4)(sReg_a: 28)(sReg_b: 4)(addr: 100044d0)
-[cycle 1049] RTYPE: (PC: 2162d8)(sReg_a: 0)(sReg_b: 0)(dReg: 2) 
-[cycle 1050] JRTYPE: (PC: 2162dc) (sReg_a: 255)(addr: 213a8c)
-[cycle 1051] RTYPE: (PC: 213a8c)(sReg_a: 0)(sReg_b: 2)(dReg: 3) 
-[cycle 1052] ITYPE: (PC: 213a90)(sReg_a: 0)(dReg: 2)(addr: ffffffff)
-[cycle 1053] BRANCH: (PC: 213a94)(sReg_a: 3)(sReg_b: 255)(addr: 213a9c)
-[cycle 1054] RTYPE: (PC: 213a98)(sReg_a: 0)(sReg_b: 16)(dReg: 2) 
-[cycle 1055] LOAD: (PC: 213a9c)(sReg_a: 29)(dReg: 31)(addr: 8041ea40)
-[cycle 1056] LOAD: (PC: 213aa0)(sReg_a: 29)(dReg: 16)(addr: 90050048)
-[cycle 1057] ITYPE: (PC: 213aa4)(sReg_a: 29)(dReg: 29)(addr: 18)
-[cycle 1058] NOP:
-[cycle 1059] JRTYPE: (PC: 213aa8) (sReg_a: 255)(addr: 20ea3c)
-[cycle 1060] RTYPE: (PC: 20ea3c)(sReg_a: 0)(sReg_b: 2)(dReg: 3) 
-[cycle 1061] NOP:
-[cycle 1062] RTYPE: (PC: 20ea40)(sReg_a: 0)(sReg_b: 3)(dReg: 3) 
-[cycle 1063] NOP:
-[cycle 1064] RTYPE: (PC: 20ea44)(sReg_a: 0)(sReg_b: 3)(dReg: 3) 
-[cycle 1065] NOP:
-[cycle 1066] RTYPE: (PC: 20ea48)(sReg_a: 2)(sReg_b: 3)(dReg: 2) 
-[cycle 1067] LOAD: (PC: 20ea4c)(sReg_a: 29)(dReg: 31)(addr: 804149b8)
-[cycle 1068] ITYPE: (PC: 20ea50)(sReg_a: 29)(dReg: 29)(addr: 18)
-[cycle 1069] NOP:
-[cycle 1070] NOP:
-[cycle 1071] JRTYPE: (PC: 20ea54) (sReg_a: 255)(addr: 20b2c8)
-[cycle 1072] LOAD: (PC: 20b2c8)(sReg_a: 28)(dReg: 2)(addr: 20064b20)
-[cycle 1073] NOP:
-[cycle 1074] NOP:
-[cycle 1075] NOP:
-[cycle 1076] BRANCH: (PC: 20b2cc)(sReg_a: 2)(sReg_b: 0)(addr: 20b2d4)
-[cycle 1077] STORE: (PC: 20b2d4)(sReg_a: 28)(sReg_b: 16)(addr: 10004988)
-[cycle 1078] BRANCH: (PC: 20b2d8)(sReg_a: 16)(sReg_b: 0)(addr: 20b338)
-[cycle 1079] LOAD: (PC: 20b2dc)(sReg_a: 28)(dReg: 2)(addr: 1000c000)
-[cycle 1080] RTYPE: (PC: 20b2e0)(sReg_a: 0)(sReg_b: 16)(dReg: 4) 
-[cycle 1081] RTYPE: (PC: 20b2e4)(sReg_a: 0)(sReg_b: 0)(dReg: 5) 
-[cycle 1082] NOP:
-[cycle 1083] ITYPE: (PC: 20b2e8)(sReg_a: 255)(dReg: 6)(addr: 1)
-[cycle 1084] NOP:
-[cycle 1085] RTYPE: (PC: 20b2ec)(sReg_a: 6)(sReg_b: 2)(dReg: 6) 
-[cycle 1086] NOP:
-[cycle 1087] ITYPE: (PC: 20b2f0)(sReg_a: 255)(dReg: 6)(addr: 2)
-[cycle 1088] JTYPE: (PC: 20b2f4)(addr: 20a118)
-[cycle 1089] RTYPE: (PC: 20a118)(sReg_a: 0)(sReg_b: 4)(dReg: 8) 
-[cycle 1090] NOP:
-[cycle 1091] ITYPE: (PC: 20a11c)(sReg_a: 6)(dReg: 2)(addr: 8)
-[cycle 1092] NOP:
-[cycle 1093] BRANCH: (PC: 20a120)(sReg_a: 2)(sReg_b: 0)(addr: 20a1b0)
-[cycle 1094] ITYPE: (PC: 20a124)(sReg_a: 5)(dReg: 7)(addr: ff)
+[cycle 1044] NOP:
+[cycle 1045] ITYPE: (PC: 20c7f4)(sReg_a: 4)(dReg: 2)(addr: 80)
+[cycle 1046] NOP:
+[cycle 1047] BRANCH: (PC: 20c7f8)(sReg_a: 2)(sReg_b: 0)(addr: 20c820)
+[cycle 1048] JTYPE: (PC: 20c7fc)(addr: 20b55c)
+[cycle 1049] LOAD: (PC: 20b55c)(sReg_a: 28)(dReg: 2)(addr: 1000c000)
+[cycle 1050] ITYPE: (PC: 20b560)(sReg_a: 29)(dReg: 29)(addr: ffffffd8)
+[cycle 1051] NOP:
+[cycle 1052] STORE: (PC: 20b564)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7580)
+[cycle 1053] RTYPE: (PC: 20b568)(sReg_a: 0)(sReg_b: 4)(dReg: 16) 
+[cycle 1054] STORE: (PC: 20b56c)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7594)
+[cycle 1055] NOP:
+[cycle 1056] STORE: (PC: 20b570)(sReg_a: 29)(sReg_b: 20)(addr: 7fff7590)
+[cycle 1057] STORE: (PC: 20b574)(sReg_a: 29)(sReg_b: 19)(addr: 7fff758c)
+[cycle 1058] STORE: (PC: 20b578)(sReg_a: 29)(sReg_b: 18)(addr: 7fff7588)
+[cycle 1059] STORE: (PC: 20b57c)(sReg_a: 29)(sReg_b: 17)(addr: 7fff7584)
+[cycle 1060] BRANCH: (PC: 20b580)(sReg_a: 2)(sReg_b: 0)(addr: 20b58c)
+[cycle 1061] SQUASHED:
+[cycle 1062] SQUASHED:
+[cycle 1063] SQUASHED:
+[cycle 1064] SQUASHED:
+[cycle 1065] LOAD: (PC: 20b58c)(sReg_a: 28)(dReg: 2)(addr: 1000c000)
+[cycle 1066] NOP:
+[cycle 1067] NOP:
+[cycle 1068] NOP:
+[cycle 1069] BRANCH: (PC: 20b590)(sReg_a: 2)(sReg_b: 0)(addr: 20b59c)
+[cycle 1070] JTYPE: (PC: 20b594)(addr: 20b288)
+[cycle 1071] ITYPE: (PC: 20b288)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
+[cycle 1072] LOAD: (PC: 20b28c)(sReg_a: 28)(dReg: 3)(addr: 1000e000)
+[cycle 1073] ITYPE: (PC: 20b290)(sReg_a: 0)(dReg: 4)(addr: 3000)
+[cycle 1074] ITYPE: (PC: 20b294)(sReg_a: 0)(dReg: 2)(addr: 400)
+[cycle 1075] STORE: (PC: 20b298)(sReg_a: 29)(sReg_b: 31)(addr: 7fff756c)
+[cycle 1076] NOP:
+[cycle 1077] STORE: (PC: 20b29c)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7568)
+[cycle 1078] STORE: (PC: 20b2a0)(sReg_a: 28)(sReg_b: 2)(addr: 10004850)
+[cycle 1079] JTYPE: (PC: 20b2a4)(addr: 0)
+[cycle 1080] ITYPE: (PC: 20ea30)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
+[cycle 1081] NOP:
+[cycle 1082] STORE: (PC: 20ea34)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7550)
+[cycle 1083] JTYPE: (PC: 20ea38)(addr: 213a68)
+[cycle 1084] ITYPE: (PC: 213a68)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
+[cycle 1085] NOP:
+[cycle 1086] STORE: (PC: 213a6c)(sReg_a: 29)(sReg_b: 31)(addr: 7fff753c)
+[cycle 1087] STORE: (PC: 213a70)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7538)
+[cycle 1088] BRANCH: (PC: 213a74)(sReg_a: 4)(sReg_b: 0)(addr: 213a80)
+[cycle 1089] SQUASHED:
+[cycle 1090] SQUASHED:
+[cycle 1091] SQUASHED:
+[cycle 1092] SQUASHED:
+[cycle 1093] LOAD: (PC: 213a80)(sReg_a: 28)(dReg: 16)(addr: 1000c400)
+[cycle 1094] NOP:
 [cycle 1095] NOP:
-[cycle 1096] ITYPE: (PC: 20a128)(sReg_a: 255)(dReg: 2)(addr: 8)
-[cycle 1097] NOP:
-[cycle 1098] RTYPE: (PC: 20a12c)(sReg_a: 7)(sReg_b: 2)(dReg: 7) 
-[cycle 1099] NOP:
-[cycle 1100] ITYPE: (PC: 20a130)(sReg_a: 255)(dReg: 2)(addr: 10)
+[cycle 1096] NOP:
+[cycle 1097] RTYPE: (PC: 213a84)(sReg_a: 16)(sReg_b: 4)(dReg: 4) 
+[cycle 1098] JTYPE: (PC: 213a88)(addr: 2162b8)
+[cycle 1099] LOAD: (PC: 2162b8)(sReg_a: 28)(dReg: 2)(addr: 1000c400)
+[cycle 1100] NOP:
 [cycle 1101] NOP:
-[cycle 1102] RTYPE: (PC: 20a134)(sReg_a: 7)(sReg_b: 2)(dReg: 7) 
-[cycle 1103] ITYPE: (PC: 20a138)(sReg_a: 4)(dReg: 2)(addr: 3)
+[cycle 1102] NOP:
+[cycle 1103] RTYPE: (PC: 2162bc)(sReg_a: 4)(sReg_b: 2)(dReg: 1) 
 [cycle 1104] NOP:
-[cycle 1105] NOP:
-[cycle 1106] BRANCH: (PC: 20a13c)(sReg_a: 2)(sReg_b: 0)(addr: 20a154)
-[cycle 1107] ITYPE: (PC: 20a154)(sReg_a: 255)(dReg: 3)(addr: 5)
-[cycle 1108] NOP:
-[cycle 1109] BRANCH: (PC: 20a158)(sReg_a: 3)(sReg_b: 0)(addr: 20a190)
-[cycle 1110] ITYPE: (PC: 20a15c)(sReg_a: 8)(dReg: 2)(addr: 1c)
-[cycle 1111] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056000)
-[cycle 1112] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056004)
-[cycle 1113] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056008)
-[cycle 1114] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005600c)
-[cycle 1115] NOP:
-[cycle 1116] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056010)
-[cycle 1117] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056014)
-[cycle 1118] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056018)
-[cycle 1119] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005601c)
-[cycle 1120] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1121] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1122] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1105] BRANCH: (PC: 2162c0)(sReg_a: 1)(sReg_b: 0)(addr: 2162c8)
+[cycle 1106] SQUASHED:
+[cycle 1107] SQUASHED:
+[cycle 1108] SQUASHED:
+[cycle 1109] SQUASHED:
+[cycle 1110] ITYPE: (PC: 2162c8)(sReg_a: 0)(dReg: 2)(addr: 11)
+[cycle 1111] SPECIAL:[cycle 1112] BRANCH: (PC: 2162d0)(sReg_a: 7)(sReg_b: 0)(addr: 2162e0)
+[cycle 1113] STORE: (PC: 2162d4)(sReg_a: 28)(sReg_b: 4)(addr: 100044d0)
+[cycle 1114] RTYPE: (PC: 2162d8)(sReg_a: 0)(sReg_b: 0)(dReg: 2) 
+[cycle 1115] JRTYPE: (PC: 2162dc) (sReg_a: 255)(addr: 213a8c)
+[cycle 1116] RTYPE: (PC: 213a8c)(sReg_a: 0)(sReg_b: 2)(dReg: 3) 
+[cycle 1117] ITYPE: (PC: 213a90)(sReg_a: 0)(dReg: 2)(addr: ffffffff)
+[cycle 1118] BRANCH: (PC: 213a94)(sReg_a: 3)(sReg_b: 255)(addr: 213a9c)
+[cycle 1119] RTYPE: (PC: 213a98)(sReg_a: 0)(sReg_b: 16)(dReg: 2) 
+[cycle 1120] LOAD: (PC: 213a9c)(sReg_a: 29)(dReg: 31)(addr: 8041ea40)
+[cycle 1121] LOAD: (PC: 213aa0)(sReg_a: 29)(dReg: 16)(addr: 9004d048)
+[cycle 1122] ITYPE: (PC: 213aa4)(sReg_a: 29)(dReg: 29)(addr: 18)
 [cycle 1123] NOP:
-[cycle 1124] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1125] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056020)
-[cycle 1126] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056024)
-[cycle 1127] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056028)
-[cycle 1128] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005602c)
-[cycle 1129] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056030)
-[cycle 1130] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056034)
-[cycle 1131] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056038)
-[cycle 1132] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005603c)
-[cycle 1133] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1134] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1135] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1136] NOP:
-[cycle 1137] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1138] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056040)
-[cycle 1139] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056044)
-[cycle 1140] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056048)
-[cycle 1141] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005604c)
-[cycle 1142] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056050)
-[cycle 1143] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056054)
-[cycle 1144] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056058)
-[cycle 1145] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005605c)
-[cycle 1146] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1147] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1148] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1124] JRTYPE: (PC: 213aa8) (sReg_a: 255)(addr: 20ea3c)
+[cycle 1125] RTYPE: (PC: 20ea3c)(sReg_a: 0)(sReg_b: 2)(dReg: 3) 
+[cycle 1126] NOP:
+[cycle 1127] RTYPE: (PC: 20ea40)(sReg_a: 0)(sReg_b: 3)(dReg: 3) 
+[cycle 1128] NOP:
+[cycle 1129] RTYPE: (PC: 20ea44)(sReg_a: 0)(sReg_b: 3)(dReg: 3) 
+[cycle 1130] NOP:
+[cycle 1131] RTYPE: (PC: 20ea48)(sReg_a: 2)(sReg_b: 3)(dReg: 2) 
+[cycle 1132] LOAD: (PC: 20ea4c)(sReg_a: 29)(dReg: 31)(addr: 804149b8)
+[cycle 1133] ITYPE: (PC: 20ea50)(sReg_a: 29)(dReg: 29)(addr: 18)
+[cycle 1134] NOP:
+[cycle 1135] NOP:
+[cycle 1136] JRTYPE: (PC: 20ea54) (sReg_a: 255)(addr: 20b2a8)
+[cycle 1137] RTYPE: (PC: 20b2a8)(sReg_a: 0)(sReg_b: 2)(dReg: 16) 
+[cycle 1138] NOP:
+[cycle 1139] ITYPE: (PC: 20b2ac)(sReg_a: 16)(dReg: 2)(addr: fff)
+[cycle 1140] NOP:
+[cycle 1141] BRANCH: (PC: 20b2b0)(sReg_a: 2)(sReg_b: 0)(addr: 20b2c8)
+[cycle 1142] ITYPE: (PC: 20b2b4)(sReg_a: 0)(dReg: 4)(addr: 1000)
+[cycle 1143] NOP:
+[cycle 1144] NOP:
+[cycle 1145] RTYPE: (PC: 20b2b8)(sReg_a: 4)(sReg_b: 2)(dReg: 4) 
+[cycle 1146] LOAD: (PC: 20b2bc)(sReg_a: 28)(dReg: 2)(addr: 1000cb20)
+[cycle 1147] NOP:
+[cycle 1148] RTYPE: (PC: 20b2c0)(sReg_a: 16)(sReg_b: 4)(dReg: 16) 
 [cycle 1149] NOP:
-[cycle 1150] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1151] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056060)
-[cycle 1152] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056064)
-[cycle 1153] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056068)
-[cycle 1154] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005606c)
-[cycle 1155] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056070)
-[cycle 1156] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056074)
-[cycle 1157] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056078)
-[cycle 1158] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005607c)
-[cycle 1159] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1160] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1161] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1162] NOP:
-[cycle 1163] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1164] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056080)
-[cycle 1165] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056084)
-[cycle 1166] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056088)
-[cycle 1167] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005608c)
-[cycle 1168] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056090)
-[cycle 1169] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056094)
-[cycle 1170] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056098)
-[cycle 1171] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005609c)
-[cycle 1172] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1173] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1174] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1150] JTYPE: (PC: 20b2c4)(addr: 0)
+[cycle 1151] ITYPE: (PC: 20ea30)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
+[cycle 1152] NOP:
+[cycle 1153] STORE: (PC: 20ea34)(sReg_a: 29)(sReg_b: 31)(addr: 7fff7550)
+[cycle 1154] JTYPE: (PC: 20ea38)(addr: 213a68)
+[cycle 1155] ITYPE: (PC: 213a68)(sReg_a: 29)(dReg: 29)(addr: ffffffe8)
+[cycle 1156] NOP:
+[cycle 1157] STORE: (PC: 213a6c)(sReg_a: 29)(sReg_b: 31)(addr: 7fff753c)
+[cycle 1158] STORE: (PC: 213a70)(sReg_a: 29)(sReg_b: 16)(addr: 7fff7538)
+[cycle 1159] BRANCH: (PC: 213a74)(sReg_a: 4)(sReg_b: 0)(addr: 213a80)
+[cycle 1160] SQUASHED:
+[cycle 1161] SQUASHED:
+[cycle 1162] SQUASHED:
+[cycle 1163] SQUASHED:
+[cycle 1164] LOAD: (PC: 213a80)(sReg_a: 28)(dReg: 16)(addr: 20062000)
+[cycle 1165] NOP:
+[cycle 1166] NOP:
+[cycle 1167] NOP:
+[cycle 1168] RTYPE: (PC: 213a84)(sReg_a: 16)(sReg_b: 4)(dReg: 4) 
+[cycle 1169] JTYPE: (PC: 213a88)(addr: 2162b8)
+[cycle 1170] LOAD: (PC: 2162b8)(sReg_a: 28)(dReg: 2)(addr: 10429460)
+[cycle 1171] NOP:
+[cycle 1172] NOP:
+[cycle 1173] NOP:
+[cycle 1174] RTYPE: (PC: 2162bc)(sReg_a: 4)(sReg_b: 2)(dReg: 1) 
 [cycle 1175] NOP:
-[cycle 1176] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1177] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100560a0)
-[cycle 1178] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100560a4)
-[cycle 1179] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100560a8)
-[cycle 1180] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100560ac)
-[cycle 1181] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100560b0)
-[cycle 1182] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100560b4)
-[cycle 1183] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100560b8)
-[cycle 1184] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100560bc)
-[cycle 1185] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1186] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1187] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1188] NOP:
-[cycle 1189] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1190] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100560c0)
-[cycle 1191] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100560c4)
-[cycle 1192] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100560c8)
-[cycle 1193] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100560cc)
-[cycle 1194] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100560d0)
-[cycle 1195] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100560d4)
-[cycle 1196] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100560d8)
-[cycle 1197] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100560dc)
-[cycle 1198] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1199] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1200] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1176] BRANCH: (PC: 2162c0)(sReg_a: 1)(sReg_b: 0)(addr: 2162c8)
+[cycle 1177] SQUASHED:
+[cycle 1178] SQUASHED:
+[cycle 1179] SQUASHED:
+[cycle 1180] SQUASHED:
+[cycle 1181] ITYPE: (PC: 2162c8)(sReg_a: 0)(dReg: 2)(addr: 11)
+[cycle 1182] SPECIAL:[cycle 1183] BRANCH: (PC: 2162d0)(sReg_a: 7)(sReg_b: 0)(addr: 2162e0)
+[cycle 1184] STORE: (PC: 2162d4)(sReg_a: 28)(sReg_b: 4)(addr: 100044d0)
+[cycle 1185] RTYPE: (PC: 2162d8)(sReg_a: 0)(sReg_b: 0)(dReg: 2) 
+[cycle 1186] JRTYPE: (PC: 2162dc) (sReg_a: 255)(addr: 213a8c)
+[cycle 1187] RTYPE: (PC: 213a8c)(sReg_a: 0)(sReg_b: 2)(dReg: 3) 
+[cycle 1188] ITYPE: (PC: 213a90)(sReg_a: 0)(dReg: 2)(addr: ffffffff)
+[cycle 1189] BRANCH: (PC: 213a94)(sReg_a: 3)(sReg_b: 255)(addr: 213a9c)
+[cycle 1190] RTYPE: (PC: 213a98)(sReg_a: 0)(sReg_b: 16)(dReg: 2) 
+[cycle 1191] LOAD: (PC: 213a9c)(sReg_a: 29)(dReg: 31)(addr: 8041ea40)
+[cycle 1192] LOAD: (PC: 213aa0)(sReg_a: 29)(dReg: 16)(addr: 90050048)
+[cycle 1193] ITYPE: (PC: 213aa4)(sReg_a: 29)(dReg: 29)(addr: 18)
+[cycle 1194] NOP:
+[cycle 1195] JRTYPE: (PC: 213aa8) (sReg_a: 255)(addr: 20ea3c)
+[cycle 1196] RTYPE: (PC: 20ea3c)(sReg_a: 0)(sReg_b: 2)(dReg: 3) 
+[cycle 1197] NOP:
+[cycle 1198] RTYPE: (PC: 20ea40)(sReg_a: 0)(sReg_b: 3)(dReg: 3) 
+[cycle 1199] NOP:
+[cycle 1200] RTYPE: (PC: 20ea44)(sReg_a: 0)(sReg_b: 3)(dReg: 3) 
 [cycle 1201] NOP:
-[cycle 1202] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1203] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100560e0)
-[cycle 1204] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100560e4)
-[cycle 1205] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100560e8)
-[cycle 1206] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100560ec)
-[cycle 1207] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100560f0)
-[cycle 1208] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100560f4)
-[cycle 1209] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100560f8)
-[cycle 1210] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100560fc)
-[cycle 1211] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1212] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1213] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1214] NOP:
-[cycle 1215] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1216] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056100)
-[cycle 1217] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056104)
-[cycle 1218] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056108)
-[cycle 1219] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005610c)
-[cycle 1220] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056110)
-[cycle 1221] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056114)
-[cycle 1222] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056118)
-[cycle 1223] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005611c)
-[cycle 1224] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1225] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1226] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1227] NOP:
-[cycle 1228] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1229] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056120)
-[cycle 1230] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056124)
-[cycle 1231] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056128)
-[cycle 1232] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005612c)
-[cycle 1233] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056130)
-[cycle 1234] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056134)
-[cycle 1235] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056138)
-[cycle 1236] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005613c)
-[cycle 1237] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1238] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1239] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1240] NOP:
-[cycle 1241] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1242] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056140)
-[cycle 1243] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056144)
-[cycle 1244] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056148)
-[cycle 1245] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005614c)
-[cycle 1246] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056150)
-[cycle 1247] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056154)
-[cycle 1248] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056158)
-[cycle 1249] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005615c)
-[cycle 1250] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1251] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1252] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1253] NOP:
-[cycle 1254] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1255] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056160)
-[cycle 1256] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056164)
-[cycle 1257] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056168)
-[cycle 1258] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005616c)
-[cycle 1259] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056170)
-[cycle 1260] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056174)
-[cycle 1261] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056178)
-[cycle 1262] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005617c)
-[cycle 1263] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1264] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1265] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1266] NOP:
-[cycle 1267] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1268] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056180)
-[cycle 1269] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056184)
-[cycle 1270] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056188)
-[cycle 1271] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005618c)
-[cycle 1272] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056190)
-[cycle 1273] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056194)
-[cycle 1274] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056198)
-[cycle 1275] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005619c)
-[cycle 1276] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1277] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1278] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1279] NOP:
-[cycle 1280] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1281] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100561a0)
-[cycle 1282] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100561a4)
-[cycle 1283] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100561a8)
-[cycle 1284] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100561ac)
-[cycle 1285] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100561b0)
-[cycle 1286] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100561b4)
-[cycle 1287] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100561b8)
-[cycle 1288] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100561bc)
-[cycle 1289] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1290] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1291] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1292] NOP:
-[cycle 1293] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1294] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100561c0)
-[cycle 1295] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100561c4)
-[cycle 1296] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100561c8)
-[cycle 1297] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100561cc)
-[cycle 1298] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100561d0)
-[cycle 1299] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100561d4)
-[cycle 1300] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100561d8)
-[cycle 1301] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100561dc)
-[cycle 1302] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1303] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1304] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1305] NOP:
-[cycle 1306] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1307] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100561e0)
-[cycle 1308] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100561e4)
-[cycle 1309] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100561e8)
-[cycle 1310] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100561ec)
-[cycle 1311] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100561f0)
-[cycle 1312] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100561f4)
-[cycle 1313] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100561f8)
-[cycle 1314] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100561fc)
+[cycle 1202] RTYPE: (PC: 20ea48)(sReg_a: 2)(sReg_b: 3)(dReg: 2) 
+[cycle 1203] LOAD: (PC: 20ea4c)(sReg_a: 29)(dReg: 31)(addr: 804149b8)
+[cycle 1204] ITYPE: (PC: 20ea50)(sReg_a: 29)(dReg: 29)(addr: 18)
+[cycle 1205] NOP:
+[cycle 1206] NOP:
+[cycle 1207] JRTYPE: (PC: 20ea54) (sReg_a: 255)(addr: 20b2c8)
+[cycle 1208] LOAD: (PC: 20b2c8)(sReg_a: 28)(dReg: 2)(addr: 20064b20)
+[cycle 1209] NOP:
+[cycle 1210] NOP:
+[cycle 1211] NOP:
+[cycle 1212] BRANCH: (PC: 20b2cc)(sReg_a: 2)(sReg_b: 0)(addr: 20b2d4)
+[cycle 1213] SQUASHED:
+[cycle 1214] SQUASHED:
+[cycle 1215] SQUASHED:
+[cycle 1216] SQUASHED:
+[cycle 1217] STORE: (PC: 20b2d4)(sReg_a: 28)(sReg_b: 16)(addr: 10004988)
+[cycle 1218] BRANCH: (PC: 20b2d8)(sReg_a: 16)(sReg_b: 0)(addr: 20b338)
+[cycle 1219] LOAD: (PC: 20b2dc)(sReg_a: 28)(dReg: 2)(addr: 1000c000)
+[cycle 1220] RTYPE: (PC: 20b2e0)(sReg_a: 0)(sReg_b: 16)(dReg: 4) 
+[cycle 1221] RTYPE: (PC: 20b2e4)(sReg_a: 0)(sReg_b: 0)(dReg: 5) 
+[cycle 1222] NOP:
+[cycle 1223] ITYPE: (PC: 20b2e8)(sReg_a: 255)(dReg: 6)(addr: 1)
+[cycle 1224] NOP:
+[cycle 1225] RTYPE: (PC: 20b2ec)(sReg_a: 6)(sReg_b: 2)(dReg: 6) 
+[cycle 1226] NOP:
+[cycle 1227] ITYPE: (PC: 20b2f0)(sReg_a: 255)(dReg: 6)(addr: 2)
+[cycle 1228] JTYPE: (PC: 20b2f4)(addr: 20a118)
+[cycle 1229] RTYPE: (PC: 20a118)(sReg_a: 0)(sReg_b: 4)(dReg: 8) 
+[cycle 1230] NOP:
+[cycle 1231] ITYPE: (PC: 20a11c)(sReg_a: 6)(dReg: 2)(addr: 8)
+[cycle 1232] NOP:
+[cycle 1233] BRANCH: (PC: 20a120)(sReg_a: 2)(sReg_b: 0)(addr: 20a1b0)
+[cycle 1234] ITYPE: (PC: 20a124)(sReg_a: 5)(dReg: 7)(addr: ff)
+[cycle 1235] NOP:
+[cycle 1236] ITYPE: (PC: 20a128)(sReg_a: 255)(dReg: 2)(addr: 8)
+[cycle 1237] NOP:
+[cycle 1238] RTYPE: (PC: 20a12c)(sReg_a: 7)(sReg_b: 2)(dReg: 7) 
+[cycle 1239] NOP:
+[cycle 1240] ITYPE: (PC: 20a130)(sReg_a: 255)(dReg: 2)(addr: 10)
+[cycle 1241] NOP:
+[cycle 1242] RTYPE: (PC: 20a134)(sReg_a: 7)(sReg_b: 2)(dReg: 7) 
+[cycle 1243] ITYPE: (PC: 20a138)(sReg_a: 4)(dReg: 2)(addr: 3)
+[cycle 1244] NOP:
+[cycle 1245] NOP:
+[cycle 1246] BRANCH: (PC: 20a13c)(sReg_a: 2)(sReg_b: 0)(addr: 20a154)
+[cycle 1247] SQUASHED:
+[cycle 1248] SQUASHED:
+[cycle 1249] SQUASHED:
+[cycle 1250] SQUASHED:
+[cycle 1251] ITYPE: (PC: 20a154)(sReg_a: 255)(dReg: 3)(addr: 5)
+[cycle 1252] NOP:
+[cycle 1253] BRANCH: (PC: 20a158)(sReg_a: 3)(sReg_b: 0)(addr: 20a190)
+[cycle 1254] ITYPE: (PC: 20a15c)(sReg_a: 8)(dReg: 2)(addr: 1c)
+[cycle 1255] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056000)
+[cycle 1256] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056004)
+[cycle 1257] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056008)
+[cycle 1258] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005600c)
+[cycle 1259] NOP:
+[cycle 1260] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056010)
+[cycle 1261] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056014)
+[cycle 1262] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056018)
+[cycle 1263] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005601c)
+[cycle 1264] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1265] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1266] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1267] NOP:
+[cycle 1268] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1269] SQUASHED:
+[cycle 1270] SQUASHED:
+[cycle 1271] SQUASHED:
+[cycle 1272] SQUASHED:
+[cycle 1273] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056020)
+[cycle 1274] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056024)
+[cycle 1275] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056028)
+[cycle 1276] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005602c)
+[cycle 1277] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056030)
+[cycle 1278] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056034)
+[cycle 1279] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056038)
+[cycle 1280] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005603c)
+[cycle 1281] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1282] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1283] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1284] NOP:
+[cycle 1285] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1286] SQUASHED:
+[cycle 1287] SQUASHED:
+[cycle 1288] SQUASHED:
+[cycle 1289] SQUASHED:
+[cycle 1290] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056040)
+[cycle 1291] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056044)
+[cycle 1292] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056048)
+[cycle 1293] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005604c)
+[cycle 1294] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056050)
+[cycle 1295] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056054)
+[cycle 1296] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056058)
+[cycle 1297] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005605c)
+[cycle 1298] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1299] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1300] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1301] NOP:
+[cycle 1302] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1303] SQUASHED:
+[cycle 1304] SQUASHED:
+[cycle 1305] SQUASHED:
+[cycle 1306] SQUASHED:
+[cycle 1307] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056060)
+[cycle 1308] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056064)
+[cycle 1309] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056068)
+[cycle 1310] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005606c)
+[cycle 1311] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056070)
+[cycle 1312] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056074)
+[cycle 1313] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056078)
+[cycle 1314] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005607c)
 [cycle 1315] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
 [cycle 1316] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
 [cycle 1317] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
 [cycle 1318] NOP:
 [cycle 1319] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1320] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056200)
-[cycle 1321] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056204)
-[cycle 1322] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056208)
-[cycle 1323] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005620c)
-[cycle 1324] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056210)
-[cycle 1325] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056214)
-[cycle 1326] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056218)
-[cycle 1327] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005621c)
-[cycle 1328] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1329] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1330] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1331] NOP:
-[cycle 1332] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1333] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056220)
-[cycle 1334] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056224)
-[cycle 1335] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056228)
-[cycle 1336] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005622c)
-[cycle 1337] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056230)
-[cycle 1338] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056234)
-[cycle 1339] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056238)
-[cycle 1340] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005623c)
-[cycle 1341] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1342] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1343] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1344] NOP:
-[cycle 1345] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1346] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056240)
-[cycle 1347] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056244)
-[cycle 1348] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056248)
-[cycle 1349] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005624c)
-[cycle 1350] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056250)
-[cycle 1351] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056254)
-[cycle 1352] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056258)
-[cycle 1353] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005625c)
-[cycle 1354] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1355] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1356] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1357] NOP:
-[cycle 1358] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1359] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056260)
-[cycle 1360] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056264)
-[cycle 1361] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056268)
-[cycle 1362] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005626c)
-[cycle 1363] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056270)
-[cycle 1364] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056274)
-[cycle 1365] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056278)
-[cycle 1366] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005627c)
-[cycle 1367] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1368] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1369] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1370] NOP:
-[cycle 1371] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1372] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056280)
-[cycle 1373] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056284)
-[cycle 1374] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056288)
-[cycle 1375] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005628c)
-[cycle 1376] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056290)
-[cycle 1377] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056294)
-[cycle 1378] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056298)
-[cycle 1379] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005629c)
-[cycle 1380] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1381] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1382] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1383] NOP:
-[cycle 1384] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1385] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100562a0)
-[cycle 1386] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100562a4)
-[cycle 1387] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100562a8)
-[cycle 1388] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100562ac)
-[cycle 1389] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100562b0)
-[cycle 1390] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100562b4)
-[cycle 1391] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100562b8)
-[cycle 1392] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100562bc)
-[cycle 1393] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1394] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1395] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1396] NOP:
-[cycle 1397] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1398] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100562c0)
-[cycle 1399] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100562c4)
-[cycle 1400] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100562c8)
-[cycle 1401] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100562cc)
-[cycle 1402] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100562d0)
-[cycle 1403] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100562d4)
-[cycle 1404] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100562d8)
-[cycle 1405] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100562dc)
-[cycle 1406] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1407] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1408] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1409] NOP:
-[cycle 1410] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1411] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100562e0)
-[cycle 1412] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100562e4)
-[cycle 1413] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100562e8)
-[cycle 1414] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100562ec)
-[cycle 1415] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100562f0)
-[cycle 1416] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100562f4)
-[cycle 1417] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100562f8)
-[cycle 1418] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100562fc)
-[cycle 1419] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1420] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1421] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1422] NOP:
-[cycle 1423] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1424] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056300)
-[cycle 1425] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056304)
-[cycle 1426] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056308)
-[cycle 1427] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005630c)
-[cycle 1428] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056310)
-[cycle 1429] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056314)
-[cycle 1430] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056318)
-[cycle 1431] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005631c)
-[cycle 1432] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1433] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1434] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-[cycle 1435] NOP:
-[cycle 1436] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
-[cycle 1437] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056320)
-[cycle 1438] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056324)
-[cycle 1439] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056328)
-[cycle 1440] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005632c)
-[cycle 1441] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056330)
-[cycle 1442] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056334)
-[cycle 1443] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056338)
-[cycle 1444] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005633c)
-[cycle 1445] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
-[cycle 1446] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
-[cycle 1447] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
-+ Simulation terminates at cycle : 1447
+[cycle 1320] SQUASHED:
+[cycle 1321] SQUASHED:
+[cycle 1322] SQUASHED:
+[cycle 1323] SQUASHED:
+[cycle 1324] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056080)
+[cycle 1325] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056084)
+[cycle 1326] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056088)
+[cycle 1327] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005608c)
+[cycle 1328] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056090)
+[cycle 1329] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056094)
+[cycle 1330] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056098)
+[cycle 1331] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005609c)
+[cycle 1332] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1333] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1334] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1335] NOP:
+[cycle 1336] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1337] SQUASHED:
+[cycle 1338] SQUASHED:
+[cycle 1339] SQUASHED:
+[cycle 1340] SQUASHED:
+[cycle 1341] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100560a0)
+[cycle 1342] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100560a4)
+[cycle 1343] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100560a8)
+[cycle 1344] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100560ac)
+[cycle 1345] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100560b0)
+[cycle 1346] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100560b4)
+[cycle 1347] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100560b8)
+[cycle 1348] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100560bc)
+[cycle 1349] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1350] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1351] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1352] NOP:
+[cycle 1353] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1354] SQUASHED:
+[cycle 1355] SQUASHED:
+[cycle 1356] SQUASHED:
+[cycle 1357] SQUASHED:
+[cycle 1358] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100560c0)
+[cycle 1359] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100560c4)
+[cycle 1360] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100560c8)
+[cycle 1361] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100560cc)
+[cycle 1362] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100560d0)
+[cycle 1363] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100560d4)
+[cycle 1364] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100560d8)
+[cycle 1365] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100560dc)
+[cycle 1366] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1367] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1368] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1369] NOP:
+[cycle 1370] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1371] SQUASHED:
+[cycle 1372] SQUASHED:
+[cycle 1373] SQUASHED:
+[cycle 1374] SQUASHED:
+[cycle 1375] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100560e0)
+[cycle 1376] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100560e4)
+[cycle 1377] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100560e8)
+[cycle 1378] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100560ec)
+[cycle 1379] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100560f0)
+[cycle 1380] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100560f4)
+[cycle 1381] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100560f8)
+[cycle 1382] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100560fc)
+[cycle 1383] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1384] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1385] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1386] NOP:
+[cycle 1387] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1388] SQUASHED:
+[cycle 1389] SQUASHED:
+[cycle 1390] SQUASHED:
+[cycle 1391] SQUASHED:
+[cycle 1392] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056100)
+[cycle 1393] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056104)
+[cycle 1394] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056108)
+[cycle 1395] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005610c)
+[cycle 1396] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056110)
+[cycle 1397] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056114)
+[cycle 1398] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056118)
+[cycle 1399] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005611c)
+[cycle 1400] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1401] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1402] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1403] NOP:
+[cycle 1404] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1405] SQUASHED:
+[cycle 1406] SQUASHED:
+[cycle 1407] SQUASHED:
+[cycle 1408] SQUASHED:
+[cycle 1409] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056120)
+[cycle 1410] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056124)
+[cycle 1411] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056128)
+[cycle 1412] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005612c)
+[cycle 1413] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056130)
+[cycle 1414] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056134)
+[cycle 1415] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056138)
+[cycle 1416] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005613c)
+[cycle 1417] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1418] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1419] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1420] NOP:
+[cycle 1421] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1422] SQUASHED:
+[cycle 1423] SQUASHED:
+[cycle 1424] SQUASHED:
+[cycle 1425] SQUASHED:
+[cycle 1426] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056140)
+[cycle 1427] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056144)
+[cycle 1428] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056148)
+[cycle 1429] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005614c)
+[cycle 1430] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056150)
+[cycle 1431] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056154)
+[cycle 1432] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056158)
+[cycle 1433] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005615c)
+[cycle 1434] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1435] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1436] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1437] NOP:
+[cycle 1438] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1439] SQUASHED:
+[cycle 1440] SQUASHED:
+[cycle 1441] SQUASHED:
+[cycle 1442] SQUASHED:
+[cycle 1443] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056160)
+[cycle 1444] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056164)
+[cycle 1445] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056168)
+[cycle 1446] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005616c)
+[cycle 1447] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056170)
+[cycle 1448] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056174)
+[cycle 1449] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056178)
+[cycle 1450] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005617c)
+[cycle 1451] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1452] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1453] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1454] NOP:
+[cycle 1455] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1456] SQUASHED:
+[cycle 1457] SQUASHED:
+[cycle 1458] SQUASHED:
+[cycle 1459] SQUASHED:
+[cycle 1460] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056180)
+[cycle 1461] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056184)
+[cycle 1462] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056188)
+[cycle 1463] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005618c)
+[cycle 1464] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056190)
+[cycle 1465] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056194)
+[cycle 1466] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056198)
+[cycle 1467] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005619c)
+[cycle 1468] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1469] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1470] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1471] NOP:
+[cycle 1472] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1473] SQUASHED:
+[cycle 1474] SQUASHED:
+[cycle 1475] SQUASHED:
+[cycle 1476] SQUASHED:
+[cycle 1477] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100561a0)
+[cycle 1478] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100561a4)
+[cycle 1479] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100561a8)
+[cycle 1480] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100561ac)
+[cycle 1481] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100561b0)
+[cycle 1482] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100561b4)
+[cycle 1483] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100561b8)
+[cycle 1484] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100561bc)
+[cycle 1485] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1486] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1487] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1488] NOP:
+[cycle 1489] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1490] SQUASHED:
+[cycle 1491] SQUASHED:
+[cycle 1492] SQUASHED:
+[cycle 1493] SQUASHED:
+[cycle 1494] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100561c0)
+[cycle 1495] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100561c4)
+[cycle 1496] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100561c8)
+[cycle 1497] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100561cc)
+[cycle 1498] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100561d0)
+[cycle 1499] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100561d4)
+[cycle 1500] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100561d8)
+[cycle 1501] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100561dc)
+[cycle 1502] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1503] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1504] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1505] NOP:
+[cycle 1506] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1507] SQUASHED:
+[cycle 1508] SQUASHED:
+[cycle 1509] SQUASHED:
+[cycle 1510] SQUASHED:
+[cycle 1511] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100561e0)
+[cycle 1512] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100561e4)
+[cycle 1513] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100561e8)
+[cycle 1514] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100561ec)
+[cycle 1515] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100561f0)
+[cycle 1516] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100561f4)
+[cycle 1517] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100561f8)
+[cycle 1518] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100561fc)
+[cycle 1519] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1520] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1521] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1522] NOP:
+[cycle 1523] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1524] SQUASHED:
+[cycle 1525] SQUASHED:
+[cycle 1526] SQUASHED:
+[cycle 1527] SQUASHED:
+[cycle 1528] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056200)
+[cycle 1529] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056204)
+[cycle 1530] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056208)
+[cycle 1531] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005620c)
+[cycle 1532] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056210)
+[cycle 1533] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056214)
+[cycle 1534] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056218)
+[cycle 1535] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005621c)
+[cycle 1536] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1537] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1538] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1539] NOP:
+[cycle 1540] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1541] SQUASHED:
+[cycle 1542] SQUASHED:
+[cycle 1543] SQUASHED:
+[cycle 1544] SQUASHED:
+[cycle 1545] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056220)
+[cycle 1546] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056224)
+[cycle 1547] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056228)
+[cycle 1548] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005622c)
+[cycle 1549] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056230)
+[cycle 1550] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056234)
+[cycle 1551] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056238)
+[cycle 1552] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005623c)
+[cycle 1553] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1554] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1555] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1556] NOP:
+[cycle 1557] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1558] SQUASHED:
+[cycle 1559] SQUASHED:
+[cycle 1560] SQUASHED:
+[cycle 1561] SQUASHED:
+[cycle 1562] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056240)
+[cycle 1563] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056244)
+[cycle 1564] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056248)
+[cycle 1565] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005624c)
+[cycle 1566] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056250)
+[cycle 1567] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056254)
+[cycle 1568] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056258)
+[cycle 1569] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005625c)
+[cycle 1570] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1571] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1572] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1573] NOP:
+[cycle 1574] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1575] SQUASHED:
+[cycle 1576] SQUASHED:
+[cycle 1577] SQUASHED:
+[cycle 1578] SQUASHED:
+[cycle 1579] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056260)
+[cycle 1580] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056264)
+[cycle 1581] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056268)
+[cycle 1582] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005626c)
+[cycle 1583] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056270)
+[cycle 1584] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056274)
+[cycle 1585] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056278)
+[cycle 1586] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005627c)
+[cycle 1587] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1588] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1589] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1590] NOP:
+[cycle 1591] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1592] SQUASHED:
+[cycle 1593] SQUASHED:
+[cycle 1594] SQUASHED:
+[cycle 1595] SQUASHED:
+[cycle 1596] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056280)
+[cycle 1597] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056284)
+[cycle 1598] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056288)
+[cycle 1599] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005628c)
+[cycle 1600] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056290)
+[cycle 1601] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056294)
+[cycle 1602] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056298)
+[cycle 1603] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005629c)
+[cycle 1604] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1605] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1606] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1607] NOP:
+[cycle 1608] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1609] SQUASHED:
+[cycle 1610] SQUASHED:
+[cycle 1611] SQUASHED:
+[cycle 1612] SQUASHED:
+[cycle 1613] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100562a0)
+[cycle 1614] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100562a4)
+[cycle 1615] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100562a8)
+[cycle 1616] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100562ac)
+[cycle 1617] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100562b0)
+[cycle 1618] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100562b4)
+[cycle 1619] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100562b8)
+[cycle 1620] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100562bc)
+[cycle 1621] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1622] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1623] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1624] NOP:
+[cycle 1625] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1626] SQUASHED:
+[cycle 1627] SQUASHED:
+[cycle 1628] SQUASHED:
+[cycle 1629] SQUASHED:
+[cycle 1630] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100562c0)
+[cycle 1631] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100562c4)
+[cycle 1632] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100562c8)
+[cycle 1633] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100562cc)
+[cycle 1634] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100562d0)
+[cycle 1635] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100562d4)
+[cycle 1636] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100562d8)
+[cycle 1637] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100562dc)
+[cycle 1638] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1639] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1640] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1641] NOP:
+[cycle 1642] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1643] SQUASHED:
+[cycle 1644] SQUASHED:
+[cycle 1645] SQUASHED:
+[cycle 1646] SQUASHED:
+[cycle 1647] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 100562e0)
+[cycle 1648] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 100562e4)
+[cycle 1649] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 100562e8)
+[cycle 1650] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 100562ec)
+[cycle 1651] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 100562f0)
+[cycle 1652] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 100562f4)
+[cycle 1653] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 100562f8)
+[cycle 1654] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 100562fc)
+[cycle 1655] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1656] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1657] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1658] NOP:
+[cycle 1659] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1660] SQUASHED:
+[cycle 1661] SQUASHED:
+[cycle 1662] SQUASHED:
+[cycle 1663] SQUASHED:
+[cycle 1664] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056300)
+[cycle 1665] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056304)
+[cycle 1666] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056308)
+[cycle 1667] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005630c)
+[cycle 1668] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056310)
+[cycle 1669] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056314)
+[cycle 1670] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056318)
+[cycle 1671] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005631c)
+[cycle 1672] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1673] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1674] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
+[cycle 1675] NOP:
+[cycle 1676] BRANCH: (PC: 20a18c)(sReg_a: 3)(sReg_b: 0)(addr: 20a160)
+[cycle 1677] SQUASHED:
+[cycle 1678] SQUASHED:
+[cycle 1679] SQUASHED:
+[cycle 1680] SQUASHED:
+[cycle 1681] STORE: (PC: 20a160)(sReg_a: 8)(sReg_b: 7)(addr: 10056320)
+[cycle 1682] STORE: (PC: 20a164)(sReg_a: 2)(sReg_b: 7)(addr: 10056324)
+[cycle 1683] STORE: (PC: 20a168)(sReg_a: 2)(sReg_b: 7)(addr: 10056328)
+[cycle 1684] STORE: (PC: 20a16c)(sReg_a: 2)(sReg_b: 7)(addr: 1005632c)
+[cycle 1685] STORE: (PC: 20a170)(sReg_a: 2)(sReg_b: 7)(addr: 10056330)
+[cycle 1686] STORE: (PC: 20a174)(sReg_a: 2)(sReg_b: 7)(addr: 10056334)
+[cycle 1687] STORE: (PC: 20a178)(sReg_a: 2)(sReg_b: 7)(addr: 10056338)
+[cycle 1688] STORE: (PC: 20a17c)(sReg_a: 2)(sReg_b: 7)(addr: 1005633c)
+[cycle 1689] ITYPE: (PC: 20a180)(sReg_a: 2)(dReg: 2)(addr: 20)
+[cycle 1690] ITYPE: (PC: 20a184)(sReg_a: 8)(dReg: 8)(addr: 20)
+[cycle 1691] ITYPE: (PC: 20a188)(sReg_a: 3)(dReg: 3)(addr: ffffffff)
++ Simulation terminates at cycle : 1691

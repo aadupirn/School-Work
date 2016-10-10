@@ -103,12 +103,10 @@ int main(int argc, char **argv)
     while(1)
     {
 
-        if(pipeline[1]->type == ti_BRANCH && pipeline[1]->Addr == pipeline[0]->PC && hazard ==0)
+        if((pipeline[1]->type == ti_BRANCH) && (pipeline[1]->Addr == pipeline[0]->PC))
         {
-            pipeline[1]->dReg == 69; //Flag branch for taken
+            pipeline[1]->dReg = 69; //Flag branch for taken
         }
-
-        hazard = 0;
 
         //you are in branch loop and adding conditions.
         if(branch_hazard != 0)
@@ -254,6 +252,8 @@ int main(int argc, char **argv)
                 pipeline[0] = &end_op;
             }
         }
+
+        hazard = 0;
 
         if(pipeline[7]->type == 9)
         {
