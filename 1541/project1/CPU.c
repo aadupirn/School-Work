@@ -18,12 +18,30 @@ int main(int argc, char **argv)
     int trace_view_on = 0;
     int predcition_method = 0;
     int hazard = 0;
-    struct trace_item b_op;
+
     struct trace_item no_op;
-    struct trace_item squashed;
     no_op->type = ti_NOP;
+    no_op->sReg_a = 255;
+    no_op->sReg_b = 255;
+    no_op->dReg = 255;
+    no_op->PC = 0;
+    no_op->Addr = 0;
+
+    struct trace_item b_op;
     end_op->type = 9;
+    end_op->sReg_a = 255;
+    end_op->sReg_b = 255;
+    end_op->dReg = 255;
+    end_op->PC = 0;
+    end_op->Addr = 0;
+
+    struct trace_item squashed;
     squashed->type = 10;
+    squashed->sReg_a = 255;
+    squashed->sReg_b = 255;
+    squashed->dReg = 255;
+    squashed->PC = 0;
+    squashed->Addr = 0;
 
     /*
             This is the buffer array
@@ -57,7 +75,8 @@ int main(int argc, char **argv)
     }
 
     trace_file_name = argv[1];
-    if (argc == 3) trace_view_on = atoi(argv[2]) ;
+    if (argc >= 3) prediction_method = atoi(argv[2]);
+    if (argc == 4) trace_view_on = atoi(argv[3]);
 
     fprintf(stdout, "\n ** opening file %s\n", trace_file_name);
 
@@ -72,21 +91,51 @@ int main(int argc, char **argv)
 
     while(1)
     {
-        size = trace_get_item(&tr_entry);
 
-        if (!size) {       /* no more instructions (trace_items) to simulate */
-              printf("+ Simulation terminates at cycle : %u\n", cycle_number);
-              break;
+        if()//branch taken and prediction method is 0
+        {
+
         }
-        else{              /* parse the next instruction to simulate */
-            cycle_number++;
-            t_type = tr_entry->type;
-            t_sReg_a = tr_entry->sReg_a;
-            t_sReg_b = tr_entry->sReg_b;
-            t_dReg = tr_entry->dReg;
-            t_PC = tr_entry->PC;
-            t_Addr = tr_entry->Addr;
+        else if()//branch taken and prediction method is 1+
+        {
+
         }
+        else if()//branch not taken and prediction method is 1+
+        {
+
+        }
+        else if()//data hazards
+        {
+
+        }
+        else if()//structural hazards
+        {
+
+        }
+        if(hazard = 0)
+        {
+            tr_entry = pipeline[6];
+            pipeline[6] = pipeline[5];
+            pipeline[5] = pipeline[4]
+            pipeline[4] = pipeline[3];
+            pipeline[3] = pipeline[2];
+            pipeline[2] = pipeline[1];
+            pipeline[1] = pipeline[0];
+            size = trace_get_item(&pipeline[0]);
+            if(!size)
+            {
+                pipeline[0] = &end_op;
+            }
+        }
+
+        cycle_number++;
+        t_type = tr_entry->type;
+        t_sReg_a = tr_entry->sReg_a;
+        t_sReg_b = tr_entry->sReg_b;
+        t_dReg = tr_entry->dReg;
+        t_PC = tr_entry->PC;
+        t_Addr = tr_entry->Addr;
+
 
         // SIMULATION OF A SINGLE CYCLE cpu IS TRIVIAL - EACH INSTRUCTION IS EXECUTED
         // IN ONE CYCLE
@@ -128,7 +177,7 @@ int main(int argc, char **argv)
                 printf(" (PC: %x) (sReg_a: %d)(addr: %x)\n", tr_entry->PC, tr_entry->dReg, tr_entry->Addr);
                 break;
             case 10:
-                printf("[cycle %d] NOP:",cycle_number);
+                printf("[cycle %d] SQUASHED:",cycle_number);
 
             }
         }
