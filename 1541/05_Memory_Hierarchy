@@ -58,3 +58,12 @@
 
 -Calculate CPI considering stalls due to cache misses.
     example you have to add 40 cycles for every miss (miss penalty = 40)
+
+-increasing the block size usually tends to decrease miss rate.
+
+-Simplified model: excecution time
+
+-Example: If clock speed doubles and memory latency is fixed.
+	Memory operations will take twice as many cycles, and the speed of the entire system will not double(do the math)
+
+-if you have extra space put in another cache.

@@ -59,4 +59,14 @@
     minimize f(x) + g(z)
     subject to Ax + Bz = c                  x and z are vectors!
 
--Rank = # of linearly independent columns.
+-Rank = # of linearly independent colummn.
+
+-PCA
+	Assume you have gaussian distribution.
+
+	Maximize variance (squared distance) along direction line.
+	Minimize residuals (squared distance) perpendicular to the direction line.
+	
+	maximize variance = minimize least-squares.
+
+-Quadratically regulized PC

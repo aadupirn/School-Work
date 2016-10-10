@@ -1,0 +1,167 @@
+2016-10-06 20:23:53 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-06 20:23:53 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-06 20:23:53 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-06 20:23:54 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-06 20:51:44 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-06 20:51:44 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-06 20:51:44 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-06 20:51:45 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-06 21:06:27 ERROR Executor:91 - Exception in task 0.0 in stage 3.0 (TID 3)
+org.apache.spark.SparkException: This RDD lacks a SparkContext. It could happen in the following cases: 
+(1) RDD transformations and actions are NOT invoked by the driver, but inside of other transformations; for example, rdd1.map(x => rdd2.values.count() * x) is invalid because the values transformation and count action cannot be performed inside of the rdd1.map transformation. For more information, see SPARK-5063.
+(2) When a Spark Streaming job recovers from checkpoint, this exception will be hit if a reference to an RDD not defined by the streaming job is used in DStream operations. For more information, See SPARK-13758.
+	at org.apache.spark.rdd.RDD.org$apache$spark$rdd$RDD$$sc(RDD.scala:89)
+	at org.apache.spark.rdd.RDD.count(RDD.scala:1115)
+	at $line38.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at $line38.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:463)
+	at org.apache.spark.util.Utils$.getIteratorSize(Utils.scala:1682)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:85)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-06 21:06:27 WARN  TaskSetManager:66 - Lost task 0.0 in stage 3.0 (TID 3, localhost): org.apache.spark.SparkException: This RDD lacks a SparkContext. It could happen in the following cases: 
+(1) RDD transformations and actions are NOT invoked by the driver, but inside of other transformations; for example, rdd1.map(x => rdd2.values.count() * x) is invalid because the values transformation and count action cannot be performed inside of the rdd1.map transformation. For more information, see SPARK-5063.
+(2) When a Spark Streaming job recovers from checkpoint, this exception will be hit if a reference to an RDD not defined by the streaming job is used in DStream operations. For more information, See SPARK-13758.
+	at org.apache.spark.rdd.RDD.org$apache$spark$rdd$RDD$$sc(RDD.scala:89)
+	at org.apache.spark.rdd.RDD.count(RDD.scala:1115)
+	at $line38.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at $line38.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:463)
+	at org.apache.spark.util.Utils$.getIteratorSize(Utils.scala:1682)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:85)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2016-10-06 21:06:27 ERROR TaskSetManager:70 - Task 0 in stage 3.0 failed 1 times; aborting job
+2016-10-06 21:06:51 ERROR Executor:91 - Exception in task 0.0 in stage 5.0 (TID 4)
+org.apache.spark.SparkException: This RDD lacks a SparkContext. It could happen in the following cases: 
+(1) RDD transformations and actions are NOT invoked by the driver, but inside of other transformations; for example, rdd1.map(x => rdd2.values.count() * x) is invalid because the values transformation and count action cannot be performed inside of the rdd1.map transformation. For more information, see SPARK-5063.
+(2) When a Spark Streaming job recovers from checkpoint, this exception will be hit if a reference to an RDD not defined by the streaming job is used in DStream operations. For more information, See SPARK-13758.
+	at org.apache.spark.rdd.RDD.org$apache$spark$rdd$RDD$$sc(RDD.scala:89)
+	at org.apache.spark.rdd.RDD.count(RDD.scala:1115)
+	at $line38.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at $line38.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:463)
+	at org.apache.spark.util.Utils$.getIteratorSize(Utils.scala:1682)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:85)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-06 21:06:51 WARN  TaskSetManager:66 - Lost task 0.0 in stage 5.0 (TID 4, localhost): org.apache.spark.SparkException: This RDD lacks a SparkContext. It could happen in the following cases: 
+(1) RDD transformations and actions are NOT invoked by the driver, but inside of other transformations; for example, rdd1.map(x => rdd2.values.count() * x) is invalid because the values transformation and count action cannot be performed inside of the rdd1.map transformation. For more information, see SPARK-5063.
+(2) When a Spark Streaming job recovers from checkpoint, this exception will be hit if a reference to an RDD not defined by the streaming job is used in DStream operations. For more information, See SPARK-13758.
+	at org.apache.spark.rdd.RDD.org$apache$spark$rdd$RDD$$sc(RDD.scala:89)
+	at org.apache.spark.rdd.RDD.count(RDD.scala:1115)
+	at $line38.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at $line38.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:463)
+	at org.apache.spark.util.Utils$.getIteratorSize(Utils.scala:1682)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:85)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2016-10-06 21:06:51 ERROR TaskSetManager:70 - Task 0 in stage 5.0 failed 1 times; aborting job
+2016-10-06 21:09:12 ERROR Executor:91 - Exception in task 0.0 in stage 7.0 (TID 6)
+org.apache.spark.SparkException: This RDD lacks a SparkContext. It could happen in the following cases: 
+(1) RDD transformations and actions are NOT invoked by the driver, but inside of other transformations; for example, rdd1.map(x => rdd2.values.count() * x) is invalid because the values transformation and count action cannot be performed inside of the rdd1.map transformation. For more information, see SPARK-5063.
+(2) When a Spark Streaming job recovers from checkpoint, this exception will be hit if a reference to an RDD not defined by the streaming job is used in DStream operations. For more information, See SPARK-13758.
+	at org.apache.spark.rdd.RDD.org$apache$spark$rdd$RDD$$sc(RDD.scala:89)
+	at org.apache.spark.rdd.RDD.count(RDD.scala:1115)
+	at $line46.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at $line46.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:463)
+	at org.apache.spark.util.Utils$.getIteratorSize(Utils.scala:1682)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:85)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-06 21:09:12 WARN  TaskSetManager:66 - Lost task 0.0 in stage 7.0 (TID 6, localhost): org.apache.spark.SparkException: This RDD lacks a SparkContext. It could happen in the following cases: 
+(1) RDD transformations and actions are NOT invoked by the driver, but inside of other transformations; for example, rdd1.map(x => rdd2.values.count() * x) is invalid because the values transformation and count action cannot be performed inside of the rdd1.map transformation. For more information, see SPARK-5063.
+(2) When a Spark Streaming job recovers from checkpoint, this exception will be hit if a reference to an RDD not defined by the streaming job is used in DStream operations. For more information, See SPARK-13758.
+	at org.apache.spark.rdd.RDD.org$apache$spark$rdd$RDD$$sc(RDD.scala:89)
+	at org.apache.spark.rdd.RDD.count(RDD.scala:1115)
+	at $line46.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at $line46.$read$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$iw$$anonfun$3.apply(<console>:34)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:463)
+	at org.apache.spark.util.Utils$.getIteratorSize(Utils.scala:1682)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.rdd.RDD$$anonfun$count$1.apply(RDD.scala:1115)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:1897)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:70)
+	at org.apache.spark.scheduler.Task.run(Task.scala:85)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:274)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2016-10-06 21:09:12 ERROR TaskSetManager:70 - Task 0 in stage 7.0 failed 1 times; aborting job
+2016-10-06 22:08:43 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-06 22:08:43 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-06 22:08:43 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-06 22:08:44 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-06 22:26:30 WARN  TaskMemoryManager:381 - leak 203.8 MB memory from org.apache.spark.util.collection.ExternalAppendOnlyMap@5f7cf4c3
+2016-10-06 22:26:30 WARN  Executor:66 - Managed memory leak detected; size = 213732850 bytes, TID = 7
+2016-10-07 15:05:56 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-07 15:05:56 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 150.212.233.212 instead (on interface wlp58s0)
+2016-10-07 15:05:56 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-07 15:05:56 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-07 16:09:08 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-07 16:09:08 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-07 16:09:08 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-07 16:09:09 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-07 16:11:12 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-07 16:11:12 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-07 16:11:12 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-07 16:11:13 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-07 16:16:54 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-07 16:16:54 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-07 16:16:54 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-07 16:16:55 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-07 16:30:33 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-07 16:30:33 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-07 16:30:33 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-07 16:30:34 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-07 16:32:19 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-07 16:32:19 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-07 16:32:19 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-07 16:32:20 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-07 16:35:28 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-10-07 16:35:28 WARN  Utils:66 - Your hostname, aadu-XPS-13-9350 resolves to a loopback address: 127.0.1.1; using 10.0.0.187 instead (on interface wlp58s0)
+2016-10-07 16:35:28 WARN  Utils:66 - Set SPARK_LOCAL_IP if you need to bind to another address
+2016-10-07 16:35:29 WARN  SparkContext:66 - Use an existing SparkContext, some configuration may not take effect.
+2016-10-07 16:36:05 WARN  TaskMemoryManager:381 - leak 316.4 MB memory from org.apache.spark.util.collection.ExternalAppendOnlyMap@3f75958c
+2016-10-07 16:36:05 WARN  Executor:66 - Managed memory leak detected; size = 331739154 bytes, TID = 3

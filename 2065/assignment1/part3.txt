@@ -1,0 +1,27 @@
+Start up:
+
+import org.bdgenomics.adam.rdd.ADAMContext._
+
+val data = sc.loadGenotypes("small.adam")
+
+import collection.JavaConverters._ 
+
+def convertAlleles(x: java.util.List[org.bdgenomics.formats.avro.GenotypeAllele] ) = { x.asScala.map(_.toString) }
+
+
+
+2.
+
+a)
+badCount = data.rdd.map(r => r.contigName -> (r.start, r.end)).distinct.count
+val peopleCount = data.rdd.map(r => r.sampleId).distinct.count
+val goodCount = data.rdd.map(r => (r.contigName, r.start, r.end) -> 1).reduceByKey(_ + _).filter(_._2 == peopleCount).count
+
+b)
+
+var peopleSorted = goodVar2.reduceByKey((x,y) => (x._1 + y._1, x._2 + y._2, x._3 + y._3))
+
+val goodVar2 = data.rdd.map(r => r.sampleId -> (1, r.start, r.end))
+
+
+use lists and ++ to append the lists to make this work so you can get all of the allele starting and ending spots. Not sure yet where to go next but we'll see.

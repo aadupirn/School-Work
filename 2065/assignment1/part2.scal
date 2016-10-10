@@ -1,3 +1,0 @@
-val badCount = data.rdd.map(r => r.contigName -> (r.start, r.end)).distinct.count
-val peopleCount = data.rdd.map(r => r.sampleId).distinct.count
-val goodCount = data.rdd.map(r => (r.contigName, r.start, r.end) -> 1).reduceByKey(_ + _).filter(_._2 == peopleCount).count
