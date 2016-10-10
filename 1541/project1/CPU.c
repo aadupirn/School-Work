@@ -142,7 +142,7 @@ int main(int argc, char **argv)
                 hazard = 1;
                 branch_hazard = 3;
             }
-            else //pc not in prediction table
+            if(prediction_pc[pc_hash] != pipeline[4]->PC)
             {
                 pipeline[7] = pipeline[6];
                 pipeline[6] = pipeline[5];
@@ -187,7 +187,7 @@ int main(int argc, char **argv)
                 hazard = 1;
                 branch_hazard = 3;
             }
-            else
+            if(prediction_pc[pc_hash] != pipeline[4]->PC)
             {
                 prediction_values[pc_hash] = 0;
             }
