@@ -16,8 +16,12 @@ int main(int argc, char **argv)
     size_t size;
     char *trace_file_name;
     int trace_view_on = 0;
-    int predcition_method = 0;
+    int prediction_method = 0;
     int hazard = 0;
+    int prediction_array_size = 64;
+
+    int prediction_values[prediction_array_size];
+    int prediction_pc[prediction_array_size];
 
     struct trace_item no_op;
     no_op->type = ti_NOP;
@@ -27,7 +31,7 @@ int main(int argc, char **argv)
     no_op->PC = 0;
     no_op->Addr = 0;
 
-    struct trace_item b_op;
+    struct trace_item end_op;
     end_op->type = 9;
     end_op->sReg_a = 255;
     end_op->sReg_b = 255;
@@ -128,56 +132,61 @@ int main(int argc, char **argv)
             }
         }
 
+        if(tr_entry->type == 9)
+        {
+            printf("+ Simulation terminates at cycle : %u\n", cycle_number);
+            break;
+        }
+
         cycle_number++;
-        t_type = tr_entry->type;
-        t_sReg_a = tr_entry->sReg_a;
-        t_sReg_b = tr_entry->sReg_b;
-        t_dReg = tr_entry->dReg;
-        t_PC = tr_entry->PC;
-        t_Addr = tr_entry->Addr;
 
 
-        // SIMULATION OF A SINGLE CYCLE cpu IS TRIVIAL - EACH INSTRUCTION IS EXECUTED
-        // IN ONE CYCLE
-
-        if (trace_view_on) {/* print the executed instruction if trace_view_on=1 */
-            switch(tr_entry->type) {
-            case ti_NOP:
-                printf("[cycle %d] NOP:",cycle_number) ;
-                break;
-            case ti_RTYPE:
-                printf("[cycle %d] RTYPE:",cycle_number) ;
-                printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(dReg: %d) \n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->dReg);
-                break;
-            case ti_ITYPE:
-                printf("[cycle %d] ITYPE:",cycle_number) ;
-                printf(" (PC: %x)(sReg_a: %d)(dReg: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->dReg, tr_entry->Addr);
-                break;
-            case ti_LOAD:
-                printf("[cycle %d] LOAD:",cycle_number) ;
-                printf(" (PC: %x)(sReg_a: %d)(dReg: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->dReg, tr_entry->Addr);
-                break;
-            case ti_STORE:
-                printf("[cycle %d] STORE:",cycle_number) ;
-                printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->Addr);
-                break;
-            case ti_BRANCH:
-                printf("[cycle %d] BRANCH:",cycle_number) ;
-                printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->Addr);
-                break;
-            case ti_JTYPE:
-                printf("[cycle %d] JTYPE:",cycle_number) ;
-                printf(" (PC: %x)(addr: %x)\n", tr_entry->PC,tr_entry->Addr);
-                break;
-            case ti_SPECIAL:
-                printf("[cycle %d] SPECIAL:",cycle_number) ;
-                break;
-            case ti_JRTYPE:
-                printf("[cycle %d] JRTYPE:",cycle_number) ;
-                printf(" (PC: %x) (sReg_a: %d)(addr: %x)\n", tr_entry->PC, tr_entry->dReg, tr_entry->Addr);
-                break;
-            case 10:
-                printf("[cycle %d] SQUASHED:",cycle_number);
+        if (trace_view_on) /* print the executed instruction if trace_view_on=1 */
+        {
+            t_type = tr_entry->type;
+            t_sReg_a = tr_entry->sReg_a;
+            t_sReg_b = tr_entry->sReg_b;
+            t_dReg = tr_entry->dReg;
+            t_PC = tr_entry->PC;
+            t_Addr = tr_entry->Addr;
+            switch(tr_entry->type)
+            {
+                case ti_NOP:
+                    printf("[cycle %d] NOP:",cycle_number) ;
+                    break;
+                case ti_RTYPE:
+                    printf("[cycle %d] RTYPE:",cycle_number) ;
+                    printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(dReg: %d) \n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->dReg);
+                    break;
+                case ti_ITYPE:
+                    printf("[cycle %d] ITYPE:",cycle_number) ;
+                    printf(" (PC: %x)(sReg_a: %d)(dReg: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->dReg, tr_entry->Addr);
+                    break;
+                case ti_LOAD:
+                    printf("[cycle %d] LOAD:",cycle_number) ;
+                    printf(" (PC: %x)(sReg_a: %d)(dReg: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->dReg, tr_entry->Addr);
+                    break;
+                case ti_STORE:
+                    printf("[cycle %d] STORE:",cycle_number) ;
+                    printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->Addr);
+                    break;
+                case ti_BRANCH:
+                    printf("[cycle %d] BRANCH:",cycle_number) ;
+                    printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->Addr);
+                    break;
+                case ti_JTYPE:
+                    printf("[cycle %d] JTYPE:",cycle_number) ;
+                    printf(" (PC: %x)(addr: %x)\n", tr_entry->PC,tr_entry->Addr);
+                    break;
+                case ti_SPECIAL:
+                    printf("[cycle %d] SPECIAL:",cycle_number) ;
+                    break;
+                case ti_JRTYPE:
+                    printf("[cycle %d] JRTYPE:",cycle_number) ;
+                    printf(" (PC: %x) (sReg_a: %d)(addr: %x)\n", tr_entry->PC, tr_entry->dReg, tr_entry->Addr);
+                    break;
+                case 10:
+                    printf("[cycle %d] SQUASHED:",cycle_number);
 
             }
         }
