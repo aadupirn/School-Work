@@ -293,29 +293,32 @@ int main(int argc, char **argv)
                 }
             }
         }
-        //data hazards
-        else if(
-            ((pipeline[3]->dReg == pipeline[2]->sReg_a || pipeline[3]->dReg == pipeline[2]->sReg_b) && pipeline[3]->dReg != 255) ||
-            (pipeline[4]->type == ti_LOAD && (pipeline[4]->dReg == pipeline[2]->sReg_a || pipeline[4]->dReg == pipeline[2]->sReg_b) && pipeline[4]->dReg != 255) ||
-            (pipeline[5]->type == ti_LOAD && (pipeline[5]->dReg == pipeline[2]->sReg_a || pipeline[5]->dReg == pipeline[2]->sReg_b) && pipeline[5]->dReg != 255)
-        )
+        if(hazard == 0)
         {
-            pipeline[7] = pipeline[6];
-            pipeline[6] = pipeline[5];
-            pipeline[5] = pipeline[4];
-            pipeline[4] = pipeline[3];
-            pipeline[3] = &no_op;
-            hazard = 1;
-        }
-        //structural hazards
-        else if((pipeline[7]->dReg == pipeline[2]->sReg_a || pipeline[7]->dReg == pipeline[2]->sReg_b) && pipeline[7]->dReg != 255)
-        {
-            pipeline[7] = pipeline[6];
-            pipeline[6] = pipeline[5];
-            pipeline[5] = pipeline[4];
-            pipeline[4] = pipeline[3];
-            pipeline[3] = &no_op;
-            hazard = 1;
+            //data hazards
+            if(
+                ((pipeline[3]->dReg == pipeline[2]->sReg_a || pipeline[3]->dReg == pipeline[2]->sReg_b) && pipeline[3]->dReg != 255) ||
+                (pipeline[4]->type == ti_LOAD && (pipeline[4]->dReg == pipeline[2]->sReg_a || pipeline[4]->dReg == pipeline[2]->sReg_b) && pipeline[4]->dReg != 255) ||
+                (pipeline[5]->type == ti_LOAD && (pipeline[5]->dReg == pipeline[2]->sReg_a || pipeline[5]->dReg == pipeline[2]->sReg_b) && pipeline[5]->dReg != 255)
+            )
+            {
+                pipeline[7] = pipeline[6];
+                pipeline[6] = pipeline[5];
+                pipeline[5] = pipeline[4];
+                pipeline[4] = pipeline[3];
+                pipeline[3] = &no_op;
+                hazard = 1;
+            }
+            //structural hazards
+            else if((pipeline[7]->dReg == pipeline[2]->sReg_a || pipeline[7]->dReg == pipeline[2]->sReg_b) && pipeline[7]->dReg != 255)
+            {
+                pipeline[7] = pipeline[6];
+                pipeline[6] = pipeline[5];
+                pipeline[5] = pipeline[4];
+                pipeline[4] = pipeline[3];
+                pipeline[3] = &no_op;
+                hazard = 1;
+            }
         }
 
         if(hazard == 0)
@@ -393,7 +396,7 @@ int main(int argc, char **argv)
                     printf("[cycle %d] SQUASHED:\n",cycle_number);
 
             }
-            //printAll(pipeline, cycle_number);
+            printAll(pipeline, cycle_number);
         }
     }
 
