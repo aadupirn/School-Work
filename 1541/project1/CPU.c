@@ -10,6 +10,67 @@
 #include <arpa/inet.h>
 #include "CPU.h"
 
+void printAll(struct trace_item *pipeline[], int cycle_number)
+{
+    struct trace_item *tr_entry;
+    unsigned char t_type = 0;
+    unsigned char t_sReg_a= 0;
+    unsigned char t_sReg_b= 0;
+    unsigned char t_dReg= 0;
+    unsigned int t_PC = 0;
+    unsigned int t_Addr = 0;
+    for(int i = 0; i < 8; i++)
+    {
+        tr_entry = pipeline[i];
+        t_type = tr_entry->type;
+        t_sReg_a = tr_entry->sReg_a;
+        t_sReg_b = tr_entry->sReg_b;
+        t_dReg = tr_entry->dReg;
+        t_PC = tr_entry->PC;
+        t_Addr = tr_entry->Addr;
+        printf("Instruction at position: %d", i);
+        switch(tr_entry->type)
+        {
+            case ti_NOP:
+                printf("[cycle %d] NOP:\n",cycle_number) ;
+                break;
+            case ti_RTYPE:
+                printf("[cycle %d] RTYPE:",cycle_number) ;
+                printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(dReg: %d) \n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->dReg);
+                break;
+            case ti_ITYPE:
+                printf("[cycle %d] ITYPE:",cycle_number) ;
+                printf(" (PC: %x)(sReg_a: %d)(dReg: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->dReg, tr_entry->Addr);
+                break;
+            case ti_LOAD:
+                printf("[cycle %d] LOAD:",cycle_number) ;
+                printf(" (PC: %x)(sReg_a: %d)(dReg: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->dReg, tr_entry->Addr);
+                break;
+            case ti_STORE:
+                printf("[cycle %d] STORE:",cycle_number) ;
+                printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->Addr);
+                break;
+            case ti_BRANCH:
+                printf("[cycle %d] BRANCH:",cycle_number) ;
+                printf(" (PC: %x)(sReg_a: %d)(sReg_b: %d)(addr: %x)\n", tr_entry->PC, tr_entry->sReg_a, tr_entry->sReg_b, tr_entry->Addr);
+                break;
+            case ti_JTYPE:
+                printf("[cycle %d] JTYPE:",cycle_number) ;
+                printf(" (PC: %x)(addr: %x)\n", tr_entry->PC,tr_entry->Addr);
+                break;
+            case ti_SPECIAL:
+                printf("[cycle %d] SPECIAL:",cycle_number) ;
+                break;
+            case ti_JRTYPE:
+                printf("[cycle %d] JRTYPE:",cycle_number) ;
+                printf(" (PC: %x) (sReg_a: %d)(addr: %x)\n", tr_entry->PC, tr_entry->dReg, tr_entry->Addr);
+                break;
+            case 10:
+                printf("[cycle %d] SQUASHED:\n",cycle_number);
+        }
+    }
+}
+
 int main(int argc, char **argv)
 {
     struct trace_item *tr_entry;
@@ -26,7 +87,7 @@ int main(int argc, char **argv)
     for(int i = 0; i < prediction_array_size; i++)
     {
         prediction_values[i] = 0;
-        prediction_pc[i] = 2;
+        prediction_pc[i] = 0;
     }
 
     struct trace_item no_op;
@@ -160,7 +221,7 @@ int main(int argc, char **argv)
             }
             else
             {
-                switch(prediction_pc[pc_hash])
+                switch(prediction_values[pc_hash])
                 {
                     case 0:
                         prediction_values[pc_hash] = 1;
@@ -199,7 +260,7 @@ int main(int argc, char **argv)
             }
             else
             {
-                switch(prediction_pc[pc_hash])
+                switch(prediction_values[pc_hash])
                 {
                     case 0:
                     case 1:
@@ -215,8 +276,8 @@ int main(int argc, char **argv)
         //data hazards
         else if(
             ((pipeline[3]->dReg == pipeline[2]->sReg_a || pipeline[3]->dReg == pipeline[2]->sReg_b) && pipeline[3]->dReg != 255) ||
-            (pipeline[4]->type == ti_LOAD && (pipeline[4]->dReg == pipeline[2]->sReg_a || pipeline[4]->dReg == pipeline[2]->sReg_b) && pipeline[4]->dReg !=255) ||
-            (pipeline[5]->type == ti_LOAD && (pipeline[5]->dReg == pipeline[2]->sReg_a || pipeline[5]->dReg == pipeline[2]->sReg_b) && pipeline[5]->dReg !=255)
+            (pipeline[4]->type == ti_LOAD && (pipeline[4]->dReg == pipeline[2]->sReg_a || pipeline[4]->dReg == pipeline[2]->sReg_b) && pipeline[4]->dReg != 255) ||
+            (pipeline[5]->type == ti_LOAD && (pipeline[5]->dReg == pipeline[2]->sReg_a || pipeline[5]->dReg == pipeline[2]->sReg_b) && pipeline[5]->dReg != 255)
         )
         {
             pipeline[7] = pipeline[6];
@@ -227,7 +288,7 @@ int main(int argc, char **argv)
             hazard = 1;
         }
         //structural hazards
-        else if((pipeline[7]->dReg == pipeline[2]->sReg_a || pipeline[7]->dReg == pipeline[2]->sReg_b)&&pipeline[7]->dReg!=255)
+        else if((pipeline[7]->dReg == pipeline[2]->sReg_a || pipeline[7]->dReg == pipeline[2]->sReg_b) && pipeline[7]->dReg != 255)
         {
             pipeline[7] = pipeline[6];
             pipeline[6] = pipeline[5];
@@ -312,6 +373,7 @@ int main(int argc, char **argv)
                     printf("[cycle %d] SQUASHED:\n",cycle_number);
 
             }
+            printAll(pipeline, cycle_number);
         }
     }
 
