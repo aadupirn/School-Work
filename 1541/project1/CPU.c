@@ -190,11 +190,24 @@ int main(int argc, char **argv)
             branch_hazard = 3;
         }
         //branch taken and prediction method is 1+
+        // /20e904
         else if(prediction_method != 0 && pipeline[4]->type == ti_BRANCH && pipeline[4]->dReg == 69)
         {
             int pc_hash = ((pipeline[4]->PC)>>4)&(prediction_array_size-1);
             //pc appears in prediction table.
-            if(prediction_pc[pc_hash] == pipeline[4]->PC && (prediction_values[pc_hash] == 0 || prediction_values[pc_hash] == 1))
+            if(prediction_pc[pc_hash] == pipeline[4]->PC)
+            {
+                if(prediction_values[pc_hash] == 0 || prediction_values[pc_hash] == 1)
+                {
+                    pipeline[7] = pipeline[6];
+                    pipeline[6] = pipeline[5];
+                    pipeline[5] = pipeline[4];
+                    pipeline[4] = &squashed;
+                    hazard = 1;
+                    branch_hazard = 3;
+                }
+            }
+            else
             {
                 pipeline[7] = pipeline[6];
                 pipeline[6] = pipeline[5];
@@ -202,20 +215,17 @@ int main(int argc, char **argv)
                 pipeline[4] = &squashed;
                 hazard = 1;
                 branch_hazard = 3;
+                prediction_values[pc_hash] = 3;
             }
-            if(prediction_pc[pc_hash] != pipeline[4]->PC)
+            if(hazard == 0)
             {
-                pipeline[7] = pipeline[6];
-                pipeline[6] = pipeline[5];
-                pipeline[5] = pipeline[4];
-                pipeline[4] = &squashed;
-                hazard = 1;
-                branch_hazard = 3;
-                prediction_values[pc_hash] = 0;
+                prediction_pc[pc_hash] = pipeline[4]->PC;
             }
-
-            prediction_pc[pc_hash] = pipeline[4]->PC;
-            if(prediction_method ==1)
+            else
+            {
+                prediction_pc[pc_hash] = pipeline[5]->PC;
+            }
+            if(prediction_method == 1)
             {
                 prediction_values[pc_hash] = 3;
             }
@@ -239,22 +249,32 @@ int main(int argc, char **argv)
         {
             int pc_hash = ((pipeline[4]->PC)>>4)&(prediction_array_size-1);
             //pc appears in prediction table
-            if(prediction_pc[pc_hash] == pipeline[4]->PC && (prediction_values[pc_hash] == 2 || prediction_values[pc_hash] == 3))
+            if(prediction_pc[pc_hash] == pipeline[4]->PC)
             {
-                pipeline[7] = pipeline[6];
-                pipeline[6] = pipeline[5];
-                pipeline[5] = pipeline[4];
-                pipeline[4] = &squashed;
-                hazard = 1;
-                branch_hazard = 3;
+                if(prediction_values[pc_hash] == 2 || prediction_values[pc_hash] == 3)
+                {
+                    pipeline[7] = pipeline[6];
+                    pipeline[6] = pipeline[5];
+                    pipeline[5] = pipeline[4];
+                    pipeline[4] = &squashed;
+                    hazard = 1;
+                    branch_hazard = 3;
+                }
             }
-            if(prediction_pc[pc_hash] != pipeline[4]->PC)
+            else
             {
                 prediction_values[pc_hash] = 0;
             }
 
-            prediction_pc[pc_hash] = pipeline[4]->PC;
-            if(prediction_method ==1)
+            if(hazard == 0)
+            {
+                prediction_pc[pc_hash] = pipeline[4]->PC;
+            }
+            else
+            {
+                prediction_pc[pc_hash] = pipeline[5]->PC;
+            }
+            if(prediction_method == 1)
             {
                 prediction_values[pc_hash] = 0;
             }
@@ -373,7 +393,7 @@ int main(int argc, char **argv)
                     printf("[cycle %d] SQUASHED:\n",cycle_number);
 
             }
-            printAll(pipeline, cycle_number);
+            //printAll(pipeline, cycle_number);
         }
     }
 
