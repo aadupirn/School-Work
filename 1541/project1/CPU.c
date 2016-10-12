@@ -10,7 +10,7 @@
 #include <arpa/inet.h>
 #include "CPU.h"
 
-void printAll(struct trace_item *pipeline[], int cycle_number)
+void printAll(struct trace_item *pipeline[], int cycle_number) //function for debugging.
 {
     struct trace_item *tr_entry;
     unsigned char t_type = 0;
@@ -396,7 +396,8 @@ int main(int argc, char **argv)
                     printf("[cycle %d] SQUASHED:\n",cycle_number);
 
             }
-            printAll(pipeline, cycle_number);
+            //Uncomment for debug.
+            //printAll(pipeline, cycle_number);
         }
     }
 
