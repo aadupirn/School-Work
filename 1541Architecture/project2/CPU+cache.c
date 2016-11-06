@@ -7,10 +7,6 @@
 unsigned int accesses = 0;
 unsigned int read_accesses = 0;
 unsigned int write_accesses = 0;
-unsigned int L1hits = 0;
-unsigned int L1misses = 0;
-unsigned int L2hits = 0;
-unsigned int L2misses = 0;
 
 #include "cache.h"
 
@@ -40,7 +36,7 @@ int main(int argc, char **argv)
     trace_file_name = argv[1];
     if (argc == 3) trace_view_on = atoi(argv[2]) ;
     // here you should extract the cache parameters from the configuration file (cache size, associativity, latency)
-    unsigned int L1size = 16;
+    unsigned int L1size = 512;
     unsigned int bsize = 32;
     unsigned int L1assoc = 4;
     unsigned int L2size = 0;
@@ -75,7 +71,14 @@ int main(int argc, char **argv)
         if (!size)
         {       /* no more instructions (trace_items) to simulate */
             printf("+ Simulation terminates at cycle : %u\n", cycle_number);
-            printf("+ Cache statistics \n write accesses: %d\n read accesses: %d\n accesses: %d\n", write_accesses, read_accesses, accesses);
+            printf("+ Cache statistics \n+ Write Accesses: %d\n+ Read Accesses: %d\n+ Accesses: %d\n", write_accesses, read_accesses, accesses);
+            double L1missRate = ((double)L1->misses)/(L1->hits + L1->misses);
+            printf("+ L1 Miss Rate: %.2f%%\n", L1missRate*100);
+            if(L2size != 0)
+            {
+                double L2missRate = ((double)L2->misses)/(L2->hits + L2->misses);
+                printf("+ L1 Miss Rate: %.2f%%\n", L2missRate*100);
+            }
             break;
         }
         else
