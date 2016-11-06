@@ -100,7 +100,7 @@ int cache_access(struct cache_t *cp, unsigned long address,
             }
         }
         int writeBackPenalty = 0;
-        if(cp->blocks[index]LRUIndex].dirty == '1')
+        if(cp->blocks[index][LRUIndex].dirty == '1')
         {
             writeBackPenalty = cache_access(next_cp, address, 'w', now, NULL, mem_latency);
         }
@@ -119,7 +119,7 @@ int cache_access(struct cache_t *cp, unsigned long address,
             {
                 cp->blocks[index][i].ts = now;
                 cp->hits = cp->hits + 1;
-                cp->dirty = '1';
+                cp->blocks[index][i].dirty = '1';
                 return(cp->hit_latency);
             }
         }
@@ -130,7 +130,7 @@ int cache_access(struct cache_t *cp, unsigned long address,
             {
                 cp->blocks[index][i].tag = tag;
                 cp->blocks[index][i].valid = '1';
-                cp->dirty = '1';
+                cp->blocks[index][i].dirty = '1';
                 cp->blocks[index][i].ts = now;
                 cp->misses = cp->misses + 1;
                 if(cp->blocksize > 4)
@@ -144,13 +144,13 @@ int cache_access(struct cache_t *cp, unsigned long address,
             }
         }
         int writeBackPenalty = 0;
-        if(cp->blocks[index]LRUIndex].dirty == '1')
+        if(cp->blocks[index][LRUIndex].dirty == '1')
         {
             writeBackPenalty = cache_access(next_cp, address, 'w', now, NULL, mem_latency);
         }
         cp->blocks[index][LRUIndex].tag = tag;
         cp->blocks[index][LRUIndex].valid = '1';
-        cp->dirty = '1';
+        cp->blocks[index][i].dirty = '1';
         cp->blocks[index][LRUIndex].ts = now;
         cp->misses = cp->misses + 1;
         if(cp->blocksize > 4)
