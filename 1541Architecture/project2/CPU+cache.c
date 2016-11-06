@@ -75,7 +75,7 @@ int main(int argc, char **argv)
         if (!size)
         {       /* no more instructions (trace_items) to simulate */
             printf("+ Simulation terminates at cycle : %u\n", cycle_number);
-            printf("+ Cache statistics \n");
+            printf("+ Cache statistics \n write accesses: %d\n read accesses: %d\n accesses: %d\n", write_accesses, read_accesses, accesses);
             break;
         }
         else
