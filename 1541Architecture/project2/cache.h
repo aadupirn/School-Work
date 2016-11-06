@@ -25,9 +25,12 @@ struct cache_t {
 struct cache_t *
 	cache_create(int size, int blocksize, int assoc, int latency)
 {
-  int i;
-  int nblocks = 1;			// number of blocks in the cache
-  int nsets = 1;			// number of sets (entries) in the cache
+  int i;			// number of sets (entries) in the cache
+
+  int sizeInBytes = size * 1024;
+  int nblocks = sizeInBytes/blocksize;
+  int nsets = nblocks/assoc;
+
 
   // YOUR JOB: calculate the number of sets and blocks in the cache
   //
@@ -44,27 +47,53 @@ struct cache_t *
 
   for(i = 0; i < nsets; i++) {
 		C->blocks[i] = (struct cache_blk_t *)calloc(assoc, sizeof(struct cache_blk_t));
-	}
+    }
 
   return C;
 }
 
 int cache_access(struct cache_t *cp, unsigned long address,
-			 char access_type, unsigned long long now, struct cache_t *next_cp)
+			 char access_type, unsigned long long now, struct cache_t *next_cp, int mem_latency)
 {
-  //
-  // Based on address, determine the set to access in cp and examine the blocks
-  // in the set to check hit/miss and update the golbal hit/miss statistics
-  // If a miss, determine the victim in the set to replace (LRU). Replacement for
-  // L2 blocks should observe the inclusion property.
-  //
-  // The function should return the hit_latency in case of a hit. In case
-  // of a miss, you need to figure out a way to return the time it takes to service
-  // the request, which includes writing back the replaced block, if dirty, and bringing
-  // the requested block from the lower level (from L2 in case of L1, and from memory in case of L2).
-  // This will require one or two calls to cache_access(L2, ...) for misses in L1.
-  // It is recommended to start implementing and testing a system with only L1 (no L2). Then add the
-  // complexity of an L2.
-	// return(cp->hit_latency);
+    if(cp == NULL)
+    {
+        return mem_latency;
+    }
+    int index = (address/(cp->blocksize))%(cp->nsets);
+    unsigned long tag = (address/(cp->blocksize))/(cp->nsets);
+    if(acccess_type == 'r')
+    {
+        int i;
+        for(i = 0; i < cp->assoc; i++)
+        {
+            if((cp->blocks[index][i]->valid) && (cp->blocks[index][i]->tag == tag))
+            {
+                cp->blocks[index][i]->ts = now;
+                return(cp->hit_latency);
+            }
+        }
+        int LRUIndex = 0;
+        for(i = 0; i < cp->assoc; i++)
+        {
+            if(!(cp->blocks[index][i]->valid))
+            {
+                cp->blocks[index][i]->tag = tag;
+                cp->blocks[index][i]->valid = '1';
+                cp->blocks[index][i]->ts = now;
+                return cache_access(next_cp, address, access_type, now, NULL, mem_latency) + cp->hit_latency;
+            }
+            if(cp->blocks[index][i]->ts < cp->blocks[index][LRUIndex])
+            {
+                LRUIndex = i;
+            }
+        }
+        cp->blocks[index][LRUIndex]->tag = tag;
+        cp->blocks[index][LRUIndex]->valid = '1';
+        cp->blocks[index][LRUIndex]->ts = now;
+        return cache_access(next_cp, address, access_type, now, NULL, mem_latency) + cp->hit_latency;
+
+
+    }
+
 	return(cp->hit_latency);
 }
