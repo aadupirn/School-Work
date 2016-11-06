@@ -1,0 +1,10 @@
+-3 states modified shared or invalid
+-snoopy protocol.
+    A coherence protocol for write back caches
+        Clean: in all caches and up to date in memory, or
+        dirty: in exactly one cache or
+        uncached: not in any caches.
+    Correspondingly we record the state of each block in a cache as:
+        shared: clean read only
+        exclusive(modified): cache has only copy, it is writeable, and dirty.
+        Invalid: block contains no data.

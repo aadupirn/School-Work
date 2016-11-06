@@ -1,0 +1,17 @@
+-Why do we have operating systems?
+    -manage processes.
+
+-Sharing resources in an OS:
+    Time sharing (multiplexing) the processor
+    space sharing (multiplexing) the memory
+    on demand sharing of I/O
+
+-Maps virtual resources to physical resources.
+    Memory, I/O devices, CPUs
+    Guest code runs on native machine in user mode.
+        Trap to VMM on instructions that acess protected resources.
+        VMM handles real IO devices.
+
+-Physical memory as a cache for the virtual memory.
+    Miss penalty (cost of a page fault) = 1M - 10M cycles (to access hdd)
+        page fault.

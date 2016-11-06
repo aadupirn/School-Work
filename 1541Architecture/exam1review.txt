@@ -1,0 +1,12 @@
+a direct mapped cache with 16 one-word blocks.
+    16 separate blocks
+    mod by 16 for location
+    div by 16 for tag
+a direct mapped cache with two-word blocks and total size of 16 words.
+    8 separate double blocks
+    mod/div by 16 for location tag
+    if even include odd after and if odd include even before.
+a 2-way associative cache with two-word blocks and total size of 16 words
+    mod/div by 8
+    replace least-recently used one.
+    2 columns of 8.

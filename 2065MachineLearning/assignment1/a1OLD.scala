@@ -26,62 +26,20 @@ object Assign1 {
         println("Individuals from these populations: " + people.size)
 
     	def convertAlleles(x: java.util.List[org.bdgenomics.formats.avro.GenotypeAllele]) ={
-            x.asScala.map(r => if(r.toString == "Ref") 0 else 1).reduce(_+_).toInt}
+    			x.asScala.map(_.toString)
+    	}
         val data = sc.loadGenotypes(adamfile)
 
         val badCount = data.rdd.map(r => r.contigName -> (r.start, r.end)).distinct.count
-        val peopleCount = data.rdd.map(r => r.sampleId).distinct.count.persist()
-        val goodVariants = data.rdd.map(r => (r.contigName, r.start, r.end) -> 1).reduceByKey(_ + _).filter(_._2 == peopleCount).map(r => (r._1._1, r._1._2, r._1._3)).collect.toSet.persist()
+        val peopleCount = data.rdd.map(r => r.sampleId).distinct.count
+        val goodVariants = data.rdd.map(r => (r.contigName, r.start, r.end) -> 1).reduceByKey(_ + _).filter(_._2 == peopleCount).map(r => (r._1._1, r._1._2, r._1._3)).collect.toSet
 
         println("Total variants: " + badCount)
         println("Variants with right number of samples: " + goodVariants.size)
 
-        val goodData = data.rdd.filter(r => people contains r.sampleId).map(r => ((r.start.toLong, r.end.toLong), r.sampleId, convertAlleles(r.alleles)))
+        val goodData = data.rdd.map(r => (r.contigName, r.start, r.end, r.sampleId, convertAlleles(r.alleles))).filter(r => (goodVariants contains (r._1, r._2, r._3)) && (people contains r._4) )
 
-        goodData.persist()
-
-        var varsizes = goodData.mapPartitions( iter => {
-            var res = collection.mutable.HashMap.empty[(Long, Long), Array[Int]]
-            iter.foreach(rec => {
-                var cur = res.getOrElseUpdate(rec._1, Array.fill(4)(0))
-                cur(3) += 1
-            })
-            res.iterator
-        }).reduceByKey((accum,n) => ({accum(0)+=n(0); accum(1)+=n(1); accum(2)+=n(2); accum(3) += n(3); accum})).map(r => (r._1, (r._2(3),(r._2(0)+r._2(1)+r._2(2))))).persist()
-
-        val rddGoodData = varsizes.filter(r => r._2._1 == people.size).persist()
-
-        val varindices = rddGoodData.filter(r => r._2._2 != 1).map(r => r._1).zipWithIndex().collectAsMap
-
-        val vi = sc.broadcast(varindices)
-
-        val preVectorData = goodData.mapPartitions( iter => {
-            var res = collection.mutable.ArrayBuffer.empty[(String, (Int, Int))]
-            val vari = vi.value
-            iter.foreach(rec => {
-                if(vari contains rec._1 ) {
-                    val aval = rec._3
-                    if(aval > 0) {
-                        val index = vari( rec._1).toInt
-                        res += ((rec._2, (index, aval) ))
-                    }
-                }
-            })
-            res.iterator
-        })
-
-        def makeVectors(x: Iterable[(Int, Int)]): Array[Float] = {
-             var arr = Array.fill(goodVariants.size.toInt)(0.0f)
-             x.foreach( {case (index, value) => { arr(index) = value } })
-             return arr
-        }
-
-        val vectors = preVectorData.groupByKey().map(r => (r._1, makeVectors(r._2))).persist()
-
-        //original way of calculating vectors.
-        //val vectors = goodData.map(r => r._4 -> Array(r._5.count(_ =="Alt").toFloat)).reduceByKey(_++_)
-        //
-
+        val vectors = goodData.map(r => r._4 -> Array(r._5.count(_ =="Alt").toFloat)).reduceByKey(_++_)
 
         val K = 21
         val MAX = 100
@@ -99,7 +57,7 @@ object Assign1 {
                     case (trainInstance, c) => c -> distance(testInstance, trainInstance)
                 }.minBy(_._2)._1
             }
-        }
+        }       
 
         def addVectors  (s: Array[Float], v: Array[Float] ): Array[Float]  = {
             for(i <- 0 until s.length){

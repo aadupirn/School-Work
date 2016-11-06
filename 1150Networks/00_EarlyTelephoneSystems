@@ -42,7 +42,7 @@ Geographic Coverage
 
     Complete expression for the power recieved.
 
-    Prx = Ptx(GtxGrx(lambda^2))/(4pir^2) [W]
+    Prx = Ptx(GtxGrx(lambda^2))/(4pir^)2 [W]
 
 -What can we discern from this?
     Power recieved is proportional to:
