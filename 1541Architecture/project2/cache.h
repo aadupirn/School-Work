@@ -29,15 +29,9 @@ struct cache_t *
 {
   int i;			// number of sets (entries) in the cache
 
-  int sizeInBytes = size * 1024;
+  int sizeInBytes = size*1024;
   int nblocks = sizeInBytes/blocksize;
   int nsets = nblocks/assoc;
-
-
-  // YOUR JOB: calculate the number of sets and blocks in the cache
-  //
-  // nblocks = X;
-  // nsets = Y;
 
   struct cache_t *C = (struct cache_t *)calloc(1, sizeof(struct cache_t));
 
@@ -58,15 +52,13 @@ struct cache_t *
 }
 
 int cache_access(struct cache_t *cp, unsigned long address,
-			 char access_type, unsigned long long now, struct cache_t *next_cp, int mem_latency)
+			 char access_type, unsigned long long now, struct cache_t *next_cp, int mem_latency, char accessSource)
 {
     if(cp == NULL)
     {
         return mem_latency;
     }
 
-    //printf("Number of Sets: %d\n", cp->nsets);
-    //printf("Blocksize: %d\n", cp->blocksize);
     int index = (address/(cp->blocksize))%(cp->nsets);
     unsigned long tag = (address/(cp->blocksize))/(cp->nsets);
     int i;
@@ -78,9 +70,16 @@ int cache_access(struct cache_t *cp, unsigned long address,
             if((cp->blocks[index][i].valid) && (cp->blocks[index][i].tag == tag))
             {
                 cp->blocks[index][i].ts = now;
-                cp->hits = cp->hits + 1;
+                if(accessSource == '1')
+                {
+                    cp->hits = cp->hits + 1;
+                }
                 return(cp->hit_latency);
             }
+        }
+        if(accessSource == '1')
+        {
+            cp->misses = cp->misses + 1;
         }
         int LRUIndex = 0;
         for(i = 0; i < cp->assoc; i++)
@@ -89,10 +88,9 @@ int cache_access(struct cache_t *cp, unsigned long address,
             {
                 cp->blocks[index][i].tag = tag;
                 cp->blocks[index][i].valid = '1';
-                cp->blocks[index][LRUIndex].dirty = '0';
+                cp->blocks[index][i].dirty = '0';
                 cp->blocks[index][i].ts = now;
-                cp->misses = cp->misses + 1;
-                return cache_access(next_cp, address, access_type, now, NULL, mem_latency) + cp->hit_latency;
+                return cache_access(next_cp, address, access_type, now, NULL, mem_latency, accessSource) + cp->hit_latency;
             }
             if(cp->blocks[index][i].ts < cp->blocks[index][LRUIndex].ts)
             {
@@ -102,14 +100,13 @@ int cache_access(struct cache_t *cp, unsigned long address,
         int writeBackPenalty = 0;
         if(cp->blocks[index][LRUIndex].dirty == '1')
         {
-            writeBackPenalty = cache_access(next_cp, address, 'w', now, NULL, mem_latency);
+            writeBackPenalty = cache_access(next_cp, address, 'w', now, NULL, mem_latency, '0');
         }
         cp->blocks[index][LRUIndex].tag = tag;
         cp->blocks[index][LRUIndex].valid = '1';
         cp->blocks[index][LRUIndex].dirty = '0';
         cp->blocks[index][LRUIndex].ts = now;
-        cp->misses = cp->misses + 1;
-        return cache_access(next_cp, address, access_type, now, NULL, mem_latency) + cp->hit_latency + writeBackPenalty;
+        return cache_access(next_cp, address, access_type, now, NULL, mem_latency, accessSource) + cp->hit_latency + writeBackPenalty;
     }
     else
     {
@@ -118,12 +115,19 @@ int cache_access(struct cache_t *cp, unsigned long address,
             if((cp->blocks[index][i].valid) && (cp->blocks[index][i].tag == tag))
             {
                 cp->blocks[index][i].ts = now;
-                cp->hits = cp->hits + 1;
+                if(accessSource == '1')
+                {
+                    cp->hits = cp->hits + 1;
+                }
                 cp->blocks[index][i].dirty = '1';
                 return(cp->hit_latency);
             }
         }
         int LRUIndex = 0;
+        if(accessSource == '1')
+        {
+            cp->misses = cp->misses + 1;
+        }
         for(i = 0; i < cp->assoc; i++)
         {
             if(!(cp->blocks[index][i].valid))
@@ -132,10 +136,13 @@ int cache_access(struct cache_t *cp, unsigned long address,
                 cp->blocks[index][i].valid = '1';
                 cp->blocks[index][i].dirty = '1';
                 cp->blocks[index][i].ts = now;
-                cp->misses = cp->misses + 1;
                 if(cp->blocksize > 4)
                 {
-                    return cache_access(next_cp, address, 'r', now, NULL, mem_latency) + cp->hit_latency;
+                    return cache_access(next_cp, address, 'r', now, NULL, mem_latency, accessSource) + cp->hit_latency;
+                }
+                else
+                {
+                    return (cp->hit_latency);
                 }
             }
             if(cp->blocks[index][i].ts < cp->blocks[index][LRUIndex].ts)
@@ -146,16 +153,15 @@ int cache_access(struct cache_t *cp, unsigned long address,
         int writeBackPenalty = 0;
         if(cp->blocks[index][LRUIndex].dirty == '1')
         {
-            writeBackPenalty = cache_access(next_cp, address, 'w', now, NULL, mem_latency);
+            writeBackPenalty = cache_access(next_cp, address, 'w', now, NULL, mem_latency, 0);
         }
         cp->blocks[index][LRUIndex].tag = tag;
         cp->blocks[index][LRUIndex].valid = '1';
-        cp->blocks[index][i].dirty = '1';
+        cp->blocks[index][LRUIndex].dirty = '1';
         cp->blocks[index][LRUIndex].ts = now;
-        cp->misses = cp->misses + 1;
         if(cp->blocksize > 4)
         {
-            return cache_access(next_cp, address, 'r', now, NULL, mem_latency) + cp->hit_latency + writeBackPenalty;
+            return cache_access(next_cp, address, 'r', now, NULL, mem_latency, accessSource) + cp->hit_latency + writeBackPenalty;
         }
         else
         {

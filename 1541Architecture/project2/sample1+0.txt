@@ -1,0 +1,8 @@
+
+ ** opening file /home/aadu/Downloads/sample1.tr
++ Simulation terminates at cycle : 13464100
++ Cache statistics 
++ Write Accesses: 86730
++ Read Accesses: 151329
++ Accesses: 238059
++ L1 Miss Rate: 49.53%

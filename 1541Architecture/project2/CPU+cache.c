@@ -35,14 +35,24 @@ int main(int argc, char **argv)
 
     trace_file_name = argv[1];
     if (argc == 3) trace_view_on = atoi(argv[2]) ;
+    FILE *config = fopen("cache_config.txt", "r");
+    char line[256];
     // here you should extract the cache parameters from the configuration file (cache size, associativity, latency)
-    unsigned int L1size = 512;
-    unsigned int bsize = 32;
-    unsigned int L1assoc = 4;
-    unsigned int L2size = 0;
-    unsigned int L2assoc = 0;
-    unsigned int L2_hit_latency = 6;
-    unsigned int mem_latency = 100;
+    fgets(line, sizeof(line), config);
+    unsigned int L1size = atoi(line);
+    fgets(line, sizeof(line), config);
+    unsigned int bsize = atoi(line);
+    fgets(line, sizeof(line), config);
+    unsigned int L1assoc = atoi(line);
+    fgets(line, sizeof(line), config);
+    unsigned int L2size = atoi(line);
+    fgets(line, sizeof(line), config);
+    unsigned int L2assoc = atoi(line);
+    fgets(line, sizeof(line), config);
+    unsigned int L2_hit_latency = atoi(line);
+    fgets(line, sizeof(line), config);
+    unsigned int mem_latency = atoi(line);
+    fclose(config);
 
     fprintf(stdout, "\n ** opening file %s\n", trace_file_name);
 
@@ -73,11 +83,14 @@ int main(int argc, char **argv)
             printf("+ Simulation terminates at cycle : %u\n", cycle_number);
             printf("+ Cache statistics \n+ Write Accesses: %d\n+ Read Accesses: %d\n+ Accesses: %d\n", write_accesses, read_accesses, accesses);
             double L1missRate = ((double)L1->misses)/(L1->hits + L1->misses);
+            printf("+ L1 Hits: %d\n+ L1 Misses %d\n",L1->hits, L1->misses);
             printf("+ L1 Miss Rate: %.2f%%\n", L1missRate*100);
+
             if(L2size != 0)
             {
                 double L2missRate = ((double)L2->misses)/(L2->hits + L2->misses);
-                printf("+ L1 Miss Rate: %.2f%%\n", L2missRate*100);
+                printf("+ L2 Hits: %d\n+ L2 Misses %d\n",L2->hits, L2->misses);
+                printf("+ L2 Miss Rate: %.2f%%\n", L2missRate*100);
             }
             break;
         }
@@ -91,9 +104,6 @@ int main(int argc, char **argv)
             t_PC = tr_entry->PC;
             t_Addr = tr_entry->Addr;
         }
-
-        // SIMULATION OF A SINGLE CYCLE cpu IS TRIVIAL - EACH INSTRUCTION IS EXECUTED
-        // IN ONE CYCLE, EXCEPT IF THERE IS A DATA CACHE MISS.
 
         switch(tr_entry->type)
         {
@@ -122,7 +132,7 @@ int main(int argc, char **argv)
                 }
                 accesses++;
                 read_accesses++;
-                cycle_number = cycle_number + cache_access(L1, tr_entry->Addr, 'r', cycle_number, nextL, mem_latency);
+                cycle_number = cycle_number + cache_access(L1, tr_entry->Addr, 'r', cycle_number, nextL, mem_latency, '1');
                 break;
             case ti_STORE:
                 if (trace_view_on)
@@ -132,7 +142,7 @@ int main(int argc, char **argv)
                 }
                 accesses++;
                 write_accesses++;
-                cycle_number = cycle_number + cache_access(L1, tr_entry->Addr, 'w', cycle_number, nextL, mem_latency);
+                cycle_number = cycle_number + cache_access(L1, tr_entry->Addr, 'w', cycle_number, nextL, mem_latency, '1');
                 break;
             case ti_BRANCH:
                 if (trace_view_on)
@@ -161,7 +171,6 @@ int main(int argc, char **argv)
         }
 
     }
-
     trace_uninit();
 
     exit(0);
