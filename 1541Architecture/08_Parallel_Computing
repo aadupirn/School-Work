@@ -1,0 +1,9 @@
+-Evolution of parallel hardware.
+
+-In order execution: instructions are issued to the pipeline(s) in the order in which they are encountered. That is, if the second instruction cannot be issued beause it has a data dependency with the first, only one instruction is issued in the cycle.
+
+-Out-of-order excecution: a more aggressive model where instructions can be issued to the pipeline(s) out of order. In this case if the second instruction has dependencies with the first but the third does can the first and third can be co-scheduled. This is also called a dynamic issue.
+
+-For parallel programming you NEED a process ID.
+
+-
