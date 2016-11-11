@@ -1,0 +1,42 @@
+Aadu Pirn
+Homework 7
+
+1.
+    a) 00010100 = 20
+        ascii char is Device Control 4
+
+    b) Even Bit: 0
+
+    c) odd bit: 1
+
+2.
+    a) 10110011 = 179
+        ascii '|'
+
+    b) Even bit: 1
+
+    c) odd bit: 0
+
+3. 128000 bytes at baoud of 38400 bps.
+    10 bits per byte
+
+    128000*10/38400 = 33.33 seconds. TOTAL TIME
+
+4.
+
+    a) 128 bppacket ->
+    1000 packets
+
+    1 packet = 1056 bits
+
+    -> 36.36 packets/second
+
+    1000 packets takes 27.5 seconds.
+
+    1ACK response/packet = 1 sec/packet
+
+    1000*1 + 27.5 = 1027.5 seconds. TOTAL TIME
+
+    b) 1000 packets + 10 packets resent = 1010
+
+    1010 + 27.775 = 1037.775 seconds TOTAL TIME
