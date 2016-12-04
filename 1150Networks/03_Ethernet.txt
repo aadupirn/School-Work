@@ -1,0 +1,3 @@
+Carrier sense. give devices ability to detect if line is busy
+
+Give devices ability to detect if collision is going on.

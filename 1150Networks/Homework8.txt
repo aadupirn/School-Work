@@ -1,0 +1,44 @@
+Homework 8
+Aadu Pirn
+Computer Networks
+
+1.
+    A)
+    3, 5, 7, 8
+
+    B)
+    3, 6, 4, 9
+
+    C)
+    4, 3, 7, 6
+
+    T = 45
+    collision = x seconds.
+
+A   [] <- 3 -> [] <- 5 -> [] <- 7 -> []
+
+B   [] <- 3 -> [] <- 6  -> [] <- 4 -> [   ]
+
+C   [] <- 4  ->[     ]
+
+    A transmits at t = 19 to 23
+    B transmits at t = 13 to 19
+    C trasmits at t = 5 - 9
+
+
+2. CSMA/CD network at 1 Gbps. 1km. Frame size if @ 200km/sec?
+
+1km/200dm/ms = .005ms
+
+2^30 bits * .005 ms = 5369 bits = Minimum frame size.
+
+
+3. N stations 56-kbps ALOHA 1000-bit frame. 100sec/frame average.
+    Max value of N?
+
+    1000bit/100sec = 10bps
+
+    56 * 2^10 / 10bps = 5784 stations
+
+
+4. Manchester encoding allows for multiple signals to be sent over the same wire.
