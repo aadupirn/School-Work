@@ -32,7 +32,7 @@ from tensorflow.python.lib.io import file_io
 # Basic model parameters as external flags.
 flags = tf.app.flags
 FLAGS = flags.FLAGS
-flags.DEFINE_integer('max_steps', 1000, 'Number of steps to run trainer.')
+flags.DEFINE_integer('max_steps', 10000, 'Number of steps to run trainer.')
 flags.DEFINE_integer('batch_size', 26, 'Batch size.')
 flags.DEFINE_string('train_data_dir', 'gs://cells-149519-ml/train', 'Directory containing training data')
 flags.DEFINE_string('train_output_dir', 'data', 'Directory to put the training data.')
@@ -93,6 +93,7 @@ class Fetcher:
     #TODO TODO - you probably want to modify this to implement data augmentation
     def __init__(self, training_examples, labels):
         self.current = 0
+        self.current2 = 0
         self.examples = training_examples
         self.lbs = labels
 
@@ -120,18 +121,20 @@ class Fetcher:
         x_batch = []
         y_batch = []
         for j in xrange(13):
+            current = np.random.randint(len(self.examples[j]), size = 2)[0]
+            current2 = np.random.randint(len(self.examples[j]), size = 2)[0]
             index = (self.current+j) % len(self.examples[j])
+            index2 = (self.current2+j) % len(self.examples[j])
             files = self.examples[j][index]
+            files2 = self.examples[j][index2]
             label = self.lbs[j]
             channels = [ misc.imread(self.open_image(f)) for f in files]
-            channels2 = [ misc.imrotate(channel, 90) for channel in channels] #data augumentation
+            channels2 = [ misc.imread(self.open_image(f2)) for f2 in files2]
             x_batch.append(np.dstack(channels))
             x_batch.append(np.dstack(channels2))
             y_batch.append(label)
             y_batch.append(label)
 
-
-        self.current = (self.current + batchsize) % 50
         return np.array(x_batch), np.array(y_batch)
 
 
@@ -153,18 +156,19 @@ def network(inputs):
 
 def run_training():
 
-  #Read the training data
-  labels, examples, n_classes = read_training_list()
-  np.random.seed(42) #shuffle the same way each time for consistency
-  for a in examples:
-      np.random.shuffle(a)
+    #Read the training data
+    labels, examples, n_classes = read_training_list()
+    np.random.seed(42) #shuffle the same way each time for consistency
+    for a in examples:
+        np.random.shuffle(a)
 
-  # TODO TODO - implement some sort of cross validation
+    # TODO TODO - implement some sort of cross validation
 
-  fetcher = Fetcher(examples, labels)
+    fetcher = Fetcher(examples, labels)
 
-  # Tell TensorFlow that the model will be built into the default Graph.
-  with tf.Graph().as_default():
+    # Tell TensorFlow that the model will be built into the default Graph.
+    with tf.Graph().as_default():
+        sys.stdout.flush()
     # Generate placeholders for the images and labels and mark as input.
 
     x = tf.placeholder(tf.float32, shape=(None, 512,512,3))
@@ -255,8 +259,9 @@ def run_training():
             summary_writer.add_summary(summary_str, step)
             summary_writer.flush()
 
-        if step % 100 == 0:
+        if (step+1) % 250 == 0:
             saver.save(sess, os.path.join(FLAGS.model_dir, 'export'))
+            print('Step %d: EXPORT' % (step))
 
 
 
@@ -274,8 +279,8 @@ def run_training():
     #TODO TODO TODO
 
 def main(_):
-  run_training()
+    run_training()
 
 
 if __name__ == '__main__':
-  tf.app.run()
+    tf.app.run()

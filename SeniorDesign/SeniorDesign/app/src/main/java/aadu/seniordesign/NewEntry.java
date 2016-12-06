@@ -23,41 +23,13 @@ public class NewEntry extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_entry);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        Button fab = (Button) findViewById(R.id.viewData);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                Context context = getApplicationContext();
-                Toast toast = Toast.makeText(context, "TEST", Toast.LENGTH_LONG);
-                toast.show();
-                String fileName = "MyFile";
-                String content = "hello world";
-                FileOutputStream outputStream = null;
-                try {
-                    outputStream = openFileOutput(fileName, Context.MODE_PRIVATE);
-                    outputStream.write(content.getBytes());
-                    outputStream.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
 
         Button displayData = (Button) findViewById(R.id.displayData);
-        fab.setOnClickListener(new View.OnClickListener() {
+        displayData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
                 Context context = getApplicationContext();
-                Toast toast = Toast.makeText(context, "TEST", Toast.LENGTH_LONG);
-                toast.show();
-                String file = "MyFile";
+                String file = "data.txt";
                 FileInputStream fin = null;
                 try {
                     fin = openFileInput(file);
@@ -66,33 +38,40 @@ public class NewEntry extends AppCompatActivity {
                     while( (c = fin.read()) != -1){
                         temp = temp + Character.toString((char)c);
                     }
+
+                    Toast toast = Toast.makeText(context, temp, Toast.LENGTH_LONG);
+                    toast.show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
             }
         });
+
+        Button fab = (Button) findViewById(R.id.clearData);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = getApplicationContext();
+
+                String fileName = "data.txt";
+                String content = "";
+                FileOutputStream outputStream = null;
+                try {
+                    outputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE);
+                    outputStream.write(content.getBytes());
+                    outputStream.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        });
+
+
     }
 
-    public void showMessage(String message)
-    {
-        setContentView(R.layout.activity_new_entry);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-
-    }
-
-    public void sendMessage(View view) {
-        // Do something in response to button
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_new_entry, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

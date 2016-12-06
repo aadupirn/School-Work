@@ -32,7 +32,7 @@ from tensorflow.python.lib.io import file_io
 # Basic model parameters as external flags.
 flags = tf.app.flags
 FLAGS = flags.FLAGS
-flags.DEFINE_integer('max_steps', 1000, 'Number of steps to run trainer.')
+flags.DEFINE_integer('max_steps', 10000, 'Number of steps to run trainer.')
 flags.DEFINE_integer('batch_size', 20, 'Batch size.')
 flags.DEFINE_string('train_data_dir', 'gs://cells-149519-ml/train', 'Directory containing training data')
 flags.DEFINE_string('train_output_dir', 'data', 'Directory to put the training data.')
@@ -58,7 +58,7 @@ labelmap = {
 def read_training_list():
     """
     Read <train_data_dir>/TRAIN which containing paths and labels in
-    the format label, channel1 file, channel2 file, channel3 
+    the format label, channel1 file, channel2 file, channel3
     Returns:
         List with all filenames in file image_list_file
     """
@@ -75,17 +75,17 @@ def read_training_list():
         labels.append(onehot)
         #create absolute paths for image files
         filenames.append([ FLAGS.train_data_dir + '/' + c for c in (c1,c2,c3)])
-    
+
     return zip( labels,filenames),n_classes
 
-    
+
 class Fetcher:
     '''Provides batches of images'''
     #TODO TODO - you probably want to modify this to implement data augmentation
     def __init__(self, training_examples):
         self.current = 0
         self.examples = training_examples
-        
+
     def load_batch(self,batchsize):
         x_batch = []
         y_batch = []
@@ -101,7 +101,7 @@ class Fetcher:
 
         self.current = (self.current + batchsize) % len(self.examples)
         return np.array(x_batch), np.array(y_batch)
-        
+
 
 def network(inputs):
     '''Define the network'''
@@ -124,7 +124,7 @@ def run_training():
   #Read the training data
   examples, n_classes = read_training_list()
   np.random.seed(42) #shuffle the same way each time for consistency
-  np.random.shuffle(examples) 
+  np.random.shuffle(examples)
   # TODO TODO - implement some sort of cross validation
 
   fetcher = Fetcher(examples)
@@ -132,10 +132,10 @@ def run_training():
   # Tell TensorFlow that the model will be built into the default Graph.
   with tf.Graph().as_default():
     # Generate placeholders for the images and labels and mark as input.
-    
+
     x = tf.placeholder(tf.float32, shape=(None, 512,512,3))
     y_ = tf.placeholder(tf.float32, shape=(None, n_classes))
-    
+
     # See "Using instance keys": https://cloud.google.com/ml/docs/how-tos/preparing-models
     # for why we have keys_placeholder
     keys_placeholder = tf.placeholder(tf.int64, shape=(None,))
@@ -198,7 +198,7 @@ def run_training():
       # Fill a feed dictionary with the actual set of images and labels
       # for this particular training step.
       images, labels = fetcher.load_batch(FLAGS.batch_size)
-      feed_dict = {x: images, y_: labels} 
+      feed_dict = {x: images, y_: labels}
 
       # Run one step of the model.  The return values are the activations
       # from the `train_op` (which is discarded) and the `loss` Op.  To
@@ -220,6 +220,13 @@ def run_training():
         summary_writer.add_summary(summary_str, step)
         summary_writer.flush()
 
+        if (step+1) % 250 == 0:
+            saver.save(sess, os.path.join(FLAGS.model_dir, 'export'))
+            print('Step %d: EXPORT' % (step))
+
+
+
+
 
     # Export the model so that it can be loaded and used later for predictions.
     file_io.create_dir(FLAGS.model_dir)
@@ -228,7 +235,7 @@ def run_training():
     #make world readable for submission to evaluation server
     if FLAGS.model_dir.startswith('gs://'):
         subprocess.call(['gsutil', 'acl','ch','-u','AllUsers:R', FLAGS.model_dir])
-    
+
     #You probably want to implement some sort of model evaluation here
     #TODO TODO TODO
 
