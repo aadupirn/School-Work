@@ -1,41 +1,74 @@
-<LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout android:orientation="horizontal"
-        android:layout_width="324dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-        <Button
-            android:layout_width="162dp"
-            android:layout_gravity="center|center"
-            android:text="@string/data_display"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/AppTheme.AppBarOverlay"
             android:layout_height="wrap_content"
-            android:id="@+id/displayData" />
+            android:weightSum="1">
 
-        <Button
-            android:layout_width="162dp"
+        <TextView
+            android:text="Data Receiver"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|center"
-            android:text="@string/data_clear"
-            android:id="@+id/clearData" />
+            android:id="@+id/toolbartext"
+            android:textSize="20dp"
+            android:textColor="#FFFF"
+            android:layout_gravity="center|left" />
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:weightSum="1">
+
+                <Button
+                    android:layout_width="65dp"
+                    android:layout_gravity="center|right"
+                    android:text="@string/data_display"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/displayData"
+                    android:layout_weight="0.43" />
+
+                <Button
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:text="@string/data_clear"
+                    android:id="@+id/clearData"
+                    android:layout_weight="0.43" />
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <TextView
+            android:text="View Data Here"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:id="@+id/dataText"
+            android:layout_gravity="bottom|center"
+            android:textColor="#000"
+            android:background="#d3d3d3"
+            android:maxLines = "9999999"
+            android:scrollbars = "vertical"/>
+
     </LinearLayout>
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/textView"
-        android:layout_gravity="bottom|center"/>
-
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

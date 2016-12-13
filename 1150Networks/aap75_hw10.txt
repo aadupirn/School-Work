@@ -1,0 +1,25 @@
+1)
+1 ms delay
+2.45 ms wake up
+5 ms collection
+57.3 ms slot time * 10 (number of tags)
+
+581.75 ms.
+
+2)1 ms delay
+2.45 ms wake up
+5 ms collection
+57.3 * 100 tags
+
+5738.45 ms
+
+
+3)
+Q: 3 = 8 numbers possible. Probability of collision with 2 tags is 1/8. No collision is 7/8.
+Q: 1 = 2 numbers possible. probability of collision or non-collision is 1/2.
+Q: 0 = 100% probability of collision. 0% probability of non-collision.
+
+4)
+    1/(40kbits/(6/8/16)) + 16 * 10 microseconds.
+
+    1/52.083 = .00016 s

@@ -1,0 +1,66 @@
+Aadu Pirn 1541 HW6
+Worked with Jonathan Selling and a bit with Nick Denu.
+
+1) As far as this one goes I wrote some code for it and started testing. I attached the results in 1541_HW6.pdf and as you can see more processes resulted in a worse runtime. I figured I had done something wrong and to maximize my time I moved on.
+
+2)
+-Ring network with N nodes:
+    Bisection Bandwidth: 2B
+    Total Network Bandwidth: NB
+    Diameter: NB/2
+    Node Degree: 2
+
+-2D torus with N nodes:
+    Bisection Bandwidth: 2B(N^(1/2))
+    Total Network Bandwidth: 2NB
+    Diameter: N^(1/2)
+    Node Degree: 4
+
+-Binary tree network with N nodes:
+    Bisection Bandwidth: B
+    Total Network Bandwidth: B(N-1)
+    Diameter: Log2(N)
+    Node Degree: 3
+
+-Binary Hypercube network with N nodes (n is power of 2):
+    Bisection Bandwidth: NB/2
+    Total Network Bandwidth: NBlog(N)/2
+    Diameter: Log2(N)
+    Node Degree:Log2(N)
+
+3)
+N: 10000
+P: 1 : 0.001301
+P: 2 : 0.000964
+P: 4 : 0.000703
+P: 8 : 0.000753
+P: 16 : 0.00162
+P: 32 : 0.002973
+
+N: 100000
+P: 1 : 0.007045
+P: 2 : 0.004231
+P: 4 : 0.0027345
+P: 8 : 0.001933
+P: 16 : 0.001456
+P: 32 : 0.003567
+
+N: 1000000
+P: 1 : 0.071347
+P: 2 : 0.038201
+P: 4 : 0.017253
+P: 8 : 0.008261
+P: 16 : 0.005146
+P: 32 : 0.005725
+
+N: 10000000
+P: 1 : 0.692024
+P: 2 : 0.348920
+P: 4 : 0.148930
+P: 8 : 0.070275
+P: 16 : 0.052976
+P: 32 : 0.039024
+
+It seems like Adding threads helps until there become to many to really speed things up when compared to the size of the input. When N was increased a lot to 10000000 then consistently adding threads sped things up even at 32. With an N of only 10000 it stopped speeding up after 4 threads. You can see for each N at which point increasing the threads stopped helping. At P: 8 for 10000, P: 16 for 100000, at P: 32 for 1000000, and it never stopped helping for P: 10000000.
+
+4) Skipped due to time constraints.

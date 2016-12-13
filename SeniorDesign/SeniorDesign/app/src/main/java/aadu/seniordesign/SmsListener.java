@@ -33,9 +33,9 @@ public class SmsListener extends BroadcastReceiver {
                     double messageTimestamp = message.getTimestampMillis();
                     if(messageBody.split(":")[0].equals("VPP") || messageBody.split(":")[0].equals("TMP"))
                     {
-                        Toast.makeText(context, "Received Senior Design Message", Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "Received Data Reciever Message", Toast.LENGTH_LONG).show();
                         String fileName = "data.txt";
-                        String content = messageBody + ":TIME:" + messageTimestamp + "\n";
+                        String content = messageBody + "TIME" + messageTimestamp + "\n";
                         FileOutputStream outputStream = null;
                         try {
                             outputStream = context.openFileOutput(fileName, Context.MODE_APPEND);
@@ -45,10 +45,6 @@ public class SmsListener extends BroadcastReceiver {
                             e.printStackTrace();
                         }
 
-                    }
-                    else
-                    {
-                        Toast.makeText(context, "Received Other Message", Toast.LENGTH_LONG).show();
                     }
 
                 }
