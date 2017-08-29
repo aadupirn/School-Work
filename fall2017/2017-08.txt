@@ -1,11 +1,62 @@
 28: {text: '===Image Processing===
 
-    Installed matlab, talked about nothing much'}
+    Installed matlab, talked about nothing much\\
+
+
+    Dr Murat Akcakaya\\
+
+    412-624-8622\\
+
+    akcakaya@pitt.edu\\
+
+
+    Use Courseweb
+
+
+    #Grading\\
+
+    Midterm: 25%\\
+
+    Final: 30%\\
+
+    Homework: 20%\\
+
+    Projects: 25%
+
+'}
 29: {text: '
 
     ===Formal Methods===
 
     Talked about sets and sequences.
+
+
+    Sharif\\
+
+    6307 Sennot\\
+
+    ksm73@pitt.edu
+
+
+    #Grading\\
+
+    Exams: 65%\\
+
+    HW: 20%\\
+
+    Projects: 25%\\
+
+
+    Introduction to Theory and Implementaiton is downloaded on laptop.
+
+
+    Sets marked by {} ignore order and repitition.
+
+
+    Multisets don''t ignore repitition.
+
+
+    Sequence Order and repitiion matters uses ()
 
 
     =========================
