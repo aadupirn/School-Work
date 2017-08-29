@@ -1,0 +1,59 @@
+28: {text: '===Image Processing===
+
+    Installed matlab, talked about nothing much'}
+29: {text: '
+
+    ===Formal Methods===
+
+    Talked about sets and sequences.
+
+
+    =========================
+
+
+    ===Applied Crypto===
+
+    Adam Lee
+
+    adamlee@cs.pitt.edu
+
+    6111 Sennot Sq
+
+    http://www.cs.pitt.edu/~adamlee
+
+
+    #Confidentiality
+
+    #Integrity
+
+    #Availability
+
+
+    #threat: what we''re worried about
+
+
+    #vulnerability: situations or conditions that allow a threat to be realized
+
+
+    #attack: exploitation of a vulnerability in order to realize a threat.
+
+
+    __Security is Security is NOT an absolute property__
+
+
+    Security Is a process
+
+
+    1. Idenity threats for the domain of interest.
+
+
+    2. Define policies to protect against these threats.
+
+
+    3. Develop mechanisms to enforce these policies.
+
+
+    4. Wash, rinse, repeat
+
+
+'}

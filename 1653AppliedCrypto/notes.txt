@@ -1,0 +1,5 @@
+Confidentiality, integrity, availability.
+
+Cryptography provides data confidentiality but does not always provide existense confidentiality.
+
+
