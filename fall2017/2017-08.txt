@@ -13,20 +13,20 @@
 
     ===Applied Crypto===
 
-    Adam Lee
+    Adam Lee\\
 
-    adamlee@cs.pitt.edu
+    adamlee@cs.pitt.edu\\
 
-    6111 Sennot Sq
+    6111 Sennot Sq\\
 
-    http://www.cs.pitt.edu/~adamlee
+    http://www.cs.pitt.edu/~adamlee\\
 
 
-    #Confidentiality
+    #Confidentiality\\
 
-    #Integrity
+    #Integrity\\
 
-    #Availability
+    #Availability\\
 
 
     #threat: what we''re worried about
