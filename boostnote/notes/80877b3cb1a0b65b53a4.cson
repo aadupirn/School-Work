@@ -6,7 +6,7 @@ content: '''
   
   ## 8/29
   
-  Sharif
+  Sherif
   6307 Sennot
   ksm73@pitt.edu
   
@@ -29,11 +29,54 @@ content: '''
   - Tuples: finite sequences.
     - (1, 7) is a 2-tuple or a pair.
   
-  
   - Set:  complement written A with a bar over it. Is set of all elements under consideration that are not in A.
   
   - onto functions: use all its range. 
   - Ex: abs?
+  
+  ##### Relations
+  - predicate or property: a function whose range is {TRUE, FALSE}
+    - Ex: even function
+  - Relation: a predicate with k arguments
+  - aRb means aRb = TRUE
+  - R(a1, a2, ... , ak) means it is TRUE
+  - Relations can rebresented as sets
+  - Ex: Rock, Paper, Scissors
+    - Domain: {Rock, Paper, Scissors}, {Rock, Paper, Scissors}
+    - Range: {True, False}
+      - True: First player wins,
+      - False:  First player doesn't win
+    - Cross product domain to get all possible entries.
+    
+  ##### Equivalence Relations
+  - Binary Relation
+  - A binary relation R is an equivalence relation if and only f:
+    1. R is reflexive: for every x, xRx
+    2. R is symmetric: for every x and y, xRy implies yRx
+    3. R is transitive: for every x, y, and z, xRy and yRz implies xRz
+  ##### Graphs
+  - Graph: set of points with lines connecting some points.
+    - Nodes, edges
+  - Number of edges at a node is **degree** of the node.
+  - No more than one edge is allowed between any 2 nodes.
+  - An edge from a node to itself is a self-loop.
+  - (i, j) is the edge that conects i, j
+    - Order doesn't matter in undirected graphs
+  - If V is the set of nodes of G and E is the set of edges G = (V, E)
+  - EX:
+    ` ( {1, 2, 3, 4, 5}, {(1, 2), (2, 3), (3, 4), (4, 5), (5, 1)} ) `
+  - Graphs represent data,
+  - A labelled graph: either nodes, edges, or both have labels.
+  - Path: sequence of nodes connected by edges.
+    - simple path: no repeat nodes.
+    - cycle path that starts and ends in the same nodes.
+    - simple cycle: only first/last repeats.
+    - tree: path with no cycles.
+      - root: a specially designated node in the tree.
+      - leaves: nodes of degree 1 other than root.
+  - Graph is connected if every two nodes have a path between them
+  
+  
   
 '''
 tags: [
@@ -42,4 +85,4 @@ tags: [
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:37:47.802Z"
-updatedAt: "2017-08-31T13:46:00.449Z"
+updatedAt: "2017-08-31T14:43:42.911Z"

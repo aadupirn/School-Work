@@ -22,10 +22,89 @@ content: '''
   
   ## 8/30
   
+  ### Chapter 2: Fundamentals
+  
+  #### Formula
+  $$c = \\lambda (v)$$
+  
+  $$E = hv$$
+  
+    lambda = wavelength
+  
+    v = frequ (Hz)
+  
+    c: speed of light(propogation in the medium)
+  
+    h: Planck''s constant
+  
+  
+  #### Light and EM Spectrum
+  
+    - colors we percieve are what the object reflects
+  
+    green objects reflect light with wavelengths primarily 500-570 nm range
+  
+    - Chromatic light bands: .43 - .79 um
+  
+  
+    - #Radiance: total amount of energy
+  
+    - #Luminance (lm) the amount of energy an observer percieve.
+  
+    - #Brightness: a subjective descriptor of light perception that is impossible
+    to measure.
+  
+    - #Intensity: black to white/ gray scale
+  
+    - Monochromatic light: void of color.
+  
+  
+  
+  #### Simple Image Formation Model
+  
+    f(x, y) = i(x, y)r(x, y)
+  
+  
+    f(x, y): intensity at the point (x, y)
+  
+    i(x, y): illumniation - amount of source illumination ) < i(x, y) < infinity <--
+    We control this aspect
+  
+    r(x, y): reflectance/transmissivity. The abount of illuminations reflected/transmitted
+    by object. 0 < r(x, y) < 1
+  
+  
+  ##### Illumination
+  
+    #Lumen: a unit of ligh tflow or luminous flux.\\\\
+  
+    Lumen per square meter (lm/m^2) -- the metric unit of measure for illumination
+    of a surface.
+  
+  ##### Reflectance
+  
+    - .01 for black velvet
+  
+    - .65 for stainless steel
+  
+    - .93 for snow
+  
+  
+    To record L you need log2(maxvalueofL) bits
+  
+  
+  ##### Interpolation: Process of using known data to estimate unknown values.
+  
+    - eg: zooming, shrinking rotating and geomatric correction.
+  
+  
+  
+  ##### interpolation, #resampling: an imaging method to increase or decrease the number
+    of pixels in a digital image.
   
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:38:45.356Z"
-updatedAt: "2017-08-31T13:43:28.412Z"
+updatedAt: "2017-08-31T14:10:43.290Z"

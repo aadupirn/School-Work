@@ -16,14 +16,13 @@ content: '''
   30% Projects
   15% Homeworks and in-class quizzes
   10% Attendance and participation
-  #Confidentiality
-  #Integrity
-  #Availability
   
+  ### Notes
+  - Confidentiality
+  - Integrity
+  - Availability
   - threat: what we're worried about
-  
-  - vulnerability: situations or conditions that allow a threat to be realized
-  
+  - vulnerability: situations or conditions that allow a threat to be realize
   - attack: exploitation of a vulnerability in order to realize a threat.
   
   Security is Security is NOT an absolute property
@@ -41,4 +40,4 @@ tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:44:07.904Z"
-updatedAt: "2017-08-31T13:45:41.492Z"
+updatedAt: "2017-08-31T14:42:11.230Z"
