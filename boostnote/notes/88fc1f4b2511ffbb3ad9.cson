@@ -4,20 +4,19 @@ title: "Applied Cryptogrophy and Network Security"
 content: '''
   # Applied Cryptogrophy and Network Security
   
-  ## 8/29
-  
-  Adam Lee
+  > Adam Lee
   adamlee@cs.pitt.edu
   6111 Sennot Sq
   http://www.cs.pitt.edu/~adamlee
   
-  Grading: 
+  > Grading: 
   45% Midterm and Final
   30% Projects
   15% Homeworks and in-class quizzes
   10% Attendance and participation
   
-  ### Notes
+  ## 8/29
+  
   - Confidentiality
   - Integrity
   - Availability
@@ -25,7 +24,7 @@ content: '''
   - vulnerability: situations or conditions that allow a threat to be realize
   - attack: exploitation of a vulnerability in order to realize a threat.
   
-  Security is Security is NOT an absolute property
+  **Security is Security is NOT an absolute property**
   
   Security Is a process:
   1. Idenity threats for the domain of interest.
@@ -35,9 +34,56 @@ content: '''
   3. Develop mechanisms to enforce these policies.
   
   4. Wash, rinse, repeat
+  
+  ## 8/31
+  
+  - Security is based on assumptions and trust. 
+  - Violating the assumptions invalidates the security system.
+    - Like trusting students during an exam or even trusting that a processor will work.
+  - In order for a threat model for any specification to be useful it must be free of ambiguity.
+    - Ex: risk, trust
+  - If we have unambiguous threat model need policies and mechanisms to enforce policies.
+  
+  
+  **Assurance**: Approximate measure of how much a system can be trusted.
+  - Increased believe in correctness of time.
+  
+  - Specification
+    - Collection of statements describing the desired functionality of a system. Can be expressed in English, a formal logical language, or anything in between.
+  - Design
+    - A system design translates a specification into components that will actually be implemented.
+    - Satisfies Specification
+    - Formal proof or **informal argumentation** to defend. 
+    - Should not be an ad-hoc design process.
+  - Principles
+    a) Economy of Mechanism: keep design simple and as small as possible.
+    b) Fail-Safe Defaults: Base decisions on permissions rather than exclusions.
+      - Make decisions based on what we should be allowed to do.
+  
+    c) Complete Mediation: Every access to every oject must be checked for authority.
+    d) Open Design: Design of a system should *not* be a secret.
+      - Use public algorithm with secret inputs
+  
+    e) Separation of Privilege: Wherever feasible, aprotection mechanism that requires two keys to unlock it is more robust and flexible than one.
+    f) Least Privilege: Every program and every user of the system should operate using the least set of privileges necessary.
+    g) Lease Common Mechanist: Minimize shared channels.
+    h) Psychological Acceptability: It is essential that the human interface be designed for ease of use so that users routinely and automatically apply the protection mechanisms correctly.
+     
+  - Implementation
+    - Testing based approach to assurance is a popular alternative to formular verification
+      - Unit Testing/Regression Testing
+      - Red teams/Penetration testing
+      - Fuzz testing
+      - Does not give you a proven guarantee, but can uncover weaknesses or errors in a system.
+      - But in the end if you can resist a rigorous attempt on your system then you're probably good.
+  - Changing assumptions/environment means you have to change other stuff.
+  - Conclusions: Computer security does not happen by accident. You need to think about stuff a lot. 
+  
+  **Project 1**: Write up for threat models you come up with and what properties the system should have. What should the system enforce? Second thing is come up with groups.
+  - Secure File Sharing System.
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:44:07.904Z"
-updatedAt: "2017-08-31T14:42:11.230Z"
+updatedAt: "2017-08-31T19:35:04.832Z"
