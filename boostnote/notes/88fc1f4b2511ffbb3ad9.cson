@@ -1,0 +1,44 @@
+type: "MARKDOWN_NOTE"
+folder: "1d72b0f0fbe4a766687d"
+title: "Applied Cryptogrophy and Network Security"
+content: '''
+  # Applied Cryptogrophy and Network Security
+  
+  ## 8/29
+  
+  Adam Lee
+  adamlee@cs.pitt.edu
+  6111 Sennot Sq
+  http://www.cs.pitt.edu/~adamlee
+  
+  Grading: 
+  45% Midterm and Final
+  30% Projects
+  15% Homeworks and in-class quizzes
+  10% Attendance and participation
+  #Confidentiality
+  #Integrity
+  #Availability
+  
+  - threat: what we're worried about
+  
+  - vulnerability: situations or conditions that allow a threat to be realized
+  
+  - attack: exploitation of a vulnerability in order to realize a threat.
+  
+  Security is Security is NOT an absolute property
+  
+  Security Is a process:
+  1. Idenity threats for the domain of interest.
+  
+  2. Define policies to protect against these threats.
+  
+  3. Develop mechanisms to enforce these policies.
+  
+  4. Wash, rinse, repeat
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-08-31T13:44:07.904Z"
+updatedAt: "2017-08-31T13:45:41.492Z"

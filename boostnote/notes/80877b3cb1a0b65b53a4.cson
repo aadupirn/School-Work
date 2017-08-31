@@ -1,0 +1,45 @@
+type: "MARKDOWN_NOTE"
+folder: "1d72b0f0fbe4a766687d"
+title: "Formal Methods"
+content: '''
+  # Formal Methods
+  
+  ## 8/29
+  
+  Sharif
+  6307 Sennot
+  ksm73@pitt.edu
+  
+  Grading
+  Exams: 65%
+  HW: 20%
+  Projects: 25%
+  
+  Introduction to Theory and Implementaiton is downloaded on laptop.
+  
+  Sets marked by {} ignore order and repitition.
+  
+  Multisets don't ignore repitition.
+  
+  Sequence Order and repitiion matters uses ()
+  
+  ## 8/31
+  
+  ### Preliminaries II: Functions, graphs, languages, and proofs
+  - Tuples: finite sequences.
+    - (1, 7) is a 2-tuple or a pair.
+  
+  
+  - Set:  complement written A with a bar over it. Is set of all elements under consideration that are not in A.
+  
+  - onto functions: use all its range. 
+  - Ex: abs?
+  
+'''
+tags: [
+  "Formal_Methods"
+]
+isStarred: false
+isTrashed: false
+createdAt: "2017-08-31T13:37:47.802Z"
+updatedAt: "2017-08-31T13:46:00.449Z"
