@@ -81,9 +81,86 @@ content: '''
   
   **Project 1**: Write up for threat models you come up with and what properties the system should have. What should the system enforce? Second thing is come up with groups.
   - Secure File Sharing System.
+  
+  ## 9/5
+  
+  ##### Cryptography
+  
+  You want to enable two people to speak on an unsecure connection.
+  - Want to ensure conversations remain secret
+  - Make sure that there is integrity of the message.
+    - At least detect message has been tampered with. Its hard to prevent tampering.
+  - {E, D, M, C, K}
+    - M: message space,
+    - K: key space,
+    - E: M x K --> C is an encryption function
+    - C: ciphertext space
+    - D: C x K --> M is a decryption function
+  - Symmetric Key: E and D use same key.
+  - Asymmetric/public key: 2 keys. Public and private. 
+  - Threshold cryptography: Need a threshold of people to decrypt.
+  
+  ##### History
+  - Ancient times (BCE)
+    - Steganography: literally hide secrets. Lemon juice on paper. 
+      - We're not going to study seganography.
+    - Transposition cipher
+    - Scytale
+      - Reorder characters in message
+      - Wrap strip of leather around wooden rod and write straight down the rod. to decrypt rewrap. Need an identical scytale.
+      - Thickness of the stick is the key.
+    - Rail fence cipher.
+      - Choose a number of fence posts. And write horizontally and then transcribe vertically.
+      - Read across posts.
+      - Key is number of posts.
+    - Transposition is weak because you share alphabet.
+    - Substitution cipher: Substitutes letters from plaintext alphabet to ciphertext alphabet.
+    - Atbashs cipher: Put alphabet in grid and use letter above the one you want.
+    - Caesar cipher
+      - Choose a shift index s. Encription is x + x mod 26
+    - Substitution keeps the patterns the same.
+    - Most modern cryptography uses both Substitution and Transposition.
+  - Midieval Times
+    - Vigenere cipher: Improved Caesar.
+      - Instead of a shift index use a keyphrase that enables using different shift indexes for each letter.
+        - E: E(p, k) = p + k mod 26
+      - Patterns are going to be a lot less recognizable.
+    - One-time pad: further generalization of the vigenere cipher.
+      - Choose a key that's as long as our plaintext.
+      - E(p) = p xor k
+      - D(c) = c xor k
+    - Playfair ipher: digraph substituion cipher
+      - Sustitute pairs of letters rather than single letters.
+      - Decrypt is x - 2 mod 26
+  - Mechanical Cryptosystems
+    - PURPLE: japan
+    - Enigma: germany
+  - Unfortunately classical cryptosystems are easy to break.
+  - 3 Types of attacks to break cryptosystems.
+    - Ciphertext only attack. All you have is the ciphertext.
+      - Hardest for the attacker.
+    - Known plaintext attack. You have some cipher and plaintext.
+    - Chosen plaintext attack. You have access to algorithm and key. We can encrypt anything ourselves. 
+      - Hardest for the defender.
+      - This is the gold system Assume all the attacker doesn't know is they key but they can even use the key to encrypt.
+    - Breaking Caesar: 
+      - 26 possible keys. You can also do easy frequency analysis.
+    - Breaking Rail fense
+      - f < message length / 2
+    - Breaking Vigenere
+      - really just k caesar ciphers where k is length of keyphrase.
+      - figure out k
+      - break each of the cipher's k Caesar ciphers.
+      - Given enough ciphertext, short workds like "the" will appear encrypted the same way multiple times.
+        - Distance between these will be a multiple of k.
+    - Assume the attacker knows as much as possible.
+    - Onetime pad: any key will translate
+      - If key can be guessed then we're no good. Also we need to get the secret key to you.
+      - If you can break key generator then you break it.
+  - Next Up: modern Symmetric Key Crypto.
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:44:07.904Z"
-updatedAt: "2017-08-31T19:35:04.832Z"
+updatedAt: "2017-09-05T19:35:18.650Z"
