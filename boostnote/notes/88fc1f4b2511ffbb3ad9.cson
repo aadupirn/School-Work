@@ -158,9 +158,56 @@ content: '''
       - If key can be guessed then we're no good. Also we need to get the secret key to you.
       - If you can break key generator then you break it.
   - Next Up: modern Symmetric Key Crypto.
+  
+  ## 9/7
+  
+  #### Modern Symmentric Key Cryptography
+  
+  - Why study symmetric key cryptography?
+    - Transmitting data over insecure channels.
+    - Securely storing sensitive data in untrustworthy places.
+    - Integrity verification
+    - Authentication
+  - In a perfect world we get the perfect security of the one time pad without the hassle of the unwieldy key.
+  - Stream ciphers, Block ciphers.
+  - Stream Ciphers
+    - Basically a one-time pad
+    - Change fixed small key into long key using pseudorandom number generator.
+    - key is the seed to the random number generator.
+    - Long sequence that is generated is used like key with xor in one time pad.
+    - Secrecy is based on how good your random number generator is.
+    - Using xor is cheap and good for streaming data because messing up one bit won't jack anything up.
+    - Synchronous stream cipher The key stream is generated indepenently of the ciphertext.
+      - Advantages:
+        - Do not propogate trasmission errosr.
+        - Prevent insertion attacks
+        - Key stream can be pre generatored.
+      - Disadvantage: need to regenerate key
+    - Self-synchronizing stream cipher: The key stream is a function of some numer of ciphertext
+      - Advantages:
+        - Decryption key stream automatically synchronizing with encryption key stream after receiving n ciphertext bits.
+        - less frequent key changes.
+      - Disadvantage: Vulnerable to replay attacks.
+  - Block Ciphers
+    - Block ciphers operate on fixed length blocks of plaintext.
+    - do multiple substitutions and transpositions
+    - Standard 128 bit lengths is only 14 characters so how do you encrypt multiple blocks?
+      - You can just stich together each block of ciphertext. electronic codebook 
+        - Benefit: Errors in ciphertext do not propagate past a single block.
+        - What's Wrong?
+          - You can build a codebook out of plaintext/ciphertext.
+          - Block replay attacks.
+        - Don't use ECB
+    - Semantic Security
+      - No meaning embedded in the ciphertext.
+    - Cipher Block Chaining CBC
+      - Each plaintext block is xored with the previous ciphertext block.
+      - need an initialization vector. 
+    - Ciphertext Feedback Mode can be used to construct a self-synchronizing stream cipher from a block cipher.
+  
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:44:07.904Z"
-updatedAt: "2017-09-05T19:35:18.650Z"
+updatedAt: "2017-09-07T19:30:11.715Z"
