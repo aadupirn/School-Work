@@ -101,10 +101,18 @@ content: '''
   
   ##### interpolation, #resampling: an imaging method to increase or decrease the number
     of pixels in a digital image.
+    
+    
+  ## 9/6
   
+  $$f(x, y) = a_0 + a_1x + a_2y + a_yx_y$$
+  
+  $$f(q_{11}) = a_0 + a_1x_1 + a_2y_2 + a_3x_1y_1$$
+  
+  $$f(x, y) = a_0 + a_1x + a_2y + a_3xy$$
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:38:45.356Z"
-updatedAt: "2017-08-31T14:10:43.290Z"
+updatedAt: "2017-09-06T19:09:48.690Z"
