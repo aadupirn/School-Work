@@ -110,9 +110,43 @@ content: '''
   $$f(q_{11}) = a_0 + a_1x_1 + a_2y_2 + a_3x_1y_1$$
   
   $$f(x, y) = a_0 + a_1x + a_2y + a_3xy$$
+  
+  ## 9/11
+  
+  ###### Array vs Matrix Operation
+  
+  - Multiplication
+    - Array You go first for x firt col then first row x second col
+    - Matrix product uses addition for each component
+  - Honestly Google this shit to find array vs matrix 
+  H[f(x, y)]  = max{f(x, y)}
+  
+  f = 1, 2
+      3, 4
+      
+  H[f] = 4
+  
+  ## 9/18
+  
+  ##### Intensity Transformation and Spatial Filtering
+  
+  - Spatial domain
+    - image plane itself, directly process the intensity values of the image plane.
+  - Transform domain
+    - process the transform coefficients not directly process the intensity values of the image plane.
+  - Spatial domain process
+    - g(x, y) = T[f(x, y)]
+    - f(x,y) input image
+    - g(x,y) output image
+    - T: an operator on f deffined over a neighborhood of point (x, y)
+  - A 3 x 3 neighborhood about a point (x, y) in an image in the spatical domain the neighborhood is moved from pixel to pixel in the image to generate an output image.
+  
+  ## 9/25
+  
+  
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:38:45.356Z"
-updatedAt: "2017-09-06T19:09:48.690Z"
+updatedAt: "2017-09-25T19:02:48.203Z"

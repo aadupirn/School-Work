@@ -204,10 +204,53 @@ content: '''
       - Each plaintext block is xored with the previous ciphertext block.
       - need an initialization vector. 
     - Ciphertext Feedback Mode can be used to construct a self-synchronizing stream cipher from a block cipher.
-  
+  ## 9/12
+  - Encryption does not guarantee integrity/authenticity
+  - CRC's can be used to detect random errors in a message.
+    - CRC(m) = c
+    - this doesn't stop malicious attacks. Just helps with random errors.
+  - the CBC residue on an encrypted message can be used as a cryptographic MAC
+    - The last block of a CBC is the residue.
+    - You can't compute residue without K.
+    - Bad news encrypting the whole message is expensive.
+  - How do we guarantee confidentiality and integrity of a message.
+    - You have to use 2 Keys send encryption using first key and residue with second.
+  ##### Modern Cryptography
+  - AES
+    - Applying confusion and diffusion to 128-bit blocks.
+  - Crypto is difficult to implement properly let alone design. Leave design to big math people. 
+  - Symmetric key crypto is a black box to us now. 
+  ## 9/14
+  ##### Hash Functions
+  - Hash function: takes variable-length input and turns it into fixed-length code.
+  - In order to be useful cryptographically it needs to have a "randomized output".
+    - Given large number of inputs any bit should be set ~half the time.
+    - Any output should have have its bits set on average.
+    - If n and n' are related H(n) and H(n') are unrelated.
+  - Preimage resistance: Should be infeasable to find an x such that H(x) = z. With a preknown z
+  - Second preimage resitance: Find an H(y) = z when H(x) = z should be infeasible.
+  - Collision resistance: It is infeasible to find two messages where the hashes match.
+    - Birthday paradox
+    - Easier to find 2 matching than 1 that matches existence.
+  - Store passwords
+    - Options:  
+      - Store user, pass in db
+      - store user, H(pass) pairs on disk.
+        - Host computes H(pass)
+        - checks to see if it is a match for the copy stored on disk.
+  - How do Hash functions actually work?
+    - Effectively Compression and iteration
+    - SHA-1
+      - Build using a Merkl-Damgard construction
+      - Message m split into blocks m1, m2..... mn (padding mayye at end)
+      - IV --> f -> f -> f -> f -> finalize -> hash
+        - each f gets the corresponding block of m.
+        - finalize is concatenation
+      - Resulting hash is secure if f is collision resistant.
+  - Hash functions can check integrity of large files efficiently.
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:44:07.904Z"
-updatedAt: "2017-09-07T19:30:11.715Z"
+updatedAt: "2017-09-14T19:31:06.893Z"
