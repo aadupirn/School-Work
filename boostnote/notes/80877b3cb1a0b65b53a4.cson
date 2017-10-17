@@ -76,6 +76,15 @@ content: '''
       - leaves: nodes of degree 1 other than root.
   - Graph is connected if every two nodes have a path between them
   
+  ## 10/5
+  
+  Recognizable vs Decidable
+  - R: Every string is accepted by a turing machine.
+    - Every string can be rejected or looped forevver.
+  - D: Every string is accepted by a truig machine
+    - Every string not in language is rejected.
+  
+  
   
   
 '''
@@ -85,4 +94,4 @@ tags: [
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:37:47.802Z"
-updatedAt: "2017-09-07T17:20:33.447Z"
+updatedAt: "2017-10-05T13:40:27.585Z"

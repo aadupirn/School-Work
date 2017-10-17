@@ -248,9 +248,13 @@ content: '''
         - finalize is concatenation
       - Resulting hash is secure if f is collision resistant.
   - Hash functions can check integrity of large files efficiently.
+  ## 9/26 Threshold Cryptography
+  - Divide a secret into n bits so that any group of k or more users can pool their secrets to find the secret
+  - 
+  
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:44:07.904Z"
-updatedAt: "2017-09-14T19:31:06.893Z"
+updatedAt: "2017-09-26T18:39:59.846Z"
