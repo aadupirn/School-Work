@@ -59,8 +59,8 @@
 
 ##### b) A = {a^ib^i | j = 2^i}
 - a^p b^(2^p)
-- if is b then it will break the first condition
+- if y is b then it will break the first condition
 - therefor A is not a regular expression.
 
 #### Part II
-- 1.73 says that 0^p1^p cannot be pumped with respect to B which is {0^n1^n|n>=0}. Pumped strings in 0^p^p all are in 0*1*.
+- 1.73 says that 0^p1^p cannot be pumped with respect to B which is {0^n1^n|n>=0}. Pumped strings in 0^p^p all are in 0 * 1 *.

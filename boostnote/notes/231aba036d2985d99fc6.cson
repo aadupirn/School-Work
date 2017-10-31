@@ -141,7 +141,31 @@ content: '''
     - T: an operator on f deffined over a neighborhood of point (x, y)
   - A 3 x 3 neighborhood about a point (x, y) in an image in the spatical domain the neighborhood is moved from pixel to pixel in the image to generate an output image.
   
-  ## 9/25
+  ## 10/23
+  
+  midterm, final: 20%, computer projects: 40%, 
+  4.6, 0 pinning,  how to shift image, if given filter, 3x3 and image is 600x600 what should be size of filter and image for frequency domain. 3 different filter, idea, gaussian, transition filters? equations related to those. How to form low pass, high, pass filter, notch and band pass filters.
+  
+  - Matrix operations, foor mult cols in first have to match rows of second.
+  - Interpolation, nearest neibor, bilinear, bicubic
+  - Neighborhood, adjacency, connectivity,paths, regions and boundaries.
+  - What is m-path distance between two points?
+  - city block distance, chess board distance, euclidean distance.
+  - linear vs nonlinear operation.
+  - addition of noisy images for noise reduction. <- probably not this.
+  - spacial operations. 
+  - geometric transoformation, affine transformation
+  - intensity assignment
+  - how to calculate the histograms. Get normalized histogram p(zk) = nk/MN
+  - Spacial domain, averaging mask, different coeficcients and stuff.
+  - bitslicing
+  - histogram processing
+  - h(rk) = nk
+  - rk is the kth intensity value.
+  - Equalization
+  - histogram matching
+  - prove in continuous case that 
+  - slide 81?
   
   
 '''
@@ -149,4 +173,4 @@ tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:38:45.356Z"
-updatedAt: "2017-09-25T19:02:48.203Z"
+updatedAt: "2017-10-23T20:39:44.594Z"

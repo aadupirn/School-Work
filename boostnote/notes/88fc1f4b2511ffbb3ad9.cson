@@ -250,11 +250,18 @@ content: '''
   - Hash functions can check integrity of large files efficiently.
   ## 9/26 Threshold Cryptography
   - Divide a secret into n bits so that any group of k or more users can pool their secrets to find the secret
-  - 
+  
+  ## 10/23 TLS
+  - TCP provides a reliable transport service.
+  - Checksums are included, are not cryptographic, so they can be forged. Not helpful against active attackers.
+  - SSL and TLS were developed to provide applications with a secure means of utilizing TCP
+  - Authentication in SSL can be one-way or mutual.  
+  
+  
   
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2017-08-31T13:44:07.904Z"
-updatedAt: "2017-09-26T18:39:59.846Z"
+updatedAt: "2017-10-25T23:09:48.102Z"
